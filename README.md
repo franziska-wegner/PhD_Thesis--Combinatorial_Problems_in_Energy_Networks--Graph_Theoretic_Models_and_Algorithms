@@ -1,6 +1,6 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-# Combinatorial Problems in Energy Networks -- Graph Theoretic Models and Algorithms
+# Combinatorial Problems in Energy Networks - _Graph Theoretic Models and Algorithms_
 LaTeX source code and figures of the PhD thesis "Combinatorial Problems in Energy Networks -- Graph-theoretic Models and Algorithms".
 
 # License
