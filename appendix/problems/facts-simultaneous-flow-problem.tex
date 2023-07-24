@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[framed]{\source-\sink-\gls{dc}~\acrlong{feas} with
+\gls{facts}~\source-\sink-\gls{dc}-\gls{feas}-\gls{facts}$(\glssymbol{graph},
+\glssymbol{dualgraph},\oneToOneMap)$}%
+  Instance: & A plane~\source-\sink-graph~$\glssymbol{graph}$ and its
+  dual~$\glssymbol{dualgraph}$,
+  subsets~$\glssymbol{edges}_1\subseteq\glssymbol{edges}(\glssymbol{graph})$
+  and~$\glssymbol{edges}_2\subseteq\glssymbol{edges} (\glssymbol{dualgraph})$,
+  and a bijection~$\oneToOneMap\colon
+  \glssymbol{edges}_1 \to \glssymbol{edges}_2$.\\
+  % 
+  Objective: & Find~\gls{kcl}-feasible flows~$\glssymbol{flow}_{\glssymbol{graph}}$
+  and~$\glssymbol{flow}_{\glssymbol{dualgraph}}$ in~$\glssymbol{graph}$
+  and~$\glssymbol{dualgraph}$
+  with~$\glssymbol{flowvalue}(\glssymbol{graph})\not=0$ and~$
+  \glssymbol{flowvalue}(\glssymbol{dualgraph})\not=0$ such that
+  for every edge~$\edge\in\glssymbol{edges}$ we
+  have~$\glssymbol{flow}_{\glssymbol{graph}}(\edge) =
+  \glssymbol{flow}_{\glssymbol{dualgraph}}(\oneToOneMap(\edge))$.
+  % 
+  % 
+\end{problem}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

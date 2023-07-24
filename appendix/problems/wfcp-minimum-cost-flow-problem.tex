@@ -1,0 +1,19 @@
+\begin{problem}[framed]{\acrlong{mcfp}~$\gls{mcfp}_{\gls{ffp}}(\glssymbol{network})$
+}%
+    Instance: & A flow network~$
+    \glssymbol{network} 
+    = (
+    \glssymbol{graph},
+    \glssymbol{windfarmCableCost}_\edge, 
+    \glssymbol{realpowergeneration}, %\mathbf{\supply}, 
+    \glssymbol{realpowerdemand} %\mathbf{\demand}
+    )$. %and a cost function~$\glssymbol{windfarmCableCost}_\edge$.
+    \\
+    % 
+    Objective: & Find a feasible flow~\glssymbol{flow} such that the sum of the
+    cost over all edges~$
+    \sum_{\edge\in\glssymbol{edges}}
+    \glssymbol{windfarmCableCost}_\edge(\glssymbol{flow}(\edge))
+    $ is minimized.
+    % 
+\end{problem}%

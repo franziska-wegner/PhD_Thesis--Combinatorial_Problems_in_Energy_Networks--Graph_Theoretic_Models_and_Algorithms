@@ -1,0 +1,21 @@
+\begin{problem}[framed]{\glscapitalform{ffp}~$\gls{ffp}(\glssymbol{network})$}%
+    Instance: & A network corresponding to the whole wind farm~$
+    \glssymbol{network} 
+    = 
+    (\glssymbol{graph},
+    \glssymbol{cabletypes},
+    \glssymbol{capacity}, 
+    \glssymbol{windfarmCableCost},%
+    \glssymbol{realpowergeneration},%
+    \glssymbol{realpowerdemand}%
+    )$.
+    \\
+    % 
+    Objective: & Find a valid pair~$(\glssymbol{cabletype},\glssymbol{flow})$
+    that minimizes the total
+    cost~$\glssymbol{windfarmTotalcost}(\glssymbol{cabletype},\glssymbol{flow})$
+    while
+    complying with~\crefrange{ch:wfcp:eq:total-net-flow}
+    {ch:wfcp:eq:capacity-constraint}.
+    % 
+\end{problem}%
