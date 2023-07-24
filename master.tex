@@ -1,0 +1,126 @@
+\documentclass[
+twoside, % book layout
+openright, % start new chapter on the right side
+titlepage,
+numbers=noenddot, % "Figure 2.3", not "Figure 2.3."
+cleardoublepage=empty,
+fontsize=11pt,
+% draft,
+% bindingoffset=0pt,
+headings=optiontoheadandtoc,
+american]{scrbook}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Input preamble stuff
+
+\input{preamble}
+\input{commands}
+\input{tikzcommands}
+\input{glossary}
+\input{tikztools}
+
+%% Show crop marks (only for printed version)
+% \showcropmarks
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title
+
+\title{Combinatorial Problems in Energy Networks}
+\subtitle{Graph-theoretic Models and Algorithms} 
+\author{Franziska Wegner}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The document starts here
+%% To update bibliography run: biber master
+%% To update list of acronyms run: makeglossaries master
+%% To recompute plots run: pdflatex -shell-escape master.tex
+
+\begin{document}
+
+% Preamble
+\pagenumbering{roman} 
+
+\include{titlepage/titlepage}
+\cleardoublepage
+\include{dedication}
+\cleardoublepage
+
+\pagestyle{plain}
+\assignpagestyle{\chapter}{plain}
+
+\include{acknowledgement}
+\cleardoublepage 
+
+\include{abstract}
+\cleardoublepage
+
+\tableofcontents
+\cleardoublepage
+
+\pagestyle{content} 
+\pagenumbering{arabic}
+
+% Content chapters
+\include{intro/intro}
+\include{relatedwork/relatedwork}
+\include{foundations/foundations}
+\include{networkAnalyzes/networkAnalyzes}
+\include{switchplacement/switchplacement}
+\include{factsplacement/factsplacement}
+\include{windfarmplacement/windfarmplacement}
+\include{conclusion/conclusion}
+
+% References
+\cleardoublepage
+\pagestyle{plain}
+
+% https://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/
+\renewcommand*{\bibfont}{\small}
+\emergencystretch=1em
+\printbibheading
+\addcontentsline{toc}{chapter}{Bibliography}
+% \nocite{*}% TODO comment in
+\printbibliography[heading=none]% TODO comment in
+%\renewcommand*{\bibfont}{\normalsize}
+\cleardoublepage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures 
+\cleardoublepage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+\cleardoublepage
+
+\phantomsection
+\chapter*{Glossary}
+\addcontentsline{toc}{chapter}{Glossary}
+\renewcommand{\glossarysection}[2][]{\qquad}
+% 
+\section*{Acronyms and Abbreviations} % TODO comment in
+\printglossary[type=\acronymtype,style={mystyle}] % prints just the list of acronyms
+
+
+\newpage
+\section*{Model}
+\printglossary[type=model,style={mystyle}] % TODO comment in
+% 
+\section*{Units}
+\printglossary[type=unit,style={unitsStyle}] %% TODO comment in
+\cleardoublepage
+
+% Appendix
+\appendix
+\include{appendix/appendix-problems}
+\include{appendix/appendix-fundamentals}
+\include{appendix/appendix-switching}
+\include{appendix/appendix-facts}
+\include{appendix/appendix-cv}
+\include{appendix/appendix-list-of-publications}
+\include{appendix/appendix-german-abstract}
+
+\end{document}
