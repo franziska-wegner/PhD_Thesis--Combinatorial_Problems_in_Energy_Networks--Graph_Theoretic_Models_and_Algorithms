@@ -1,0 +1,1661 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70206" creator="Ipe 7.2.11">
+<info created="D:20190404104808" modified="D:20190915021230" title="Shortening of Superfluous Edge" author="Franziska Wegner" subject="Reduction Rules"/>
+<preamble>\usepackage{eurosym}
+\DeclareSIUnit \EUR { \text{\euro} } %euro as unit</preamble>
+<ipestyle name="KIT-colors">
+<color name="KITgreen" value="0 0.588 0.509"/>
+<color name="KITgreen70" value="0.3 0.711 0.656"/>
+<color name="KITgreen50" value="0.5 0.794 0.754"/>
+<color name="KITgreen30" value="0.7 0.876 0.852"/>
+<color name="KITgreen15" value="0.85 0.938 0.926"/>
+<color name="KITblue" value="0.274 0.392 0.666"/>
+<color name="KITblue70" value="0.492 0.574 0.766"/>
+<color name="KITblue50" value="0.637 0.696 0.833"/>
+<color name="KITblue30" value="0.782 0.817 0.9"/>
+<color name="KITblue15" value="0.891 0.908 0.95"/>
+<color name="KITblack" value="0"/>
+<color name="KITblack70" value="0.3"/>
+<color name="KITblack50" value="0.5"/>
+<color name="KITblack30" value="0.7"/>
+<color name="KITblack15" value="0.85"/>
+<color name="KITpalegreen" value="0.509 0.745 0.235"/>
+<color name="KITpalegreen70" value="0.656 0.821 0.464"/>
+<color name="KITpalegreen50" value="0.754 0.872 0.617"/>
+<color name="KITpalegreen30" value="0.852 0.923 0.77"/>
+<color name="KITpalegreen15" value="0.926 0.961 0.885"/>
+<color name="KITyellow" value="0.98 0.901 0.078"/>
+<color name="KITyellow70" value="0.986 0.931 0.354"/>
+<color name="KITyellow50" value="0.99 0.95 0.539"/>
+<color name="KITyellow30" value="0.994 0.97 0.723"/>
+<color name="KITyellow15" value="0.997 0.985 0.861"/>
+<color name="KITorange" value="0.862 0.627 0.117"/>
+<color name="KITorange70" value="0.903 0.739 0.382"/>
+<color name="KITorange50" value="0.931 0.813 0.558"/>
+<color name="KITorange30" value="0.958 0.888 0.735"/>
+<color name="KITorange15" value="0.979 0.944 0.867"/>
+<color name="KITbrown" value="0.627 0.509 0.196"/>
+<color name="KITbrown70" value="0.739 0.656 0.437"/>
+<color name="KITbrown50" value="0.813 0.754 0.598"/>
+<color name="KITbrown30" value="0.888 0.852 0.758"/>
+<color name="KITbrown15" value="0.944 0.926 0.879"/>
+<color name="KITred" value="0.627 0.117 0.156"/>
+<color name="KITred70" value="0.739 0.382 0.409"/>
+<color name="KITred50" value="0.813 0.558 0.578"/>
+<color name="KITred30" value="0.888 0.735 0.747"/>
+<color name="KITred15" value="0.944 0.867 0.873"/>
+<color name="KITlilac" value="0.627 0 0.47"/>
+<color name="KITlilac70" value="0.739 0.3 0.629"/>
+<color name="KITlilac50" value="0.813 0.5 0.735"/>
+<color name="KITlilac30" value="0.888 0.7 0.841"/>
+<color name="KITlilac15" value="0.944 0.85 0.92"/>
+<color name="KITcyanblue" value="0.313 0.666 0.901"/>
+<color name="KITcyanblue70" value="0.519 0.766 0.931"/>
+<color name="KITcyanblue50" value="0.656 0.833 0.95"/>
+<color name="KITcyanblue30" value="0.794 0.9 0.97"/>
+<color name="KITcyanblue15" value="0.897 0.95 0.985"/>
+<color name="KITseablue" value="0.196 0.313 0.549"/>
+<color name="KITseablue70" value="0.437 0.519 0.684"/>
+<color name="KITseablue50" value="0.598 0.656 0.774"/>
+<color name="KITseablue30" value="0.758 0.794 0.864"/>
+<color name="KITseablue15" value="0.879 0.897 0.932"/>
+<color name="kit100black" value="0"/>
+<color name="HELMHOLTZblue" value="0.043 0.362 0.618"/>
+<color name="HELMHOLTZgreen" value="0.549 0.7 0.19"/>
+<color name="MTSF" value="0.509 0.745 0.235"/>
+<color name="MPF" value="0.437 0.519 0.684"/>
+<color name="MF" value="0.739 0.3 0.629"/>
+<color name="SUSCEPTANCE" value="0.862 0.627 0.117"/>
+<color name="SWITCHES" value="0 0.588 0.509"/>
+<color name="THETA" value="0.313 0.666 0.901"/>
+<color name="CAPACITIES" value="0.5"/>
+<color name="CHANGES" value="0.997 0.985 0.861"/>
+<color name="FRAMEblack15" value="0.95"/>
+<color name="CountryText" value="0.85"/>
+<color name="DTP" value="0.627 0.117 0.156"/>
+<color name="GRIDtextCity" value="0"/>
+<color name="GRIDtextLand" value="0.3"/>
+<color name="GRIDtextDenmark" value="1"/>
+<color name="GRIDtextKarlsruhe" value="0.627 0.117 0.156"/>
+<color name="GRIDtextTransnetBW" value="0.926 0.961 0.885"/>
+<color name="GRIDtextAmprion" value="0.926 0.961 0.885"/>
+<color name="GRIDtextTennet" value="0.85"/>
+<color name="GRIDtext50Herz" value="0.926 0.961 0.885"/>
+<color name="GRIDtextSea" value="1"/>
+<color name="GRIDSea" value="0.437 0.519 0.684"/>
+<color name="GRIDland" value="1"/>
+<color name="GRIDdenmark" value="0.85"/>
+<color name="GRIDtransnetbw" value="0.509 0.745 0.235"/>
+<color name="GRIDamprion" value="0.656 0.821 0.464"/>
+<color name="GRID50hertz" value="0.754 0.872 0.617"/>
+<color name="GRIDlandBorder" value="0.3"/>
+<color name="GRIDGermanyBorder" value="0.3"/>
+<color name="GRIDcableOffshore" value="0.739 0.3 0.629"/>
+<color name="GRIDwindturbine" value="0.879 0.897 0.932"/>
+<color name="GRIDtennet" value="0.852 0.923 0.77"/>
+<color name="GRIDcableOnshorePlanned" value="0.5"/>
+<color name="GRIDcableOnshore330KV" value="0.3 0.711 0.656"/>
+<color name="GRIDcableOnshore220KV" value="0.739 0.656 0.437"/>
+<color name="GRIDcableOnshore110KV" value="0"/>
+<color name="PHYSICAL" value="0.437 0.519 0.684"/>
+<color name="KVL" value="0.437 0.519 0.684"/>
+<color name="FEASIBLE" value="0.739 0.3 0.629"/>
+<color name="KCL" value="0.739 0.3 0.629"/>
+<color name="OTS" value="0"/>
+<color name="ROP" value="0"/>
+<color name="MFF" value="0"/>
+<color name="OPF" value="0"/>
+</ipestyle>
+<ipestyle name="diss_basics">
+<dashstyle name="medium dotted" value="[1 1.5] 0"/>
+<dashstyle name="dense dashed" value="[8 3] 0"/>
+<dashstyle name="long dashed" value="[12] 0"/>
+<dashstyle name="long dash dotted" value="[12 6 1 6] 0"/>
+<dashstyle name="dense dotted" value="[0.5 0.5] 0"/>
+<gridsize name="3 pts" value="3"/>
+<gridsize name="2 pts" value="2"/>
+<gridsize name="1 pts" value="1"/>
+<opacity name="10 percent" value="0.1"/>
+<opacity name="20 percent" value="0.2"/>
+<opacity name="30 percent" value="0.3"/>
+<opacity name="40 percent" value="0.4"/>
+<opacity name="50 percent" value="0.5"/>
+<opacity name="60 percent" value="0.6"/>
+<opacity name="70 percent" value="0.7"/>
+<opacity name="80 percent" value="0.8"/>
+<opacity name="90 percent" value="0.9"/>
+</ipestyle>
+<ipestyle name="StandardPreamble">
+<preamble>
+  \input{/Users/fwegner/Documents/work/dissertation/03-Document/ipe-latex-preamble.tex}
+</preamble>
+</ipestyle>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/ptarc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fptarc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+0.5 0 0 0.5 0 0 e
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+-0.5 -0.5 m
+0.5 -0.5 l
+0.5 0.5 l
+-0.5 0.5 l
+h
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="small" value="\small"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="75%" value="0.75"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<ipestyle name="Dissertation-One-Column">
+<preamble>
+\makeatletter
+\leftmargini 1.5em
+\leftmargin \leftmargini
+\leftmarginii  1.2em
+\leftmarginiii 1em
+\def\@listI{\leftmargin\leftmargini
+            \parsep \z@
+	    \partopsep 3pt
+	    \topsep \z@
+            \itemsep \z@}
+\@listI
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \itemsep   \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \partopsep \z@
+              \itemsep   \topsep}
+\makeatother
+</preamble>
+<layout paper="374 155" origin="0 0" frame="374 155" skip="64" crop="no"/>
+<tiling name="falling" angle="-60" step="12" width="3"/>
+<tiling name="rising" angle="30" step="12" width="3"/>
+</ipestyle>
+<ipestyle name="windfarm">
+<symbol name="Background">
+<path matrix="1 0 0 1 0 16" stroke="white">
+0 512 m
+256 512 l
+</path>
+</symbol>
+<symbol name="mark/turbine(sx)" transformations="translations">
+<group>
+<path fill="white">
+1.5 0 0 1.5 0 0 e
+</path>
+<path fill="sym-stroke">
+1.7 0 0 1.7 0 0 e
+1.5 0 0 1.5 0 0 e
+</path>
+<path fill="sym-stroke">
+-1.13 -1.27 m
+1.27 1.13 l
+1.13 1.27 l
+-1.27 -1.13 l
+h
+</path>
+<path fill="sym-stroke">
+-1.13 1.27 m
+1.27 -1.13 l
+1.13 -1.27 l
+-1.27 1.13 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/substation(sx)" transformations="translations">
+<path fill="KITbrown">
+-1.7 -1.7 m
+1.7 -1.7 l
+1.7 1.7 l
+-1.7 1.7 l
+h
+</path>
+</symbol>
+<symbol name="background">
+<path matrix="1 0 0 1 0 16" stroke="white">
+0 512 m
+256 512 l
+</path>
+</symbol>
+<pen name="normal" value="1.2"/>
+<pen name="heavier" value="2.4"/>
+<pen name="fat" value="3.6"/>
+<pen name="ultrafat" value="6"/>
+<arrowsize name="normal" value="15"/>
+<arrowsize name="large" value="20"/>
+<arrowsize name="small" value="10"/>
+<arrowsize name="tiny" value="6"/>
+<color name="Motivation" value="0.872 0.968 1"/>
+<dashstyle name="medium dotted" value="[1 1.5] 0"/>
+<dashstyle name="dense dashed" value="[8 3] 0"/>
+<dashstyle name="long dashed" value="[12] 0"/>
+<dashstyle name="long dash dotted" value="[12 6 1 6] 0"/>
+<dashstyle name="dense dotted" value="[0.5 0.5] 0"/>
+<textsize name="verytiny" value="\tiny"/>
+<textsize name="largebf" value="\bf\large"/>
+<textstretch name="normal" value="2.45"/>
+<textstretch name="large" value="2.45"/>
+<textstretch name="Large" value="2.2"/>
+<textstretch name="LARGE" value="2.2"/>
+<textstretch name="huge" value="2.2"/>
+<textstretch name="Huge" value="2.2"/>
+<textstretch name="small" value="2.2"/>
+<textstretch name="footnote" value="2"/>
+<textstretch name="tiny" value="2.8"/>
+<textstretch name="verytiny" value="2.3"/>
+<textstretch name="largebf" value="2.45"/>
+<gridsize name="3 pts" value="3"/>
+<gridsize name="2 pts" value="2"/>
+<gridsize name="1 pts" value="1"/>
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="20%" value="0.2"/>
+<opacity name="40%" value="0.4"/>
+<opacity name="60%" value="0.6"/>
+<opacity name="70%" value="0.7"/>
+<opacity name="80%" value="0.8"/>
+<opacity name="90%" value="0.9"/>
+<preamble>
+</preamble>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<group layer="alpha" matrix="0.285176 0 0 0.24121 170.543 -165.338">
+<path matrix="0.719352 0 0 0.746609 181.523 988.994" fill="KITseablue70">
+39.5685 442.006 m
+40.0821 8.55241 l
+738.118 8.55241 l
+738.118 442.279 l
+h
+</path>
+<path matrix="0.678852 0 0 0.710291 211.419 995.386" stroke="KITpalegreen" pen="1">
+255.812 -0.00927129 m
+263.87 13.7616 l
+271.914 27.5228
+288 55.0454
+272.687 63.1418 c
+229.914 80.0923
+163.487 92.4429
+103.019 123.906 c
+88.7448 131.245
+84.239 143.117
+89.6011 145.87 c
+94.9632 148.622
+111.05 148.622
+124.25 150.818 c
+139.645 155.775
+136.669 170.194
+125.943 179.88 c
+116.412 187.154
+105.687 192.658
+94.9632 200.915 c
+84.239 209.172
+73.5147 220.181
+65.4715 231.19 c
+57.4283 242.199
+52.0662 253.208
+52.0662 261.464 c
+52.0662 269.721
+57.4283 275.226
+60.1094 283.482 c
+62.7904 291.739
+62.7904 302.748
+60.1094 313.757 c
+57.4283 324.766
+52.0662 335.775
+46.704 344.032 c
+41.3419 352.289
+35.9798 357.793
+41.3419 371.555 c
+46.704 385.316
+62.7904 407.334
+72.1177 422.935 c
+81.445 438.537
+84.0131 447.721
+85.3381 452.356 c
+86.8223 455.642 l
+</path>
+<path matrix="0.678852 0 0 0.710291 211.419 995.386" fill="KITpalegreen50">
+212.93 0.00028958 m
+255.827 0.00028958
+255.827 0.00028958
+255.827 0.00028958 c
+255.827 0.00028958
+255.827 0.00028958
+263.87 13.7616 c
+271.914 27.5228
+288 55.0454
+272.687 63.1418 c
+229.914 80.0923
+163.487 92.4429
+103.019 123.906 c
+88.7448 131.245
+84.239 143.117
+89.6011 145.87 c
+94.9632 148.622
+111.05 148.622
+124.25 150.818 c
+139.645 155.775
+136.669 170.194
+125.943 179.88 c
+116.412 187.154
+105.687 192.658
+94.9632 200.915 c
+84.239 209.172
+73.5147 220.181
+65.4715 231.19 c
+57.4283 242.199
+52.0662 253.208
+52.0662 261.464 c
+52.0662 269.721
+57.4283 275.226
+60.1094 283.482 c
+62.7904 291.739
+62.7904 302.748
+60.1094 313.757 c
+57.4283 324.766
+52.0662 335.775
+46.704 344.032 c
+41.3419 352.289
+35.9798 357.793
+41.3419 371.555 c
+46.704 385.316
+62.7904 407.334
+72.1177 422.935 c
+81.445 438.537
+84.0131 447.721
+85.3381 452.356 c
+86.8223 455.642 l
+-2.10937 455.608 l
+-1.55235 -0.00927129 l
+41.4151 0.128546 l
+84.239 0.00028958
+170.033 0.00028958
+212.93 0.00028958 c
+</path>
+</group>
+<path matrix="1 0 0 1 228.742 -0.195658" stroke="KITred" fill="KITred50" pen="0.6">
+85 76
+85 76
+85 76
+53 115
+53 115
+53 115
+17 115
+17 115
+17 115
+17 142
+17 142
+17 142
+23 152
+23 152
+23 152
+103 152
+103 152
+103 152
+144 112
+144 112
+144 112
+144 76
+144 76
+144 76 u
+</path>
+<path matrix="1 0 0 1 228.693 -0.150798" stroke="KITorange" fill="KITorange50" pen="0.5">
+22 147 m
+22 116 l
+48 116 l
+48 147 l
+h
+</path>
+<path matrix="1 0 0 1 228.742 -0.195658" stroke="KITorange" fill="KITorange50" pen="0.5">
+52 147 m
+104 147 l
+143 109 l
+143 78 l
+86 78 l
+52 119 l
+h
+</path>
+<path matrix="1 0 0 1 228.742 -0.195658" stroke="KITgreen" fill="KITgreen50" pen="0.6">
+106.213 111.025 m
+102 110
+102 110
+102 110
+65 110
+65 110
+65 110
+78 94
+78 94
+78 94
+106 94
+106 94
+106 94
+106 109
+106 109
+106 109
+106.213 111.025 c
+</path>
+<path matrix="1 0 0 1 228.694 -0.195317" stroke="KITseablue" pen="1">
+106.213 111.025 m
+102 111 l
+62 111 l
+56.0881 109.413 l
+</path>
+<text matrix="0.312077 0 0 0.298153 215.414 -84.6977" transformations="translations" pos="315.357 549.511" stroke="KITorange" type="label" width="56.535" height="3.447" depth="0.96" valign="baseline" size="5">\bf Collector System</text>
+<text matrix="0.312077 0 0 0.298153 168.4 -16.2531" transformations="translations" pos="315.357 549.511" stroke="KITred" type="label" width="52.852" height="3.438" depth="0" valign="baseline" size="5">\bf Full Wind Farm</text>
+<text matrix="0.312077 0 0 0.299475 211.255 -69.9984" transformations="translations" pos="315.357 549.511" stroke="KITgreen" type="label" width="23.356" height="3.438" depth="0" valign="baseline" size="5">\bf Circuit</text>
+<path matrix="1.11447 0 0 0.460576 266.277 -84.6328" fill="white">
+14.0195 346.073 m
+14.0195 336.488 l
+11.4869 336.488 l
+11.4869 346.073 l
+h
+</path>
+<group matrix="0.487393 0 0 0.285835 12.22 -11.494">
+<path stroke="KITseablue30" fill="KITseablue30">
+336 368 m
+336 336 l
+368 336 l
+368 368 l
+h
+</path>
+<path stroke="KITseablue30" fill="KITseablue30">
+368 368 m
+368 384 l
+384 352 l
+368 320 l
+h
+</path>
+</group>
+<group matrix="0 -0.380374 0.274288 0 -15.5018 200.502">
+<path stroke="KITseablue30" fill="KITseablue30">
+336 368 m
+336 336 l
+368 336 l
+368 368 l
+h
+</path>
+<path stroke="KITseablue30" fill="KITseablue30">
+368 368 m
+368 384 l
+384 352 l
+368 320 l
+h
+</path>
+</group>
+<group matrix="0 -0.380374 0.274288 0 228.898 200.502">
+<path stroke="KITseablue30" fill="KITseablue30">
+336 368 m
+336 336 l
+368 336 l
+368 368 l
+h
+</path>
+<path stroke="KITseablue30" fill="KITseablue30">
+368 368 m
+368 384 l
+384 352 l
+368 320 l
+h
+</path>
+</group>
+<group matrix="0.285176 0 0 0.24121 -58.1993 -165.142">
+<path matrix="0.719352 0 0 0.746609 181.523 988.994" fill="KITseablue70">
+39.5685 442.006 m
+40.0821 8.55241 l
+738.118 8.55241 l
+738.118 442.279 l
+h
+</path>
+<path matrix="0.678852 0 0 0.710291 211.419 995.386" stroke="KITpalegreen" pen="1">
+255.812 -0.00927129 m
+263.87 13.7616 l
+271.914 27.5228
+288 55.0454
+272.687 63.1418 c
+229.914 80.0923
+163.487 92.4429
+103.019 123.906 c
+88.7448 131.245
+84.239 143.117
+89.6011 145.87 c
+94.9632 148.622
+111.05 148.622
+124.25 150.818 c
+139.645 155.775
+136.669 170.194
+125.943 179.88 c
+116.412 187.154
+105.687 192.658
+94.9632 200.915 c
+84.239 209.172
+73.5147 220.181
+65.4715 231.19 c
+57.4283 242.199
+52.0662 253.208
+52.0662 261.464 c
+52.0662 269.721
+57.4283 275.226
+60.1094 283.482 c
+62.7904 291.739
+62.7904 302.748
+60.1094 313.757 c
+57.4283 324.766
+52.0662 335.775
+46.704 344.032 c
+41.3419 352.289
+35.9798 357.793
+41.3419 371.555 c
+46.704 385.316
+62.7904 407.334
+72.1177 422.935 c
+81.445 438.537
+84.0131 447.721
+85.3381 452.356 c
+86.8223 455.642 l
+</path>
+<path matrix="0.678852 0 0 0.710291 211.419 995.386" fill="KITpalegreen50">
+212.93 0.00028958 m
+255.827 0.00028958
+255.827 0.00028958
+255.827 0.00028958 c
+255.827 0.00028958
+255.827 0.00028958
+263.87 13.7616 c
+271.914 27.5228
+288 55.0454
+272.687 63.1418 c
+229.914 80.0923
+163.487 92.4429
+103.019 123.906 c
+88.7448 131.245
+84.239 143.117
+89.6011 145.87 c
+94.9632 148.622
+111.05 148.622
+124.25 150.818 c
+139.645 155.775
+136.669 170.194
+125.943 179.88 c
+116.412 187.154
+105.687 192.658
+94.9632 200.915 c
+84.239 209.172
+73.5147 220.181
+65.4715 231.19 c
+57.4283 242.199
+52.0662 253.208
+52.0662 261.464 c
+52.0662 269.721
+57.4283 275.226
+60.1094 283.482 c
+62.7904 291.739
+62.7904 302.748
+60.1094 313.757 c
+57.4283 324.766
+52.0662 335.775
+46.704 344.032 c
+41.3419 352.289
+35.9798 357.793
+41.3419 371.555 c
+46.704 385.316
+62.7904 407.334
+72.1177 422.935 c
+81.445 438.537
+84.0131 447.721
+85.3381 452.356 c
+86.8223 455.642 l
+-2.10937 455.608 l
+-1.55235 -0.00927129 l
+41.4151 0.128546 l
+84.239 0.00028958
+170.033 0.00028958
+212.93 0.00028958 c
+</path>
+</group>
+<path stroke="KITred" fill="KITred50" pen="0.6">
+85 76
+85 76
+85 76
+53 115
+53 115
+53 115
+17 115
+17 115
+17 115
+17 142
+17 142
+17 142
+23 152
+23 152
+23 152
+103 152
+103 152
+103 152
+144 112
+144 112
+144 112
+144 76
+144 76
+144 76 u
+</path>
+<path stroke="KITorange" fill="KITorange50" pen="0.5">
+22 147 m
+22 116 l
+48 116 l
+48 147 l
+h
+</path>
+<path stroke="KITorange" fill="KITorange50" pen="0.5">
+52 147 m
+104 147 l
+143 109 l
+143 78 l
+86 78 l
+52 119 l
+h
+</path>
+<path stroke="KITgreen" fill="KITgreen50" pen="0.6">
+106.213 111.025 m
+102 110
+102 110
+102 110
+65 110
+65 110
+65 110
+78 94
+78 94
+78 94
+106 94
+106 94
+106 94
+106 109
+106 109
+106 109
+106.213 111.025 c
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+388.287 408.971 m
+388.287 384.899 l
+388.287 357.872 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+266.884 308.816 m
+289.875 308.816 l
+313.89 308.816 l
+338.275 308.816 l
+366.616 308.816 l
+</path>
+<path stroke="black" pen="1">
+79 101 m
+86.5474 101 l
+94.1574 101 l
+103.002 101 l
+103.002 107.208 l
+106.213 111.024 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+313.89 258.804 m
+338.275 258.804 l
+366.616 258.804 l
+388.287 258.804 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+338.275 234.555 m
+366.616 234.555 l
+388.287 234.555 l
+388.287 258.804 l
+388.287 283.169 l
+376.905 321.616 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+486.868 234.555 m
+462.991 234.555 l
+441.004 234.555 l
+414.305 234.555 l
+414.305 258.804 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+486.868 258.804 m
+462.991 258.804 l
+441.004 258.804 l
+414.305 258.804 l
+376.905 321.616 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+486.868 283.169 m
+462.991 283.169 l
+441.004 283.169 l
+414.305 283.169 l
+414.305 308.816 l
+388.287 308.816 l
+376.905 321.616 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+414.305 308.816 m
+441.004 308.816 l
+462.991 308.816 l
+486.868 308.816 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+462.991 334.442 m
+441.004 334.442 l
+414.305 334.442 l
+376.905 321.616 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+441.004 357.872 m
+441.004 334.442 l
+</path>
+<use matrix="0.312077 0 0 0.298153 -10.4287 15.9134" name="mark/turbine(sx)" pos="459.844 331.827" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.273 15.3454" name="mark/turbine(sx)" pos="486.428 308.104" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.8481 15.2029" name="mark/turbine(sx)" pos="461.188 308.581" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.1023 15.183" name="mark/turbine(sx)" pos="436.812 308.651" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.8211 14.56" name="mark/turbine(sx)" pos="412.417 310.739" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.7748 15.2412" name="mark/turbine(sx)" pos="386.249 308.454" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.5285 15.0607" name="mark/turbine(sx)" pos="363.79 309.06" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.9747 15.0426" name="mark/turbine(sx)" pos="340.083 309.122" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.652 15.036" name="mark/turbine(sx)" pos="314.664 309.145" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.8977 14.5387" name="mark/turbine(sx)" pos="291.437 310.809" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 15.1331" name="mark/turbine(sx)" pos="266.884 308.816" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -12.0931 15.7539" name="mark/turbine(sx)" pos="291.893 285.914" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.6933 14.8784" name="mark/turbine(sx)" pos="389.193 284.025" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -12.068 15.4918" name="mark/turbine(sx)" pos="390.394 233.354" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 15.0532" name="mark/turbine(sx)" pos="388.287 259.073" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4273 14.7456" name="mark/turbine(sx)" pos="366.67 260.104" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -12.1612 15.0443" name="mark/turbine(sx)" pos="340.68 259.103" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.8408 14.3673" name="mark/turbine(sx)" pos="315.268 261.373" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -12.6823 15.1105" name="mark/turbine(sx)" pos="342.35 234.633" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 15.1115" name="mark/turbine(sx)" pos="366.616 234.629" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.2909 14.6806" name="mark/turbine(sx)" pos="413.922 284.688" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.4249 14.9285" name="mark/turbine(sx)" pos="437.846 283.857" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.1804 15.1803" name="mark/turbine(sx)" pos="462.253 283.013" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.1078 15.1331" name="mark/turbine(sx)" pos="485.899 283.169" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.1742 15.1115" name="mark/turbine(sx)" pos="486.111 258.879" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.6985 14.6429" name="mark/turbine(sx)" pos="460.709 260.451" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.9857 14.5699" name="mark/turbine(sx)" pos="439.644 260.694" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.346 15.1331" name="mark/turbine(sx)" pos="414.099 258.804" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 15.2661" name="mark/turbine(sx)" pos="414.305 234.11" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 15.0737" name="mark/turbine(sx)" pos="441.004 234.757" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 15.6928" name="mark/turbine(sx)" pos="462.991 232.68" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 15.1331" name="mark/turbine(sx)" pos="486.868 234.555" size="1.25" stroke="black"/>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+338.275 433.181 m
+338.275 408.971 l
+338.275 384.899 l
+338.275 357.872 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+366.616 433.181 m
+366.616 408.971 l
+366.616 384.899 l
+366.616 357.872 l
+388.287 357.872 l
+388.287 334.442 l
+376.905 321.616 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+414.305 384.899 m
+414.305 357.872 l
+414.305 334.442 l
+</path>
+<path matrix="0.193592 0 0 0.171329 2.09225 74.955" stroke="black" pen="1">
+235.999 256.243 m
+208.758 256.749 l
+164.743 256.749 l
+117.403 256.749 l
+117.403 305.92 l
+164.743 305.92 l
+208.758 305.92 l
+236.002 256.155 l
+</path>
+<path matrix="0.193592 0 0 0.171329 2.09225 74.955" stroke="black" pen="1">
+235.954 256.244 m
+220.906 344.65 l
+208.759 352.361 l
+164.744 352.361 l
+117.404 352.361 l
+117.404 402.001 l
+164.744 402.001 l
+208.759 402.001 l
+224.416 344.822 l
+236.002 256.155 l
+</path>
+<use matrix="0.312077 0 0 0.298153 -112.643 -18.277" name="mark/turbine(sx)" pos="440.479 543.699" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -112.636 -18.2308" name="mark/turbine(sx)" pos="469.824 543.545" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -112.366 -18.4853" name="mark/turbine(sx)" pos="496.264 544.396" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -112.891 -18.5617" name="mark/turbine(sx)" pos="470.64 516.13" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -112.7 -18.4194" name="mark/turbine(sx)" pos="440.665 515.651" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -112.892 -18.4853" name="mark/turbine(sx)" pos="497.949 515.872" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -112.96 -18.5833" name="mark/turbine(sx)" pos="441.496 489.518" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -113.201 -18.5594" name="mark/turbine(sx)" pos="442.264 461.181" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -113.393 -18.5594" name="mark/turbine(sx)" pos="472.248 461.181" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -113.201 -18.3822" name="mark/turbine(sx)" pos="471.631 488.842" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -113.201 -18.4853" name="mark/turbine(sx)" pos="498.935 489.187" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -113.201 -18.4853" name="mark/turbine(sx)" pos="498.935 460.932" size="1.25" stroke="black"/>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+240.333 357.872 m
+240.333 384.899 l
+240.333 408.971 l
+240.333 433.181 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+289.875 433.181 m
+289.875 408.971 l
+289.875 384.899 l
+289.875 357.872 l
+</path>
+<use matrix="0.312077 0 0 0.298153 -10.5357 15.229" name="mark/turbine(sx)" pos="287.072 432.862" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.0681 14.8778" name="mark/turbine(sx)" pos="288.777 409.828" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.721 15.1619" name="mark/turbine(sx)" pos="287.666 384.804" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.6468 14.9698" name="mark/turbine(sx)" pos="237.886 409.518" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.4033 14.8988" name="mark/turbine(sx)" pos="237.106 433.969" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.9166 15.6818" name="mark/turbine(sx)" pos="238.75 383.061" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.2765 15.865" name="mark/turbine(sx)" pos="337.846 382.445" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.8055 15.0794" name="mark/turbine(sx)" pos="336.337 409.153" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.8133 15.3923" name="mark/turbine(sx)" pos="336.361 432.312" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -9.28105 15.1331" name="mark/turbine(sx)" pos="359.792 433.181" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -9.48791 15.4235" name="mark/turbine(sx)" pos="360.455 408" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -9.75458 15.4499" name="mark/turbine(sx)" pos="361.309 383.837" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.167 14.8959" name="mark/turbine(sx)" pos="362.631 358.669" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.495 14.5238" name="mark/turbine(sx)" pos="385.353 359.919" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.6565 15.67" name="mark/turbine(sx)" pos="385.871 383.1" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.2318 15.1331" name="mark/turbine(sx)" pos="384.509 408.971" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.1835 15.5497" name="mark/turbine(sx)" pos="387.559 333.047" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.2281 15.1331" name="mark/turbine(sx)" pos="410.517 384.899" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.2237 15.1984" name="mark/turbine(sx)" pos="410.502 357.653" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.6834 15.2881" name="mark/turbine(sx)" pos="411.976 333.923" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.1577 15.1331" name="mark/turbine(sx)" pos="436.99 357.872" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.0002 15.6501" name="mark/turbine(sx)" pos="436.485 332.711" size="1.25" stroke="black"/>
+<path matrix="0.193592 0 0 0.171329 2.09225 74.955" stroke="KITseablue" pen="1">
+235.954 256.244 m
+235.739 210.378 l
+25.0146 188.942 l
+</path>
+<use matrix="0.312077 0 0 0.298153 -110.781 -18.5542" name="mark/substation(sx)" pos="508.085 460.822" size="1.25" stroke="KITblack70"/>
+<text matrix="0.312077 0 0 0.298153 -13.3281 -84.502" transformations="translations" pos="315.357 549.511" stroke="KITorange" type="label" width="56.535" height="3.447" depth="0.96" valign="baseline" size="5">\bf Collector System</text>
+<path matrix="0.193592 0 0 0.171329 2.09225 74.955" stroke="KITseablue" pen="1">
+278.916 201.122 m
+25.0146 188.942 l
+</path>
+<path matrix="0.312077 0 0 0.298153 2.09381 -92.9793" stroke="KITseablue" pen="1">
+15.5124 671.82 m
+-0.0215661 671.766 l
+</path>
+<use matrix="0.312077 0 0 0.298153 -7.86335 -25.727" name="mark/substation(sx)" pos="47.4182 446.255" size="1.25" stroke="KITblack70"/>
+<use matrix="0.312077 0 0 0.298153 -11.4694 16.0505" name="mark/turbine(sx)" pos="314.079 284.919" size="1.25" stroke="black"/>
+<path stroke="black" pen="1">
+63.6398 115.892 m
+71.9266 115.892 l
+79.1005 115.892 l
+86.595 115.892 l
+94.205 115.892 l
+106.213 111.024 l
+</path>
+<path stroke="black" pen="1">
+55.503 144.287 m
+55.503 137.069 l
+55.503 129.892 l
+55.503 121.834 l
+63.592 121.834 l
+93.5182 117.798 l
+106.213 111.024 l
+</path>
+<path stroke="black" pen="1">
+71.8779 144.288 m
+71.8779 137.069 l
+71.8779 129.892 l
+71.8779 121.834 l
+79.0525 121.834 l
+94.7022 118.727 l
+106.213 111.024 l
+</path>
+<path matrix="0.312077 0 0 0.298153 -11.4104 15.1331" stroke="black" pen="1">
+313.89 433.181 m
+313.89 408.971 l
+313.89 384.899 l
+313.89 357.872 l
+338.275 357.872 l
+376.905 321.616 l
+</path>
+<use matrix="0.312077 0 0 0.298153 -10.9413 15.3929" name="mark/turbine(sx)" pos="212.91 432.311" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.9182 14.9416" name="mark/turbine(sx)" pos="212.836 409.616" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.6445 15.4841" name="mark/turbine(sx)" pos="215.163 383.725" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 14.8516" name="mark/turbine(sx)" pos="214.413 358.817" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -9.99398 15.3825" name="mark/turbine(sx)" pos="262.346 432.346" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.1408 14.9075" name="mark/turbine(sx)" pos="262.816 409.729" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.7285 15.5236" name="mark/turbine(sx)" pos="264.699 383.591" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.6559 15.2062" name="mark/turbine(sx)" pos="311.472 432.937" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.7626 15.2703" name="mark/turbine(sx)" pos="311.814 408.512" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.8355 15.4351" name="mark/turbine(sx)" pos="312.047 383.888" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.0133 14.5713" name="mark/turbine(sx)" pos="312.617 359.759" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.4104 14.9532" name="mark/turbine(sx)" pos="240.333 358.476" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.6841 14.6916" name="mark/turbine(sx)" pos="264.557 359.355" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.2812 15.0788" name="mark/turbine(sx)" pos="289.46 358.058" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -11.5682 15.1028" name="mark/turbine(sx)" pos="338.78 357.976" size="1.25" stroke="black"/>
+<text matrix="0.312077 0 0 0.298153 -60.3417 -16.0574" transformations="translations" pos="315.357 549.511" stroke="KITred" type="label" width="52.852" height="3.438" depth="0" valign="baseline" size="5">\bf Full Wind Farm</text>
+<text matrix="0.312077 0 0 0.299475 -17.4872 -69.8027" transformations="translations" pos="315.357 549.511" stroke="KITgreen" type="label" width="23.356" height="3.438" depth="0" valign="baseline" size="5">\bf Circuit</text>
+<use matrix="0.312078 0 0 0.298153 2.09387 -92.9792" name="mark/disk(sx)" pos="-0.0215661 671.766" size="3" stroke="black"/>
+<path matrix="0.592194 0 0 0.460576 -6.55821 -49.978" fill="white">
+14.0195 346.073 m
+14.0195 336.488 l
+11.4869 336.488 l
+11.4869 346.073 l
+h
+</path>
+<path matrix="1.11447 0 0 0.460576 37.5348 -84.4371" fill="white">
+14.0195 346.073 m
+14.0195 336.488 l
+11.4869 336.488 l
+11.4869 346.073 l
+h
+</path>
+<path stroke="KITblack50" pen="0.5">
+292.284 115.715 m
+300.571 115.715 l
+307.745 115.715 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+475.564 320.655 m
+475.564 273.625 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+436.254 320.658 m
+436.255 273.626 l
+475.564 273.625 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack" pen="1">
+475.564 273.622 m
+537.837 210.533 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+397.542 320.655 m
+397.541 273.627 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+360.48 320.657 m
+360.48 273.625 l
+397.541 273.627 l
+</path>
+<path stroke="KITblack" pen="1">
+307.747 121.696 m
+323.347 118.55 l
+334.907 110.839 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+275.894 320.659 m
+275.894 273.623 l
+317.678 273.622 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+317.678 320.655 m
+317.678 273.622 l
+</path>
+<path stroke="KITblack" pen="1">
+292.286 121.696 m
+322.163 117.621 l
+334.858 110.848 l
+</path>
+<path stroke="KITblack70" pen="1">
+307.745 115.715 m
+315.24 115.715 l
+322.85 115.715 l
+334.858 110.848 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+521.251 320.656 m
+521.251 273.624 l
+556.186 273.622 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack" pen="1">
+556.186 273.622 m
+556.185 232.851 l
+537.586 210.582 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+641.168 232.848 m
+598.129 232.849 l
+537.586 210.582 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack" pen="1">
+598.128 188.253 m
+556.186 188.253 l
+537.838 210.532 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack" pen="1">
+598.128 101.22 m
+537.586 210.582 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+641.168 188.253 m
+598.128 188.253 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+641.168 143.623 m
+598.129 143.623 l
+598.128 188.253 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+521.251 101.22 m
+556.186 101.22 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+641.168 101.22 m
+598.129 101.221 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack" pen="1">
+556.186 101.222 m
+556.186 143.621 l
+537.586 210.582 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+641.168 59.0216 m
+598.128 59.0216 l
+598.128 101.22 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+556.186 59.0216 m
+556.186 101.22 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack" pen="1">
+521.251 188.253 m
+537.837 210.528 l
+</path>
+<path stroke="KITblack70" pen="0.8">
+322.849 100.797 m
+331.693 100.797 l
+331.696 107.005 l
+</path>
+<path matrix="0.312077 0 0 0.299475 217.282 14.5223" stroke="KITblack50" pen="0.5">
+388.287 408.971 m
+388.287 384.899 l
+388.287 357.872 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+360.479 188.253 m
+397.542 188.253 l
+436.255 188.253 l
+</path>
+<path stroke="KITblack50" pen="0.5">
+307.691 100.797 m
+315.239 100.797 l
+322.849 100.797 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+436.255 101.22 m
+475.564 101.22 l
+521.251 101.22 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+475.564 59.0216 m
+521.251 59.0216 l
+556.186 59.0216 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+436.255 188.257 m
+475.565 188.255 l
+521.251 188.253 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+715.102 59.0216 m
+676.612 59.0216 l
+641.168 59.0216 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+715.102 101.22 m
+676.612 101.22 l
+641.168 101.22 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+715.102 143.621 m
+676.612 143.621 l
+641.168 143.621 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+641.168 188.253 m
+676.612 188.253 l
+715.102 188.253 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+676.612 232.848 m
+641.168 232.848 l
+</path>
+<path matrix="0.312077 0 0 0.299475 217.282 14.5223" stroke="KITblack50" pen="0.5">
+441.004 357.872 m
+441.004 334.442 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+475.564 404.677 m
+475.564 362.546 l
+475.564 320.655 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+521.251 404.677 m
+521.251 362.546 l
+521.251 320.655 l
+</path>
+<path matrix="0.312077 0 0 0.299475 217.282 14.5223" stroke="KITblack50" pen="0.5">
+414.305 384.899 m
+414.305 357.872 l
+414.305 334.442 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+235.999 256.243 m
+208.758 256.749 l
+164.743 256.749 l
+117.403 256.749 l
+117.403 305.92 l
+164.743 305.92 l
+208.758 305.92 l
+236.002 256.155 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack70" pen="0.8">
+235.954 256.244 m
+220.906 344.65 l
+208.759 352.361 l
+164.744 352.361 l
+117.404 352.361 l
+117.404 402.001 l
+164.744 402.001 l
+208.759 402.001 l
+224.416 344.822 l
+236.002 256.155 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+317.678 320.655 m
+317.678 362.546 l
+317.678 404.677 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+397.542 404.677 m
+397.542 362.546 l
+397.542 320.655 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+275.894 404.677 m
+275.894 362.546 l
+275.894 320.655 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+360.48 404.677 m
+360.48 362.546 l
+360.48 320.657 l
+</path>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITblack50" pen="0.5">
+436.255 404.677 m
+436.255 362.546 l
+436.255 320.655 l
+</path>
+<use matrix="0.312077 0 0 0.299475 218.263 15.3056" name="mark/turbine(sx)" pos="459.844 331.827" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.419 14.7353" name="mark/turbine(sx)" pos="486.428 308.104" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.845 14.5924" name="mark/turbine(sx)" pos="461.188 308.581" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.59 14.5719" name="mark/turbine(sx)" pos="436.812 308.651" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.872 13.9469" name="mark/turbine(sx)" pos="412.417 310.739" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.918 14.631" name="mark/turbine(sx)" pos="386.249 308.454" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.163 14.4493" name="mark/turbine(sx)" pos="363.79 309.06" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 216.718 14.4312" name="mark/turbine(sx)" pos="340.083 309.122" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.041 14.4247" name="mark/turbine(sx)" pos="314.664 309.145" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 216.794 13.9255" name="mark/turbine(sx)" pos="291.437 310.809" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.5223" name="mark/turbine(sx)" pos="266.884 308.816" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217 14.2664" name="mark/turbine(sx)" pos="389.193 284.025" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 216.625 14.8822" name="mark/turbine(sx)" pos="390.394 233.354" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.4422" name="mark/turbine(sx)" pos="388.287 259.073" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.266 14.1328" name="mark/turbine(sx)" pos="366.67 260.104" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 216.532 14.433" name="mark/turbine(sx)" pos="340.68 259.103" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 216.851 13.7533" name="mark/turbine(sx)" pos="315.268 261.373" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 216.011 14.4995" name="mark/turbine(sx)" pos="342.35 234.633" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.5004" name="mark/turbine(sx)" pos="366.616 234.629" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.402 14.0678" name="mark/turbine(sx)" pos="413.922 284.688" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.268 14.3166" name="mark/turbine(sx)" pos="437.846 283.857" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.513 14.5693" name="mark/turbine(sx)" pos="462.253 283.013" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.584 14.5223" name="mark/turbine(sx)" pos="485.899 283.169" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.518 14.5004" name="mark/turbine(sx)" pos="486.111 258.879" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.993 14.0295" name="mark/turbine(sx)" pos="460.709 260.451" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.707 13.9567" name="mark/turbine(sx)" pos="439.644 260.694" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.347 14.5223" name="mark/turbine(sx)" pos="414.099 258.804" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.6557" name="mark/turbine(sx)" pos="414.305 234.11" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.4624" name="mark/turbine(sx)" pos="441.004 234.757" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 15.0841" name="mark/turbine(sx)" pos="462.991 232.68" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.5223" name="mark/turbine(sx)" pos="486.868 234.555" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 116.05 -19.0357" name="mark/turbine(sx)" pos="440.479 543.699" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 116.056 -18.9893" name="mark/turbine(sx)" pos="469.824 543.545" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 116.326 -19.245" name="mark/turbine(sx)" pos="496.264 544.396" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.801 -19.322" name="mark/turbine(sx)" pos="470.64 516.13" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.992 -19.1791" name="mark/turbine(sx)" pos="440.665 515.651" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.801 -19.245" name="mark/turbine(sx)" pos="497.949 515.872" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.734 -19.3437" name="mark/turbine(sx)" pos="441.496 489.518" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.492 -19.3196" name="mark/turbine(sx)" pos="442.264 461.181" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.3 -19.3196" name="mark/turbine(sx)" pos="472.248 461.181" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.492 -19.1416" name="mark/turbine(sx)" pos="471.631 488.842" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.492 -19.245" name="mark/turbine(sx)" pos="498.935 489.187" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 115.492 -19.245" name="mark/turbine(sx)" pos="498.935 460.932" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.157 14.6186" name="mark/turbine(sx)" pos="287.072 432.862" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.624 14.2658" name="mark/turbine(sx)" pos="288.777 409.828" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.972 14.5512" name="mark/turbine(sx)" pos="287.666 384.804" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.046 14.3584" name="mark/turbine(sx)" pos="237.886 409.518" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.29 14.2869" name="mark/turbine(sx)" pos="237.106 433.969" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.777 15.0735" name="mark/turbine(sx)" pos="238.75 383.061" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.416 15.2572" name="mark/turbine(sx)" pos="337.846 382.445" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.888 14.4683" name="mark/turbine(sx)" pos="336.337 409.153" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.881 14.7825" name="mark/turbine(sx)" pos="336.361 432.312" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 219.413 14.5223" name="mark/turbine(sx)" pos="359.792 433.181" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 219.204 14.8139" name="mark/turbine(sx)" pos="360.455 408" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.939 14.8404" name="mark/turbine(sx)" pos="361.309 383.837" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.526 14.2842" name="mark/turbine(sx)" pos="362.631 358.669" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.199 13.9104" name="mark/turbine(sx)" pos="385.353 359.919" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.037 15.0616" name="mark/turbine(sx)" pos="385.871 383.1" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.461 14.5223" name="mark/turbine(sx)" pos="384.509 408.971" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.51 14.9404" name="mark/turbine(sx)" pos="387.559 333.047" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.466 14.5223" name="mark/turbine(sx)" pos="410.517 384.899" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.469 14.588" name="mark/turbine(sx)" pos="410.502 357.653" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.01 14.6782" name="mark/turbine(sx)" pos="411.976 333.923" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.535 14.5223" name="mark/turbine(sx)" pos="436.99 357.872" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.692 15.0414" name="mark/turbine(sx)" pos="436.485 332.711" size="1.25" stroke="black"/>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITseablue" pen="1">
+235.954 256.244 m
+235.739 210.378 l
+25.0146 188.942 l
+</path>
+<use matrix="0.312077 0 0 0.299475 117.911 -19.3142" name="mark/substation(sx)" pos="508.085 460.822" size="1.25" stroke="KITblack70"/>
+<path matrix="0.193592 0 0 0.172088 230.786 74.609" stroke="KITseablue" pen="1">
+278.916 201.122 m
+25.0146 188.942 l
+</path>
+<path matrix="0.312077 0 0 0.299475 230.787 -94.0694" stroke="KITseablue" pen="1">
+15.5124 671.82 m
+-0.0215661 671.766 l
+</path>
+<use matrix="0.312077 0 0 0.299475 220.829 -26.5189" name="mark/substation(sx)" pos="47.4182 446.255" size="1.25" stroke="KITblack70"/>
+<use matrix="0.312077 0 0 0.299475 230.787 -94.0694" name="mark/disk(sx)" pos="-0.0215661 671.766" size="3" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.143 15.4817" name="mark/turbine(sx)" pos="240.779 334.695" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.68 15.506" name="mark/turbine(sx)" pos="265.612 334.614" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 15.6198" name="mark/turbine(sx)" pos="289.875 334.234" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 15.7656" name="mark/turbine(sx)" pos="313.89 333.747" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.752 14.7834" name="mark/turbine(sx)" pos="212.91 432.311" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.774 14.3296" name="mark/turbine(sx)" pos="212.836 409.616" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.048 14.8748" name="mark/turbine(sx)" pos="215.163 383.725" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.2394" name="mark/turbine(sx)" pos="214.413 358.817" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.7 14.7727" name="mark/turbine(sx)" pos="262.346 432.346" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.551 14.2958" name="mark/turbine(sx)" pos="262.816 409.729" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.963 14.9146" name="mark/turbine(sx)" pos="264.699 383.591" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.037 14.5957" name="mark/turbine(sx)" pos="311.472 432.937" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.932 14.6604" name="mark/turbine(sx)" pos="311.814 408.512" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.858 14.8255" name="mark/turbine(sx)" pos="312.047 383.888" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.68 13.9579" name="mark/turbine(sx)" pos="312.617 359.759" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 14.3412" name="mark/turbine(sx)" pos="240.333 358.476" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 218.01 14.079" name="mark/turbine(sx)" pos="264.557 359.355" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.413 14.4674" name="mark/turbine(sx)" pos="289.46 358.058" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.125 14.4921" name="mark/turbine(sx)" pos="338.78 357.976" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 217.282 15.5575" name="mark/turbine(sx)" pos="338.275 334.442" size="1.25" stroke="black"/>
+<path matrix="0.638839 0 0 0.463465 -34.0545 -51.3207" fill="white">
+414.015 348.054 m
+414.015 337.631 l
+411.675 337.631 l
+411.675 348.054 l
+h
+</path>
+<use matrix="0.312077 0 0 0.298153 -12.2687 15.8672" name="mark/turbine(sx)" pos="341.025 285.534" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 -10.8799 16.0497" name="mark/turbine(sx)" pos="364.916 284.922" size="1.25" stroke="black"/>
+<path matrix="0 -1.11908 0.293363 0 -92.6097 426.162" stroke="KITseablue30" fill="KITseablue30">
+336 368 m
+336 336 l
+368 336 l
+368 368 l
+h
+</path>
+<path matrix="0 -0.772701 0.293363 0 -92.6097 298.694" stroke="KITseablue30" fill="KITseablue30">
+368 368 m
+368 384 l
+384 352 l
+368 320 l
+h
+</path>
+<text matrix="0 0.678291 -0.751813 0 187.781 -8.98845" pos="32 240" stroke="black" type="minipage" width="58.52" height="6.89" depth="1.91" valign="top" size="10" style="center">Complexity</text>
+<path matrix="1.44547 0 0 0.568624 -334.315 -69.3195" stroke="KITgreen" fill="KITgreen50">
+246 210 m
+246 186 l
+489 186 l
+489 210 l
+h
+</path>
+<text matrix="0.410857 0 0 0.349217 156.96 -37.0795" transformations="translations" pos="32 240" stroke="black" type="minipage" width="78.985" height="5.923" depth="0.94" valign="top" size="10" style="center">Circuit Problem</text>
+<text matrix="0.410857 0 0 0.349217 44.4127 -36.2085" transformations="translations" pos="32 240" stroke="black" type="minipage" width="46.975" height="7.473" depth="2.49" valign="top" size="10" style="center">P (MST)</text>
+<path matrix="0.329049 0 0 -0.986396 -33.5995 387.901" stroke="KITblack50" cap="1" opacity="50%">
+544 256 m
+800 256 l
+</path>
+<path matrix="0.330303 0 0 -0.986396 -34.2821 233.964" stroke="KITblack50" cap="1" opacity="50%">
+544 128 m
+800 128 l
+</path>
+<path matrix="0.328953 0 0 -0.986396 -33.5466 403.926" stroke="KITblack50" cap="1" opacity="50%">
+544 256 m
+800 256 l
+</path>
+<path matrix="1.44547 0 0 0.541413 -334.315 -98.7264" stroke="KITred" fill="KITred50">
+246 210 m
+246 186 l
+489 186 l
+489 210 l
+h
+</path>
+<text matrix="0.389088 0 0 0.330715 21.7268 -66.5627" transformations="translations" pos="32 240" stroke="black" type="minipage" width="93.74" height="7.473" depth="2.49" valign="top" size="10" style="center">NP-hard (Heuristics)</text>
+<text matrix="0.410857 0 0 0.349217 142.031 -72.0207" transformations="translations" pos="32 240" stroke="black" type="minipage" width="108.843" height="5.923" depth="0.94" valign="top" size="10" style="center">Full Farm Problem</text>
+<text matrix="0.410857 0 0 0.349217 283.729 -72.0207" transformations="translations" pos="32 240" stroke="black" type="minipage" width="57.142" height="5.923" depth="0.94" valign="top" size="10" style="center">NP-hard</text>
+<path matrix="1.44557 0 0 0.532802 -334.352 -64.6024" stroke="KITorange" fill="KITorange50">
+246 181.5 m
+246 157.5 l
+489 157.5 l
+489 181.5 l
+h
+</path>
+<text matrix="0.410857 0 0 0.349217 25.5592 -53.769" transformations="translations" pos="32 240" stroke="black" type="minipage" width="84.682" height="7.473" depth="2.49" valign="top" size="10" style="center">NP-hard (CMST)</text>
+<text matrix="0.410857 0 0 0.349217 284.217 -54.7865" transformations="translations" pos="32 240" stroke="black" type="minipage" width="56.165" height="5.923" depth="0.94" valign="top" size="10" style="center">NP-hard</text>
+<text matrix="0.410857 0 0 0.349217 147.385 -54.64" transformations="translations" pos="32 240" stroke="black" type="minipage" width="98.134" height="5.923" depth="0.94" valign="top" size="10" style="center">Substation Problem</text>
+<path matrix="0.40728 0 0 0.419079 174.111 -51.0658" stroke="KITblack70">
+256 240 m
+256 128 l
+</path>
+<path matrix="0.40728 0 0 0.418924 36.5611 -51.0468" stroke="KITblack70">
+256 240 m
+256 128 l
+</path>
+<text matrix="0.410857 0 0 0.349217 266.099 -37.0795" transformations="translations" pos="32 240" stroke="black" type="minipage" width="92.402" height="5.923" depth="0.94" valign="top" size="10" style="center">NP-hard</text>
+<use matrix="0.312077 0 0 0.298153 216.598 15.5509" name="mark/turbine(sx)" pos="291.893 285.914" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 217.222 15.8475" name="mark/turbine(sx)" pos="314.079 284.919" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 216.423 15.6642" name="mark/turbine(sx)" pos="341.025 285.534" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.298153 217.812 15.8467" name="mark/turbine(sx)" pos="364.916 284.922" size="1.25" stroke="black"/>
+<path matrix="1 0 0 1 228.694 -0.195317" stroke="KITseablue" pen="1">
+106.165 111.034 m
+101 113 l
+62 113 l
+56.0882 109.415 l
+</path>
+<use matrix="0.312077 0 0 0.299475 217.906 14.2738" name="mark/substation(sx)" pos="374.903 322.449" size="1.25" stroke="KITblack70"/>
+<use matrix="0.312077 0 0 0.299475 269.982 -24.4223" name="mark/substation(sx)" pos="47.4182 446.255" size="1.25" stroke="KITblack70"/>
+<path matrix="1 0 0 1 0.0491905 -0.0179086" stroke="KITseablue" pen="1">
+106.213 111.025 m
+102 111 l
+62 111 l
+56.0881 109.413 l
+</path>
+<use matrix="0.312077 0 0 0.299475 -11.5018 15.6591" name="mark/turbine(sx)" pos="240.779 334.695" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 -10.9648 15.6834" name="mark/turbine(sx)" pos="265.612 334.614" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 -11.3628 15.7972" name="mark/turbine(sx)" pos="289.875 334.234" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 -11.3628 15.943" name="mark/turbine(sx)" pos="313.89 333.747" size="1.25" stroke="black"/>
+<use matrix="0.312077 0 0 0.299475 -11.3628 15.7349" name="mark/turbine(sx)" pos="338.275 334.442" size="1.25" stroke="black"/>
+<path matrix="1 0 0 1 0.0491905 -0.0179086" stroke="KITseablue" pen="1">
+106.165 111.034 m
+101 113 l
+62 113 l
+56.0882 109.415 l
+</path>
+<use matrix="0.312077 0 0 0.298153 41.2899 -23.6395" name="mark/substation(sx)" pos="47.4182 446.255" size="1.25" stroke="KITblack70"/>
+<use matrix="0.312077 0 0 0.298153 -10.7858 14.8858" name="mark/substation(sx)" pos="374.903 322.449" size="1.25" stroke="KITblack70"/>
+<text matrix="0.300908 0 0 0.300908 20.3233 46.6162" pos="544 272" stroke="KITblack" type="label" width="77.2755" height="18.3089" depth="6.1005" valign="baseline">\SI{150}{\EUR\per\metre}</text>
+<path matrix="0.089906 0 0 0.265642 192.453 56.9962" stroke="KITblack50" pen="0.5" cap="1">
+279.306 275.951 m
+358.67 275.948 l
+</path>
+<text matrix="0.300908 0 0 0.300908 -18.4751 45.9232" pos="544 272" stroke="KITblack" type="label" width="113.43" height="16.8144" depth="0" valign="baseline">2 Turbines</text>
+<text matrix="0.300908 0 0 0.300908 20.3233 37.8605" pos="544 272" stroke="KITblack" type="label" width="77.2755" height="18.3089" depth="6.1005" valign="baseline">\SI{300}{\EUR\per\meter}</text>
+<path matrix="0.089906 0 0 0.265642 192.453 48.2405" stroke="KITblack70" pen="1" cap="1">
+279.306 275.951 m
+358.67 275.948 l
+</path>
+<text matrix="0.300908 0 0 0.300908 -18.4751 37.1675" pos="544 272" stroke="KITblack" type="label" width="113.43" height="16.8144" depth="0" valign="baseline">7 Turbines</text>
+<text matrix="0.300908 0 0 0.300908 20.3233 29.1048" pos="544 272" stroke="KITblack" type="label" width="77.2755" height="18.3089" depth="6.1005" valign="baseline">\SI{600}{\EUR\per\meter}</text>
+<path matrix="0.089906 0 0 0.265642 192.453 39.4848" stroke="KITblack" pen="2" cap="1">
+279.306 275.951 m
+358.67 275.948 l
+</path>
+<text matrix="0.300908 0 0 0.300908 -18.4751 28.4118" pos="544 272" stroke="KITblack" type="label" width="113.43" height="16.8144" depth="0" valign="baseline">9 Turbines</text>
+<text matrix="1 0 0 1 -0.824847 -6.00211" transformations="translations" pos="180 156" stroke="black" type="minipage" width="32.937" height="9.094" depth="4.11" valign="top" size="7" style="center">Costs per meter~\si{\meter} </text>
+<text matrix="0.300908 0 0 0.300908 48.2573 59.0191" pos="544 272" stroke="KITblack" type="label" width="61.0197" height="16.8144" depth="0" valign="baseline">Cable</text>
+<text matrix="0.300908 0 0 0.300908 -15.6906 59.728" pos="544 272" stroke="KITblack" type="label" width="94.9228" height="16.8315" depth="4.7285" valign="baseline">Capacity</text>
+</page>
+</ipe>
