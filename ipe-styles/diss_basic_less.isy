@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipestyle SYSTEM "ipe.dtd">
+<ipestyle name="diss_basics">
+<dashstyle name="medium dotted" value="[1 1.5] 0"/>
+<dashstyle name="dense dashed" value="[8 3] 0"/>
+<dashstyle name="long dashed" value="[12] 0"/>
+<dashstyle name="long dash dotted" value="[12 6 1 6] 0"/>
+<dashstyle name="dense dotted" value="[0.5 0.5] 0"/>
+<dashstyle name="switched" value="[4] 0"/>
+<gridsize name="3 pts" value="3"/>
+<gridsize name="2 pts" value="2"/>
+<gridsize name="1 pts" value="1"/>
+<opacity name="10 percent" value="0.1"/>
+<opacity name="20 percent" value="0.2"/>
+<opacity name="30 percent" value="0.3"/>
+<opacity name="40 percent" value="0.4"/>
+<opacity name="50 percent" value="0.5"/>
+<opacity name="60 percent" value="0.6"/>
+<opacity name="70 percent" value="0.7"/>
+<opacity name="80 percent" value="0.8"/>
+<opacity name="90 percent" value="0.9"/>
+</ipestyle>
