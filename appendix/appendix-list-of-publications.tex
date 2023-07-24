@@ -1,0 +1,78 @@
+\chapter{List of Publications}
+
+% Redefine the bibliography environment to imitate the numeric
+% citation style
+\defbibenvironment{bibliography}
+{  \list
+  {\printfield[labelnumberwidth]{labelnumber}
+  }
+  {\setlength{\labelwidth}{\labelnumberwidth}%
+    \setlength{\leftmargin}{\labelwidth}%
+    \setlength{\labelsep}{\biblabelsep}%
+    \addtolength{\labelsep}{1em}
+    \addtolength{\leftmargin}{\labelsep}%
+    \setlength{\itemsep}{\bibitemsep}%
+    \setlength{\parsep}{\bibparsep}}%
+  \renewcommand*{\makelabel}[1]{\hss##1}}
+{\endlist
+}
+{\item}
+
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}\hspace{-1.1em}}
+\toggletrue{authorend}
+\renewbibmacro*{author}{%
+  \ifboolexpr{
+    test \ifuseauthor
+    and
+    not test {\ifnameundef{author}}
+  }
+  {~Joint work with \printnames{author}.%
+    \iffieldundef{authortype}
+    {}
+    {\setunit{\addcomma\space}%
+      \usebibmacro{authorstrg}}}
+  {}}
+  
+
+\begin{refsection}[bibliography/list-of-publications.bib]
+  % w-nfmpg-14
+\nocite{gritzbach2019engineering,hmmpww-pagmo-17,bbgrw-sevir-18,lrww-asaba-17,swgw-artcp-17,bbgrw-cmlsp-16,lmmnrsww-opgfc-15,bbgrw-sevis-16,grwww-tmtsf-18,guwww-t-18,mnrww-trfcp-15,lmmnrsww-opgff-15,bbgrw-sivrn-16} 
+  % 
+  \printbibliography[
+  type=article,
+  title={Journal Articles},
+  sorting=ydnt,
+  heading=subbibliography,
+  resetnumbers
+  ]
+  % 
+  \printbibliography[
+  type=inproceedings,
+  notkeyword={submitted},
+  title={Articles in Conference Proceedings},
+  sorting=ydnt,
+  heading=subbibliography
+  ]
+  % 
+  \printbibliography[
+  type=misc,
+  notkeyword={submitted},
+  notkeyword={jrnl},
+  title={Technical Reports},
+  sorting=ydnt,
+  heading=subbibliography
+  ]
+  % 
+  \makeatletter{\renewcommand*{\@makefnmark}{}
+  \footnotetext{The papers 
+  \parencite{gritzbach2019engineering},
+  \parencite{bbgrw-sevir-18}, 
+  \parencite{hmmpww-pagmo-17},  
+  \parencite{bbgrw-sevis-16}, 
+  \parencite{bbgrw-cmlsp-16}, 
+  \parencite{guwww-t-18}, and 
+  \parencite{swgw-artcp-17}
+  \parencite{bbgrw-sivrn-16}
+  are omitted in this thesis because of missing thematically closeness and
+  since the main author is someone else.}\makeatother}
+\end{refsection}

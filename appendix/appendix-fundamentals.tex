@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Fundamentals}
+\label{ch:appendix:sec:fundamentals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Instantaneous Curves} 
+\label{ch:appendix:sec:fundamentals:sinusoid-plot-derivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+%
+\begin{subequations}
+    \input{appendix/equations/eq-complex-real-reactive-power}
+    \label{app:foundations:sec:complex-real-reactive-power}
+\end{subequations}
+% 
+\clearpage
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Complex Power Injection}
+\label{ch:appendix:sec:fundamentals:sec:complex-power-injection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+The complete derivation of the trigonometric relationship
+from~\cref{ch:foundations:sec:power-flow-analyses:eq:complex-power-injection-resolution}
+on
+Page~\pageref{ch:foundations:sec:power-flow-analyses:eq:complex-power-injection-resolution}
+is given
+in~\cref{app:foundations:sec:power-flow-analyses:eq:complex-power-injection-resolution}.
+We emphasize the decoupled parts of the real power~\glssymbol{realpower} and
+reactive power~\glssymbol{reactivepower}.
+% 
+\begin{subequations}
+    \input{appendix/equations/eq-complex-power-injection-iv-rectangular-polar}
+    \label{app:foundations:sec:power-flow-analyses:eq:complex-power-injection-resolution}
+\end{subequations}
+% 
+\clearpage
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Complex Power Flow}
+\label{app:fundamentals:sec:complex-power-flow}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+The complete derivation of the complex power flow on an edge
+from~\cref{ch:foundations:sec:power-flow-analyses:eq:complex-power-flow:pqv} on
+Page~\pageref{ch:foundations:sec:power-flow-analyses:eq:complex-power-flow:pqv}
+is given
+in~\cref{app:foundations:sec:power-flow-analyses:eq:complex-power-flow-pqv-rectangular}.
+% 
+\begin{subequations}
+    \input{appendix/equations/eq-complex-power-flow-pqv-rectangular}
+    \label{app:foundations:sec:power-flow-analyses:eq:complex-power-flow-pqv-rectangular}
+\end{subequations}
+% 
+\clearpage
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Complex Current Flow}
+\label{app:fundamentals:sec:complex-current-flow}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+The complete derivation of the complex current flow on an edge
+from~\cref{ch:foundations:sec:power-flow-analyses:eq:complex-current-flow-voltages}
+on
+Page~\pageref{ch:foundations:sec:power-flow-analyses:eq:complex-current-flow-voltages}
+is given
+in~\cref{app:foundations:sec:power-flow-analyses:eq:complex-current-flow-rectangular}.
+% 
+\begin{align}
+    \input{appendix/equations/eq-complex-current-flow-rectangular}
+    \label{app:foundations:sec:power-flow-analyses:eq:complex-current-flow-rectangular}
+\end{align}
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Formulations}
+\label{app:fundamentals:sec:formulations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Polar PQV Formulation} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+The real and reactive parts of the complex power flow equation
+from~\cref{app:foundations:sec:power-flow-analyses:eq:complex-power-flow:pqv:rectangular}
+are transformed separately to the polar form. The real power PQV formulation is
+used
+in~\cref{ch:foundations:sec:power-flow-analyses:eq:real-power-flow:pqv:polar} on
+Page~\pageref{ch:foundations:sec:power-flow-analyses:eq:real-power-flow:pqv:polar}.
+The reactive power PQV formulation is used
+in~\cref{ch:foundations:sec:power-flow-analyses:eq:reactive-power-flow:pqv:polar}
+on Page~\pageref{ch:foundations:sec:power-flow-analyses:eq:reactive-power-flow:pqv:polar}.
+% 
+\begin{subequations}
+    \input{appendix/equations/eq-polar-pqv}
+    \label{app:foundations:sec:power-flow-analyses:eq:polar-pqv}
+\end{subequations}
+% 
+\clearpage
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Rectangular PQV Formulation} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+The real part
+in~\cref{app:foundations:eq:rectangular-pqv:network-equation:real-power} and the
+reactive part
+in~\cref{app:foundations:eq:rectangular-pqv:network-equation:reactive-power} are
+come from~\cref{app:foundations:sec:power-flow-analyses:eq:complex-power-flow:pqv:rectangular}.
+%
+\begin{subequations}
+    \input{appendix/equations/eq-rectangular-pqv}
+    \label{app:foundations:sec:power-flow-analyses:eq:rectangular-pqv}
+\end{subequations}
+% 
+\clearpage
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Polar IV Formulation} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+The~\cref{app:foundations:sec:power-flow-analyses:eq:polar-iv} comes
+from~\cref{ch:foundations:sec:power-flow-analyses:eq:complex-current-ohm-voltage,ch:foundations:sec:power-flow-analyses:eq:complex-current-flow-voltages}.
+% 
+\begin{subequations}
+    \input{appendix/equations/eq-polar-iv}
+    \label{app:foundations:sec:power-flow-analyses:eq:polar-iv}
+\end{subequations}
+% 
+\clearpage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Rectangular IV Formulation} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+\begin{subequations}
+    \input{appendix/equations/eq-rectangular-iv}
+    \label{app:foundations:sec:power-flow-analyses:eq:rectangular-iv}
+\end{subequations}
+% 
+\clearpage
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{DC Assumption 3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% 
+\begin{subequations}
+    \input{appendix/equations/eq-how-to-neglect-reactance-in-a-DC-network}
+    \label{app:foundations:sec:power-flow-analyses:eq:how-to-neglect-reactance-in-a-DC-network}
+\end{subequations}
+% 
+\clearpage
+% 

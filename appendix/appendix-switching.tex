@@ -1,0 +1,232 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Discrete Changes to the Power Grid}
+\label{ch:appendix:sec:switching:simulations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+This section is an extension of the~\cref{ch:switching} in which we consider
+discrete changes to the power grid topology with the focus on transmission
+switching. In~\cref{ch:switching:sec:evaluation}, we evaluate two different
+algorithms and present for the~\gls{dtp} betweenness centralities two networks
+in~\cref{ch:switching:sec:evaluation:fig:simulations}\screen{a\&b}. In this
+section, we extend this to other power grid sizes and structures such that we
+have a broader evaluation.
+\cref{ch:switching:sec:evaluation:fig:simulations}\screen{d} illustrates the
+compressed representation.
+
+In this section, we test the influence of switching edges one by one with
+different~\acrlong{dtp} (\gls{dtp}) betweenness centralities and their influence
+on the~\acrlong{mpf} (\gls{mpf}). For each test case, we compute the~\gls{dtp}
+betweenness centrality for each edge and the~\gls{mpf} when only this edge is
+switched. The results of these simulations are shown in~\cref{fig:Switching_Betweenness_Centrality_Plot_Cut_Y_3_to_24,%
+fig:Switching_Betweenness_Centrality_Plot_Cut_Y_29_to_89,%
+fig:Switching_Betweenness_Centrality_Plot_Cut_Y_162_to_3012}. 
+% 
+We sort the edges from highest to lowest centrality. The centrality of the
+edges is shown as a dashed curve. The solid curve represents the value of
+the~\gls{mpf} if the edge is switched. We can see that for many edges
+switching them does not influence the value of the~\gls{mpf}. The edges
+where switching them decreases the value are often those with medium to low
+centrality values (see in particular \texttt{nesta\_case14\_ieee},
+\texttt{nesta\_case30\_ieee} and \texttt{nesta\_case300\_ieee}). Switching edges
+with high centrality (relative to the other edges in the network) still keeps a
+large flow value. For a combination of all the results refer
+to~\cref{ch:switching:sec:evaluation:fig:simulations}\screen{d}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%
+\begingroup
+\tikzset{every picture/.style={scale=0.43}}%font=\relsize{#1}
+\tikzset{font={\fontsize{8pt}{12}\selectfont}}
+\begin{figure}[H]%
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case3_lmbd-dtpbc-mpf-cutY.tex}%
+    \label{fig:SwitchingBetweenness_nesta_case3_lmbd_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case4_gs-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case4_gs_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case5_pjm-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case5_pjm_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case6_c-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case6_c_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case6_ww-dtpbc-mpf-cutY.tex}%
+  \label{plot:SwitchingBetweenness_nesta_case6_ww_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case9_wscc-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case9_wscc_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case14_ieee-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case14_ieee_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}[t]{.5\textwidth}
+    \centering
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case24_ieee_rts-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case24_ieee_rts_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+% 
+  \caption{Results of the simulations for the~\gls{dtp} betweenness centrality
+  on \texttt{nesta\_case3\_lmbd} to \texttt{nesta\_case24\_ieee\_rts}.
+  }%
+  % 
+  \label{fig:Switching_Betweenness_Centrality_Plot_Cut_Y_3_to_24}%
+\end{figure}%
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%
+\begin{figure}[H]%
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case30_as-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case30_as_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill%
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case30_fsr-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case30_fsr_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case30_ieee-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case30_ieee_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case39_epri-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case39_epri_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case57_ieee-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case57_ieee_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case73_ieee_rts-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case73_ieee_rts_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case89_pegase-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case89_pegase_dtpbc_mpf_cutY}
+  \end{subfigure}
+  \hfill
+  % 
+  \begin{subfigure}[t]{.49\textwidth}
+    \centering
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case118_ieee-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case118_ieee_dtpbc_mpf_cutY}
+  \end{subfigure}
+  % 
+  \caption{Results of the simulations for the~\gls{dtp} betweenness centrality
+  on cases \texttt{nesta\_case30\_as} to~\texttt{nesta\_case118\_ieee}.}%
+  % 
+  \label{fig:Switching_Betweenness_Centrality_Plot_Cut_Y_29_to_89}%
+\end{figure}%
+% 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%
+\begin{figure}[H]%
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case162_ieee_dtc-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case162_ieee_dtc_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case189_edin-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case189_edin_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case300_ieee-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case300_ieee_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case2383wp_mp-dtpbc-mpf-cutY.tex}%
+   \label{plot:SwitchingBetweenness_nesta_case2383wp_mp_dtpbc_mpf-cutY}%
+  \end{subfigure}%
+
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case2736sp_mp-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case2736sp_mp_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case2737sop_mp-dtpbc-mpf-cutY.tex}%
+    \label{plot:plot-SwitchingBetweenness_nesta_case2737sop_mp-dtpbc-mpf-cutY}%
+  \end{subfigure}%
+
+  %
+  \begin{subfigure}[t]{.5\textwidth}%
+    \centering%
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case2746wop_mp-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case2746sp_mp_dtpbc_mpf_cutY}%
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}[t]{.5\textwidth}
+    \centering
+    \input{switchplacement/plots/plot-SwitchingBetweenness_nesta_case3012wp_mp-dtpbc-mpf-cutY.tex}%
+    \label{plot:SwitchingBetweenness_nesta_case3012wp_mp_dtpbc_mpf_cutY}
+  \end{subfigure}
+  %
+  \caption{Results of the simulations for the~\gls{dtp} betweenness
+  centrality on cases~\texttt{nesta\_case162\_ieee}
+  to~\texttt{nesta\_case3012wp\_mp}.%
+  }%
+  \label{fig:Switching_Betweenness_Centrality_Plot_Cut_Y_162_to_3012}%
+\end{figure}%
+%
+\endgroup

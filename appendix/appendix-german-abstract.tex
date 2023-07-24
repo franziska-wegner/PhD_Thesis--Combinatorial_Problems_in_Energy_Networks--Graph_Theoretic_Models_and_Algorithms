@@ -1,0 +1,142 @@
+\selectlanguage{ngerman}
+\chapter{Deutsche Zusammenfassung}
+% 
+Energienetze bilden das R{\"u}ckgrat unserer Gesellschaft, die unter anderem
+unsere Nahrungskette und andere wichtige Infrastrukturen, wie die Wasser- und
+W{\"a}rmeversorgung, bestimmen. Um die grundlegenden menschlichen
+Bed{\"u}rfnisse zu befriedigen, m{\"u}ssen wir ein nachhaltigeres und
+umweltfreundlicheres Verhalten im Allgemeinen und in Energienetzen im Speziellen
+an den Tag legen. In dieser Arbeit geht es um Energienetze, wobei wir uns auf
+Stromnetze spezialisieren und uns darauf fokussieren, wie wir die vorhandene
+Infrastruktur besser ausnutzen k{\"o}nnen. Wir merken an, dass die Ergebnisse
+aus dieser Arbeit auch auf andere Energienetze {\"u}bertragen werden
+k{\"o}nnen~\parencite{Gro19} und bestimmte auftretende Ph{\"a}nomene legen es
+nahe, dass sich einige Ergebnisse eventuell auch auf Verkehrsnetze
+{\"u}bertragen lassen. Diese Arbeit besteht aus vier inhaltlichen Teilen. Der
+erste Teil besch{\"a}ftigt sich mit der Funktionsweise und Struktur von
+elektrischen Fl{\"u}{ss}en. Der zweite und dritte inhaltliche Teil der Arbeit
+besch{\"a}ftigt sich jeweils mit der effizienten Ausnutzung der vorhandenen
+Energienetzinfrastruktur. Dabei verstehen wir hier unter effizienter Ausnutzung
+entweder die Maximierung der Gesamterzeugung und die damit verbundene
+Erweiterung des Betriebspunktes oder die Minimierung der Erzeugungskosten
+verstehen.
+
+Das elektrische Netz besteht aus drei Spannungsebenen, die wir als Hoch-,
+Mittel-, und Niederspannungsebene bezeichnen. Das traditionelle elektrische Netz
+ist auf eine zentrale Energieversorgung ausgelegt, bei der die Erzeuger sich in
+der Hochspannungsebene befinden. Der elektrische Fluss im klassischen Sinne
+flie{\ss}t von der Hoch- in die Mittel- und Niederspannungsebene. Die
+industriellen Verbraucher befinden sich zumeist auf der Mittelspannungsebene,
+w{\"a}hrend sich die Haushalte und kleineren Industrien in der
+Niederspannungsebene befinden. Durch nachhaltige Erzeuger, die ihre Energie aus
+erneuerbaren Energien wie beispielsweise Wind gewinnen, findet nun ein
+Paradigmenwechsel im elektrischen Netz statt. Diese nachhaltigen Erzeuger
+befinden sich zumeist im Nieder- und Mittelspannungsnetz und der elektrische
+Fluss k\"onnte nun bidirektional flie{\ss}en. Dieser Paradigmenwechsel kann zu
+Engp\"a{\ss}en und anderen Problemen f{\"u}hren, da das elektrische Netz f\"ur
+ein solches Szenario nicht konzipiert ist.
+
+Eine Hauptaufgabe dieser Arbeit war die Identifizierung von Problemstellungen in
+elektrischen Netzen. Die extrahierten Problemstellungen haben wir dann in
+graphen-theoretische Modelle {\"u}bersetzt und Algorithmen entwickelt, die
+oftmals G{\"u}tegarantien besitzen. Wir haben uns dabei zun{\"a}chst auf die
+Modellierung von elektrischen Netzen und das Verhalten von Fl{\"u}ssen in diesen
+Netzen mit Hilfe von Graphentheorie konzentriert. Zur Modellierung des
+elektrischen Flusses nutzen wir eine linearisierte Modellierung, die mehrere
+vereinfachende Annahmen trifft. Diese linearisierte Modellierung ist f{\"u}r
+Hochspannungsnetze im Allgemeinen eine gute Ann{\"a}herung und macht das
+Entscheidungsproblem f{\"u}r elektrische Fl{\"u}sse, das hei{\ss}t, ob ein
+g{\"u}ltiger elektrischer Fluss f{\"u}r eine bestimmte Konfiguration des Netzes
+und f{\"u}r einen bestimmten Verbrauch und eine bestimmte Erzeugung existiert,
+in Polynomialzeit l{\"o}sbar.
+
+\textbf{Leistungsfluss.} Fokusiert man sich auf das vereinfachte
+Zul{\"a}ssigkeitsproblem von elektrischen Fl\"ussen und den Ma\-xi\-ma\-len
+Leistungsfl{\"u}ssen, so existieren verschiedene mathematische Formulierungen,
+die den Leistungsfluss beschreiben. Auf allgemeinen Graphen ist es oftmals der
+Fall, dass graphentheoretischen Fl{\"u}sse keine zul{\"a}ssigen
+Leistungsfl{\"u}sse darstellen. Im Gegensatz zu graphentheoretischen Fl{\"u}ssen
+balancieren sich Leistungsfl{\"u}sse. Wir diskutieren diese Eigenschaft aus
+% 
+graphentheoretischer Sicht. Die verschiedenen mathematischen Formulierungen
+geben uns strukturelle Einblicke in das Lei\-stungs\-fluss\-problem. Sie zeigen
+uns die Dualit{\"a}t der zwei Kirchhoffschen Regeln. Diese nutzen wir um einen
+algorithmischen Ansatz zur Berechnung von Leistungsflüssen zu formulieren, der
+zu einem Algorithmus für Leistungsflüsse auf planaren Graphen führen k{\"o}nnte.
+Die Einschr{\"a}nkung auf planare zweifachzusammenh{\"a}ngende Graphen ist
+vertretbar, da elektrische Netze im Allgemeinen planar sind~\parencite[S.\
+13]{Cai12}. Zudem hilft uns diese Sichtweise, um Analogien zu anderen
+geometrischen Problemen herzustellen.
+
+\textbf{Kontinuierliche {\"A}nderungen.} Da graphentheoretische Fl{\"u}sse sich
+in vielen F{\"a}llen anders als elektrische Fl{\"u}sse verhalten, haben wir
+versucht, das Stromnetz mittels Kontrolleinheiten so auszustatten, dass der
+elektrische Fluss den gleichen Wert hat wie der graphentheoretische Fluss. Um
+dieses Ziel zu erreichen, platzieren wir die Kontrolleinheiten entweder an den
+Knoten oder an den Kanten. Durch eine Suszeptanz-Skalierung, die durch die
+Kontrolleinheiten erm{\"o}glicht wird, ist es nun prinzipiell m{\"o}glich jeden
+graphentheoretischen Fluss elektrisch zul{\"a}ssig zu machen. Dabei konnten wir
+zeigen, dass das gezielte Platzieren von Kontrolleinheiten die Kosten der
+Erzeugung von elektrischer Leistung durch Generatoren im elektrischen Netz
+senken kann und den Betriebspunkt des Netzes in vielen F{\"a}llen auch
+erweitert. Platziert man Kontrolleinheiten so, dass der verbleibende Teil (d.\
+h.\ das Netz ohne die Kontrolleinheiten) ein Baum oder Kaktus unter geeigneter
+Begrenzung der Kapazit{\"a}ten ist, so ist es m{\"o}glich, jeden
+graphentheoretischen Fluss als elektrisch zul{\"a}ssigen Fluss mit
+gleichwertigen Kosten zu realisieren. Die Kostensenkung und die Erweiterung des
+Betriebspunktes konnten wir experimentell auf~\gls{ieee}-Benchmark-Daten
+best{\"a}tigen.
+
+\textbf{Diskrete {\"A}nderungen.} Die oben beschriebenen Kontrolleinheiten sind
+eine idealisierte, aktuell nicht realisierbare Steuereinheit, da sie den
+elektrischen Fluss im gesamten Leistungsspektrum einstellen können. Damit ist
+vor allem gemeint, dass sie den elektrischen Fluss auf einer Leitung von \glqq
+Die Leitung ist abgeschaltet.\grqq\ bis zur maximalen Kapazit{\"a}t stufenlos
+einstellen k{\"o}nnen. Diese Idealisierung ist auch ein
+% 
+gro{\ss}er Kritikpunkt an der Modellierung. Aus diesem Grund haben wir versucht,
+unser Modell realistischer zu gestalten. Wir haben zwei m{\"o}gliche
+Modellierungen identifiziert. In der ersten Modellierung können Leitungen ein-
+und ausgeschaltet werden. Dieser Prozess wird als Switching bezeichnet und kann
+in realen Netzen mittels Circuit Breakers (dt.\ Leistungsschaltern) realisiert
+werden. Die zweite Modellierung kommt der Kontrolleinheiten-Modellierung sehr
+nahe und beschäftigt sich mit der Platzierung von~Kontrolleinheiten, die die
+Suszeptanz innerhalb eines gewissen Intervalls einstellen k{\"o}nnen. Diese
+wirkt im ersten Moment wie eine Verallgemeinerung der
+Schaltungsflussmodellierung. Nutzt man jedoch eine realistischere Modellierung
+der Kontrolleinheiten, so ist das Einstellen der Suszeptanz durch ein Intervall
+begrenzt, das das Ausschalten einer Leitung nicht mit beinhaltet. Sowohl ein
+optimales (im Sinne der Minimierung der Gesamterzeugungskosten oder der
+Maximierung des Durchsatzes) Platzieren von Switches als auch ein optimales
+Platzieren von~Kontrolleinheiten ist im Allgemeinen
+\NP-schwer~\parencite{Leh14}. Diese beiden Probleme erg{\"a}nzen sich
+dahingehend, dass man den maximalen graphentheoretischen Fluss, mit den zuvor
+genannten Platzierungen ann{\"a}hern kann.
+
+F{\"u}r Switching konnten wir zeigen, dass das Problem bereits schwer ist, wenn
+der Graph serien-parallel ist und das Netzwerk nur einen Erzeuger und einen
+Verbraucher besitzt~\parencite{Gra18}. Wir haben sowohl für den Maximalen
+{\"U}bertragungsschaltungsfluss (engl.\ Maximum Transmission Switching Flow;
+kurz~\gls{mtsf}) als auch für den optimalen {\"U}bertragungsschaltungsfluss
+(engl.\ Optimal Switching Flow; kurz~OSF) erste algorithmische Ans{\"a}tze
+vorgeschlagen und gezeigt, dass sie auf bestimmten graphentheoretischen
+Strukturen exakt sind, und dass auf anderen graphentheoretischen Strukturen
+G{\"u}tegarantien m{\"o}glich sind~\parencite{Gra18}. Die Algorithmen haben wir
+dann auf allgemeinen Netzen evaluiert. Simulationen führen zu guten Ergebnissen
+auf den~\gls{nesta}-Benchmark-Daten.
+
+\textbf{Erweiterungsplanung auf der Gr{\"u}nen Wiese.} Eine vom Rest der 
+Arbeit eher losgel{\"o}ste Fragestellung war die Verkabelung von Windturbinen.
+Unter Verwendung einer Metaheuristik haben wir gute Ergebnisse im Vergleich zu
+einem \glqq Mixed Integer Linear Program\grqq\ (\gls{milp}; dt.\
+gemischt-ganzzahliges lineares Programm) erzielt, das wir nach einer Stunde
+abgebrochen haben. Die Modellierung der Problemstellung und die Evaluation des
+Algorithmus haben wir auf der ACM e-Energy 2017
+ver{\"o}ffentlicht~\parencite{Leh17}.
+
+\textbf{Schlusswort.} Abschlie{\ss}end kann man sagen, dass mit dieser Arbeit
+allgemeine, tiefliegende Aussagen {\"u}ber elektrische Netze getroffen wurden,
+unter der Ber{\"u}cksichtigung struktureller Eigenschaften unterschiedlicher
+Netzklassen. Diese Arbeit zeigt wie das Netz ausgestaltet sein muss, um
+bestimmte Eigenschaften garantieren zu k{\"o}nnen und zeigt verschiedene
+L{\"o}sungsans{\"a}tze mit oft beweisbaren G{\"u}tegarantien auf. 
