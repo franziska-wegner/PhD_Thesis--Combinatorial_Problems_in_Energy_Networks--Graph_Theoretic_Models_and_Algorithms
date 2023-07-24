@@ -1,0 +1,121 @@
+% latex table generated in R 3.2.2 by xtable 1.8-0 package
+% Wed Jan 27 11:17:04 2016
+{\setlength{\tabcolsep}{0.5em}}
+{\renewcommand{\arraystretch}{1}}% for the vertical padding
+\small
+\begin{tabular}{
+>{\centering\arraybackslash}m{1.6cm}
+>{\centering\arraybackslash}m{0.2cm}
+>{\centering\arraybackslash}m{2.25cm}
+>{\centering\arraybackslash}m{2.25cm}
+>{\centering\arraybackslash}m{0.5cm}
+>{\centering\arraybackslash}m{2.85cm}
+>{\centering\arraybackslash}m{0.6cm}
+}
+\toprule
+%-------------------------------------------------------------------------------
+  \multirow[c]{2}*{\textbf{Vertex Type}}     & 
+  \multicolumn{4}{c}{\textbf{Variables}}  &
+  \multirow[c]{2}*{\textbf{Comments}}     &
+  \multirow[c]{2}*{\textbf{Code}}     \\
+%-------------------------------------------------------------------------------
+ \cmidrule(lr){2-5}
+  & 
+  \multicolumn{1}{c}{$\glssymbol{realpower}(\vertexa)$}     &
+  \multicolumn{1}{c}{$\glssymbol{reactivepower}(\vertexa)$} & 
+  \multicolumn{1}{c}{$\glssymbol{voltage}(\vertexa)$}   &
+  \multicolumn{1}{c}{$\glssymbol{voltageangle}(\vertexa)$}       &
+  \\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+ \midrule  
+%-------------------------------------------------------------------------------
+   Load
+   & \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}}
+   & \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}}
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   & \parbox{3cm}{Usual load representation}
+   & \pqbus
+  \\\addlinespace
+%-------------------------------------------------------------------------------
+  \rowcolor{Table-Line-Marker}
+   Voltage Controlled 
+   & \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}} 
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}} 
+   & \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}}
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}} 
+   & \parbox{3cm}{$\fmagnitude{\glssymbol{voltage}(\vertexa)}$ is held constant
+   % no matter what~\reactances is
+   }
+   & \cvbus
+  \\\addlinespace
+%-------------------------------------------------------------------------------
+   \vspace{1cm}\multirow{2}*{\shortstack[l]{Generator or\\ Synchronous\\
+   Condenser}}
+   & \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}}
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   & \shortstack[l]{
+      \multicolumn{1}{c}{\hspace*{-0.5cm}\textcolor{KITgreen}{\checkmark},}
+      \\when \\$\glssymbol{reactivepowergenerationmin}(\vertexa)\! < \!
+      \glssymbol{reactivepowergeneration}(\vertexa)\! < \!
+      \glssymbol{reactivepowergenerationmax}(\vertexa)$
+      }
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   &\vspace{-11mm}\multirow{2}*{\parbox{3cm}{\vspace{-4.5mm}
+   Generator or synchronous 
+   condenser ($\glssymbol{realpower}(\vertexa) = 0$) has~\si{\var} limits;
+    % \hspace*{2.5mm}\reactivepowergenerationmin minimum~\si{\var} limit\\
+    % \hspace*{2.5mm}\reactivepowergenerationmax maximum~\si{\var} limit\\
+    $\fmagnitude{\glssymbol{voltage}(\vertexa)}$ is held as long
+    as~\glssymbol{reactivepowergeneration}(\vertexa) and~\glssymbol{reactivepowerdemand}(\vertexa)
+    are within limit}} &
+    \vspace{1cm}\multirow{2}*{\pvbus}
+  \\%
+%-------------------------------------------------------------------------------
+  \cmidrule(lr){2-5}
+    & \textcolor{KITgreen}{\checkmark}
+    & \shortstack[l]{
+        \multicolumn{1}{c}{\hspace*{-0.9cm}\textcolor{KITgreen}{\checkmark},}\\
+        when\\ 
+        $-\glssymbol{reactivepowerdemandmax}(\vertexa)\! <\! 
+        \glssymbol{reactivepowerdemand}(\vertexa) \!<\!
+        -\glssymbol{reactivepowerdemandmin}(\vertexa)$
+      }
+    & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+    & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+    &% 
+    &%bustype
+   \\\addlinespace%
+%-------------------------------------------------------------------------------
+   \rowcolor{Table-Line-Marker}
+   Fixed~\impedances to Ground
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+   & \parbox{3cm}{Only~\impedances is given}
+   &%bustype
+   \\\addlinespace%
+%-------------------------------------------------------------------------------
+   Reference, Slack & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}} &
+   \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}} &
+   \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}} &
+   \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}} &
+   \parbox{3cm}{\emph{Swing bus} must adjust net power to hold voltage constant
+   (essential for solution)} & 
+   \vtbus
+   \\%
+%-------------------------------------------------------------------------------
+    \rowcolor{Table-Line-Marker}
+    Slack demand or tie
+    & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+    & \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}}
+    & \multicolumn{1}{c}{\textcolor{KITred}{\ding{55}}}
+    & \multicolumn{1}{c}{\textcolor{KITgreen}{\checkmark}}
+    & \parbox{3cm}{The \emph{tie} has no generation and demand attached}
+    & \qtbus
+    \\%
+%-------------------------------------------------------------------------------
+   \bottomrule
+\end{tabular}
