@@ -1,0 +1,814 @@
+\newglossaryentry{susceptance}
+{
+    name={\susceptance},
+    sort={function susceptance},
+    type={model},
+    parent={network},
+    % 
+    description={The susceptance is a function~$
+    \glssymbol{susceptance} 
+    \colon
+    \glssymbol{undirectededges} 
+    \to 
+    \posreals$ 
+    defined by~$
+    \glssymbol{susceptance}(\vertexa,\vertexc)
+    \coloneqq 
+    -
+    \nicefrac{
+        \glssymbol{reactance}(\vertexa,\vertexc)
+    }{
+        (\glssymbol{resistance}(\vertexa,\vertexc)^2
+        + 
+        \glssymbol{reactance}(\vertexa,\vertexc)^2)
+    }$ for all~$\{\vertexa,\vertexc\}\in\glssymbol{undirectededges}$. Note that
+    for~\gls{dc} models it is simply the reciprocal of the
+    reactance~\glssymbol{reactance}. Roughly speaking it represents how easy an
+    electron is able to pass a material.
+    % 
+    },
+    % 
+    symbol={\susceptance}
+}
+
+\newglossaryentry{susceptancenorm}
+{
+    name={\ensuremath{ \bnorm{\fpath{}{\vertexa}{\vertexb}} } },
+    sort={susceptance norm},
+    type={model},
+    % 
+    description={The susceptance norm of a path~$
+    \fpath{}{\vertexa}{\vertexb}
+    $ is defined by~$
+    \bnorm{\fpath{}{\vertexa}{\vertexb}}
+    \coloneqq
+    \sum_{\edge\in\fpath{}{\vertexa}{\vertexb}}
+    \glssymbol{susceptance}(\edge)^{-1}
+    $. The susceptance norm is a norm, since it fulfills the axioms given
+    by~\textcite{Ban22}.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \bnorm{\fpath{}{\vertexa}{\vertexb}} } }
+}
+
+\newglossaryentry{conductance}
+{
+    name={\conductance},
+    sort={function conductance},
+    type={model},
+    parent={network},
+    % 
+    description={The conductance~\glssymbol{conductance} is a
+    function~$
+    \glssymbol{conductance} 
+    \colon
+    \glssymbol{undirectededges} 
+    \to 
+    \reals
+    $ defined by~$
+    \glssymbol{conductance}(\vertexa,\vertexc) 
+    \coloneqq 
+    \nicefrac{
+        \glssymbol{resistance}(\vertexa,\vertexc)
+    }{  
+        (\glssymbol{resistance}(\vertexa,\vertexc)^2 
+        + 
+        \glssymbol{reactance}(\vertexa,\vertexc)^2)
+    }$ for all~$\{\vertexa,\vertexc\}\in\glssymbol{undirectededges}$. Note that
+    for~\gls{dc} models it is simply the reciprocal of the
+    resistance~\glssymbol{resistance}. Roughly speaking it represents how easy
+    an electron is able to pass a material.
+    % 
+    },
+    % 
+    symbol={\conductance}
+}
+
+\newglossaryentry{resistance}
+{
+    name={\resistance},
+    sort={function resistance},
+    type={model},
+    parent={network},
+    % 
+    description={The resistance is a
+    function~$\glssymbol{resistance}\colon
+    \glssymbol{undirectededges}\to\posreals\cup\{\infty\}$ representing the real
+    part of the impedance. Note that for~\gls{dc} models it is simply the
+    reciprocal of the~\glssymbol{conductance}. Roughly speaking it represents
+    how easy an electron is able to pass a material.
+    % 
+    },
+    % 
+    symbol={\resistance}
+}
+
+\newglossaryentry{impedance}
+{
+    name={\impedance},
+    sort={function impedance},
+    type={model},
+    parent={network},
+    % 
+    description={The impedance is a
+    function~$\glssymbol{impedance}\colon\glssymbol{undirectededges}\to\complexes$
+    defined by~$
+        \glssymbol{impedance}(\vertexa,\vertexc) \coloneqq 
+        \frac{1}{\glssymbol{admittance}(\vertexa,\vertexc)} 
+    =
+        \glssymbol{resistance}(\vertexa,\vertexc) 
+    + 
+        \imgPart\cdot\glssymbol{reactance}(\vertexa,\vertexc)
+    $
+    for all~$\{\vertexa,\vertexc\}\in\glssymbol{undirectededges}$.
+    % 
+    },
+    % 
+    symbol={\impedance}
+}
+
+\newglossaryentry{reactance}
+{
+    name={\reactance},
+    sort={function reactance},
+    type={model},
+    parent={network},
+    % 
+    description={The reactance is a
+    function~$\glssymbol{reactance}\colon
+    \glssymbol{undirectededges}\to\posreals\cup\{\infty\}$ representing the
+    imaginary part of the impedance. Note that for~\gls{dc} models it is simply
+    the reciprocal of the~\glssymbol{susceptance}. Roughly speaking it
+    represents how easy an electron is able to pass a material.
+    % 
+    },
+    % 
+    symbol={\reactance}
+}
+
+\newglossaryentry{admittance}
+{
+    name={\admittance},
+    sort={function admittance},
+    type={model},
+    parent={network},
+    % 
+    description={
+    % 
+    The admittance is a
+    function~$\glssymbol{admittance}\colon\glssymbol{undirectededges}\to\complexes$~(\cref{ch:foundations:sec:power-flow-analyses:eq:admittance}), where
+    $\glssymbol{admittance}(\vertexa,\vertexb)$~(\cref{ch:foundations:sec:power-flow-analyses:eq:admittance}) is defined by
+    the
+    conductance~$\glssymbol{conductance}(\vertexa,\vertexb)$~(\cref{ch:foundations:sec:power-flow-analyses:eq:conductance})
+    and the
+    susceptance~$\glssymbol{susceptance}(\vertexa,\vertexb)$~(\cref{ch:foundations:sec:power-flow-analyses:eq:susceptance})
+    that define how easy the current is able to flow through an element such as
+    a transmission line~$\{\vertexa,\vertexb\}\in\glssymbol{undirectededges}$.
+    % 
+    },
+    % 
+    symbol={\admittance}
+}
+
+\newglossaryentry{complexpower}
+{
+    name={\complexpower},
+    sort={complex power},
+    type={model},
+    % parent={network},
+    % 
+    description={The complex power
+    function~$\complexpower\colon\vertices\to\complexes$ is the sum of the real
+    and reactive power. For time varying models, the function is called
+    instantaneous electric power, which is a
+    function~$\glssymbol{complexpower}\colon\glssymbol{vertices}\times\reals\to\complexes$
+    representing the instantaneous power at
+    vertex~$\vertexa\in\glssymbol{vertices}$ for
+    timestamp~$\timestamp\in\reals$. It is usually denoted by~$p$, but the
+    additional parameter separates the constant
+    term~$\glssymbol{complexpower}(\vertexa)$ clearly from the time varying
+    term~$\glssymbol{complexpower}(\vertexa,\timestamp)$.
+    % 
+    },
+    % 
+    symbol={\complexpower}
+}
+
+\newglossaryentry{complexpowermax}
+{
+    name={\complexpowermax},
+    sort={complex power maximum},
+    type={model},
+    % 
+    description={The apparent power maximum~\glssymbol{complexpowermax} is a
+    total thermal line limitation in terms of power. },
+    % 
+    symbol={\complexpowermax}
+}
+
+\newglossaryentry{currentmax}
+{
+    name={\currentmax},
+    sort={current maximum},
+    type={model},
+    % 
+    description={The current power maximum~\glssymbol{currentmax} is a total
+    thermal line limitation in terms of current~\glssymbol{current}. },
+    % 
+    symbol={\currentmax}
+}
+
+\newglossaryentry{realpower}
+{
+    name={\realpower},
+    sort={real power},
+    type={model},
+    % 
+    description={The real power~$\glssymbol{realpower}$ is also called active power and
+    represents the real part of the complex power~\glssymbol{complexpower}.
+    % 
+    },
+    % 
+    symbol={\realpower}
+}
+
+\newglossaryentry{realpowermax}
+{
+    name={\realpowermax},
+    sort={real power maximum},
+    type={model},
+    % 
+    description={The real power maximum~\glssymbol{realpowermax} is the real
+    part of the thermal line limitation in terms of power.
+    % 
+    }, 
+    % 
+    symbol={\realpowermax}
+}
+
+\newglossaryentry{realpowermin}
+{
+    name={\realpowermin},
+    sort={real power maximum},
+    type={model},
+    % 
+    description={The real power minimum~\glssymbol{realpowermin} is the real
+    part of the thermal line limitation in terms of power.
+    % 
+    }, 
+    % 
+    symbol={\realpowermin}
+}
+
+\newglossaryentry{realpowergeneration}
+{
+    name={\realpowergeneration},
+    sort={real power generation},
+    type={model},
+    parent={network},
+    % 
+    description={The generators' real power output at vertex~$\vertexa \in
+    \glssymbol{generators}$.},
+    % 
+    symbol={\realpowergeneration}
+}
+
+\newglossaryentry{realpowergenerationmax}
+{
+    name={\realpowergenerationmax},
+    sort={real power generation maximum},
+    type={model},
+    parent={network},
+    % 
+    description={The generators' real power upper bound at vertex~$\vertexa \in
+    \glssymbol{generators}$.
+    % 
+    },
+    % 
+    symbol={\realpowergenerationmax}
+}
+
+\newglossaryentry{realpowergenerationmin}
+{
+    name={\realpowergenerationmin},
+    sort={real power generation minimum},
+    type={model},
+    parent={network},
+    % 
+    description={The generators' real power lower bound at vertex~$\vertexa \in
+    \glssymbol{generators}$.
+    % 
+    },
+    % 
+    symbol={\realpowergenerationmin}
+}
+
+\newglossaryentry{realpowerdemand}
+{
+    name={\realpowerdemand},
+    sort={real power demand},
+    type={model},
+    % parent={network},
+    % 
+    description={The demands' real power at vertex~$\vertexa \in
+    \glssymbol{consumers}$.
+    % 
+    },
+    % 
+    symbol={\realpowerdemand}
+}
+
+\newglossaryentry{realpowerdemandmax}
+{
+    name={\realpowerdemandmax},
+    sort={real power demand maximum},
+    type={model},
+    parent={network},
+    % 
+    description={The demands' real power upper bound at vertex~$\vertexa \in
+    \glssymbol{consumers}$.
+    % 
+    },
+    % 
+    symbol={\realpowerdemandmax}
+}
+
+\newglossaryentry{realpowerdemandmin}
+{
+    name={\realpowerdemandmin},
+    sort={real power demand minimum},
+    type={model},
+    parent={network},
+    % 
+    description={The demands' lower real power bound at vertex~$\vertexa \in
+    \glssymbol{consumers}$.
+    % 
+    },
+    % 
+    symbol={\realpowerdemandmin}
+}
+
+\newglossaryentry{reactivepower}
+{
+    name={\reactivepower},
+    sort={reactive power},
+    type={model},
+    % 
+    description={The reactive power~\glssymbol{reactivepower} is also called
+    phantom power and represents the imaginary part of the complex
+    power~\glssymbol{complexpower}.
+    % 
+    },
+    % 
+    symbol={\reactivepower}
+}
+
+\newglossaryentry{reactivepowermax}
+{
+    name={\reactivepowermax},
+    sort={reactive power maximum},
+    type={model},
+    parent={network},
+    % 
+    description={The reactive power maximum~\glssymbol{reactivepowermax} is the
+    imaginary part of the thermal line limitation.
+    % 
+    }, 
+    % 
+    symbol={\reactivepowermax}
+}
+
+\newglossaryentry{reactivepowermin}
+{
+    name={\reactivepowermin},
+    sort={reactive power minimum},
+    type={model},
+    parent={network},
+    % 
+    description={The reactive power minimum~\glssymbol{reactivepowermin} is the
+    imaginary part of the thermal line limitation.
+    % 
+    }, 
+    % 
+    symbol={\reactivepowermin}
+}
+
+\newglossaryentry{reactivepowergeneration}
+{
+    name={\reactivepowergeneration},
+    sort={reactive power generation},
+    type={model},
+    % 
+    description={The generators' reactive power output at vertex~$\vertexa \in
+    \glssymbol{generators}$.
+    % 
+    },
+    % 
+    symbol={\reactivepowergeneration}
+}
+
+\newglossaryentry{reactivepowergenerationmax}
+{
+    name={\reactivepowergenerationmax},
+    sort={reactive power generation maximum},
+    type={model},
+    parent={network},
+    % 
+    description={The generators' reactive power upper bound at vertex~$\vertexa
+    \in \glssymbol{generators}$.
+    % 
+    },
+    % 
+    symbol={\reactivepowergenerationmax}
+}
+
+\newglossaryentry{reactivepowergenerationmin}
+{
+    name={\reactivepowergenerationmin},
+    sort={reactive power generation minimum},
+    type={model},
+    parent={network},
+    % 
+    description={The generators' reactive power lower bound at vertex~$\vertexa
+    \in \glssymbol{generators}$.
+    % 
+    },
+    % 
+    symbol={\reactivepowergenerationmin}
+}
+
+\newglossaryentry{reactivepowerdemand}
+{
+    name={\reactivepowerdemand},
+    sort={reactive power demand},
+    type={model},
+    % 
+    description={The demands' reactive power demand at a consumer
+    vertex~$\vertexa \in \glssymbol{consumers}$.
+    % 
+    },
+    % 
+    symbol={\reactivepowerdemand}
+}
+
+\newglossaryentry{reactivepowerdemandmax}
+{
+    name={\reactivepowerdemandmax},
+    sort={reactive power demand maximum},
+    type={model},
+    parent={network},
+    % 
+    description={The demands' reactive power upper bound at vertex~$\vertexa \in
+    \glssymbol{consumers}$.
+    % 
+    },
+    % 
+    symbol={\reactivepowerdemandmax}
+}
+
+\newglossaryentry{reactivepowerdemandmin}
+{
+    name={\reactivepowerdemandmin},
+    sort={reactive power demand minimum},
+    type={model},
+    parent={network},
+    % 
+    description={The demands' reactive power lower bound at vertex~$\vertexa \in
+    \glssymbol{consumers}$.
+    % 
+    },
+    % 
+    symbol={\reactivepowerdemandmin}
+}
+
+\newglossaryentry{current}
+{
+    name={\current},
+    sort={current},
+    type={model},
+    % 
+    description={ The current is a
+    function~$\glssymbol{current}\colon\glssymbol{vertices}\to\reals$ that
+    represents the electrons that move through an element per second an thus, is
+    measured in Ampere~\gls{ampere}. The time varying function (in a dynamic
+    network setting) of current is defined
+    by~$\glssymbol{current}\colon\glssymbol{vertices}\times\reals\to\reals$ that
+    represents the instantaneous
+    current~$\glssymbol{current}(\vertexa,\glssymbol{timestamp})$ at
+    vertex~$\vertexa\in\glssymbol{vertices}$ for
+    timestamp~$\glssymbol{timestamp}\in\reals$.
+    % 
+    },
+    %
+    symbol={\current}
+}
+
+\newglossaryentry{currentrms}
+{
+    name={\currentrms},
+    sort={currentrms},
+    type={model},
+    % 
+    description={The~\acrlong{rms} (\gls{rms}) value of a current
+    magnitude~$\fmagnitude{\glssymbol{current}(\vertexa)}$ at
+    vertex~$\vertexa\in\glssymbol{vertices}$ is defined
+    by~$\nicefrac{\fmagnitude{\glssymbol{current}(\vertexa)}}{
+    \sqrt{2}}$. It
+    represents the effective value of a sinusoid current waveform. Note that
+    the~\gls{rms} value is only used for time varying sinusoid functions and not
+    for~\gls{dc} or~\gls{ac} models, where we assume time invariance and thus,
+    the functions become constant over time.
+    % 
+    },
+    %
+    symbol={\currentrms}
+}
+
+\newglossaryentry{angularfrequency}
+{
+    name={\angularfrequency},
+    sort={angularfrequency},
+    type={model},
+    % 
+    description={The velocity of the angle (here voltage
+    angle~\glssymbol{voltageangle} and current angle~\glssymbol{currentangle})
+    rotation is defined by the angular
+    frequency~$\glssymbol{angularfrequency}\coloneqq\nicefrac{d\aangle}{d\timestamp}$.
+    Thus, it describes how the phase changes of a sinusoid function. In a
+    time-invariant setting, we have a constant rotation velocity
+    meaning~$\glssymbol{angularfrequency}\coloneqq\nicefrac{d\aangle} {d\timestamp} =
+    \gls{twopi}\glssymbol{frequency}$. In the Argand diagram
+    (see~\cref{ch:foundations:fig:AC-voltage-current-angle-difference}) the
+    rotation speed of the voltage vector~\glssymbol{voltage} and current
+    vector~\glssymbol{current} (counter-clock-wise) is meant.
+    % 
+    },
+    % 
+    symbol={\angularfrequency}
+}
+
+\newglossaryentry{frequency}
+{
+    name={\frequency},
+    sort={frequency},
+    type={model},
+    % 
+    description={The frequency is defined
+    by~$\glssymbol{frequency}\coloneqq\frac{1}{T}$, where~$T$ is the time to
+    complete one cycle of~$\glssymbol{twopi}$ radians.
+    % 
+    },
+    % 
+    symbol={\frequency}
+}
+
+\newglossaryentry{currentangle}
+{
+    name={\iangle},
+    sort={current angle},
+    type={model},
+    % 
+    description={The current angle is a
+    function~$\glssymbol{currentangle}\colon\glssymbol{vertices}\to\reals$ at a
+    vertex~$\vertexa\in\glssymbol{vertices}$ that represents an initial
+    potential at a vertex~\vertexa. The current angle~\glssymbol{currentangle}
+    is the initial angle between the current vector and the x-axis in the Argand
+    diagram (see~\cref{ch:foundations:fig:AC-voltage-current-angle-difference}).
+    % 
+    },
+    % 
+    symbol={\iangle}
+}
+
+\newglossaryentry{voltage}
+{
+    name={\voltage},
+    sort={voltage},
+    type={model},
+    % 
+    description={The voltage is a
+    function~$\glssymbol{voltage}\colon\glssymbol{vertices}\to\reals$ that
+    represents the push of current~\glssymbol{current} and is measured in Volt.
+    Note that we will talk some times of a voltage drop at an
+    element~$(\vertexa,\vertexc)\in\glssymbol{edges}$. Then voltage is a
+    function~$\glssymbol{voltage}\colon\glssymbol{edges}\to\reals$. If we use
+    the vertex based definition, we just neglect the reference point, which is
+    ground~$0$.
+    % 
+    },
+    %
+    symbol={\voltage}
+}
+
+\newglossaryentry{voltagemin}
+{
+    name={\voltagemin},
+    sort={voltage minimum},
+    type={model},
+    % 
+    description={The voltage magnitude's~$\fmagnitude{\glssymbol{voltage}
+    (\vertexa)}$ lower bound is denoted by~\glssymbol{voltagemin}.
+    % 
+    },
+    %
+    symbol={\voltagemin}
+}
+
+\newglossaryentry{voltagemax}
+{
+    name={\voltagemax},
+    sort={voltage maximum},
+    type={model},
+    % 
+    description={The voltage magnitude's~$\fmagnitude{\glssymbol{voltage}
+    (\vertexa)}$ upper bound is denoted by~\glssymbol{voltagemax}.
+    % 
+    },%
+    symbol={\voltagemax}
+}
+
+\newglossaryentry{voltagerms}
+{
+    name={\voltagerms},
+    sort={voltagerms},
+    type={model},
+    % 
+    description={The~\acrlong{rms} (\gls{rms}) value of a voltage
+    magnitude~$\fmagnitude{\glssymbol{voltage}(\vertexa)}$ is defined
+    by~$\nicefrac{\fmagnitude{\glssymbol{voltage}(\vertexa)}}{\sqrt{2}}$ at
+    vertex~$\vertexa\in\glssymbol{vertices}$. It represents the effective value
+    of the voltage. Note that the~\gls{rms} value is only used for time varying
+    sinusoid functions.
+    % 
+    },
+    %
+    symbol={\voltagerms}
+}
+
+\newglossaryentry{voltageangle}
+{
+    name={\vangle},
+    sort={voltage angle},
+    type={model},
+    % 
+    description={The voltage angle (also called phase angle or theta angle) is a
+    function~$\glssymbol{voltageangle}\colon\glssymbol{vertices}\to\reals$ at a
+    vertex~\vertexa that represents a potential at a vertex~\vertexa. The
+    voltage angle is the angle between the voltage vector and the x-axis in the
+    Argand diagram
+    (see~\cref{ch:foundations:fig:AC-voltage-current-angle-difference}).
+    % 
+    },
+    % 
+    symbol={\vangle}
+}
+
+\newglossaryentry{minvoltageangle}
+{
+    name={\ensuremath{\vanglemin}},
+    sort={voltage angle minimum},
+    type={model},
+    parent={voltageangle},
+    % 
+    description={The voltage angle's lower bound is denoted
+    by~$\glssymbol{vangle}_{\min}(\vertexa)$ at
+    vertex~$\vertex\in\glssymbol{vertices}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\vanglemin}}
+}
+
+\newglossaryentry{maxvoltageangle}
+{
+    name={\ensuremath{\vanglemax}},
+    sort={voltage angle maximum},
+    type={model},
+    parent={voltageangle},
+    % 
+    description={The voltage angle's upper bound is denoted
+    by~$\glssymbol{vangle}_{\max}(\vertexa)$ at
+    vertex~$\vertex\in\glssymbol{vertices}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\vanglemax}}
+}
+
+\newglossaryentry{voltageangleshift}
+{
+    name={\ensuremath{\vangleshift}},
+    sort={voltage angle shift},
+    type={model},
+    parent={voltageangle},
+    % 
+    description={An additional voltage angle
+    shift~$\glssymbol{voltageangleshift}(\vertexa,\vertexb)$ at an edge~$
+    \{\vertexa,\vertexb\}\in\glssymbol{undirectededges}$ influences the voltage
+    angle difference such that~$\glssymbol{voltageangle}(\vertexc)-
+    \glssymbol{voltageangle}(\vertexa)-\glssymbol{voltageangleshift}
+    (\vertexa,\vertexb)$. A electrical devices that causes such a shift is a
+    transformer (phase shifter). Thus, this angle is often called transformer
+    (phase shifter) final angle.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\vangleshift}}
+}
+
+\newglossaryentry{tapratio}
+{
+    name={\ensuremath{\tapratio}},
+    sort={tap ratio},
+    type={model},
+    % 
+    description={The tap ratio (also known as turn ratio) is defined by~$\glssymbol{tapratio}(\vertexa,\vertexc)\coloneqq\nicefrac{\fmagnitude{
+    \glssymbol{voltage}(\vertexc)}} {\fmagnitude{\glssymbol{voltage}(\vertexa)}} =
+    \nicefrac{\glssymbol{voltage}(\vertexc)}{\glssymbol{voltage} (\vertexa)} = -
+    \nicefrac{\glssymbol{current}(\vertexa, \vertexc)}{\glssymbol{current} (\vertexc, \vertexa)}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\tapratio}}
+}
+
+
+\newglossaryentry{linechargingadmittance}
+{
+    name={\ensuremath{\linechargingadmittance}},
+    sort={tap ratio},
+    type={model},
+    % 
+    description={The line charging
+    admittance~$\glssymbol{linechargingadmittance}(\vertexa,\vertexc)$ is a
+    parameter of a transmission line.},
+    % 
+    symbol={\ensuremath{\linechargingadmittance}}
+}
+
+\newglossaryentry{linechargingsusceptance}
+{
+    name={\ensuremath{\linechargingsusceptance}},
+    sort={tap ratio},
+    type={model},
+    % 
+    description={ The line charging
+    susceptance~$\glssymbol{linechargingsusceptance}(\vertexa,\vertexc)$ is a
+    parameter of a transmission
+    line~$\{\vertexa,\vertexc\}\in\glssymbol{undirectededges}$ as medium to long
+    transmission lines tend to have an inherent capacitance. 
+    % 
+    },
+    % 
+    symbol={\ensuremath{\linechargingsusceptance}}
+}
+
+\newglossaryentry{voltageangledifference}
+{
+    name={\ensuremath{ \deltaangle }},
+    sort={voltage angle difference},
+    type={model},
+    parent={voltageangle},
+    % 
+    description={The voltage angle difference of a particular
+    edge~$(\vertexa,\vertexc)\in\glssymbol{edges}$ is defined by~$
+    \glssymbol{voltageangledifference}(\vertexa,\vertexc)\coloneqq 
+    \glssymbol{voltageangle}(\vertexc) - \glssymbol{voltageangle}(\vertexa)$.
+    For a~\vertexa-\vertexb-path~$\fpath{}{\vertexa}{\vertexc}$ it is denoted
+    by~$\glssymbol{voltageangledifference}(\fpath{}{\vertexa}{\vertexc})$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \deltaangle }}
+}
+
+\newglossaryentry{voltageangledifferencemin}
+{
+    name={\ensuremath{ \deltavanglemin }},
+    sort={voltage angle difference minimum},
+    type={model},
+    parent={voltageangle},
+    % 
+    description={The voltage angle difference's lower
+    bound~\glssymbol{voltageangledifferencemin} restricts the flow.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \deltavanglemin }}
+}
+
+\newglossaryentry{voltageangledifferencemax}
+{
+    name={\ensuremath{ \deltavanglemax }},
+    sort={voltage angle difference maximum},
+    type={model},
+    parent={voltageangle},
+    % 
+    description={The voltage angle difference's upper
+    bound~\glssymbol{voltageangledifferencemax} restricts the flow.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \deltavanglemax }}
+}
