@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Glossary %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define "ed" key:
+ \glsaddkey*
+  {longform}% key
+  {\glsentrytext{\glslabel}}% default value
+  {\glsentrylongform}% command analogous to \glsentrytext
+  {\Glsentrylongform}% command analogous to \Glsentrytext
+  {\glslongform}% command analogous to \glstext
+  {\Glslongform}% command analogous to \Glstext
+  {\GLSlongform}% command analogous to \GLStext
+
+  \glsaddkey*
+   {capitalform}% key
+   {\glsentrytext{\glslabel}}% default value
+   {\glsentrycapitalform}% command analogous to \glsentrytext
+   {\Glsentrycapitalform}% command analogous to \Glsentrytext
+   {\glscapitalform}% command analogous to \glstext
+   {\Glscapitalform}% command analogous to \Glstext
+   {\GLScapitalform}% command analogous to \GLStext
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{glossary/acronym}
+\input{glossary/general-model-glossary}
+\input{glossary/power-grid-glossary}
+\input{glossary/wind-farm-glossary}
+\input{glossary/units-glossary}
+
+
+
+
+% \newglossaryentry{demand}
+% {
+%     name={\demand},
+%     sort={function demand},
+%     type={model},
+%     parent={network},
+%     % 
+%     description={The demand~$\glssymbol{demand}(\vertexa)$ at vertex~$\vertexa \in
+%     \glssymbol{consumers}$ represents the consumed power.
+%     % 
+%     },
+%     % 
+%     symbol={\demand}
+% }
+
+% \newglossaryentry{mindemand}
+% {
+%     name={\mindemand},
+%     sort={demand minimum},
+%     type={model},
+%     parent={network},
+%     % 
+%     description={The term~\glssymbol{mindemand} represents the demands' lower
+%     bound at vertex~$\vertexa \in \glssymbol{consumers}$.
+%     % 
+%     },
+%     % 
+%     symbol={\mindemand}
+% }
+
+% \newglossaryentry{maxdemand}
+% {
+%     name={\maxdemand},
+%     sort={demand maximum},
+%     type={model},
+%     parent={network},
+%     % 
+%     description={The demands' upper bound at vertex~$\vertexa \in
+%     \glssymbol{consumers}$.
+%     % 
+%     },
+%     % 
+%     symbol={\maxdemand}
+% }
+
+% \newglossaryentry{maxexcess}
+% {
+%     name={\maxexcess},
+%     sort={excess maximum},
+%     type={model},
+%     parent={network},
+%     % 
+%     description={The term~\glssymbol{maxexcess} represents the generators' upper
+%     bound at vertex~$\vertexa \in \glssymbol{generators}$.
+%     % 
+%     },
+%     % 
+%     symbol={\maxexcess}
+% }
+
+% \newglossaryentry{minexcess}
+% {
+%     name={\minexcess},
+%     sort={function excess minimum},
+%     type={model},
+%     parent={network},
+%     % 
+%     description={The term~\glssymbol{minexcess} represents the generators' lower
+%     bound at vertex~$\vertexa \in \glssymbol{generators}$.
+%     % 
+%     },
+%     % 
+%     symbol={\minexcess}
+% }
+
+
+
+
+
+% The selected style doesn't display the symbol
+% so add it to the post-name hook:
+% \newcommand*{\glsxtrpostnameunit}{ (\glsentrysymbol{\glscurrententrylabel})}
+
+
+% Insert the symbol after commands like \gls but only on first use
+% (and only for the "unit" category):
+
+\newcommand*{\glsxtrpostlinkunit}{%
+ \ifdefempty\glscustomtext{\glsxtrpostlinkAddSymbolOnFirstUse}{}}
+% The above "post-link" hook occurs after the link-text produced by 
+% \gls so it's place outside the \unitfont argument.
+
+% \glsaddallunused
+
+% Insert page/pages tag before location list:
+% \GlsXtrEnablePreLocationTag{Used on page }{Used on page }
