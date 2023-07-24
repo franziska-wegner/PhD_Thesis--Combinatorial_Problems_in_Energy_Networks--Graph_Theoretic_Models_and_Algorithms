@@ -1,0 +1,815 @@
+\newglossaryentry{gurobi}
+{
+   name={Gurobi Optimizer},
+   longform={Gurobi},
+   capitalform={Gurobi Optimizer},
+   sort={gurobi},
+   description={Gurobi is a solver that can solve optimization problems
+   formulated as an~\acrlong{lp} (\gls{lp}) or an~\gls{milp} (\gls{milp}).}
+}
+
+
+
+\newglossaryentry{qt}
+{
+    name={QT},
+    longform={Quality Threshold},
+    capitalform={Quality Threshold},
+    sort={qt},
+    description={\glslongform{qt} is a clustering algorithm.},
+    symbol={QT}
+}
+
+
+\newglossaryentry{problems}
+{
+    name={\ensuremath{\problems}},
+    longform={problems},
+    capitalform={Problems},
+    sort={instances},
+    % 
+    description={ With the problem~\glssymbol{problems}, we abstract from
+        specific problems such as~\acrlong{sppp} (\gls{sppp}). },
+    % 
+    symbol={\ensuremath{\problems}}
+}
+
+
+
+\newglossaryentry{pu}
+{
+    name={p.u.},
+    longform={per-unit-system},
+    capitalform={Per-unit-system},
+    sort={pu},
+    description={The per-unit-system (p.u.) is a normalization system used in
+    the power system analyzes to simplify the calculation of the power flow
+    while having heterogeneous networks.},
+    symbol={p.u.} 
+}
+
+% activity threshold
+% substation capacity tightness - ratio of maximum supply and demand
+
+% Mathematical Model
+\newglossaryentry{graph}
+{
+    name={\graph},
+    sort={graph},
+    type={model},
+    % 
+    description={ The topological structure of a power grid is a
+    graph~$\glssymbol{graph}
+    =
+    (\glssymbol{vertices},\glssymbol{edges})$, where the
+    set~\glssymbol{vertices} is the set of vertices and the
+    set~\glssymbol{edges} is the set of edges. },
+    %
+    % Bidirected graph.
+    symbol={\graph}
+}
+
+\newglossaryentry{embedding}
+{
+    name={\embedding},
+    sort={embedding},
+    parent={graph},
+    type={model},
+    % 
+    description={A fixed planar embedding~\glssymbol{embedding} of a
+    graph~\glssymbol{graph} into the plane
+    with~$\glssymbol{graph}(\embedding)\cong\glssymbol{graph}$ (\ie,
+    $\glssymbol{graph}(\embedding)$ is isomorphic to~\glssymbol{graph}) and a
+    injective function~$\embeddingMap\colon
+    \glssymbol{vertices}\to\reals\times\reals$ meaning there is a one-to-one
+    correspondence between the vertices~\glssymbol{vertices} of the graph and
+    the geometrical points~$\points$ of the plane embedding. },
+    % 
+    symbol={\embedding}
+}
+
+\newglossaryentry{dualgraph}
+{
+    name={\dualgraph},
+    sort={dualgraph},
+    parent={graph},
+    type={model},
+    % 
+    description={ A dual graph~\glssymbol{dualgraph} of a planar
+    graph~\glssymbol{graph} with a fixed planar embedding~\glssymbol{embedding}
+    is a graph that has for each face of~\glssymbol{graph} a vertex and whenever
+    two faces are incident to each other in graph~\glssymbol{graph} these two
+    vertices representing the faces are connected by an edge in the dual
+    graph~\glssymbol{dualgraph}. There is a one-to-one correspondence between
+    the edges of the primal graph~\glssymbol{graph} and the edges of the dual
+    graph~\glssymbol{dualgraph}. },
+    % 
+    symbol={\dualgraph}
+}
+
+\newglossaryentry{wyedeltagraph}
+{
+    name={\wyedelta graph},
+    sort={graph-wye-delta},
+    parent={graph},
+    type={model},
+    % 
+    description={The \glssymbol{wyedelta} graph is a topological structure of
+    the power grid that can be reduced to a vertex by the following reduction
+    rules: degree 1 and self-loop deletion, series and parallel contraction, and
+    \glssymbol{wyedelta} transformations.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\graph_{\wyedelta}}}
+}
+
+\newglossaryentry{deltawye}
+{
+    name={\deltawye},
+    sort={deltawye},
+    longform={delta-wye},
+    capitalform={Delta-wye},
+    type={model},
+    % 
+    description={
+    % 
+    The delta-wye transformation transforms a triangle to a star by adding one
+    vertex into the center and adding edges from the center to the already
+    existing vertices.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\deltawye}}
+}
+
+\newglossaryentry{wyedelta}
+{
+    name={\wyedelta},
+    sort={wyedelta},
+    longform={wye-delta},
+    capitalform={Wye-delta},
+    type={model},
+    % 
+    description={
+    % 
+    The wye-delta transformation transforms a star with three edges to a
+    triangle by removing the star's center and its incident edges, and adding
+    edges such that the remaining vertices build a complete graph that is a
+    triangle.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\wyedelta}}
+}
+
+\newglossaryentry{cubicgraph}
+{
+    name={cubic graph},
+    sort={cubic graph},
+    parent={graph},
+    type={model},
+    % 
+    description={A cubic graph (also known as trivalent graph) is a 3-regular
+    graph, where all vertices have a degree of three.
+    % 
+    },
+    symbol={}
+}
+
+\newglossaryentry{3attachedsubgraph}
+{
+    name={3-attached subgraph},
+    sort={graph-3-attached},
+    parent={graph},
+    type={model},
+    % 
+    description={A $3$-attached subgraph is a subgraph of~\glssymbol{graph} with
+    three designated vertices~$\glssymbol{vertices}_3$ that are not directly
+    connected to each other. In addition, removing~$\glssymbol{vertices}_3$
+    from~\glssymbol{graph}---meaning~$\glssymbol{graph}-
+    \glssymbol{vertices}_3$---results in at least two connected components one
+    of which is called~$H'$. The induced subgraph of~$H'$ and~$\vertices_3$ is
+    denoted by~$H$ that consists of an inner part~$H'$ and an outer
+    part~$\glssymbol{graph}-H$ that both have at least a size
+    of~$\fmagnitude{\glssymbol{vertices}} = 1$. If the size
+    of~$\fmagnitude{\glssymbol{vertices}(H')}\geq 2$ it is called
+    \emph{non-trivial}.
+    % 
+    },
+    symbol={}
+}
+
+\newglossaryentry{trisubgraph}
+{
+    name={tri\-sub\-graph},
+    sort={trisubgraph},
+    parent={graph},
+    type={model},
+    % 
+    description={Is a minimal non-trivial~\gls{3attachedsubgraph}.
+    % 
+    },
+    symbol={}
+}
+
+\newglossaryentry{network}
+{
+    name={\network},
+    sort={network},
+    type={model},
+    % 
+    description={A network~\glssymbol{network} represents a power grid with 
+    electrical parameters such as~$\dcnetworktuple$ for the~\gls{dc}-network.
+    See~\cref{ch:foundations} for other example networks.},
+    % 
+    symbol={\network}
+}
+
+\newglossaryentry{vertices}
+{
+    name={\vertices},
+    sort={vertices},
+    parent={graph},
+    type={model},
+    % 
+    description={The set~\glssymbol{vertices} of vertices (in the power grid
+    denoted as buses) represent points such as transmission line junctions.
+    % 
+    },
+    % 
+    symbol={\vertices}
+}
+
+\newglossaryentry{generators}
+{
+    name={\generators},
+    sort={generators},
+    type={model},
+    parent={network},
+    % 
+    description={The set~\glssymbol{generators} of generator vertices is a
+    subset of the set~\vertices of vertices. It represents the set of sources.
+    % 
+    },
+    % 
+    symbol={\generators}
+}
+
+\newglossaryentry{consumers}
+{
+    name={\consumers},
+    sort={consumers},
+    type={model},
+    parent={network},
+    % 
+    description={The set~\glssymbol{consumers} of consumer vertices is a subset
+    of the set~\glssymbol{vertices} of vertices. It represents the set of
+    sinks.
+    % 
+    },
+    % 
+    symbol={\consumers}
+}
+
+\newglossaryentry{edges}
+{
+    name={\edges},
+    sort={edges},
+    parent={graph},
+    type={model},
+    % 
+    description={The set~\glssymbol{edges} of edges (in the power grid denoted
+    as branches) represents curves that interconnect to points such as
+    transmission lines or cables.},
+    % 
+    symbol={\edges}
+}
+
+\newglossaryentry{undirectededges}
+{
+    name={\ensuremath{\protect\undirectededges}},%
+    sort={edgesUndirected},
+    type={model},
+    parent={graph},
+    % 
+    description={The set~\glssymbol{undirectededges} of undirected edges that is
+    represented by unordered pairs of vertices~$
+    \{\vertexa,\vertexc\}\in\glssymbol{undirectededges}(\glssymbol{graph})$.},
+    % 
+    symbol={\ensuremath{\protect\undirectededges}}%
+}
+
+\newglossaryentry{capacity}
+{
+    name={\ensuremath{\capacity}},
+    sort={capacity},
+    type={model},
+    parent={network},
+    % 
+    description={The capacity is in general a function~$\glssymbol{capacity}
+    \colon \glssymbol{undirectededges}\to\posreals$ representing the (thermal
+    line) limits of an edge. For the wind farm cabling problem the capacity is a
+    function~$
+    \glssymbol{capacity} 
+    \colon
+    \glssymbol{cabletypes} 
+    \to 
+    \posreals 
+    \cup 
+    \{\infty\}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\capacity}}
+}
+
+\newglossaryentry{mincapacity}
+{
+    name={\ensuremath{ \mincapacity }},
+    sort={capacityMinimum},
+    type={model},
+    parent={network},
+    description={The minimum capacity on a path~$\glssymbol{path}$.},
+    symbol={\ensuremath{ \mincapacity }}
+}
+
+\newglossaryentry{gencostfct}
+{
+    name={\gamma},
+    sort={generatorCostFunction},
+    type={model},
+    parent={network},
+    % 
+    description={The generator cost function~$\gamma(\vertexa)$ of a generator
+    at a vertex~$\vertexa\in\glssymbol{generators}$.
+    % 
+    },
+    % 
+    symbol={\gamma}
+}
+
+\newglossaryentry{flow}
+{
+    name={\flow},
+    sort={flow},
+    type={model},
+    % 
+    description={The flow~\glssymbol{flow} is a function~$\glssymbol{flow}
+    \colon \glssymbol{edges} \to \reals$ satisfying the skew-symmetry property.
+    % 
+    },
+    % 
+    symbol={\flow}
+}
+
+\newglossaryentry{netflow}
+{
+    name={\netflow},
+    sort={netflow},
+    type={model},
+    parent={flow},
+    % 
+    description={The net flow~$\glssymbol{netflow}(\vertexa)$ at a
+    vertex~$\vertexa\in\glssymbol{vertices}$ is defined by the sum of all incident
+    edges~$\glssymbol{netflow}(\vertexa)\coloneqq\sum_{
+    \{\vertexa,\vertexb\}\in\glssymbol{undirectededges}}\glssymbol{flow}
+    (\vertexa,\vertexb)$.
+    % 
+    },
+    % 
+    symbol={\netflow}
+}
+
+\newglossaryentry{flowvalue}
+{
+    name={\flowvalue},
+    sort={flowValue},
+    type={model},
+    parent={flow},
+    % 
+    description={The flow
+    value~$\glssymbol{flowvalue}(\glssymbol{network},\glssymbol{flow})$ of a
+    network~\glssymbol{network} and some flow~\glssymbol{flow} is defined
+    by~$\glssymbol{flowvalue}(\glssymbol{network},\glssymbol{flow})\coloneqq\sum_{\vertexa\in\glssymbol{generators}}\glssymbol{netflow}(\vertexa)$.
+    % 
+    },
+    % 
+    symbol={\flowvalue}
+}
+
+\newglossaryentry{timestamp}
+{
+    name={\ensuremath{\timestamp}},
+    sort={timestamp},
+    type={model},
+    % 
+    description={A timestamp represents a point in time.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\timestamp}}
+}
+
+\newglossaryentry{switched}
+{
+    name={\switched},
+    sort={switched},
+    type={model},
+    % 
+    description={Set of switched edges~\glssymbol{switched}
+    with~$\glssymbol{switched}\subseteq\glssymbol{undirectededges}$. Note that
+    for a static analysis with one timestamp the switch is in OFF-state for
+    these edges. Roughly speaking the transmission line is temporary removed
+    from the topology.
+    % 
+    },
+    % 
+    symbol={\switched}
+}
+
+\newglossaryentry{switch}
+{
+    name={\ensuremath{\switch(\vertexa,\vertexb)}},
+    sort={switch},
+    type={model},
+    parent={switched},
+    % 
+    description={The function~$\switch\colon\undirectededges\to\{0,1\}$ 
+    is~$\switch(\vertexa,\vertexb) = 0$ if an edge is switched and~$\switch
+    (\vertexa,\vertexb) = 1$ otherwise.
+    % 
+    },
+    % 
+    symbol={\ensuremath{\switch}}
+}
+
+\newglossaryentry{numberdtps}
+{
+    name={\ensuremath{\sigma_{\dtp}(\source, \sink, \edge)}},
+    sort={dtpnumber},
+    type={model},
+    % 
+    description={The number of~\dtp{s} between~\source and~\sink.},
+    % 
+    symbol={\ensuremath{\sigma_{\dtp}(\source, \sink, \edge)}}
+}
+
+\newglossaryentry{optimalvalue}
+{
+    name={\ensuremath{\opt_\Pi}},
+    sort={optimumValue},
+    type={model},
+    % 
+    description={The optimum value of a problem~$\Pi$~(\eg, \gls{mtsf}) is
+    denoted by~\glssymbol{optimalvalue}~(\eg, $\opt_{\gls{mtsf}}$).
+    % 
+    },
+    % 
+    symbol={\ensuremath{\opt_\Pi}}
+}
+
+\newglossaryentry{switchingcentrality}
+{
+    name={\ensuremath{ c_{\scu} }},
+    sort={centralitySwitching},
+    type={model},
+    % 
+    description={The switching centrality is denoted
+    by~$\glssymbol{switchingcentrality}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ c_{\scu} }}
+}
+
+\newglossaryentry{neighbor}
+{
+    name={\ensuremath{ \neighbor }},
+    sort={neighbor},
+    type={model},
+    % 
+    description={The set of neighbors---\ie, the neighborhood---of a
+vertex~\vertexb is denoted by~$\glssymbol{neighbor}(\vertexb)=
+\{\vertexa\in\glssymbol{vertices}\mid\{\vertexa,\vertexb\}\in
+\glssymbol{undirectededges}\}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \neighbor }}
+}
+
+\newglossaryentry{inneighbor}
+{
+    name={\ensuremath{ \inneighbor }},
+    sort={inneighbor},
+    parent={neighbor},
+    type={model},
+    % 
+    description={The neighborhood created by incoming edges is denoted
+    by~$\glssymbol{inneighbor}(\vertexb)$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \inneighbor }}
+}
+
+\newglossaryentry{outneighbor}
+{
+    name={\ensuremath{ \outneighbor }},
+    sort={outneighbor},
+    parent={neighbor},
+    type={model},
+    % 
+    description={The neighborhood created by outgoing edges is
+    denoted by~$\glssymbol{outneighbor}(\vertexb)$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \outneighbor }}
+}
+
+\newglossaryentry{pathset}
+{
+    name={\ensuremath{ \paths(\vertexa,\vertexc) }},
+    sort={pathSet},
+    type={model},
+    % 
+    description={The set of all paths between two vertices~\vertexa and~\vertexc
+    with~$\vertexa,\vertexc\in\glssymbol{vertices}$ is denoted by~\gls{pathset}.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \paths }}
+}
+
+\newglossaryentry{path}
+{
+    name={\ensuremath{ \pathu(\vertexa,\vertexc) }},
+    sort={path},
+    type={model},
+    parent={pathset},
+    % 
+    description={A path starting at~\vertexa and ending at~\vertexc
+    with~$\vertexa,\vertexc\in\glssymbol{vertices}$ is denoted by~\gls{path}.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \pathu }}
+}
+
+\newglossaryentry{dtppath}
+{
+    name={\ensuremath{ \fpath{\dtp}{\vertexa}{\vertexc} }},
+    sort={dtpPath},
+    type={model},
+    parent={pathset},
+    % 
+    description={A~\dtp from~\vertexa to~\vertexb
+    with~$\vertexa,\vertexc\in\glssymbol{vertices}$ is denoted by~\gls{dtppath}.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \fpath{\dtp}{\vertexa}{\vertexc} }}
+}
+
+\newglossaryentry{labels}
+{
+    name={\ensuremath{ \labels }},
+    sort={labels},
+    type={model},
+    % 
+    description={The set of nondominated labels at a
+    vertex~$\vertexa\in\glssymbol{vertices}$ is denoted
+    by~$\glssymbol{labels}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \labels }}
+}
+
+\newglossaryentry{paretolabels}
+{
+    name={\ensuremath{ \paretolabels(\vertexa) }},
+    sort={paretoLabels},
+    type={model},
+    parent={labels},
+    % 
+    description={The Pareto set at vertex~$\vertexa\in\glssymbol{vertices}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \paretolabels }}
+}
+
+\newglossaryentry{label}
+{
+    name={\ensuremath{ \lab }},
+    sort={label},
+    type={model},
+    parent={labels},
+    % 
+    description={A label~\glssymbol{label} includes the susceptance
+    norm~$\bnorm{\glssymbol{path}}$ and the minimum
+    capacity~$\glssymbol{mincapacity}(\glssymbol{path})$ of a path~$
+    \glssymbol{path}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \lab }}
+}
+
+\newglossaryentry{priorityqueue}
+{
+    name={\ensuremath{ Q }},
+    sort={priorityQueue},
+    type={model},
+    % 
+    description={The priority queue is denoted by~\glssymbol{priorityqueue}.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ Q }}
+}
+
+\newglossaryentry{factsbus}
+{
+    name={\ensuremath{ \factsbus }},
+    sort={factsbus},
+    type={model},
+    % 
+    description={The set of facts buses.
+    % 
+    A \emph{vertex hitting set} of~$\glssymbol{graph} =
+    (\glssymbol{vertices},\glssymbol{edges})$ with respect to a class of
+    graphs~$\mathcal G$ is a set of
+    vertices~$\glssymbol{factsbus}\subseteq\glssymbol{vertices}$ such
+    that~$\glssymbol{graph}-\glssymbol{factsbus} \in \mathcal G$.
+    % 
+    We call a subset of vertices~$\glssymbol{factsbus}^c$ $c$-pumpkin hitting
+    set if there is a vertex
+    subset~$\glssymbol{factsbus}^c\subseteq\glssymbol{vertices}(\glssymbol{graph})$
+    such that~$
+    \glssymbol{graph}-\glssymbol{factsbus}^c$ consists of no~$c$-pumpkin minor.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \factsbus }}
+}
+
+\newglossaryentry{factsbranch}
+{
+    name={\ensuremath{ \factsbranch }},
+    sort={factsbranch},
+    type={model},
+    % 
+    description={The set of facts buses.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \factsbranch }}
+}
+
+\newglossaryentry{dtpcentrality}
+{
+    name={\ensuremath{ c_{\sbc} }},
+    sort={centralityBetweennessDtp},
+    type={model},
+    % 
+    description={The~\dtp betweenness centrality is denoted by~$\glssymbol{dtpcentrality}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ c_{\sbc} }}
+}
+
+\newglossaryentry{normalizedconstant}
+{
+    name={\ensuremath{ m_B }},
+    sort={constantNormalizing},
+    type={model},
+    % 
+    description={The normalizing constant for the betweenness centrality is
+    denoted by~\glssymbol{normalizedconstant}.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ m_B }}
+}
+
+\newglossaryentry{adjacencyMatrix}
+{
+    name={\ensuremath{ \adjacencyMatrix }},
+    sort={matrixAdjacency},
+    type={model},
+    % 
+    description={The \emph{oriented adjacency
+    matrix}~$\glssymbol{adjacencyMatrix}\in\{-1, 0,
+    1\}^{\fmagnitude{\glssymbol{vertices}}\times\fmagnitude{
+    \glssymbol{vertices}}}$ represents the connections of a graph by vertex
+    adjacencies meaning an entry in row~\vertexa and column~\vertexb is~$1$
+    (respectively~$-1$) if there is an edge~$(\vertexa,\vertexb)\in
+    \glssymbol{edges}(\glssymbol{graph})$ (respectively~$
+    (\vertexb,\vertexa)\in\glssymbol{edges}(\glssymbol{graph})$). The entry
+    is~$0$, if there is no such edge in the graph.
+    % 
+    }, 
+    % 
+    symbol={\ensuremath{\adjacencyMatrix }} 
+    % 
+}
+
+\newglossaryentry{incidenceMatrix}
+{
+    name={\ensuremath{ \incidenceMatrix }},
+    sort={matrixIncidence},
+    type={model},
+    % 
+    description={
+    The \emph{oriented incidence matrix}~$\incidenceMatrix\in\{-1,0,1\}^{
+    \fmagnitude{\glssymbol{vertices}}\times\fmagnitude{\glssymbol{edges}}}$
+    represents connections of a graph~\glssymbol{graph}. An entry in
+    row~\vertexa and column~$(\vertexa,\vertexc)$ of the oriented incidence
+    matrix~\glssymbol{incidenceMatrix} is~$1$ (respectively~$-1$) if there is
+    an outgoing edge~$(\vertexa,\vertexc)$ (respectively incoming
+    edge~$(\vertexc,\vertexa)$) at vertex~$\vertexa$, and~$0$ otherwise. An
+    undirected version of the incidence matrix is defined
+    by~$\incidenceMatrix\in\{0,1\}^{
+    \fmagnitude{\glssymbol{vertices}}\times\fmagnitude{\glssymbol{edges}}}$,
+    where an entry in row~\vertexa is~$1$ if there is an edge~$
+    \{\vertexa,\vertexc\}\in\glssymbol{undirectededges}$.
+    % 
+    },
+    % 
+    symbol={\ensuremath{ \incidenceMatrix }} 
+    % 
+    }
+
+\newglossaryentry{cycleMatrix}
+{
+    name={\ensuremath{ \cycleMatrix }},
+    sort={matrixCircuit},
+    type={model},
+    % 
+    description={
+        The \emph{oriented circuit matrix}~$\glssymbol{cycleMatrix}\in
+        \{-1,0,1\}^{
+        \fmagnitude{\glssymbol{cycles}}\times \fmagnitude{\glssymbol{edges}}}$,
+        where~\glssymbol{cycles} is the set of cycles. Assume we define a
+        direction for each cycle. Thus, the matrix has a~$1$ entry if the edge
+        is in the cycle and aligned with the cycle direction, $-1$ if it is
+        opposite to the defined direction, and~$0$ otherwise.
+        % 
+    },
+    symbol={\ensuremath{ \cycleMatrix }}
+}
+
+\newglossaryentry{cycles}
+{
+    name={\ensuremath{ \cycles }},
+    sort={cycles},
+    type={model},
+    % 
+    description={
+        The set~\glssymbol{cycles} is called the set of cycles for a
+        graph~\glssymbol{graph}.
+    % 
+    },
+    symbol={\ensuremath{ \cycles }}
+}
+
+\newglossaryentry{cycle}
+{
+    name={\ensuremath{ \cycle }},
+    sort={cycle},
+    parent={cycles},
+    type={model},
+    % 
+    description={
+        A \emph{cycle} is a
+        path~$\fpath{}{\source}{\sink}\in\paths(\source,\sink)$, where the first and the
+        last vertex are identical meaning~$\source = \sink$. A cycle is called
+        \emph{simple} if no vertex is visited twice with the exception of~$\source$
+        and~$\sink$.
+        % 
+    },
+    symbol={\ensuremath{ \cycle }}
+}
+
+\newglossaryentry{cutsetMatrix}
+{
+    name={\ensuremath{ \cutsetMatrix }},
+    sort={matrixCutset},
+    type={model},
+    % 
+    description={
+        The \emph{oriented cut-set matrix}~$\cutsetMatrix\in\{-1, 0, 1\}^{
+        \fmagnitude{\cutsets}\times\fmagnitude{\glssymbol{edges}}}$
+        represents the graph~\glssymbol{graph} in terms of~$\cutsets$
+        and~\glssymbol{edges}. The entry is~$1$ (respectively~$-1$) if the edge
+        is in the cut-set and oriented in the predefined direction (respectively
+        in the opposite direction), otherwise it is~$0$.
+        % 
+    },
+    symbol={\ensuremath{ \cutsetMatrix }}
+}
