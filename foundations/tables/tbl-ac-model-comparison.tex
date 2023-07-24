@@ -1,0 +1,138 @@
+{\setlength{\tabcolsep}{0.3em}}
+{\renewcommand{\arraystretch}{1}}% for the vertical padding
+\small
+% \begin{tabular}{p{2cm}p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+\begin{tabular}{%
+>{\centering\arraybackslash}m{2.4cm}%
+>{\arraybackslash}m{1.9cm}%
+>{\centering\arraybackslash}m{0.61cm}%
+>{\arraybackslash}m{2cm}%
+>{\centering\arraybackslash}m{0.61cm}%
+>{\arraybackslash}m{2cm}%
+>{\centering\arraybackslash}m{0.61cm}%
+>{\arraybackslash}m{2cm}%
+>{\centering\arraybackslash}m{0.61cm}%
+>{\arraybackslash}m{1.5cm}%
+>{\centering\arraybackslash}m{1.00cm}%
+}%
+% 
+\toprule
+  \multirow[c]{4}*{Constraints}   & 
+  \multicolumn{4}{c}{Polar}       &
+  \multicolumn{4}{c}{Rectangular} & 
+  \multicolumn{1}{c}{DC}\\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+ \cmidrule(lr){2-5}\cmidrule(lr){6-9}
+  & 
+  \multicolumn{2}{c}{PQV} &
+  \multicolumn{2}{c}{IV}  &
+  \multicolumn{2}{c}{PQV} & 
+  \multicolumn{2}{c}{IV}  &
+  \multicolumn{2}{c}{}
+  \\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+  \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr)
+  {8-9}\cmidrule(lr){10-11}
+   & 
+   \multicolumn{1}{c}{Property}   &
+   \multicolumn{1}{c}{Ref.}       &
+   \multicolumn{1}{c}{Property}   & 
+   \multicolumn{1}{c}{Ref.}       &
+   \multicolumn{1}{c}{Property}   & 
+   \multicolumn{1}{c}{Ref.}       &
+   \multicolumn{1}{c}{Property}   & 
+   \multicolumn{1}{c}{Ref.}       &
+   \multicolumn{1}{c}{Property}   & 
+   \multicolumn{1}{c}{Ref.}
+   \\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+ \midrule  
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+  \rowcolor{Table-Line-Marker}%
+  \textbf{Network Flow}%
+    & Quadratic equation and trigonometric functions%
+    & 
+    % \ref{ch:foundations:sec:power-flow-analyses:eq:complex-power-flow:pqv},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:real-power-flow:pqv:polar:full},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:reactive-power-flow:pqv:polar:full}.
+    & Quadratic equation and trigonometric functions%
+    & 
+    based on
+    \ref{ch:foundations:sec:power-flow-analyses:eq:complex-current-ohm-voltage},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:complex-current-flow-voltages}.
+    & Quadratic equations%
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:complex-power-flow:pqv:rectangular}.
+    & Linear \mbox{constraints}%
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:current-sum-at-vertex},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:complex-current-ohm-voltage},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:complex-current-flow-voltages}.
+    & Linear equations
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:dc:eq:kvl}
+    \\
+  \textbf{Voltage Angle Difference}~$\deltaangle$  %line         
+    & Linear \mbox{constraints}
+    & 
+    
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:delta-voltageangle:polar}.
+    & Linear \mbox{constraints}
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:delta-voltageangle:polar}.
+    & Non-convex \mbox{constraints} with trigonometric functions
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:delta-voltageangle:rectangular}.
+    & Non-convex \mbox{constraints} with trigonometric functions
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:delta-voltageangle:rectangular}.
+    & Linear \mbox{constraints}
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:dc:eq:angle-difference}.
+    \\
+  \rowcolor{Table-Line-Marker}
+  \textbf{Vertices \& Edges}
+    & Linear \mbox{constraints}
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-min:polar},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:injection-disturbance-bounds}.
+    & Linear \mbox{constraints}
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-min:polar},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:current-flow},
+    
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:current-flow:polar},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:complex-power:iv:polar:p:q}
+    ineq.
+    & Quadratic inequalities (some non-convex)
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-min:rectangular},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-max:rectangular},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:complex-power:iv:rectangular} %
+    with %
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:current-flow}.%
+    & Quadratic inequalities (some non-convex)
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-min:rectangular},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-max:rectangular},
+    \ref{ch:foundations:sec:power-flow-analyses:eq:network:bounds:current-flow:polar}.%
+    & Linear \mbox{constraints}
+    & 
+    \ref{ch:foundations:sec:power-flow-analyses:dc:eq:kcl}--\ref{ch:foundations:sec:power-flow-analyses:dc:eq:capacity}
+    \\ 
+  \textbf{Models}
+    & \multicolumn{2}{c}{\cref{app:foundations:sec:power-flow-analyses:eq:polar-pqv} }
+    & \multicolumn{2}{c}{\cref{app:foundations:sec:power-flow-analyses:eq:polar-iv} }
+    & \multicolumn{2}{c}{\cref{app:foundations:sec:power-flow-analyses:eq:rectangular-pqv} }
+    & \multicolumn{2}{c}{\cref{app:foundations:sec:power-flow-analyses:eq:rectangular-iv} }
+    & \multicolumn{2}{c}{\crefrange{ch:foundations:sec:power-flow-analyses:dc:eq:kcl}{ch:foundations:sec:power-flow-analyses:dc:eq:angle-difference} }
+    \\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+   \bottomrule
+\end{tabular}
