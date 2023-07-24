@@ -1,0 +1,1593 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Packages
+
+\usepackage{scrhack}
+
+\usepackage[ngerman,main=american]{babel}
+
+\usepackage{calc}
+
+\usepackage{printlen}
+
+\usepackage{nicefrac}
+\usepackage{xfrac}
+\usepackage[super]{nth} %\nth{1}, \nth{2}, \nth{3}, \nth{4}
+
+% SI units
+\usepackage{eurosym}
+\usepackage[binary-units=true]{siunitx}
+\sisetup{
+    % quotient-mode = fraction,
+    per = fraction,
+    % fraction-function=\sfrac,
+    % product-units = single,
+    % output-product={\,},
+    unit-color = UNITCOLOR,
+    % round-mode=places,
+    % round-precision=2,
+    % exponent-product = \cdot,
+    % output-decimal-marker = {.},
+    fraction=sfrac,
+    group-separator = {\,},
+    group-minimum-digits = 3,
+}
+% \sisetup{}
+\DeclareSIUnit \var { \si{\volt}\si{\ampere}r } %volt-ampere reactive - idle
+% power
+\DeclareSIUnit \EUR { \text{\euro} } %euro as unit
+\DeclareSIUnit\year{a}
+
+\usepackage{xargs}       % Use more than one optional parameter in a new commands
+
+\usepackage{complexity}
+
+\usepackage{pifont} % for \ding{55} -> cross
+
+% Figures
+\usepackage{graphicx}
+\input{insbox}
+\usepackage{wrapfig}
+\usepackage{cutwin}
+
+% \usepackage[redeflists]{IEEEtrantools}
+
+% Table
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\def\sharedaffiliation{%
+  \end{tabular}
+  \begin{tabular}{c}
+}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+% \usepackage{lscape}
+
+% Quotes
+\usepackage{csquotes}
+
+\usepackage{timetravel}
+\setcounter{equation}{70}
+\setCounters{chapter,equation,section,figure}%algocfproc,theorem,algocf
+
+
+
+\makeatletter%https://tex.stackexchange.com/questions/265841/small-overleftrightarrow
+    \newcommand{\overleftrightsmallarrow}{\mathpalette{\overarrowsmall@\leftrightarrowfill@}}
+    \newcommand{\overrightsmallarrow}{\mathpalette{\overarrowsmall@\rightarrowfill@}}
+    \newcommand{\overleftsmallarrow}{\mathpalette{\overarrowsmall@\leftarrowfill@}}
+% 
+    \newcommand{\overarrowsmall@}[3]{%
+    \vbox{%
+      \ialign{%
+        ##\crcr
+        #1{\smaller@style{#2}}\crcr
+        \noalign{\nointerlineskip}%
+        $\m@th\hfil#2#3\hfil$\crcr
+      }%
+    }%
+    }
+    \def\smaller@style#1{%
+    \ifx#1\displaystyle\scriptstyle\else
+      \ifx#1\textstyle\scriptstyle\else
+        \scriptscriptstyle
+      \fi
+    \fi
+    }
+\makeatother
+
+%% New environment for research question
+% \DeclareFloatingEnvironment{researchquestion}[Research Question][List of
+% research questions]
+% \crefformat{enumi}{#2Reseacrh Questions #1#3}
+% \renewenvironment{researchquestion}
+%   {\begin{enumerate}}
+%   {\end{enumerate}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indentation
+
+\newlength{\myparindent}
+\newlength{\myparskip}
+\setlength{\myparindent}{1em}
+\setlength{\myparskip}{0em}
+
+\setlength{\parindent}{\myparindent}
+\setlength{\parskip}{\myparskip}
+\setlength{\parskip}{0pt plus1pt minus0pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Colors
+
+% \usepackage[dvipsnames]{xcolor}
+\usepackage[table,x11names,dvipsnames,table]{xcolor}
+\usepackage[most]{tcolorbox}
+
+% Thesis, KIT, and power grid colors
+\input{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Link
+\newcommandx{\screen}[1]{\textcolor{black}{#1}}%
+\newcommandx{\screentextcolor}[2]{\textcolor{#1}{#2}}%
+\colorlet{HiLi}{KITorange15}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Highlight text background
+
+\usepackage{soul}
+\DeclareRobustCommand{\hlhili}[1]{{\sethlcolor{HiLi}\hl{#1}}}
+\DeclareRobustCommand{\myhl}[2]{{\sethlcolor{#1}\hl{#2}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ...
+
+\newlength{\tmpa}
+\newlength{\tmpb}
+\newlength{\tmpc}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Size and position of the text body
+
+\newlength{\mybodywidth}
+\newlength{\mybodyheight}
+\newlength{\myoutermargin}
+\newlength{\mytopmargin}
+\setlength{\mybodywidth}{132.5mm}
+\setlength{\mybodyheight}{195mm}
+\setlength{\myoutermargin}{51.8mm}%+5mm}
+\setlength{\mytopmargin}{38mm}
+
+\newlength{\myinnermargin}
+\newlength{\mybottommargin}
+\setlength{\myinnermargin}{\paperwidth-\mybodywidth-\myoutermargin}
+\setlength{\mybottommargin}{\paperheight-\mybodyheight-\mytopmargin}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Position of the cut marks
+
+\newlength{\cutmarktop}
+\newlength{\cutmarkbottom}
+\newlength{\cutmarkinner}
+\newlength{\cutmarkouter}
+
+\setlength{\cutmarktop}{7mm}
+\setlength{\cutmarkbottom}{7mm}
+\setlength{\cutmarkinner}{0mm}
+\setlength{\cutmarkouter}{7mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Position of the head and foot
+
+\newcommand{\goldenratio}{1.618}
+
+\newlength{\myheadsep} % distance from header to body
+\setlength{\myheadsep}{(\mytopmargin-\cutmarktop) -
+  (\mytopmargin-\cutmarktop) / \real{\goldenratio} - 1ex}
+
+\newlength{\myfootskip} % distance from body to footer
+\setlength{\myfootskip}{(\mybottommargin-\cutmarkbottom) /
+  \real{\goldenratio} - 1ex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Margin position and width
+
+\newlength{\mymargininnersep} % distance between margin and body
+\newlength{\mymarginoutersep} % distance between margin and paper edge
+\newlength{\mymarginwidth} % width of the margin
+\setlength{\mymargininnersep}{7mm}
+\setlength{\mymarginoutersep}{12mm}
+\setlength{\mymarginwidth}{\myoutermargin - \mymargininnersep -
+  \mymarginoutersep - \cutmarkouter}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Applying the geometry
+
+\usepackage[
+paper=a4paper,
+width=\mybodywidth,
+height=\mybodyheight,
+outer=\myoutermargin,
+top=\mytopmargin,
+headsep=\myheadsep,
+footskip=\myfootskip,
+marginparsep=\mymargininnersep,
+marginparwidth=\mymarginwidth
+% showframe
+]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Comments and TODOs
+
+% for new line use "\newline"
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+% 
+\newcommandx{\franzi}[2][1=]{\todo
+[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{{\textbf{
+\underline{Franzi:}}}\newline#2}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Printing crop marks
+
+\usepackage{tikz}
+\setlength{\tmpa}{1mm}
+\newcommand{\cropmarkeven}{%
+  \begin{tikzpicture}[overlay,remember picture]%
+    \node [inner sep=0,outer sep=0, anchor=north west] at (current
+    page.north west) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (\cutmarkouter,0mm) -- (\cutmarkouter,-\cutmarktop+\tmpa);%
+        \draw (0mm,-\cutmarktop) -- (\cutmarkouter-\tmpa,-\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=north east] at (current
+    page.north east) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (0mm,-\cutmarktop) -- (-\cutmarkouter+\tmpa,-\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=south west] at (current
+    page.south west) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (\cutmarkouter,0mm) -- (\cutmarkouter,\cutmarktop-\tmpa);%
+        \draw (0mm,\cutmarktop) -- (\cutmarkouter-\tmpa,\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=south east] at (current
+    page.south east) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (0mm,\cutmarktop) -- (-\cutmarkouter+\tmpa,\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+  \end{tikzpicture}
+}
+\newcommand{\cropmarkodd}{%
+  \begin{tikzpicture}[overlay,remember picture]%
+    \node [inner sep=0,outer sep=0, anchor=north west] at (current
+    page.north west) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (0mm,-\cutmarktop) -- (\cutmarkouter-\tmpa,-\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=north east] at (current
+    page.north east) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (-\cutmarkouter,0mm) -- (-\cutmarkouter,-\cutmarktop+\tmpa);%
+        \draw (0mm,-\cutmarktop) -- (-\cutmarkouter+\tmpa,-\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=south west] at (current
+    page.south west) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (0mm,\cutmarktop) -- (\cutmarkouter-\tmpa,\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=south east] at (current
+    page.south east) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw (-\cutmarkouter,0mm) -- (-\cutmarkouter,\cutmarktop-\tmpa);%
+        \draw (0mm,\cutmarktop) -- (-\cutmarkouter+\tmpa,\cutmarktop);%
+      \end{tikzpicture}%
+    };%
+  \end{tikzpicture}
+}
+
+\usepackage{everypage}
+\usepackage[strict]{changepage}
+
+\newcommand{\showcropmarks}{%
+  \AddEverypageHook{%
+    \checkoddpage%
+    \ifoddpage%
+    \cropmarkodd%
+    \else%
+    % \cropmarkeven%
+    \fi%
+  }}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Header and footer format
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+
+\fancypagestyle{plain}{%
+  \fancyhf{} % clear header and footer
+
+  % no header/footer line
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+
+  % set distances
+  \fancyheadoffset[EL]{\myoutermargin}
+  \fancyheadoffset[OR]{\myoutermargin}
+  \fancyfootoffset[EL]{\myoutermargin}
+  \fancyfootoffset[OR]{\myoutermargin}
+
+  % page numbers
+  \fancyfoot[EL]{%
+    {\color{stroke1}\rule{\myoutermargin-\mymargininnersep}{0.5mm}}\\
+    \begin{minipage}[b]{\myoutermargin-\mymargininnersep}%
+      \raggedleft\color{footerpagenr}\textbf{\thepage}%
+    \end{minipage}%
+  }
+  \fancyfoot[OR]{%
+    {\color{stroke1}\rule{\myoutermargin-\mymargininnersep}{0.5mm}}\\
+    \begin{minipage}[b]{\myoutermargin-\mymargininnersep}%
+      \raggedright\color{footerpagenr}\textbf{\thepage}%
+    \end{minipage}%
+  }
+}
+
+\fancypagestyle{content}{%
+  % use default page numbering
+  \pagestyle{plain}
+
+  % define header
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{%
+      \small\textsf{\color{footerchaptername}##1}%
+    }{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{%
+      \small\textsf{\color{footersectionname}##1}%
+    }%
+  } 
+  \fancyhead[EL]{%
+    \begin{minipage}[b]{\myoutermargin-\mymargininnersep}%
+      \small%
+      \raggedleft\textsf{\textbf{\color{footerchapter}\chaptername\ \thechapter}}
+    \end{minipage}%
+    \hspace{\mymargininnersep}\leftmark%
+  }
+  \fancyhead[OR]{%
+    \rightmark\hspace{\mymargininnersep}%
+    \begin{minipage}[b]{\myoutermargin-\mymargininnersep}%
+      \small%
+      \raggedright\textsf{\textbf{\color{footersection}Section\ \thesection}}
+    \end{minipage}%
+  }
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Caption format
+
+\usepackage{caption}
+\captionsetup{
+  font=small,
+  labelfont={bf,sf,color=captionlabel},
+  format=plain,
+  singlelinecheck=off
+  %tableposition=top
+}
+
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+% \usepackage{colortbl}
+% \usepackage[table]{xcolor}
+% \usepackage{multirow}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% part format
+% \RequirePackage{silence}
+% \WarningFilter{scrreprt}{Usage of package `titlesec'}
+% \WarningFilter{scrreprt}{Activating an ugly workaround}
+
+\usepackage[noindentafter,explicit]{titlesec}
+
+\assignpagestyle{\part}{empty}
+\titleformat{\part}
+[display]
+{\Huge\sffamily}%
+{}%
+{-2\baselineskip}%
+{%
+  \setlength{\tmpa}{0.618\paperwidth}%
+  \setlength{\tmpb}{0.382\paperheight}%
+  \begin{tikzpicture}[overlay,remember picture]%
+    \node [inner sep=0,outer sep=0, anchor=north] at (current
+    page.north west) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw[color=stroke1, line width=0.7mm] (\tmpa,0) -- (\tmpa,-\tmpb);%
+      \end{tikzpicture}%
+    };%
+    \node (align) [align=right, below=\tmpb-2ex, inner sep=0, outer
+    sep=0, anchor=north west] at (current page.north west){%
+      \hspace{\tmpa}\hspace{0.5em}\partname\ \thepart\\[1ex]%
+      \color{stroke1}#1%
+    };%
+  \end{tikzpicture}%
+}%
+[]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Chapter format
+% 
+\let\oldchapter\chapter
+\newcommand\Chapter[3]{%
+% \renewcommand\chapter[3]{%
+  \def\tempSubtitle{#2}
+  \def\tempFooter{#3}
+  % 
+  \ifx\tempSubtitle\empty
+    \def\tempTocEntry{#1}
+    \def\tempHeadEntry{#1}
+    \ifx\tempFooter\empty
+      \def\tempHeader{\sffamily\fontsize{19.5}{19.5}\selectfont#1}
+    \else
+      \def\tempHeader{\sffamily\fontsize{19.5}{19.5}\selectfont#1#3}
+    \fi
+  \else
+    \def\tempTocEntry{#1\hfil\hbox{}\protect\linebreak{\normalfont\itshape#2}}%
+    % \def\tempTocEntry{#1\protect\linebreak{\normalfont\itshape#2}}%
+    \def\tempHeadEntry{#2}
+    \ifx\tempFooter\empty
+      \def\tempHeader{\sffamily\fontsize{19.5}{19.5}\selectfont#1\\[0.0ex]\Large\itshape#2}
+    \else
+      \def\tempHeader{\sffamily\fontsize{19.5}{19.5}\selectfont#1#3\\[0.0ex]\Large\itshape#2}
+    \fi
+  \fi
+  % 
+  \oldchapter[%
+    tocentry={\tempTocEntry},
+    head={\tempHeadEntry}
+  ]%
+  {
+    \ifx\tempSubtitle\empty
+      \sffamily\fontsize{19.5}{19.5}\selectfont#1\hspace{-2mm}#3
+    \else
+      \sffamily\fontsize{19.5}{19.5}\selectfont#1\hspace{-2mm}#3
+      \\[0.0ex]\Large\itshape#2
+    \fi
+  }%
+}
+
+\usepackage{xpatch}
+\makeatletter
+\providecommand*\@chaptersubtitle{}
+\FamilyStringKey[.section]{KOMAarg}{chaptersubtitle}{\@chaptersubtitle}
+\xpretocmd{\chapter}{\xdef\@chaptersubtitle{}}{}{\PatchFailed}
+\xapptocmd\chapterlinesformat{%
+  \ifstr{\@chaptersubtitle}{}{}
+    {%
+      \parbox[t]{\linewidth}
+        {\raggedchaptersubtitle\usekomafont{chaptersubtitle}\@chaptersubtitle}%
+      \par\nobreak
+    }%
+  }
+  {}{\PatchFailed}
+\xapptocmd\chapterlineswithprefixformat{%
+  \ifstr{\@chaptersubtitle}{}{}
+    {%
+      \parbox[t]{\linewidth}
+        {\raggedchaptersubtitle\usekomafont{chaptersubtitle}\@chaptersubtitle}%
+      \par\nobreak
+    }%
+  }
+  {}{\PatchFailed}
+\makeatother
+\newcommand\raggedchaptersubtitle{\raggedchapter}
+\newkomafont{chaptersubtitle}{\normalsize}
+
+
+
+% \assignpagestyle{\chapter}{plain}
+\titlespacing{\chapter}{0mm}{0mm}{0mm}
+\titleformat{\chapter}[display]%
+{\sffamily\color{stroke1}\huge}% format
+{}% label
+{0pt}% sep
+{%
+  \begin{tikzpicture}[overlay,remember picture]%
+    \node [right=\myinnermargin,below=\mytopmargin, inner sep=0, outer
+    sep=0, anchor=north west] (numbernode) at (current page.north west){%
+      \hspace{\myinnermargin}%
+      \sffamily\fontsize{60}{60}\selectfont%
+      \color{chapternumber}%
+      \raggedchaptersubtitle%
+      \thechapter%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=north west] at (numbernode.south west) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw[color=stroke1, line width=0.7mm] (\myinnermargin,-1ex) -- (\paperwidth,-1ex);%
+      \end{tikzpicture}%
+    };%
+    \node (align) [align=right, right=\myinnermargin+\mybodywidth, inner sep=0, outer sep=0,
+    anchor=east] at (numbernode.west) {%
+      #1%
+    };%
+  \end{tikzpicture}%
+}% before-code
+[\bigskip]% after-code
+
+
+\titleformat{name=\chapter,numberless}
+[display]%
+{\sffamily\color{stroke1}\huge}% format
+{}% label
+{0pt}% sep
+{%
+  \begin{tikzpicture}[overlay,remember picture]%
+    \node [right=\myinnermargin,below=\mytopmargin, inner sep=0, outer
+    sep=0, anchor=north west] (numbernode) at (current page.north west){%
+      \hspace{\myinnermargin}%
+      \sffamily\fontsize{60}{60}\selectfont%
+      \color{white}%
+      \thechapter%
+    };%
+    \node [inner sep=0,outer sep=0, anchor=north west] at (numbernode.south west) {%
+      \begin{tikzpicture}[overlay,remember picture]%
+        \draw[color=stroke1, line width=0.7mm] (\myinnermargin,-1ex) -- (\paperwidth,-1ex);%
+      \end{tikzpicture}%
+    };%
+    \node (align) [align=left, right=\myinnermargin, inner sep=0, outer sep=0,
+    anchor=south west] at (numbernode.south west) {%
+      #1%
+    };%
+  \end{tikzpicture}%
+}% before-code
+[\bigskip]% after-code
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Section format
+
+% \titleformat{\section}%
+% [block]%
+% {\Large\bfseries\sffamily}%
+% {\color{sectiontitlenumber}\thesection\hspace{0.5em}}%
+% {0pt}%
+% {\color{sectiontitle}\raggedright}%
+% []
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Subsection format
+
+% \titleformat{\subsection}%
+% [block]%
+% {\large\bfseries\sffamily}%
+% {\color{sectiontitlenumber}\thesubsection\hspace{0.5em}}%
+% {0pt}%
+% {\color{sectiontitle}\raggedright}%
+% []
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paragraph format
+
+\titleformat{\paragraph}%
+[runin]%
+{\bfseries\sffamily}%
+{}%
+{0pt}%
+{#1.}%
+[]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Biblatex and CV packages
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{currvita}
+\usepackage{csquotes}
+\usepackage[
+style=alphabetic,
+% style=trad-alpha,
+%style=numeric,
+autocite=plain,
+maxnames=100,
+backend=biber,
+natbib=true,
+defernumbers,
+safeinputenc,
+backref=true,
+backrefstyle=none,
+sortcites,
+maxcitenames=2,
+% abbreviate=true 
+% citetracker=true,
+% sortcites=true, 
+% sorting=ynt, 
+% pagetracker=true,
+% backref=true,
+% minnames=1,
+% maxbibnames=10,
+% minbibnames=7,
+% uniquelist=true,
+% uniquename=allfull,
+]{biblatex}
+% \autocite, \textcite,\parencite
+\patchcmd{\bibsetup}{\interlinepenalty=5000}{\interlinepenalty=10000}{}{}
+
+% Set up back references.
+\DefineBibliographyStrings{english}{%
+  backrefpage = {cited on page}, % originally "cited on page"
+  backrefpages = {cited on pages}, % originally "cited on pages"
+}
+
+\DeclareFieldFormat{pagerefformat}{#1}
+% \DeclareFieldFormat{pagerefformat}{\small\color{stroke1}\mkbibemph{{#1}}}
+
+\renewbibmacro*{pageref}{%
+  \addperiod%
+  \iflistundef{pageref}%
+    {}%
+    {\newline\footnotesize\printtext[pagerefformat]{%
+       \ifnumgreater{\value{pageref}}{1}%
+         {\bibstring{backrefpages}\ppspace}%
+     {\bibstring{backrefpage}\ppspace}%
+       \printlist[pageref][-\value{listtotal}]{pageref}\addperiod}}}
+
+% Set up bibliography layout.
+\DeclareNumChars*{:}
+\renewcommand{\intitlepunct}{\addspace}
+\renewcommand{\multicitedelim}{\addcomma\space}
+
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+
+\renewbibmacro*{volume+number+eid}{
+  \printfield{volume}
+  \iffieldundef{number}{}{\addcolon}%
+  \printfield{number}
+  \setunit*{\addcomma\space}
+  \printfield{eid}
+}
+
+\renewbibmacro*{editor+others}{%
+  \ifboolexpr{
+    test \ifuseeditor
+    and
+    not test {\ifnameundef{editor}}
+  }
+    {\printnames{editor}%
+     \setunit{\space}%
+     \usebibmacro{editor+othersstrg}%
+     \clearname{editor}}
+    {}}
+
+\addbibresource{bibliography/article.bib}
+\addbibresource{bibliography/book.bib}
+\addbibresource{bibliography/thesis.bib}
+\addbibresource{bibliography/internet.bib}
+% \addbibresource{bibliography/list-of-publications.bib}
+
+% \AtEveryCitekey{\ifciteseen{}{\defcounter{maxnames}{99}}}
+
+\DeclareFieldFormat[article]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[inproceedings]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[thesis]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[book]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[unpublished]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[report]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[inbook]{chapter}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[inbook]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat{editortype}{\mkbibparens{#1}}
+\DeclareFieldFormat[misc]{title}{\textbf{\color{stroke1}#1}}
+\DeclareFieldFormat[manual]{title}{\textbf{\color{stroke1}#1}}
+
+\DefineBibliographyStrings{english}{%
+  andothers = {\textsc{et\,al\adddot}},
+  editor  = {editor},
+  editors = {editors},
+  page    = {page},
+  pages   = {pages},
+  volume  = {volume},
+}
+
+\newtoggle{authorend}
+\togglefalse{authorend}
+
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \iftoggle{authorend}{}{\usebibmacro{author/translator+others}}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{bytranslator+others}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit\newblock
+  \usebibmacro{journal}
+  \setunit{\addnbspace}
+  \usebibmacro{volume+number+eid}
+  \newunit
+  \usebibmacro{byeditor+others}%
+  \newunit
+  \usebibmacro{note+pages}%
+  \setunit{\addcomma\space}
+  \printfield{year}
+  \newunit\newblock
+  \iftoggle{bbx:isbn}
+  {\printfield{issn}}
+  {}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+  {\usebibmacro{related:init}%
+    \usebibmacro{related}}
+  {}%
+  \usebibmacro{finentry}%
+  \iftoggle{authorend}{\usebibmacro{author/translator+others}}{}%
+}
+
+\DeclareBibliographyDriver{inbook}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \iftoggle{authorend}{}{\usebibmacro{author/translator+others}}%
+  \setunit{\labelnamepunct}\newblock
+  \printfield{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{in:}%
+  \usebibmacro{maintitle+booktitle}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \printfield{edition}%
+  \iffieldundef{volume}
+  {\setunit{\addcomma\space}}
+  {  \newunit\printfield{volume}%
+    \printfield{part}\space\bibstring{ofseries}\space\printfield{series}\setunit{\addcomma\space}}%
+  \printfield{pages}
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{publisher+location+date}%
+  \newunit\newblock
+  \iftoggle{bbx:isbn}
+  {\printfield{isbn}}
+  {}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+  {\usebibmacro{related:init}%
+    \usebibmacro{related}}
+  {}%
+  \usebibmacro{finentry}%
+  \iftoggle{authorend}{\usebibmacro{author/translator+others}}{}%
+}
+
+\DeclareBibliographyDriver{book}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor+others/translator+others}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{maintitle+title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \printfield{edition}%
+  \newunit
+  \iffieldundef{volume}
+  {\setunit{\addcomma\space}}
+  {  \newunit\printfield{volume}%
+    \printfield{part}\space\bibstring{ofseries}\space\printfield{series}\setunit{\addcomma\space}}%
+  %
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{publisher+location+date}%
+  \newunit
+  \iflistundef{location}%
+  {\setunit*{\addcomma\space}}%
+  {\setunit*{\addcomma\space}}%
+  \printlist{location}%
+  {}
+  \newunit
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printfield{pagetotal}%
+  \newunit\newblock
+  \iftoggle{bbx:isbn}%
+  {\printfield{isbn}}%
+  {}
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \usebibmacro{finentry}
+}
+
+\DeclareBibliographyDriver{inproceedings}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \iftoggle{authorend}{}{\usebibmacro{author/translator+others}}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{in:}%
+  \usebibmacro{maintitle+booktitle}%
+  \newunit\newblock
+  \usebibmacro{event+venue+date}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \iffieldundef{volume}
+  {}
+  {\printfield{volume}%
+    \printfield{part}\space\bibstring{ofseries}}
+  \printfield{series}%
+  \newunit\newblock
+  \usebibmacro{chapter+pages}%
+  \iflistundef{publisher}%
+  {\setunit{\addcomma\space}}%
+  {\newunit\newblock}%
+  \usebibmacro{publisher+location+date}%
+  \newunit\newblock
+  \iftoggle{bbx:isbn}
+  {\printfield{isbn}}
+  {}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+  {\usebibmacro{related:init}%
+    \usebibmacro{related}}
+  {}%
+  \usebibmacro{finentry}%
+  \iftoggle{authorend}{\usebibmacro{author/translator+others}}{}%
+}
+
+\DeclareBibliographyDriver{thesis}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \iftoggle{authorend}{}{\usebibmacro{author}}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \printfield{type}%
+  \newunit
+  \usebibmacro{institution+location+date}%
+  \newunit\newblock
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printfield{pagetotal}%
+  \newunit\newblock
+  \iftoggle{bbx:isbn}
+  {\printfield{isbn}}
+  {}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+  {\usebibmacro{related:init}%
+    \usebibmacro{related}}
+  {}%
+  \usebibmacro{finentry}%
+  \iftoggle{authorend}{\usebibmacro{author}}{}%
+}
+
+\DeclareBibliographyDriver{misc}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \iftoggle{authorend}{}{\usebibmacro{author/translator+others}}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \printfield{type}%
+  \space
+  \printfield{number}%
+  \newunit\newblock
+  \usebibmacro{institution+location+date}%
+  \newunit
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+  {\usebibmacro{related:init}%
+    \usebibmacro{related}}
+  {}%
+  \usebibmacro{finentry}%
+  \iftoggle{authorend}{\usebibmacro{author/translator+others}}{}%
+}
+
+% Copied from numeric.cbx to imitate numerical citations.
+\providebool{bbx:subentry}
+\newbibmacro*{citenum}{%Note: the original macro was called "cite". I did not redefine "cite", but instead defined a new macro "citenum", because the author-year citations use the "cite" macro too. "\renewbibmacro*{cite}" would have caused all the author-year citations to become numeric too.
+  \printtext[bibhyperref]{%If you ever want to use hyperref
+    \printfield{prefixnumber}%
+    \printfield{labelnumber}%
+    \ifbool{bbx:subentry}
+    {\printfield{entrysetcount}}
+    {}}}
+
+% Copied from numeric.cbx to define a new numeric citation command for @online entries.
+\DeclareCiteCommand{\conline}[\mkbibbrackets]
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+  \usebibmacro{citenum}}%Note: this was originally "cite" but I changed it to "citenum" to avoid clashes with the author-year style.
+{\multicitedelim}
+{\usebibmacro{postnote}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Other packages 
+
+\usepackage[T1]{fontenc}
+
+\usepackage[final]{microtype}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{amsthm}
+
+\usepackage{thmtools}
+
+\usepackage[
+hidelinks,
+% ocgcolorlinks=true,
+% colorlinks=false,
+%linkcolor=stroke1,
+%urlcolor=stroke1,
+%citecolor=stroke2,
+linkbordercolor=primarycolor-vlight,
+urlbordercolor=primarycolor-vlight,
+citebordercolor=secondarycolor-vlight,
+pdftex,
+pdfauthor={Franziska Wegner},
+pdftitle={Combinatorial Problems in Energy Networks}
+]{hyperref}
+
+% \usepackage[ocgcolorlinks]{ocgx2}
+% \usepackage{ocgx2}
+\usepackage{accents}
+\usepackage{graphicx}
+
+\usepackage{paralist}
+
+\usepackage{booktabs}
+
+\usepackage{multirow}
+
+\usepackage{rotating}
+
+\usepackage{xspace}
+
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage[ttscale=.85]{libertine}
+
+\usepackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
+
+\usepackage{timetravel}
+\setCounters{theorem}
+
+\usepackage{accents}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage{subcaption}
+\captionsetup[subfigure]{justification=centering}
+
+\usepackage[innercaption]{sidecap}
+\columnsep=\mymargininnersep
+
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\pgfplotsset{compat=1.9}
+\usepgfplotslibrary{external} 
+\tikzexternalize[prefix=tikz/]
+\tikzexternaldisable
+
+\usepackage{environ}
+\makeatletter
+\newsavebox{\measure@tikzpicture}
+\NewEnviron{scaletikzpicturetowidth}[1]{%
+  \def\tikz@width{#1}%
+  \def\tikzscale{1}\begin{lrbox}{\measure@tikzpicture}%
+  \BODY
+  \end{lrbox}%
+  \pgfmathparse{#1/\wd\measure@tikzpicture}%
+  \edef\tikzscale{\pgfmathresult}%
+  \BODY
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Algorithm stuff
+
+% \usepackage[algochapter, algo2e, figure, ruled, vlined, linesnumbered]
+% {algorithm2e}
+% \usepackage{listings}
+\usepackage[titlenumbered, ruled, vlined, linesnumbered,resetcount]
+{algorithm2e}%, dotocloa
+\setCounters{algocf}%algocfproc,
+% \setcounter{algorithm}{1}
+\SetKwComment{Comment}{\color{KITblack30}$\triangleright$\ }{}
+\SetCommentSty{small}
+\SetKw{kwnot}{not}
+\SetKw{kwand}{and}
+\SetKw{kwdominates}{dominates}
+\SetKwFunction{deleteMin}{delMin}
+\SetKwFunction{deleteFirst}{popFirst}
+\SetKwFunction{pushBack}{pushBack}
+\SetKwFunction{update}{update}
+\SetKwFunction{myinsert}{insert}
+\SetKwFunction{getPaths}{getPaths}
+\SetKwFunction{deleteDominatedLabels}{deleteDominatedLabels}
+\SetKwFunction{isReachable}{isReachable}
+\SetKwFunction{algodfs}{dfs}
+\SetKwFunction{algoplanarembedding}{planarEmbeddingOf}
+\SetKwFunction{algoGridEmbeddingOfPlanarGraph}{gridEmbeddingOf}
+\SetKwFunction{algoContractGridGraphToEdge}{contractGridGraphToEdge}
+\SetKwFunction{algoDecontractEdgeToGridGraph}{decontractEdgeToGridGraph}
+\SetKwFunction{algoconstructDualGraphOf}{constructDualGraphOf}
+\SetKwFunction{algoBipolarSubgraphOf}{bipolarSubgraphOf}
+\SetKwFunction{algoDualGraphOf}{dualGraphOf}
+\SetKwFunction{algoMinCostFlow}{minCostFlow}
+\SetKwFunction{resolveConflict}{resolveKclConflict}
+\SetKwFunction{sweepLineFlowAlgorithm}{sweepLineFlowAlgorithm}
+\SetKwFunction{shortestPathGraph}{shortestPathGraph}
+\SetKwFunction{algoRescalePowerFlow}{rescalePowerFlow}
+% \DontPrintSemicolon
+\SetKwFunction{topologicSort}{topologicSort}
+\SetKwFunction{computeColors}{computeColors}
+\SetKw{kwfrom}{from}
+\SetKw{kwto}{to}
+\SetKw{kwcontinue}{continue}
+
+
+
+\newcommand{\assign}{\longleftarrow}
+
+\SetAlFnt{\small}
+\SetAlTitleFnt{\small}
+\newcommand{\commentfont}[1]{{\color{black50}#1}}
+\newcommand{\kwfont}[1]{\texttt{\color{stroke1}#1}}
+\newcommand{\funcfont}[1]{\texttt{#1}}
+\newcommand{\datafont}[1]{\texttt{#1}}
+
+\SetCommentSty{commentfont}
+\SetKwSty{kwfont}
+\SetFuncSty{funcfont}
+\SetDataSty{datafont}
+
+\SetKwFunction{queueIsEmpty}{isEmpty}%
+\SetKwFunction{queueIsNotEmpty}{isNotEmpty}%
+\SetKwFunction{queueMinElement}{minElement}%
+\SetKwFunction{queueDeleteMin}{deleteMin}%
+\SetKwFunction{queueDeleteMax}{deleteMax}%
+\SetKwFunction{queueInsert}{insert}%
+\SetKwFunction{queueUpdate}{update}%
+\SetKwFunction{setInsert}{insert}%
+\SetKwFunction{setDeleteDominatedLabels}{deleteLabelsDominatedBy}%
+\SetKw{KwNotDominates}{does not dominate}%
+
+\makeatletter
+\newcommand{\setalgotoprulecolor}[1]{\colorlet{toprulecolor}{#1}}
+\let\old@algocf@pre@ruled\@algocf@pre@ruled
+\renewcommand{\@algocf@pre@ruled}{\textcolor{toprulecolor}{\old@algocf@pre@ruled}}
+
+\newcommand{\setalgobotrulecolor}[1]{\colorlet{bottomrulecolor}{#1}}
+\let\old@algocf@post@ruled\@algocf@post@ruled
+\renewcommand{\@algocf@post@ruled}{\textcolor{bottomrulecolor}{\old@algocf@post@ruled}}
+
+\renewcommand{\algocf@caption@ruled}{\box\algocf@capbox\vspace{-3mm}
+\textcolor{bottomrulecolor}{\old@algocf@post@ruled}}%
+\makeatother
+
+\setalgotoprulecolor{stroke1}
+\setalgobotrulecolor{stroke1}
+
+\input{environments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theorems
+
+\theoremstyle{plain} %
+\newtheorem{theorem}{Theorem}[chapter] %
+\newtheorem{lemma}[theorem]{Lemma} %
+\newtheorem{corollary}[theorem]{Corollary} %
+\newtheorem{proposition}[theorem]{Proposition} %
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+% \newtheoremstyle{mytheoremstyle}  % name
+%     {0.25cm}                      % Space above
+%     {0.25cm}                      % Space below
+%     {}                            % Body font - \itshape
+%     {}                            % Indent amount
+%     {\bf}                         % Theorem head font - \scshape
+%     {.}                           % Punctuation after theorem head
+%     {.5em}                        % Space after theorem head
+%     {}  % Theorem head spec (can be left empty, meaning ‘normal’)
+% \theoremstyle{mytheoremstyle}
+\newtheorem{reductionrule}[theorem]{Reduction Rule}
+% \newtheorem{algorithm}[algocf]{Algorithm} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Clever referencing
+
+\usepackage[nameinlink,capitalize]{cleveref}
+\usepackage{crossreftools}%crthyperCref, \crthypercref, \crtcref, \crtCref
+\newcommand{\crefrangeconjunction}{\screen{--}}
+\creflabelformat{equation}{#2#1#3}
+
+% Labeltypes of \cref
+\Crefname{algorithm}{Algorithm}{Algorithms}%
+\Crefname{equation}{Equation}{Equations}%
+\Crefname{reductionrule}{Reduction Rule}{Reduction Rules}%
+\Crefname{figure}{Figure}{Figures}%
+% \Crefname{figure*}{Figure}{Figures}%
+% \Crefname{plot}{Plot}{Plots}%
+% \Crefname{subfigure}{Figure}{Figures}%
+\Crefname{tabular}{Table}{Tables}%
+\Crefname{chapter}{Chapter}{Chapters}%
+\Crefname{section}{Section}{Sections}%
+\Crefname{appendix}{Appendix}{Appendices}%
+\Crefname{enumi}{Item}{Items}%
+\Crefname{footnote}{Footnote}{Footnotes}%
+\Crefname{theorem}{Theorem}{Theorems}%
+\Crefname{lemma}{Lemma}{Lemmas}%
+\Crefname{Lemma}{Lemma}{Lemmas}%
+\Crefname{corollary}{Corollary}{Corollaries}%
+\Crefname{observation}{Observation}{Observations}%
+\Crefname{Observation}{Observation}{Observations}%
+\Crefname{proposition}{Proposition}{Propositions}%
+\Crefname{definition}{Definition}{Definitions}%
+\Crefname{result}{Result}{Results}%
+\Crefname{example}{Example}{Examples}%
+\Crefname{remark}{Remark}{Remarks}%
+\Crefname{note}{Note}{Notes}%
+\Crefname{algorithm}{Algorithm}{Algorithm}%
+\Crefname{line}{Line}{Lines}%
+\Crefname{part}{Part}{Parts}%
+\Crefname{hypothesis}{Hypothesis}{Hypotheses}%
+\Crefname{question}{Question}{Questions}%
+\Crefname{conjecture}{Conjecture}{Conjectures}%
+% \Crefname{properties}{Property}{Properties}%
+% 
+% Use, e.g. Lemma x instead of Theorem x, though they use the same counter
+\let\oldReductionrule\reductionrule
+\renewcommand{\reductionrule}{%
+  \crefalias{theorem}{reductionrule}% Theorem counter now looks like Reduction Rule
+  \oldReductionrule
+}
+\let\oldLemma\lemma
+\renewcommand{\lemma}{%
+  \crefalias{theorem}{lemma}% Theorem counter now looks like Lemma
+  \oldLemma
+}
+\let\oldObservation\observation
+\renewcommand{\observation}{%
+  \crefalias{theorem}{observation}% Theorem counter now looks like Observation
+  \oldObservation
+}
+\let\oldCorollary\corollary
+\renewcommand{\corollary}{%
+  \crefalias{theorem}{corollary}% Theorem counter now looks like Corollary
+  \oldCorollary
+}
+\let\oldDefinition\definition
+\renewcommand{\definition}{% 
+  \crefalias{theorem}{definition}% Theorem counter now looks like Definition
+  \oldDefinition
+}
+\let\oldHypothesis\hypothesis
+\renewcommand{\hypothesis}{% 
+  \crefalias{theorem}{hypothesis}% Theorem counter now looks like Hypothesis
+  \oldHypothesis
+}
+\let\oldQuestion\question
+\renewcommand{\question}{% 
+  \crefalias{theorem}{question}% Theorem counter now looks like Question
+  \oldQuestion
+}
+\let\oldConjecture\conjecture
+\renewcommand{\conjecture}{% 
+  \crefalias{theorem}{conjecture}% Theorem counter now looks like Conjecture
+  \oldConjecture
+}
+% \let\oldProperty\proeprty
+% \renewcommand{\property}{% 
+%   \crefalias{theorem}{property}% Theorem counter now looks like Property
+%   \oldProperty
+% }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Acronym stuff
+%% For update run: makeglossaries master
+
+\usepackage[nopostdot,
+            automake,
+            % stylemods=longragged, % load glossary-longragged.sty and glossaries-extra-stylemods.sty
+            style=super,
+            % style=altlongragged4col,% set the glossary style
+            toc
+            % acronym
+            ]{glossaries-extra}%,nonumberlist
+
+% \setabbreviationstyle[acronym]{short}
+\DeclareRobustCommand{\glossfirstformat}[1]{\textit{#1}}
+\renewcommand*{\glsdisplayfirst}[4]{\glossfirstformat{#1#4}}
+
+\setlength{\glspagelistwidth}{0.1\textwidth}%
+\setlength{\glsdescwidth}{0.6\textwidth}%
+% \renewcommand*{\glsgroupheading}[1]{\textbf{\glsgetgrouptitle{##1}\bigskip}\\}%
+% \renewcommand*{\glossarypostamble}{\onecolumn}
+% \newcommand*{\Agroupname}{}
+% \newcommand*{\Ggroupname}{Greek letters}
+\usepackage{tabu}
+\newglossarystyle{mystyle}{%
+  \renewenvironment{theglossary}{%
+    \begin{longtabu} to \linewidth {
+      X[0.25,L,b]
+      X[0.40,L,b]
+      X[3.5]% X[3.5,L]
+      X[0.10,L]
+      X[1.00,L]
+    }
+  }%
+   % {\begin{longtabu} to \linewidth {p{0.05\linewidth}
+   % p{0.05\linewidth}p{0.6\linewidth}p{0.1\linewidth}p{0.1\linewidth}}}%
+   {\end{longtabu}}%% Set the table’s header: title row
+  %\renewcommand*{\glossaryheader}{%
+  % \bfseries Term & \bfseries Description & 
+  % \bfseries Units & \bfseries Page List
+  % \\\endhead}%
+  % No table header:
+  \renewcommand*{\glossaryheader}{}%
+  % No heading between groups:
+   % \renewcommand*{\glsgroupheading}[1]{\textbf{\glsgetgrouptitle{##1}}\\}%
+  % Main (level 0) entries displayed in a row optionally numbered:
+   \renewcommand*{\glossaryentryfield}[5]{%
+      \glstarget{##1}{##2}% Name
+      &
+      & ##3% Description
+      & \glsentryuseri{##1}% Units
+      & ##5% Page list
+      \\\vspace{2mm}% end of row
+   }%
+  % Similarly for sub-entries (no sub-entry numbers):
+  \renewcommand*{\glossarysubentryfield}[6]{%
+      % ignoring first argument (sub-level)
+      &
+      \glstarget{##2}{##3}% Name
+      & ##4% Description
+      & \glsentryuseri{##2}% Units
+      & ##6% Page list
+      \\% end of row
+   }%
+  % Nothing between groups:
+  \renewcommand*{\glsgroupskip}{\indexspace}%
+}
+
+\newglossarystyle{unitsStyle}{%
+  \renewenvironment{theglossary}{%
+    \begin{longtabu} to \linewidth {
+      X[0.15,L,b]
+      X[0.40,L,b]
+      X[4.50]
+      % X[0.25,L]
+      % X[0.75,L]
+    }
+  }%
+   % {\begin{longtabu} to \linewidth {p{0.05\linewidth}
+   % p{0.05\linewidth}p{0.6\linewidth}p{0.1\linewidth}p{0.1\linewidth}}}%
+   {\end{longtabu}}%% Set the table’s header: title row
+  %\renewcommand*{\glossaryheader}{%
+  % \bfseries Term & \bfseries Description & 
+  % \bfseries Units & \bfseries Page List
+  % \\\endhead}%
+  % No table header:
+  \renewcommand*{\glossaryheader}{}%
+  % No heading between groups:
+   % \renewcommand*{\glsgroupheading}[1]{\textbf{\glsgetgrouptitle{##1}}\\}%
+  % Main (level 0) entries displayed in a row optionally numbered:
+   \renewcommand*{\glossaryentryfield}[5]{%
+      \glstarget{##1}{##2}% Name
+      &
+      & ##3% Description
+      % & \glsentryuseri{##1}% Units
+      % & ##5% Page list
+      \\\vspace{2mm}% end of row
+   }%
+  % Similarly for sub-entries (no sub-entry numbers):
+  \renewcommand*{\glossarysubentryfield}[6]{%
+      % ignoring first argument (sub-level)
+      &
+      \glstarget{##2}{##3}% Name
+      & ##4% Description
+      % & \glsentryuseri{##2}% Units
+      % & ##6% Page list
+      \\\vspace{1mm}% end of row
+   }%
+  % Nothing between groups:
+  \renewcommand*{\glsgroupskip}{\indexspace}%
+}
+
+% Change the font used by entry names
+% \renewcommand{\glsnamefont}[1]{\textbf{#1}}
+% \renewcommand{\glsnamefont}[1]{\textsc{\mdseries #1}}
+% \renewcommand{\glsnamefont}[1]{\mdseries #1}
+
+% \newglossary[slg]       {symbols}       {not}       {ntn}       {Symbols}
+% \setglossarystyle{tree}
+\newglossary[modg]      {model}         {modd}      {modn}      {Model}
+\newglossary[unitg]     {unit}          {unitd}     {unitn}     {Unit}
+% \newglossary[pgmg]      {powergridmodel}{pgmd}      {pgmn}      {Power Grid Model}
+% \newglossary[wfmg]      {windfarmmodel} {wfmd}      {wfmn}      {Wind Farm Model}
+
+% Generate the glossary
+\makeglossaries
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TikZ stuff
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{through}
+\usetikzlibrary{intersections}
+\tikzset{>=stealth'}
+
+\tikzstyle{figure}=[font=\small]
+\tikzstyle{vertex}=[circle, inner sep=0pt, minimum size=6pt, draw=black, fill=primarycolor-vlight]
+\tikzstyle{bigvertex}=[vertex, minimum size=11pt]
+\tikzstyle{chvertex}=[bigvertex]
+\tikzstyle{textvertex}=[bigvertex, font=\footnotesize]
+\tikzstyle{highlightedvertex}=[vertex, fill=secondarycolor-light]
+\tikzstyle{highlightedchvertex}=[chvertex, fill=secondarycolor-light]
+\tikzstyle{chargingstationvertex}=[double distance=1pt, fill=secondarycolor-light]
+\tikzstyle{vertexhull}=[line width=14pt, rounded corners=2pt]
+\tikzstyle{vertexhullboundary}=[vertexhull, line width=14.8pt]
+\tikzstyle{chshortcutedges}=[edges, very thick, fill=secondarycolor, draw=primarycolor]
+\tikzstyle{cell1vertex}=[vertex, fill=black30]
+\tikzstyle{cell2vertex}=[vertex, fill=black15]
+\tikzstyle{cell3vertex}=[vertex, fill=black50]
+\tikzstyle{dualvertex}=[vertex, fill=secondarycolor-light]
+\tikzstyle{dualtextvertex}=[textvertex, fill=secondarycolor-light]
+
+\tikzstyle{edgelabel}=[inner sep=1pt, fill=white]
+\tikzstyle{edges}=[shorten >=1pt, shorten <=1pt]
+\tikzstyle{shortestpathedges}=[edges, line width=3pt, fill=secondarycolor-light, draw=secondarycolor-light]
+\tikzstyle{internaledges}=[edges]
+\tikzstyle{boundaryedges}=[internaledges, thick, densely dotted]
+\tikzstyle{edgesbackground}=[line width=2pt, draw=white]
+\tikzstyle{shortestpathedgesbackground}=[line width=4.5pt, draw=white]
+\tikzstyle{dualedges}=[edges,thick,secondarycolor]
+
+\tikzstyle{polygonalpath}=[thick, draw=primarycolor-dark]
+\tikzstyle{polygonwindow}=[very thick,densely dotted]
+\tikzstyle{polygonalarea}=[fill=primarycolor-vlight,draw=primarycolor-vlight]
+\tikzstyle{polygon}=[polygonalpath, fill=primarycolor-vlight]
+\tikzstyle{polygonhole}=[polygonalpath, fill=white]
+\tikzstyle{outerpolygonalpath}=[thick]
+\tikzstyle{triangulationedge}=[draw=black50]
+\tikzstyle{point}=[circle, inner sep=0pt, minimum size=3pt, draw=black, fill=black]
+\tikzstyle{specialpoint}=[point,fill=primarycolor]
+\tikzstyle{minlinkpath}=[primarycolor,line width=2pt]
+\tikzstyle{minlinkshortestpath}=[secondarycolor,very thick]
+\tikzstyle{minlinkshortestpathmid}=[thesisyellow,very thick]
+\tikzstyle{visibilitycone}=[primarycolor,very thick]
+\pgfdeclareverticalshading{myshading}{100bp}{color(0bp)=(primarycolor-light); color(40bp)=(primarycolor-light); color(70bp)=(white); color(100bp)=(white)}
+\pgfdeclareverticalshading{myshadingother}{100bp}{color(0bp)=(primarycolor-light); color(10bp)=(primarycolor-light); color(54bp)=(white); color(100bp)=(white)}
+\tikzstyle{visibilityconearea}=[bottom color=primarycolor-light, top color=white,draw=white]
+\tikzstyle{filledregionprimary}=[primarycolor-vlight]
+\tikzstyle{filledregionsecondary}=[secondarycolor-vlight]
+
+\tikzstyle{toplevelpartitionboundary}=[primarycolor-dark,line width=2.25pt]
+\tikzstyle{botlevelpartitionboundary}=[secondarycolor-light, line width=1pt]
+\tikzstyle{toplevelpartitiondescription}=[text=primarycolor-dark]
+\tikzstyle{botlevelpartitiondescription}=[font=\footnotesize,text=secondarycolor-light]
+
+\tikzstyle{function}=[draw=primarycolor,very thick,line cap=rect]
+\tikzstyle{functionterm}=[text=primarycolor,edgelabel]
+\tikzstyle{discontinuity}=[circle, inner sep=0pt, minimum size=3.5pt,very thick]
+\tikzstyle{discontinuityblank}=[discontinuity,draw=primarycolor,fill=white]
+\tikzstyle{discontinuityfilled}=[discontinuity,draw=primarycolor,fill=primarycolor]
+\tikzstyle{plotgrid}=[color=black30,very thin,dash pattern=on 2pt off 1pt]
+\tikzstyle{chargingfunction}=[function,draw=secondarycolor]
+\tikzstyle{helperline}=[black]
+\tikzstyle{breakpoint}=[fill,primarycolor,circle,inner sep=0pt,minimum size=3.5pt,very thick]
+
+\tikzstyle{shrinkedface}=[thick,double distance=10pt,draw=primarycolor-dark, double=primarycolor-vlight]
+\tikzstyle{reachablevertex}=[vertex, fill=white]
+\tikzstyle{unreachablevertex}=[vertex, fill=black50]
+\tikzstyle{passableedges}=[edges,black]
+\tikzstyle{borderedges}=[edges,thick,densely dotted]
+\tikzstyle{unreachableedges}=[edges,black]
+\tikzstyle{reachableboundary}=[draw=primarycolor,line width=3pt]
+\tikzstyle{unreachableboundary}=[draw=secondarycolor,line width=3pt]
+\tikzstyle{visitededges}=[edges, line width=3pt, primarycolor-light]
+
+\tikzstyle{plotpoint}=[fill=black,circle,inner sep=0pt,minimum size=3.5pt]
+\tikzstyle{tangentline}=[shorten >=-20pt,shorten <= -15pt]
+
+\tikzstyle{markSign} = [mark=*]
+\tikzstyle{heuristicMarkSign} = [mark=o]
+\tikzstyle{exactMarkSign} = [mark=*]
+\tikzstyle{shortenLines} = [shorten <= 3.5pt,shorten >= 3.5pt]
+
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+\pgfplotsset{
+  /pgfplots/legend line with mark/.style={
+    legend image code/.code={
+        \draw[##1,no markers,shorten >= 3.5pt,line width=1pt]
+         plot coordinates {
+         (0cm,0cm)
+         (0.3cm,0cm)
+        };
+        \draw[##1,only marks,markSign,line width=1pt]
+         plot coordinates {
+         (0.3cm,0cm)
+        };
+        \draw[##1,no markers,shorten <= 3.5pt,line width=1pt]
+         plot coordinates {
+         (0.3cm,0cm)
+         (0.6cm,0cm)
+        };
+    }
+  }
+}
+
+\pgfplotsset{
+  /pgfplots/legend line with heuristic mark/.style={
+    legend image code/.code={
+        \draw[##1,no markers,shorten >= 3.5pt,line width=1pt]
+         plot coordinates {
+         (0cm,0cm)
+         (0.3cm,0cm)
+        };
+        \draw[##1,only marks,heuristicMarkSign,line width=1pt]
+         plot coordinates {
+         (0.3cm,0cm)
+        };
+        \draw[##1,no markers,shorten <= 3.5pt,line width=1pt]
+         plot coordinates {
+         (0.3cm,0cm)
+         (0.6cm,0cm)
+        };
+    }
+  }
+}
+
+\pgfplotsset{
+  /pgfplots/legend line with exact mark/.style={
+    legend image code/.code={
+        \draw[##1,no markers,shorten >= 3.5pt,line width=1pt]
+         plot coordinates {
+         (0cm,0cm)
+         (0.3cm,0cm)
+        };
+        \draw[##1,only marks,exactMarkSign,line width=1pt]
+         plot coordinates {
+         (0.3cm,0cm)
+        };
+        \draw[##1,no markers,shorten <= 3.5pt,line width=1pt]
+         plot coordinates {
+         (0.3cm,0cm)
+         (0.6cm,0cm)
+        };
+    }
+  }
+}
+
+\newcommand{\substationsymbol}{
+\protect\tikz \protect
+\begin{tikzpicture}
+\filldraw[fill=orange,draw=orange] rectangle (1pt,1pt);
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Misc settings
+
+\widowpenalties 2 10000 0
+\clubpenalties 2 10000 0
+
+\hyphenation{Karls-ruhe}
+\hyphenation{Lem-ma}
+\hyphenation{Open-Access}
+\hyphenation{Trans-for-ma-tion}
+\hyphenation{ca-pa-ci-ty}
+\hyphenation{mul-ti-ple}
+\hyphenation{trap-ped}
+\hyphenation{para-dox}
+\hyphenation{ap-prox-i-ma-tion}
+\hyphenation{switch-es}
+\hyphenation{poly-no-mi-al}
+\hyphenation{re-pre-sen-ta-ti-on}
+\hyphenation{so-lu-ti-on}
+\hyphenation{tri-sub-graph}
+
+\setlength{\tabcolsep}{1.0ex}
+
+\providecommand\phantomsection{}
