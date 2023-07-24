@@ -1,0 +1,87 @@
+\begin{array}{ll}  
+    \glssymbol{current}(\vertexa,\vertexc) &= 
+        \big(
+            \glssymbol{conductance}(\vertexa,\vertexc) 
+            + \imgPart\cdot\glssymbol{susceptance}(\vertexa,\vertexc)
+        \big)
+        \big(
+            \glssymbol{voltage}(\vertexc) - \glssymbol{voltage}(\vertexa)
+        \big)
+    \\
+    &=
+        \Big(
+            \glssymbol{conductance}(\vertexa,\vertexc) 
+            + \imgPart\cdot\susceptance(\vertexa,\vertexc)
+        \Big)
+        \Big(
+            \real{\glssymbol{voltage}(\vertexc)} + \imgPart\cdot\imaginary{\glssymbol{voltage}
+            (\vertexc)}
+            - 
+            \real{\glssymbol{voltage}(\vertexa)} - \imgPart\cdot\imaginary{\glssymbol{voltage}(\vertexa)}
+        \Big)
+    \\
+    &
+        \begin{aligned}
+        =&&\glssymbol{conductance}(\vertexa,\vertexc)\cdot\real{\glssymbol{voltage}(\vertexc)}
+        &+&
+        \imgPart\cdot
+        &\glssymbol{conductance}(\vertexa,\vertexc)\cdot\imaginary{\glssymbol{voltage}(\vertexc)}
+        &-
+        \\
+        % &\hphantom{=\,\,}
+        &&\glssymbol{conductance}(\vertexa,\vertexc)\cdot\real{\glssymbol{voltage}(\vertexa)\,}
+        &-&
+        \imgPart\cdot
+        &\glssymbol{conductance}(\vertexa,\vertexc)\cdot\imaginary{\glssymbol{voltage}(\vertexa)\,}
+        &+
+        \\
+        % &\hphantom{=\,\,}
+        &\imgPart\cdot
+        &\glssymbol{susceptance}(\vertexa,\vertexc)\cdot\real{\glssymbol{voltage}(\vertexc)}
+        &+&
+        \imgPart^2\cdot
+        &\glssymbol{susceptance}(\vertexa,\vertexc)\cdot\imaginary{\glssymbol{voltage}(\vertexc)}
+        &-
+        \\
+        % &\hphantom{=\,\,}
+        &\imgPart\cdot
+        &\glssymbol{susceptance}(\vertexa,\vertexc)\cdot\real{\glssymbol{voltage}(\vertexa)\,}
+        &-&
+        \imgPart^2\cdot
+        &\glssymbol{susceptance}(\vertexa,\vertexc)\cdot\imaginary{\glssymbol{voltage}(\vertexa)\,}
+        &
+        \end{aligned}
+    \\
+    &
+        \begin{aligned}
+        =&
+        &\underbrace{
+            \glssymbol{conductance}(\vertexa,\vertexc)
+            \big(
+                \real{\glssymbol{voltage}(\vertexc)}-\real{\glssymbol{voltage}(\vertexa)}
+            \big)
+            +
+            \glssymbol{susceptance}(\vertexa,\vertexc)
+            \big(
+                \imaginary{\glssymbol{voltage}(\vertexa)} - \imaginary{\glssymbol{voltage}(\vertexc)}
+            \big)
+        }_{\eqqcolon \realSmall{\glssymbol{current}(\vertexa,\vertexc)} }+
+        \\
+        &
+        \imgPart\cdot
+        \Big(
+            &
+            \underbrace{
+                \glssymbol{conductance}(\vertexa,\vertexc)
+                \big(
+                    \imaginary{\glssymbol{voltage}(\vertexc)} - \imaginary{\glssymbol{voltage}(\vertexa)}
+                \big)
+                +
+                \glssymbol{susceptance}(\vertexa,\vertexc)
+                \big(
+                    \real{\glssymbol{voltage}(\vertexc)} - \real{\glssymbol{voltage}(\vertexa)}
+                \big)
+            }_{\eqqcolon \imaginarySmall{\glssymbol{current}(\vertexa,\vertexc)} }
+        \Big)
+        \end{aligned}
+\end{array}
