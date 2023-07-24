@@ -1,0 +1,2055 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70206" creator="Ipe 7.2.11">
+<info created="D:20150826150040" modified="D:20190813154601" title="Periodic System -- Understanding the Admittance" author="Franziska Wegner" subject="Fundamentals"/>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/ptarc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fptarc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+0.5 0 0 0.5 0 0 e
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+-0.5 -0.5 m
+0.5 -0.5 l
+0.5 0.5 l
+-0.5 0.5 l
+h
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<dashstyle name="dense dashed" value="[2 1] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="small" value="\small"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<ipestyle name="KIT-colors">
+<color name="KITgreen" value="0 0.588 0.509"/>
+<color name="KITgreen70" value="0.3 0.711 0.656"/>
+<color name="KITgreen50" value="0.5 0.794 0.754"/>
+<color name="KITgreen30" value="0.7 0.876 0.852"/>
+<color name="KITgreen15" value="0.85 0.938 0.926"/>
+<color name="KITblue" value="0.274 0.392 0.666"/>
+<color name="KITblue70" value="0.492 0.574 0.766"/>
+<color name="KITblue50" value="0.637 0.696 0.833"/>
+<color name="KITblue30" value="0.782 0.817 0.9"/>
+<color name="KITblue15" value="0.891 0.908 0.95"/>
+<color name="KITblack" value="0"/>
+<color name="KITblack70" value="0.3"/>
+<color name="KITblack50" value="0.5"/>
+<color name="KITblack30" value="0.7"/>
+<color name="KITblack15" value="0.85"/>
+<color name="KITpalegreen" value="0.509 0.745 0.235"/>
+<color name="KITpalegreen70" value="0.656 0.821 0.464"/>
+<color name="KITpalegreen50" value="0.754 0.872 0.617"/>
+<color name="KITpalegreen30" value="0.852 0.923 0.77"/>
+<color name="KITpalegreen15" value="0.926 0.961 0.885"/>
+<color name="KITyellow" value="0.98 0.901 0.078"/>
+<color name="KITyellow70" value="0.986 0.931 0.354"/>
+<color name="KITyellow50" value="0.99 0.95 0.539"/>
+<color name="KITyellow30" value="0.994 0.97 0.723"/>
+<color name="KITyellow15" value="0.997 0.985 0.861"/>
+<color name="KITorange" value="0.862 0.627 0.117"/>
+<color name="KITorange70" value="0.903 0.739 0.382"/>
+<color name="KITorange50" value="0.931 0.813 0.558"/>
+<color name="KITorange30" value="0.958 0.888 0.735"/>
+<color name="KITorange15" value="0.979 0.944 0.867"/>
+<color name="KITbrown" value="0.627 0.509 0.196"/>
+<color name="KITbrown70" value="0.739 0.656 0.437"/>
+<color name="KITbrown50" value="0.813 0.754 0.598"/>
+<color name="KITbrown30" value="0.888 0.852 0.758"/>
+<color name="KITbrown15" value="0.944 0.926 0.879"/>
+<color name="KITred" value="0.627 0.117 0.156"/>
+<color name="KITred70" value="0.739 0.382 0.409"/>
+<color name="KITred50" value="0.813 0.558 0.578"/>
+<color name="KITred30" value="0.888 0.735 0.747"/>
+<color name="KITred15" value="0.944 0.867 0.873"/>
+<color name="KITlilac" value="0.627 0 0.47"/>
+<color name="KITlilac70" value="0.739 0.3 0.629"/>
+<color name="KITlilac50" value="0.813 0.5 0.735"/>
+<color name="KITlilac30" value="0.888 0.7 0.841"/>
+<color name="KITlilac15" value="0.944 0.85 0.92"/>
+<color name="KITcyanblue" value="0.313 0.666 0.901"/>
+<color name="KITcyanblue70" value="0.519 0.766 0.931"/>
+<color name="KITcyanblue50" value="0.656 0.833 0.95"/>
+<color name="KITcyanblue30" value="0.794 0.9 0.97"/>
+<color name="KITcyanblue15" value="0.897 0.95 0.985"/>
+<color name="KITseablue" value="0.196 0.313 0.549"/>
+<color name="KITseablue70" value="0.437 0.519 0.684"/>
+<color name="KITseablue50" value="0.598 0.656 0.774"/>
+<color name="KITseablue30" value="0.758 0.794 0.864"/>
+<color name="KITseablue15" value="0.879 0.897 0.932"/>
+</ipestyle>
+<ipestyle name="Dissertation-One-Column">
+<preamble>
+\makeatletter
+\leftmargini 1.5em
+\leftmargin \leftmargini
+\leftmarginii  1.2em
+\leftmarginiii 1em
+\def\@listI{\leftmargin\leftmargini
+            \parsep \z@
+	    \partopsep 3pt
+	    \topsep \z@
+            \itemsep \z@}
+\@listI
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \itemsep   \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \partopsep \z@
+              \itemsep   \topsep}
+\makeatother
+</preamble>
+<layout paper="374 100" origin="0 0" frame="374 100" skip="64" crop="no"/>
+<tiling name="falling" angle="-60" step="12" width="3"/>
+<tiling name="rising" angle="30" step="12" width="3"/>
+</ipestyle>
+<ipestyle name="diss_basics">
+<dashstyle name="dense dashed" value="[8 3] 0"/>
+<dashstyle name="medium dotted" value="[1 1.5] 0"/>
+<dashstyle name="long dashed" value="[12] 0"/>
+<dashstyle name="long dash dotted" value="[12 6 1 6] 0"/>
+<dashstyle name="dense dotted" value="[0.5 0.5] 0"/>
+<gridsize name="1 pts" value="1"/>
+<gridsize name="2 pts" value="2"/>
+<gridsize name="3 pts" value="3"/>
+<opacity name="10 percent" value="0.1"/>
+<opacity name="20 percent" value="0.2"/>
+<opacity name="30 percent" value="0.3"/>
+<opacity name="40 percent" value="0.4"/>
+<opacity name="50 percent" value="0.5"/>
+<opacity name="60 percent" value="0.6"/>
+<opacity name="70 percent" value="0.7"/>
+<opacity name="80 percent" value="0.8"/>
+<opacity name="90 percent" value="0.9"/>
+</ipestyle>
+<ipestyle name="StandardPreamble">
+<preamble>
+  \input{/Users/fwegner/Documents/work/dissertation/03-Document/ipe-latex-preamble.tex}
+</preamble>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<layer name="beta"/>
+<layer name="gamma"/>
+<layer name="delta"/>
+<layer name="epsilon"/>
+<layer name="zeta"/>
+<layer name="eta"/>
+<view layers="alpha beta gamma delta epsilon zeta eta" active="alpha"/>
+<text layer="alpha" matrix="0.930138 0 0 1.31646 -188.263 -398.172" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="13.41" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(a)}</text>
+<text matrix="0.255916 0 0 0.255916 -131.153 -82.6561" transformations="translations" pos="598.582 427.177" stroke="KITblack" type="label" width="36.68" height="6.177" depth="0" valign="baseline" size="small">Neutrons</text>
+<text matrix="0.255916 0 0 0.255916 -131.153 -94.008" transformations="translations" pos="598.582 427.177" stroke="KITblack" type="label" width="35.528" height="6.177" depth="0" valign="baseline" size="small">Protones</text>
+<text matrix="0.255916 0 0 0.255916 -131.153 -105.223" transformations="translations" pos="598.582 427.177" stroke="KITblack" type="label" width="37.576" height="6.177" depth="0" valign="baseline" size="small">Electrons</text>
+<path matrix="0.179295 0 0 0.179295 -53.6948 -7.49191" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.179295 0 0 0.179295 -53.6948 3.86002" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.128774 0 0 0.128715 -35.1032 -11.2861" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<group matrix="1.52867 0 0 1.52867 -195.621 -51.9503">
+<path matrix="0.227414 0 0 0.225387 205.131 7.90039" stroke="KITblack15" fill="KITblack15" pen="heavier" opacity="40 percent">
+0 404.02 m
+0 124.449 l
+736 124.449 l
+736 404.02 l
+h
+</path>
+<path matrix="0.2278 0 0 0.225487 204.944 7.85768" stroke="KITblack" pen="heavier">
+82.5557 116.831 m
+82.5557 36.8769 l
+694.181 36.8769 l
+694.181 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 344.1 18.5953" stroke="KITblack" fill="KITcyanblue70">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 344.1 27.5814" stroke="KITblack" fill="KITcyanblue70">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 344.1 36.5674" stroke="KITblack" fill="KITcyanblue70">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 344.1 45.5533" stroke="KITblack" fill="KITcyanblue70">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 344.1 54.5394" stroke="KITblack" fill="KITcyanblue70">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 344.1 63.5256" stroke="KITblack" fill="KITcyanblue70">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 344.1 72.5115" stroke="KITblack" fill="KITcyanblue70">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 334.811 63.5253" stroke="KITblack" fill="KITpalegreen50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 334.811 54.5392" stroke="KITblack" fill="KITpalegreen50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 334.811 45.5531" stroke="KITblack" fill="KITpalegreen50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 334.811 36.5672" stroke="KITblack" fill="KITpalegreen50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 334.811 27.5811" stroke="KITblack" fill="KITpalegreen50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 334.811 18.5951" stroke="KITblack" fill="KITpalegreen50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.523 18.5948" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.523 27.5807" stroke="KITblack" fill="KITorange30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.523 36.5665" stroke="KITblack" fill="KITorange30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.523 45.5524" stroke="KITblack" fill="KITlilac50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.523 54.539" stroke="KITblack" fill="KITlilac50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.523 63.5249" stroke="KITblack" fill="KITlilac50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.234 63.5249" stroke="KITblack" fill="KITlilac50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.234 54.5383" stroke="KITblack" fill="KITlilac50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.234 45.5524" stroke="KITblack" fill="KITorange30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.234 36.5665" stroke="KITblack" fill="KITorange30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.234 27.5805" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.234 18.5946" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.946 18.5943" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.946 27.5802" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.946 36.5663" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.946 45.5522" stroke="KITblack" fill="KITorange30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.946 54.5381" stroke="KITblack" fill="KITorange30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.946 63.524" stroke="KITblack" fill="KITlilac50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.657 63.5238" stroke="KITblack" fill="KITorange30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.657 54.5379" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.657 45.552" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.657 36.5661" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.657 27.58" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.657 18.5941" stroke="KITblack" fill="KITlilac15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 288.369 18.5938" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 288.369 27.5797" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 288.369 36.5659" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 288.369 45.5517" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 279.08 45.5515" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 279.08 36.5656" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 279.08 27.5797" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 279.08 18.5936" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 269.792 18.5933" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 269.792 27.5795" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 269.792 36.5654" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 269.792 45.5513" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 260.503 45.5511" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 260.503 36.5652" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 260.503 27.5792" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 260.503 18.5931" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 251.215 18.5928" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 251.215 27.5787" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 251.215 36.5647" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 251.215 45.5506" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 241.926 45.5504" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 241.926 36.5645" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 241.926 27.5785" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 241.926 18.5926" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 232.638 18.5924" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 232.638 27.5782" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 232.638 36.564" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 232.638 45.5504" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 223.349 45.5499" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 223.349 36.5638" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 223.349 27.578" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 223.349 18.5921" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 214.061 18.5919" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 214.061 27.5777" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 214.061 36.5636" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 214.061 45.5497" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 204.772 45.5495" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 204.772 36.5634" stroke="KITblack" fill="orange" opacity="50 percent">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 204.772 27.5777" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 204.772 18.5916" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 195.484 18.5914" stroke="KITblack" fill="KITyellow30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 195.484 27.5775" stroke="KITblack" fill="KITyellow30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 195.484 36.5631" stroke="KITblack" fill="KITyellow30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 195.484 45.549" stroke="KITblack" fill="KITyellow30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 195.484 54.5354" stroke="KITblack" fill="KITyellow30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 195.484 63.5213" stroke="KITblack" fill="KITyellow30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 186.195 72.5072" stroke="KITblack" fill="KITred30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 186.195 63.5211" stroke="KITblack" fill="KITbrown30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 186.195 54.5349" stroke="KITblack" fill="KITbrown30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 186.195 45.5488" stroke="KITblack" fill="KITbrown30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 186.195 36.5629" stroke="KITblack" fill="KITbrown30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 186.195 27.5773" stroke="KITblack" fill="KITbrown30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 186.195 18.5911" stroke="KITblack" fill="KITbrown30">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<text matrix="0.225493 0 0 0.225493 215.618 17.8613" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.785" height="10.891" depth="3.1" valign="baseline" size="16">Og</text>
+<text matrix="0.225493 0 0 0.225493 213.645 15.5896" pos="663.657 95.4935" stroke="KITblack" type="label" width="39.143" height="5.49" depth="1.55" valign="baseline" size="8">Oganesson</text>
+<text matrix="0.225493 0 0 0.225493 213.908 21.2858" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">118</text>
+<text matrix="0.225493 0 0 0.225493 215.783 26.8473" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.99" height="10.891" depth="0" valign="baseline" size="16">Rn</text>
+<text matrix="0.225493 0 0 0.225493 215.417 24.3134" pos="663.657 95.4935" stroke="KITblack" type="label" width="24.107" height="5.49" depth="0" valign="baseline" size="8">Radon</text>
+<text matrix="0.225493 0 0 0.225493 213.908 30.2718" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">86</text>
+<text matrix="0.225493 0 0 0.225493 215.97 35.4492" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.529" height="10.891" depth="0" valign="baseline" size="16">Xe</text>
+<text matrix="0.225493 0 0 0.225493 215.463 33.3707" pos="663.657 95.4935" stroke="KITblack" type="label" width="23.751" height="5.49" depth="0" valign="baseline" size="8">Xenon</text>
+<text matrix="0.225493 0 0 0.225493 213.908 39.2579" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">54</text>
+<text matrix="0.225493 0 0 0.225493 216.015 44.4141" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.113" height="10.891" depth="0" valign="baseline" size="16">Kr</text>
+<text matrix="0.225493 0 0 0.225493 214.676 42.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.285" height="5.49" depth="1.55" valign="baseline" size="8">Krypton</text>
+<text matrix="0.225493 0 0 0.225493 213.908 48.2442" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">36</text>
+<text matrix="0.225493 0 0 0.225493 215.922 53.4" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.696" height="10.891" depth="0" valign="baseline" size="16">Ar</text>
+<text matrix="0.225493 0 0 0.225493 215.479 51.5608" pos="663.657 95.4935" stroke="KITblack" type="label" width="22.816" height="5.49" depth="1.55" valign="baseline" size="8">Argon</text>
+<text matrix="0.225493 0 0 0.225493 213.908 57.2303" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">18</text>
+<text matrix="0.225493 0 0 0.225493 215.675 62.4071" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.529" height="10.891" depth="0" valign="baseline" size="16">Ne</text>
+<text matrix="0.225493 0 0 0.225493 215.839 60.3291" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.046" height="5.49" depth="0" valign="baseline" size="8">Neon</text>
+<text matrix="0.225493 0 0 0.225493 213.908 66.2158" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">10</text>
+<text matrix="0.225493 0 0 0.225493 215.674 71.3932" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.529" height="10.891" depth="0" valign="baseline" size="16">He</text>
+<text matrix="0.225493 0 0 0.225493 214.993 69.0357" pos="663.657 95.4935" stroke="KITblack" type="label" width="26.574" height="5.49" depth="0" valign="baseline" size="8">Helium</text>
+<text matrix="0.225493 0 0 0.225493 213.908 75.2019" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">2</text>
+<text matrix="0.225493 0 0 0.225493 207.742 62.3859" pos="663.657 95.4935" stroke="KITblack" type="label" width="9.597" height="10.891" depth="0" valign="baseline" size="16">F</text>
+<text matrix="0.225493 0 0 0.225493 205.378 60.3017" pos="663.657 95.4935" stroke="KITblack" type="label" width="30.936" height="5.49" depth="0" valign="baseline" size="8">Fluorine</text>
+<text matrix="0.225493 0 0 0.225493 205.251 66.1576" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">9</text>
+<text matrix="0.225493 0 0 0.225493 206.944 53.3901" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.621" height="10.891" depth="0" valign="baseline" size="16">Cl</text>
+<text matrix="0.225493 0 0 0.225493 205.259 51.2984" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.528" height="5.49" depth="0" valign="baseline" size="8">Chlorine</text>
+<text matrix="0.225493 0 0 0.225493 204.62 57.2292" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">17</text>
+<text matrix="0.225493 0 0 0.225493 206.933 44.4139" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.075" height="10.891" depth="0" valign="baseline" size="16">Br</text>
+<text matrix="0.225493 0 0 0.225493 205.354 42.3123" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.407" height="5.49" depth="0" valign="baseline" size="8">Bromine</text>
+<text matrix="0.225493 0 0 0.225493 204.62 48.2435" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">35</text>
+<text matrix="0.225493 0 0 0.225493 208.136 35.4278" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.222" height="10.891" depth="0" valign="baseline" size="16">I</text>
+<text matrix="0.225493 0 0 0.225493 206.184 33.3433" pos="663.657 95.4935" stroke="KITblack" type="label" width="23.045" height="5.49" depth="0" valign="baseline" size="8">Iodine</text>
+<text matrix="0.225493 0 0 0.225493 204.62 39.2568" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">53</text>
+<text matrix="0.225493 0 0 0.225493 206.757 26.4628" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.28" height="10.891" depth="0" valign="baseline" size="16">At</text>
+<text matrix="0.225493 0 0 0.225493 205.411 24.3408" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.325" height="5.49" depth="0" valign="baseline" size="8">Astatine</text>
+<text matrix="0.225493 0 0 0.225493 204.62 30.2715" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">85</text>
+<text matrix="0.225493 0 0 0.225493 207.039 17.4768" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.121" height="10.891" depth="0" valign="baseline" size="16">Ts</text>
+<text matrix="0.225493 0 0 0.225493 204.389 15.3546" pos="663.657 95.4935" stroke="KITblack" type="label" width="39.849" height="5.49" depth="0" valign="baseline" size="8">Tennessine</text>
+<text matrix="0.225493 0 0 0.225493 204.62 21.285" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">117</text>
+<text matrix="0.225493 0 0 0.225493 197.339 17.4555" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.908" height="10.891" depth="0" valign="baseline" size="16">Lv</text>
+<text matrix="0.225493 0 0 0.225493 195.448 15.5039" pos="663.657 95.4935" stroke="KITblack" type="label" width="41.035" height="4.118" depth="0" valign="baseline" size="6">Livermorium</text>
+<text matrix="0.225493 0 0 0.225493 195.331 21.2847" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">116</text>
+<text matrix="0.225493 0 0 0.225493 197.386 26.4625" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.908" height="10.891" depth="0" valign="baseline" size="16">Po</text>
+<text matrix="0.225493 0 0 0.225493 195.547 24.3134" pos="663.657 95.4935" stroke="KITblack" type="label" width="35.163" height="5.49" depth="0" valign="baseline" size="8">Polonium</text>
+<text matrix="0.225493 0 0 0.225493 195.331 30.2709" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">84</text>
+<text matrix="0.225493 0 0 0.225493 197.656 35.4483" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.87" height="10.891" depth="0" valign="baseline" size="16">Te</text>
+<text matrix="0.225493 0 0 0.225493 195.538 33.3433" pos="663.657 95.4935" stroke="KITblack" type="label" width="35.998" height="5.49" depth="0" valign="baseline" size="8">Tellurium</text>
+<text matrix="0.225493 0 0 0.225493 195.331 39.2568" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">52</text>
+<text matrix="0.225493 0 0 0.225493 197.648 44.4035" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.621" height="10.891" depth="0" valign="baseline" size="16">Se</text>
+<text matrix="0.225493 0 0 0.225493 195.739 42.2849" pos="663.657 95.4935" stroke="KITblack" type="label" width="33.404" height="5.49" depth="0" valign="baseline" size="8">Selenium</text>
+<text matrix="0.225493 0 0 0.225493 195.331 48.2426" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">34</text>
+<text matrix="0.225493 0 0 0.225493 198.509 53.3901" pos="663.657 95.4935" stroke="KITblack" type="label" width="8.144" height="10.891" depth="0" valign="baseline" size="16">S</text>
+<text matrix="0.225493 0 0 0.225493 196.982 51.2984" pos="663.657 95.4935" stroke="KITblack" type="label" width="22.354" height="5.49" depth="0" valign="baseline" size="8">Sulfur</text>
+<text matrix="0.225493 0 0 0.225493 195.331 57.2294" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">16</text>
+<text matrix="0.225493 0 0 0.225493 198.04 62.376" pos="663.657 95.4935" stroke="KITblack" type="label" width="11.475" height="10.891" depth="0" valign="baseline" size="16">O</text>
+<text matrix="0.225493 0 0 0.225493 196.33 60.564" pos="663.657 95.4935" stroke="KITblack" type="label" width="28.227" height="5.49" depth="1.55" valign="baseline" size="8">Oxygen</text>
+<text matrix="0.225493 0 0 0.225493 195.331 66.2153" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">8</text>
+<text matrix="0.225493 0 0 0.225493 188.671 62.3857" pos="663.657 95.4935" stroke="KITblack" type="label" width="11.051" height="10.891" depth="0" valign="baseline" size="16">N</text>
+<text matrix="0.225493 0 0 0.225493 186.581 60.564" pos="663.657 95.4935" stroke="KITblack" type="label" width="32.226" height="5.49" depth="1.55" valign="baseline" size="8">Nitrogen</text>
+<text matrix="0.225493 0 0 0.225493 186.043 66.2153" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">7</text>
+<text matrix="0.225493 0 0 0.225493 189.079 53.3991" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.013" height="10.891" depth="0" valign="baseline" size="16">P</text>
+<text matrix="0.225493 0 0 0.225493 185.998 51.581" pos="663.657 95.4935" stroke="KITblack" type="label" width="40.323" height="4.81" depth="1.35" valign="baseline" size="7">Phosphorus</text>
+<text matrix="0.225493 0 0 0.225493 186.043 57.2283" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">15</text>
+<text matrix="0.225493 0 0 0.225493 188.004 44.4342" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.78" height="10.891" depth="0" valign="baseline" size="16">As</text>
+<text matrix="0.225493 0 0 0.225493 187.115 42.3123" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.569" height="5.49" depth="0" valign="baseline" size="8">Arsenic</text>
+<text matrix="0.225493 0 0 0.225493 186.043 48.2429" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">33</text>
+<text matrix="0.225493 0 0 0.225493 188.227 35.4176" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.287" height="10.891" depth="0" valign="baseline" size="16">Sb</text>
+<text matrix="0.225493 0 0 0.225493 186.081 33.6057" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.688" height="5.49" depth="1.55" valign="baseline" size="8">Antimony</text>
+<text matrix="0.225493 0 0 0.225493 186.043 39.257" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">51</text>
+<text matrix="0.225493 0 0 0.225493 188.543 26.4411" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.41" height="10.891" depth="0" valign="baseline" size="16">Bi</text>
+<text matrix="0.225493 0 0 0.225493 186.821 24.3134" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.212" height="5.49" depth="0" valign="baseline" size="8">Bismuth</text>
+<text matrix="0.225493 0 0 0.225493 186.043 30.2709" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">83</text>
+<text matrix="0.225493 0 0 0.225493 187.666 17.4763" pos="663.657 95.4935" stroke="KITblack" type="label" width="20.027" height="10.891" depth="0" valign="baseline" size="16">Mc</text>
+<text matrix="0.225493 0 0 0.225493 186.038 15.4304" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.98" height="4.804" depth="0" valign="baseline" size="7">Moscovium</text>
+<text matrix="0.225493 0 0 0.225493 186.043 21.285" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">115</text>
+<text matrix="0.225493 0 0 0.225493 179.353 17.455" pos="663.657 95.4935" stroke="KITblack" type="label" width="13.577" height="10.891" depth="0" valign="baseline" size="16">Fl</text>
+<text matrix="0.225493 0 0 0.225493 177.266 15.4065" pos="663.657 95.4935" stroke="KITblack" type="label" width="35.195" height="4.804" depth="0" valign="baseline" size="7">Flerovium</text>
+<text matrix="0.225493 0 0 0.225493 176.754 21.2842" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">114</text>
+<text matrix="0.225493 0 0 0.225493 178.796 26.462" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.157" height="10.891" depth="0" valign="baseline" size="16">Pb</text>
+<text matrix="0.225493 0 0 0.225493 178.898 24.3134" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.991" height="5.49" depth="0" valign="baseline" size="8">Lead</text>
+<text matrix="0.225493 0 0 0.225493 176.754 30.2704" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">82</text>
+<text matrix="0.225493 0 0 0.225493 178.886 35.4174" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.287" height="10.891" depth="0" valign="baseline" size="16">Sn</text>
+<text matrix="0.225493 0 0 0.225493 179.59 33.3536" pos="663.657 95.4935" stroke="KITblack" type="label" width="13.173" height="5.49" depth="0" valign="baseline" size="8">Tin</text>
+<text matrix="0.225493 0 0 0.225493 176.754 39.2568" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">50</text>
+<text matrix="0.225493 0 0 0.225493 178.644 44.4033" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.055" height="10.891" depth="0" valign="baseline" size="16">Ge</text>
+<text matrix="0.225493 0 0 0.225493 176.042 42.3123" pos="663.657 95.4935" stroke="KITblack" type="label" width="43.817" height="5.49" depth="0" valign="baseline" size="8">Germanium</text>
+<text matrix="0.225493 0 0 0.225493 176.754 48.2426" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">32</text>
+<text matrix="0.225493 0 0 0.225493 179.409 53.3892" pos="663.657 95.4935" stroke="KITblack" type="label" width="12.123" height="10.891" depth="0" valign="baseline" size="16">Si</text>
+<text matrix="0.225493 0 0 0.225493 177.624 51.2984" pos="663.657 95.4935" stroke="KITblack" type="label" width="29.64" height="5.49" depth="0" valign="baseline" size="8">Silicium</text>
+<text matrix="0.225493 0 0 0.225493 176.754 57.2281" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">14</text>
+<text matrix="0.225493 0 0 0.225493 179.601 62.3751" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.642" height="10.891" depth="0" valign="baseline" size="16">C</text>
+<text matrix="0.225493 0 0 0.225493 177.924 60.3017" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.529" height="5.49" depth="0" valign="baseline" size="8">Carbon</text>
+<text matrix="0.225493 0 0 0.225493 176.754 66.2142" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">6</text>
+<text matrix="0.225493 0 0 0.225493 170.489 62.3843" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.43" height="10.891" depth="0" valign="baseline" size="16">B</text>
+<text matrix="0.225493 0 0 0.225493 169.195 60.3291" pos="663.657 95.4935" stroke="KITblack" type="label" width="22.468" height="5.49" depth="0" valign="baseline" size="8">Boron</text>
+<text matrix="0.225493 0 0 0.225493 167.466 66.2142" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">5</text>
+<text matrix="0.225493 0 0 0.225493 169.666 53.3984" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.031" height="10.891" depth="0" valign="baseline" size="16">Al</text>
+<text matrix="0.225493 0 0 0.225493 167.495 51.3629" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.938" height="4.804" depth="0" valign="baseline" size="7">Aluminium</text>
+<text matrix="0.225493 0 0 0.225493 167.466 57.2281" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">13</text>
+<text matrix="0.225493 0 0 0.225493 169.317 44.4031" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.888" height="10.891" depth="0" valign="baseline" size="16">Ga</text>
+<text matrix="0.225493 0 0 0.225493 168.333 42.2849" pos="663.657 95.4935" stroke="KITblack" type="label" width="29.696" height="5.49" depth="0" valign="baseline" size="8">Gallium</text>
+<text matrix="0.225493 0 0 0.225493 167.466 48.2422" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">31</text>
+<text matrix="0.225493 0 0 0.225493 169.936 35.4267" pos="663.657 95.4935" stroke="KITblack" type="label" width="13.366" height="10.891" depth="0" valign="baseline" size="16">In</text>
+<text matrix="0.225493 0 0 0.225493 168.616 33.3262" pos="663.657 95.4935" stroke="KITblack" type="label" width="26.573" height="5.49" depth="0" valign="baseline" size="8">Indium</text>
+<text matrix="0.225493 0 0 0.225493 167.466 39.2561" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">49</text>
+<text matrix="0.225493 0 0 0.225493 169.963 26.4406" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.621" height="10.891" depth="0" valign="baseline" size="16">Tl</text>
+<text matrix="0.225493 0 0 0.225493 167.944 24.2962" pos="663.657 95.4935" stroke="KITblack" type="label" width="33.874" height="5.49" depth="0" valign="baseline" size="8">Thallium</text>
+<text matrix="0.225493 0 0 0.225493 167.466 30.2702" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">81</text>
+<text matrix="0.225493 0 0 0.225493 169.048 17.4547" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.195" height="10.891" depth="0" valign="baseline" size="16">Nh</text>
+<text matrix="0.225493 0 0 0.225493 167.446 15.3272" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.453" height="5.49" depth="0" valign="baseline" size="8">Nihonium</text>
+<text matrix="0.225493 0 0 0.225493 167.466 21.284" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">113</text>
+<text matrix="0.225493 0 0 0.225493 160.054 44.4123" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.119" height="10.891" depth="0" valign="baseline" size="16">Zn</text>
+<text matrix="0.225493 0 0 0.225493 160.516 42.3123" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.996" height="5.49" depth="0" valign="baseline" size="8">Zinc</text>
+<text matrix="0.225493 0 0 0.225493 158.177 48.242" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">30</text>
+<text matrix="0.225493 0 0 0.225493 159.926 35.4167" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.785" height="10.891" depth="0" valign="baseline" size="16">Cd</text>
+<text matrix="0.225493 0 0 0.225493 158.273 33.3433" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.226" height="5.49" depth="0" valign="baseline" size="8">Cadmium</text>
+<text matrix="0.225493 0 0 0.225493 158.177 39.2558" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">48</text>
+<text matrix="0.225493 0 0 0.225493 159.804 26.8928" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.362" height="10.891" depth="3.1" valign="baseline" size="16">Hg</text>
+<text matrix="0.225493 0 0 0.225493 158.884 24.5757" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.056" height="5.49" depth="1.55" valign="baseline" size="8">Mercury</text>
+<text matrix="0.225493 0 0 0.225493 158.177 30.27" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">80</text>
+<text matrix="0.225493 0 0 0.225493 159.978 17.4446" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.785" height="10.891" depth="0" valign="baseline" size="16">Cn</text>
+<text matrix="0.225493 0 0 0.225493 158.047 15.6569" pos="663.657 95.4935" stroke="KITblack" type="label" width="41.161" height="4.46" depth="1.26" valign="baseline" size="6.5">Copernicium</text>
+<text matrix="0.225493 0 0 0.225493 158.177 21.284" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">112</text>
+<text matrix="0.225493 0 0 0.225493 150.652 44.4024" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.785" height="10.891" depth="0" valign="baseline" size="16">Cu</text>
+<text matrix="0.225493 0 0 0.225493 150.017 42.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.059" height="5.49" depth="1.55" valign="baseline" size="8">Copper</text>
+<text matrix="0.225493 0 0 0.225493 148.889 48.242" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">29</text>
+<text matrix="0.225493 0 0 0.225493 150.613 35.8788" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.362" height="10.891" depth="3.1" valign="baseline" size="16">Ag</text>
+<text matrix="0.225493 0 0 0.225493 150.722 33.3433" pos="663.657 95.4935" stroke="KITblack" type="label" width="20.707" height="5.49" depth="0" valign="baseline" size="8">Silver</text>
+<text matrix="0.225493 0 0 0.225493 148.889 39.2556" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">47</text>
+<text matrix="0.225493 0 0 0.225493 150.528 26.4615" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.778" height="10.891" depth="0" valign="baseline" size="16">Au</text>
+<text matrix="0.225493 0 0 0.225493 151.023 24.3134" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.934" height="5.49" depth="0" valign="baseline" size="8">Gold</text>
+<text matrix="0.225493 0 0 0.225493 148.889 30.2697" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">79</text>
+<text matrix="0.225493 0 0 0.225493 150.81 17.9067" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.157" height="10.891" depth="3.1" valign="baseline" size="16">Rg</text>
+<text matrix="0.225493 0 0 0.225493 148.97 15.6801" pos="663.657 95.4935" stroke="KITblack" type="label" width="42.197" height="4.12" depth="1.16" valign="baseline" size="6">Roentgenium</text>
+<text matrix="0.225493 0 0 0.225493 148.889 21.2837" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">111</text>
+<text matrix="0.225493 0 0 0.225493 141.569 17.4751" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.992" height="10.891" depth="0" valign="baseline" size="16">Ds</text>
+<text matrix="0.225493 0 0 0.225493 140.062 15.5625" pos="663.657 95.4935" stroke="KITblack" type="label" width="43.02" height="3.432" depth="0" valign="baseline" size="5">Darmstadtium</text>
+<text matrix="0.225493 0 0 0.225493 139.6 21.2835" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">110</text>
+<text matrix="0.225493 0 0 0.225493 142.05 26.4612" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.658" height="10.891" depth="0" valign="baseline" size="16">Pt</text>
+<text matrix="0.225493 0 0 0.225493 140.055 24.2962" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.222" height="5.49" depth="0" valign="baseline" size="8">Platinum</text>
+<text matrix="0.225493 0 0 0.225493 139.6 30.2695" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">78</text>
+<text matrix="0.225493 0 0 0.225493 141.538 35.4472" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.157" height="10.891" depth="0" valign="baseline" size="16">Pd</text>
+<text matrix="0.225493 0 0 0.225493 139.611 33.3262" pos="663.657 95.4935" stroke="KITblack" type="label" width="37.515" height="5.49" depth="0" valign="baseline" size="8">Palladium</text>
+<text matrix="0.225493 0 0 0.225493 139.6 39.2554" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">46</text>
+<text matrix="0.225493 0 0 0.225493 141.705 44.4119" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.031" height="10.891" depth="0" valign="baseline" size="16">Ni</text>
+<text matrix="0.225493 0 0 0.225493 141.123 42.2849" pos="663.657 95.4935" stroke="KITblack" type="label" width="22.574" height="5.49" depth="0" valign="baseline" size="8">Nickel</text>
+<text matrix="0.225493 0 0 0.225493 139.6 48.2415" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">26</text>
+<text matrix="0.225493 0 0 0.225493 132.178 44.402" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.952" height="10.891" depth="0" valign="baseline" size="16">Co</text>
+<text matrix="0.225493 0 0 0.225493 131.805 42.2849" pos="663.657 95.4935" stroke="KITblack" type="label" width="24.935" height="5.49" depth="0" valign="baseline" size="8">Cobalt</text>
+<text matrix="0.225493 0 0 0.225493 130.312 48.2415" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">25</text>
+<text matrix="0.225493 0 0 0.225493 132.187 35.4258" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.99" height="10.891" depth="0" valign="baseline" size="16">Rh</text>
+<text matrix="0.225493 0 0 0.225493 130.673 33.3433" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.222" height="5.49" depth="0" valign="baseline" size="8">Rhodium</text>
+<text matrix="0.225493 0 0 0.225493 130.312 39.2547" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">45</text>
+<text matrix="0.225493 0 0 0.225493 133.118 26.4399" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.867" height="10.891" depth="0" valign="baseline" size="16">Ir</text>
+<text matrix="0.225493 0 0 0.225493 131.368 24.2962" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.521" height="5.49" depth="0" valign="baseline" size="8">Iridium</text>
+<text matrix="0.225493 0 0 0.225493 130.312 30.2697" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">77</text>
+<text matrix="0.225493 0 0 0.225493 132.147 17.4748" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.194" height="10.891" depth="0" valign="baseline" size="16">Mt</text>
+<text matrix="0.225493 0 0 0.225493 130.286 15.4304" pos="663.657 95.4935" stroke="KITblack" type="label" width="40.335" height="4.804" depth="0" valign="baseline" size="7">Meitnerium</text>
+<text matrix="0.225493 0 0 0.225493 130.312 21.283" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">109</text>
+<text matrix="0.225493 0 0 0.225493 123.285 44.4322" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.826" height="10.891" depth="0" valign="baseline" size="16">Fe</text>
+<text matrix="0.225493 0 0 0.225493 123.489 42.3123" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.289" height="5.49" depth="0" valign="baseline" size="8">Iron</text>
+<text matrix="0.225493 0 0 0.225493 121.023 48.2406" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">26</text>
+<text matrix="0.225493 0 0 0.225493 122.86 35.4463" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.574" height="10.891" depth="0" valign="baseline" size="16">Ru</text>
+<text matrix="0.225493 0 0 0.225493 120.636 33.3433" pos="663.657 95.4935" stroke="KITblack" type="label" width="41.28" height="5.49" depth="0" valign="baseline" size="8">Ruthenium</text>
+<text matrix="0.225493 0 0 0.225493 121.023 39.2549" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">44</text>
+<text matrix="0.225493 0 0 0.225493 122.97 26.4297" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.203" height="10.891" depth="0" valign="baseline" size="16">Os</text>
+<text matrix="0.225493 0 0 0.225493 121.667 24.3408" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.098" height="5.49" depth="0" valign="baseline" size="8">Osmium</text>
+<text matrix="0.225493 0 0 0.225493 121.023 30.2686" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">76</text>
+<text matrix="0.225493 0 0 0.225493 122.887 17.4746" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.78" height="10.891" depth="0" valign="baseline" size="16">Hs</text>
+<text matrix="0.225493 0 0 0.225493 121.589 15.3546" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.372" height="5.49" depth="0" valign="baseline" size="8">Hassium</text>
+<text matrix="0.225493 0 0 0.225493 121.023 21.2833" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">108</text>
+<text matrix="0.225493 0 0 0.225493 113.11 44.411" pos="663.657 95.4935" stroke="KITblack" type="label" width="21.693" height="10.891" depth="0" valign="baseline" size="16">Mn</text>
+<text matrix="0.225493 0 0 0.225493 111.887 42.5915" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.122" height="4.81" depth="1.35" valign="baseline" size="7">Manganese</text>
+<text matrix="0.225493 0 0 0.225493 111.735 48.2406" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">25</text>
+<text matrix="0.225493 0 0 0.225493 114.156 35.4461" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.87" height="10.891" depth="0" valign="baseline" size="16">Tc</text>
+<text matrix="0.225493 0 0 0.225493 111.775 33.4226" pos="663.657 95.4935" stroke="KITblack" type="label" width="40.57" height="4.804" depth="0" valign="baseline" size="7">Technetium</text>
+<text matrix="0.225493 0 0 0.225493 111.735 39.2547" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">43</text>
+<text matrix="0.225493 0 0 0.225493 113.795 26.4602" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.324" height="10.891" depth="0" valign="baseline" size="16">Re</text>
+<text matrix="0.225493 0 0 0.225493 112.183 24.3134" pos="663.657 95.4935" stroke="KITblack" type="label" width="33.517" height="5.49" depth="0" valign="baseline" size="8">Rhenium</text>
+<text matrix="0.225493 0 0 0.225493 111.735 30.2684" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">75</text>
+<text matrix="0.225493 0 0 0.225493 113.712 17.4533" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.574" height="10.891" depth="0" valign="baseline" size="16">Bh</text>
+<text matrix="0.225493 0 0 0.225493 112.342 15.3272" pos="663.657 95.4935" stroke="KITblack" type="label" width="32.348" height="5.49" depth="0" valign="baseline" size="8">Bohrium</text>
+<text matrix="0.225493 0 0 0.225493 111.735 21.283" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">107</text>
+<text matrix="0.225493 0 0 0.225493 104.584 44.4013" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.287" height="10.891" depth="0" valign="baseline" size="16">Cr</text>
+<text matrix="0.225493 0 0 0.225493 102.735 42.3642" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.917" height="4.804" depth="0" valign="baseline" size="7">Chromium</text>
+<text matrix="0.225493 0 0 0.225493 102.446 48.2406" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">24</text>
+<text matrix="0.225493 0 0 0.225493 103.886 35.4458" pos="663.657 95.4935" stroke="KITblack" type="label" width="20.86" height="10.891" depth="0" valign="baseline" size="16">Mo</text>
+<text matrix="0.225493 0 0 0.225493 102.15 33.6508" pos="663.657 95.4935" stroke="KITblack" type="label" width="42.034" height="4.46" depth="1.26" valign="baseline" size="6.5">Molybdenum</text>
+<text matrix="0.225493 0 0 0.225493 102.446 39.2543" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">42</text>
+<text matrix="0.225493 0 0 0.225493 104.77 26.4389" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.215" height="10.891" depth="0" valign="baseline" size="16">W</text>
+<text matrix="0.225493 0 0 0.225493 102.906 24.5757" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.156" height="5.49" depth="1.55" valign="baseline" size="8">Tungsten</text>
+<text matrix="0.225493 0 0 0.225493 102.446 30.2686" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">74</text>
+<text matrix="0.225493 0 0 0.225493 104.625 17.8583" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.454" height="10.891" depth="3.1" valign="baseline" size="16">Sg</text>
+<text matrix="0.225493 0 0 0.225493 102.39 15.6098" pos="663.657 95.4935" stroke="KITblack" type="label" width="40.784" height="4.81" depth="1.35" valign="baseline" size="7">Seaborgium</text>
+<text matrix="0.225493 0 0 0.225493 102.446 21.2828" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">106</text>
+<text matrix="0.225493 0 0 0.225493 94.8943 17.4738" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.407" height="10.891" depth="0" valign="baseline" size="16">Db</text>
+<text matrix="0.225493 0 0 0.225493 93.4252 15.3101" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.693" height="5.49" depth="0" valign="baseline" size="8">Dubnium</text>
+<text matrix="0.225493 0 0 0.225493 93.1575 21.2821" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">105</text>
+<text matrix="0.225493 0 0 0.225493 95.4443 26.4597" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.703" height="10.891" depth="0" valign="baseline" size="16">Ta</text>
+<text matrix="0.225493 0 0 0.225493 93.4998 24.2962" pos="663.657 95.4935" stroke="KITblack" type="label" width="35.755" height="5.49" depth="0" valign="baseline" size="8">Tantalum</text>
+<text matrix="0.225493 0 0 0.225493 93.1577 30.2679" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">73</text>
+<text matrix="0.225493 0 0 0.225493 94.792 35.4456" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.195" height="10.891" depth="0" valign="baseline" size="16">Nb</text>
+<text matrix="0.225493 0 0 0.225493 93.6867 33.3433" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.748" height="5.49" depth="0" valign="baseline" size="8">Niobium</text>
+<text matrix="0.225493 0 0 0.225493 93.1577 39.254" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">41</text>
+<text matrix="0.225493 0 0 0.225493 95.9817 44.4108" pos="663.657 95.4935" stroke="KITblack" type="label" width="11.051" height="10.891" depth="0" valign="baseline" size="16">V</text>
+<text matrix="0.225493 0 0 0.225493 93.1457 42.2678" pos="663.657 95.4935" stroke="KITblack" type="label" width="37.629" height="5.49" depth="0" valign="baseline" size="8">Vanadium</text>
+<text matrix="0.225493 0 0 0.225493 93.1575 48.2404" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">23</text>
+<text matrix="0.225493 0 0 0.225493 86.465 44.4105" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.621" height="10.891" depth="0" valign="baseline" size="16">Ti</text>
+<text matrix="0.225493 0 0 0.225493 84.3658 42.2952" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.815" height="5.49" depth="0" valign="baseline" size="8">Titanium</text>
+<text matrix="0.225493 0 0 0.225493 83.869 48.2402" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">22</text>
+<text matrix="0.225493 0 0 0.225493 86.0822 35.4242" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.621" height="10.891" depth="0" valign="baseline" size="16">Zr</text>
+<text matrix="0.225493 0 0 0.225493 83.7817 33.3707" pos="663.657 95.4935" stroke="KITblack" type="label" width="37.644" height="5.49" depth="0" valign="baseline" size="8">Zirconium</text>
+<text matrix="0.225493 0 0 0.225493 83.8692 39.2538" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">40</text>
+<text matrix="0.225493 0 0 0.225493 85.8971 26.8432" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.447" height="10.891" depth="0" valign="baseline" size="16">Hf</text>
+<text matrix="0.225493 0 0 0.225493 84.3749 24.2962" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.984" height="5.49" depth="0" valign="baseline" size="8">Hafnium</text>
+<text matrix="0.225493 0 0 0.225493 83.8692 30.2677" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">72</text>
+<text matrix="0.225493 0 0 0.225493 76.9608 44.4006" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.621" height="10.891" depth="0" valign="baseline" size="16">Sc</text>
+<text matrix="0.225493 0 0 0.225493 74.7134 42.2849" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.226" height="5.49" depth="0" valign="baseline" size="8">Scandium</text>
+<text matrix="0.225493 0 0 0.225493 74.5807 48.2399" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">107</text>
+<text matrix="0.225493 0 0 0.225493 77.5035 35.424" pos="663.657 95.4935" stroke="KITblack" type="label" width="11.051" height="10.891" depth="0" valign="baseline" size="16">Y</text>
+<text matrix="0.225493 0 0 0.225493 75.5653 33.3536" pos="663.657 95.4935" stroke="KITblack" type="label" width="30.344" height="5.49" depth="0" valign="baseline" size="8">Yttrium</text>
+<text matrix="0.225493 0 0 0.225493 74.5807 39.2534" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">39</text>
+<text matrix="0.225493 0 0 0.225493 73.9253 26.4595" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.629" height="10.891" depth="0" valign="baseline" size="16">La-Lu</text>
+<text matrix="0.225493 0 0 0.225493 73.7707 24.3134" pos="663.657 95.4935" stroke="KITblack" type="label" width="45.09" height="5.49" depth="0" valign="baseline" size="8">Lanthanides</text>
+<text matrix="0.225493 0 0 0.225493 74.5807 30.2682" pos="663.657 95.4935" stroke="KITblack" type="label" width="25.038" height="6.901" depth="0" valign="baseline" size="11">57-71</text>
+<text matrix="0.225493 0 0 0.225493 74.0996 17.4733" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.751" height="10.891" depth="0" valign="baseline" size="16">Ac-Lr</text>
+<text matrix="0.225493 0 0 0.225493 74.9048 15.3272" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.384" height="5.49" depth="0" valign="baseline" size="8">Actinides</text>
+<text matrix="0.225493 0 0 0.225493 74.5807 21.2818" pos="663.657 95.4935" stroke="KITblack" type="label" width="30.403" height="6.901" depth="0" valign="baseline" size="11">89-103</text>
+<text matrix="0.225493 0 0 0.225493 67.3146 17.4731" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.157" height="10.891" depth="0" valign="baseline" size="16">Ra</text>
+<text matrix="0.225493 0 0 0.225493 66.2184 15.3101" pos="663.657 95.4935" stroke="KITblack" type="label" width="29.283" height="5.49" depth="0" valign="baseline" size="8">Radium</text>
+<text matrix="0.225493 0 0 0.225493 65.2922 21.2816" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">88</text>
+<text matrix="0.225493 0 0 0.225493 67.417 26.4592" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.741" height="10.891" depth="0" valign="baseline" size="16">Ba</text>
+<text matrix="0.225493 0 0 0.225493 66.4636 24.3236" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.643" height="5.49" depth="0" valign="baseline" size="8">Barium</text>
+<text matrix="0.225493 0 0 0.225493 65.2922 30.2672" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">56</text>
+<text matrix="0.225493 0 0 0.225493 67.7603 35.4138" pos="663.657 95.4935" stroke="KITblack" type="label" width="13.789" height="10.891" depth="0" valign="baseline" size="16">Sr</text>
+<text matrix="0.225493 0 0 0.225493 65.407 33.3707" pos="663.657 95.4935" stroke="KITblack" type="label" width="37.409" height="5.49" depth="0" valign="baseline" size="8">Strontium</text>
+<text matrix="0.225493 0 0 0.225493 65.2922 39.2531" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">38</text>
+<text matrix="0.225493 0 0 0.225493 67.2409 44.3999" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.952" height="10.891" depth="0" valign="baseline" size="16">Ca</text>
+<text matrix="0.225493 0 0 0.225493 66.0701 42.2849" pos="663.657 95.4935" stroke="KITblack" type="label" width="30.58" height="5.49" depth="0" valign="baseline" size="8">Calcium</text>
+<text matrix="0.225493 0 0 0.225493 65.2922 48.2393" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">20</text>
+<text matrix="0.225493 0 0 0.225493 66.7144 53.8485" pos="663.657 95.4935" stroke="KITblack" type="label" width="20.86" height="10.891" depth="3.1" valign="baseline" size="16">Mg</text>
+<text matrix="0.225493 0 0 0.225493 65.2748 51.605" pos="663.657 95.4935" stroke="KITblack" type="label" width="39.409" height="4.81" depth="1.35" valign="baseline" size="7">Magnesium</text>
+<text matrix="0.225493 0 0 0.225493 65.2922 57.2254" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">12</text>
+<text matrix="0.225493 0 0 0.225493 67.4548 62.4031" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.908" height="10.891" depth="0" valign="baseline" size="16">Be</text>
+<text matrix="0.225493 0 0 0.225493 65.46 60.5367" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.347" height="5.49" depth="1.55" valign="baseline" size="8">Beryllium</text>
+<text matrix="0.225493 0 0 0.225493 65.2922 66.2115" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">4</text>
+<text matrix="0.225493 0 0 0.225493 58.63 71.3678" pos="663.657 95.4935" stroke="KITblack" type="label" width="11.051" height="10.891" depth="0" valign="baseline" size="16">H</text>
+<text matrix="0.225493 0 0 0.225493 56.0465 69.2707" pos="663.657 95.4935" stroke="KITblack" type="label" width="35.754" height="5.49" depth="1.55" valign="baseline" size="8">Hydrogen</text>
+<text matrix="0.225493 0 0 0.225493 56.0037 75.1976" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">1</text>
+<text matrix="0.225493 0 0 0.225493 58.5042 62.3816" pos="663.657 95.4935" stroke="KITblack" type="label" width="13.161" height="10.891" depth="0" valign="baseline" size="16">Li</text>
+<text matrix="0.225493 0 0 0.225493 56.902 60.2846" pos="663.657 95.4935" stroke="KITblack" type="label" width="29.753" height="5.49" depth="0" valign="baseline" size="8">Lithium</text>
+<text matrix="0.225493 0 0 0.225493 56.0037 66.2115" pos="663.657 95.4935" stroke="KITblack" type="label" width="5.365" height="6.901" depth="0" valign="baseline" size="11">3</text>
+<text matrix="0.225493 0 0 0.225493 57.7332 53.4167" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.362" height="10.891" depth="0" valign="baseline" size="16">Na</text>
+<text matrix="0.225493 0 0 0.225493 57.017 51.2984" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.993" height="5.49" depth="0" valign="baseline" size="8">Sodium</text>
+<text matrix="0.225493 0 0 0.225493 56.0037 57.2254" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">11</text>
+<text matrix="0.225493 0 0 0.225493 58.8205 44.4094" pos="663.657 95.4935" stroke="KITblack" type="label" width="11.468" height="10.891" depth="0" valign="baseline" size="16">K</text>
+<text matrix="0.225493 0 0 0.225493 55.9908 42.3123" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.08" height="5.49" depth="0" valign="baseline" size="8">Potassium</text>
+<text matrix="0.225493 0 0 0.225493 56.0037 48.2393" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">19</text>
+<text matrix="0.225493 0 0 0.225493 57.9309 35.4447" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.99" height="10.891" depth="0" valign="baseline" size="16">Rb</text>
+<text matrix="0.225493 0 0 0.225493 56.0789 33.3262" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.575" height="5.49" depth="0" valign="baseline" size="8">Rubidium</text>
+<text matrix="0.225493 0 0 0.225493 56.0037 39.2531" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">37</text>
+<text matrix="0.225493 0 0 0.225493 58.089 26.4282" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.37" height="10.891" depth="0" valign="baseline" size="16">Cs</text>
+<text matrix="0.225493 0 0 0.225493 57.08 24.3408" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.334" height="5.49" depth="0" valign="baseline" size="8">Cesium</text>
+<text matrix="0.225493 0 0 0.225493 56.0037 30.2677" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">55</text>
+<text matrix="0.225493 0 0 0.225493 58.4161 17.4518" pos="663.657 95.4935" stroke="KITblack" type="label" width="13.993" height="10.891" depth="0" valign="baseline" size="16">Fr</text>
+<text matrix="0.225493 0 0 0.225493 56.3027 15.3546" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.935" height="5.49" depth="0" valign="baseline" size="8">Francium</text>
+<text matrix="0.225493 0 0 0.225493 56.0037 21.2816" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">87</text>
+<text matrix="0.225493 0 0 0.225493 86.1918 17.4054" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.242" height="10.891" depth="0" valign="baseline" size="16">Rf</text>
+<text matrix="0.225493 0 0 0.225493 84.2296 15.5625" pos="663.657 95.4935" stroke="KITblack" type="label" width="43.781" height="3.432" depth="0" valign="baseline" size="5">Rutherfordium</text>
+<text matrix="0.225493 0 0 0.225493 83.8692 21.2823" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">104</text>
+<path matrix="0.229367 0 0 0.225493 334.854 7.85698" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 334.854 -1.12917" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.565 -1.12917" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 325.565 7.85697" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.277 7.85696" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 316.277 -1.12917" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.988 -1.12919" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 306.988 7.85695" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.7 7.85694" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 297.7 -1.12919" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 288.411 7.85693" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 288.411 -1.12922" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 279.123 -1.12924" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 279.123 7.85692" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 269.834 7.85691" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 269.834 -1.12924" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 260.546 -1.12924" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 260.546 7.8569" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 251.257 7.85689" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 251.257 -1.12926" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 241.969 -1.12928" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 241.969 7.85688" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 232.68 7.85687" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 232.68 -1.12928" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 223.392 -1.12931" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 223.392 7.85686" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 214.103 7.85685" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 214.103 -1.12931" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 204.815 7.85684" stroke="KITblack" fill="KITseablue15">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<path matrix="0.229367 0 0 0.225493 204.815 -1.12931" stroke="KITblack" fill="KITseablue50">
+82.5557 116.831 m
+82.5557 76.9799 l
+123.052 76.9799 l
+123.052 116.831 l
+h
+</path>
+<text matrix="0.225493 0 0 0.225493 206.559 6.73871" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.325" height="10.891" depth="0" valign="baseline" size="16">Lu</text>
+<text matrix="0.225493 0 0 0.225493 205.037 4.66485" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.458" height="5.49" depth="0" valign="baseline" size="8">Lutetium</text>
+<text matrix="0.225493 0 0 0.225493 204.662 10.5474" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">71</text>
+<text matrix="0.225493 0 0 0.225493 206.933 -2.26852" pos="663.657 95.4935" stroke="KITblack" type="label" width="14.826" height="10.891" depth="0" valign="baseline" size="16">Lr</text>
+<text matrix="0.225493 0 0 0.225493 204.335 -4.29006" pos="663.657 95.4935" stroke="KITblack" type="label" width="42.168" height="4.804" depth="0" valign="baseline" size="7">Lawrencium</text>
+<text matrix="0.225493 0 0 0.225493 204.662 1.56128" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">103</text>
+<text matrix="0.225493 0 0 0.225493 196.978 -2.24746" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.362" height="10.891" depth="0" valign="baseline" size="16">No</text>
+<text matrix="0.225493 0 0 0.225493 195.43 -4.39323" pos="663.657 95.4935" stroke="KITblack" type="label" width="35.748" height="5.49" depth="0" valign="baseline" size="8">Nobelium</text>
+<text matrix="0.225493 0 0 0.225493 195.373 1.56125" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">102</text>
+<text matrix="0.225493 0 0 0.225493 197.26 6.7387" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.195" height="10.891" depth="0" valign="baseline" size="16">Yb</text>
+<text matrix="0.225493 0 0 0.225493 195.388 4.63745" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.813" height="5.49" depth="0" valign="baseline" size="8">Ytterbium</text>
+<text matrix="0.225493 0 0 0.225493 195.373 10.5474" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">70</text>
+<text matrix="0.225493 0 0 0.225493 187.476 6.7176" pos="663.657 95.4935" stroke="KITblack" type="label" width="22.949" height="10.891" depth="0" valign="baseline" size="16">Tm</text>
+<text matrix="0.225493 0 0 0.225493 186.69 4.62031" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.757" height="5.49" depth="0" valign="baseline" size="8">Thulium</text>
+<text matrix="0.225493 0 0 0.225493 186.085 10.5474" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">69</text>
+<text matrix="0.225493 0 0 0.225493 187.366 -2.24746" pos="663.657 95.4935" stroke="KITblack" type="label" width="21.693" height="10.891" depth="0" valign="baseline" size="16">Md</text>
+<text matrix="0.225493 0 0 0.225493 186.677 -4.15792" pos="663.657 95.4935" stroke="KITblack" type="label" width="39.304" height="3.432" depth="0" valign="baseline" size="5">Mendelevium</text>
+<text matrix="0.225493 0 0 0.225493 186.085 1.56123" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">101</text>
+<text matrix="0.225493 0 0 0.225493 178.29 -2.26854" pos="663.657 95.4935" stroke="KITblack" type="label" width="20.656" height="10.891" depth="0" valign="baseline" size="16">Fm</text>
+<text matrix="0.225493 0 0 0.225493 177.2 -4.36583" pos="663.657 95.4935" stroke="KITblack" type="label" width="33.053" height="5.49" depth="0" valign="baseline" size="8">Fermium</text>
+<text matrix="0.225493 0 0 0.225493 176.796 1.56123" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.096" height="6.901" depth="0" valign="baseline" size="11">100</text>
+<text matrix="0.225493 0 0 0.225493 179.068 6.71759" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.658" height="10.891" depth="0" valign="baseline" size="16">Er</text>
+<text matrix="0.225493 0 0 0.225493 177.878 4.62031" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.878" height="5.49" depth="0" valign="baseline" size="8">Erbium</text>
+<text matrix="0.225493 0 0 0.225493 176.796 10.5474" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">68</text>
+<text matrix="0.225493 0 0 0.225493 169.111 6.73867" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.362" height="10.891" depth="0" valign="baseline" size="16">Ho</text>
+<text matrix="0.225493 0 0 0.225493 167.697 4.63745" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.101" height="5.49" depth="0" valign="baseline" size="8">Holmium</text>
+<text matrix="0.225493 0 0 0.225493 167.508 10.5474" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">67</text>
+<text matrix="0.225493 0 0 0.225493 169.727 -2.24748" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.742" height="10.891" depth="0" valign="baseline" size="16">Es</text>
+<text matrix="0.225493 0 0 0.225493 167.37 -4.29006" pos="663.657 95.4935" stroke="KITblack" type="label" width="41.679" height="4.804" depth="0" valign="baseline" size="7">Einsteinium</text>
+<text matrix="0.225493 0 0 0.225493 167.508 1.56121" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">99</text>
+<text matrix="0.225493 0 0 0.225493 160.426 -2.27826" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.037" height="10.891" depth="0" valign="baseline" size="16">Cf</text>
+<text matrix="0.225493 0 0 0.225493 158.034 -4.31396" pos="663.657 95.4935" stroke="KITblack" type="label" width="41.324" height="4.804" depth="0" valign="baseline" size="7">Californium</text>
+<text matrix="0.225493 0 0 0.225493 158.219 1.56119" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">98</text>
+<text matrix="0.225493 0 0 0.225493 159.908 7.14495" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.99" height="10.891" depth="3.1" valign="baseline" size="16">Dy</text>
+<text matrix="0.225493 0 0 0.225493 157.991 4.94401" pos="663.657 95.4935" stroke="KITblack" type="label" width="41.182" height="4.81" depth="1.35" valign="baseline" size="7">Dysprosium</text>
+<text matrix="0.225493 0 0 0.225493 158.219 10.5474" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">66</text>
+<text matrix="0.225493 0 0 0.225493 150.915 6.73864" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.785" height="10.891" depth="0" valign="baseline" size="16">Tb</text>
+<text matrix="0.225493 0 0 0.225493 149.663 4.63745" pos="663.657 95.4935" stroke="KITblack" type="label" width="31.293" height="5.49" depth="0" valign="baseline" size="8">Terbium</text>
+<text matrix="0.225493 0 0 0.225493 148.931 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">65</text>
+<text matrix="0.225493 0 0 0.225493 150.913 -2.2475" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.157" height="10.891" depth="0" valign="baseline" size="16">Bk</text>
+<text matrix="0.225493 0 0 0.225493 148.887 -4.39323" pos="663.657 95.4935" stroke="KITblack" type="label" width="37.523" height="5.49" depth="0" valign="baseline" size="8">Berkelium</text>
+<text matrix="0.225493 0 0 0.225493 148.931 1.56119" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">97</text>
+<text matrix="0.225493 0 0 0.225493 140.861 -2.27826" pos="663.657 95.4935" stroke="KITblack" type="label" width="22.949" height="10.891" depth="0" valign="baseline" size="16">Cm</text>
+<text matrix="0.225493 0 0 0.225493 140.591 -4.36583" pos="663.657 95.4935" stroke="KITblack" type="label" width="28.235" height="5.49" depth="0" valign="baseline" size="8">Curium</text>
+<text matrix="0.225493 0 0 0.225493 139.642 1.56119" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">96</text>
+<text matrix="0.225493 0 0 0.225493 141.252 6.70788" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.72" height="10.891" depth="0" valign="baseline" size="16">Gd</text>
+<text matrix="0.225493 0 0 0.225493 139.507 4.71671" pos="663.657 95.4935" stroke="KITblack" type="label" width="40.619" height="4.804" depth="0" valign="baseline" size="7">Gadolinium</text>
+<text matrix="0.225493 0 0 0.225493 139.642 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">64</text>
+<text matrix="0.225493 0 0 0.225493 132.251 6.73862" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.157" height="10.891" depth="0" valign="baseline" size="16">Eu</text>
+<text matrix="0.225493 0 0 0.225493 130.376 4.89981" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.817" height="5.49" depth="1.55" valign="baseline" size="8">Europium</text>
+<text matrix="0.225493 0 0 0.225493 130.354 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">63</text>
+<text matrix="0.225493 0 0 0.225493 131.448 -2.26861" pos="663.657 95.4935" stroke="KITblack" type="label" width="23.359" height="10.891" depth="0" valign="baseline" size="16">Am</text>
+<text matrix="0.225493 0 0 0.225493 130.465 -4.29006" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.08" height="4.804" depth="0" valign="baseline" size="7">Americium</text>
+<text matrix="0.225493 0 0 0.225493 130.354 1.56116" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">95</text>
+<text matrix="0.225493 0 0 0.225493 122.975 -2.24755" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.157" height="10.891" depth="0" valign="baseline" size="16">Pu</text>
+<text matrix="0.225493 0 0 0.225493 121.426 -4.31396" pos="663.657 95.4935" stroke="KITblack" type="label" width="36.696" height="4.804" depth="0" valign="baseline" size="7">Plutonium</text>
+<text matrix="0.225493 0 0 0.225493 121.065 1.56114" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">94</text>
+<text matrix="0.225493 0 0 0.225493 122.614 6.70785" pos="663.657 95.4935" stroke="KITblack" type="label" width="20.451" height="10.891" depth="0" valign="baseline" size="16">Sm</text>
+<text matrix="0.225493 0 0 0.225493 121.029 4.66485" pos="663.657 95.4935" stroke="KITblack" type="label" width="37.644" height="5.49" depth="0" valign="baseline" size="8">Samarium</text>
+<text matrix="0.225493 0 0 0.225493 121.065 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">62</text>
+<text matrix="0.225493 0 0 0.225493 113.184 6.71752" pos="663.657 95.4935" stroke="KITblack" type="label" width="22.321" height="10.891" depth="0" valign="baseline" size="16">Pm</text>
+<text matrix="0.225493 0 0 0.225493 111.473 4.71671" pos="663.657 95.4935" stroke="KITblack" type="label" width="43.241" height="4.804" depth="0" valign="baseline" size="7">Promethium</text>
+<text matrix="0.225493 0 0 0.225493 111.777 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">61</text>
+<text matrix="0.225493 0 0 0.225493 113.283 -1.84125" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.195" height="10.891" depth="3.1" valign="baseline" size="16">Np</text>
+<text matrix="0.225493 0 0 0.225493 111.768 -4.08667" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.938" height="4.81" depth="1.35" valign="baseline" size="7">Neptunium</text>
+<text matrix="0.225493 0 0 0.225493 111.777 1.56114" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">93</text>
+<text matrix="0.225493 0 0 0.225493 105.169 -2.2312" pos="663.657 95.4935" stroke="KITblack" type="label" width="11.051" height="10.891" depth="0" valign="baseline" size="16">U</text>
+<text matrix="0.225493 0 0 0.225493 102.945 -4.36583" pos="663.657 95.4935" stroke="KITblack" type="label" width="32.696" height="5.49" depth="0" valign="baseline" size="8">Uranium</text>
+<text matrix="0.225493 0 0 0.225493 102.488 1.56112" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">92</text>
+<text matrix="0.225493 0 0 0.225493 103.976 6.73859" pos="663.657 95.4935" stroke="KITblack" type="label" width="19.195" height="10.891" depth="0" valign="baseline" size="16">Nd</text>
+<text matrix="0.225493 0 0 0.225493 102.738 4.96983" pos="663.657 95.4935" stroke="KITblack" type="label" width="38.455" height="4.12" depth="1.16" valign="baseline" size="6">Neodymium</text>
+<text matrix="0.225493 0 0 0.225493 102.488 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">60</text>
+<text matrix="0.225493 0 0 0.225493 95.4839 6.7175" pos="663.657 95.4935" stroke="KITblack" type="label" width="15.658" height="10.891" depth="0" valign="baseline" size="16">Pr</text>
+<text matrix="0.225493 0 0 0.225493 93.4743 5.01955" pos="663.657 95.4935" stroke="KITblack" type="label" width="43.884" height="3.44" depth="0.96" valign="baseline" size="5">Praseodymium</text>
+<text matrix="0.225493 0 0 0.225493 93.1999 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">59</text>
+<text matrix="0.225493 0 0 0.225493 95.2951 -2.24757" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.908" height="10.891" depth="0" valign="baseline" size="16">Pa</text>
+<text matrix="0.225493 0 0 0.225493 92.7402 -4.29006" pos="663.657 95.4935" stroke="KITblack" type="label" width="46.036" height="4.804" depth="0" valign="baseline" size="7">Protactinium</text>
+<text matrix="0.225493 0 0 0.225493 93.1999 1.56112" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">91</text>
+<text matrix="0.225493 0 0 0.225493 85.8432 -2.26868" pos="663.657 95.4935" stroke="KITblack" type="label" width="18.785" height="10.891" depth="0" valign="baseline" size="16">Th</text>
+<text matrix="0.225493 0 0 0.225493 84.4745 -4.39323" pos="663.657 95.4935" stroke="KITblack" type="label" width="32.469" height="5.49" depth="0" valign="baseline" size="8">Thorium</text>
+<text matrix="0.225493 0 0 0.225493 83.9114 1.56112" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">90</text>
+<text matrix="0.225493 0 0 0.225493 85.8557 6.70781" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.119" height="10.891" depth="0" valign="baseline" size="16">Ce</text>
+<text matrix="0.225493 0 0 0.225493 84.9715 4.66485" pos="663.657 95.4935" stroke="KITblack" type="label" width="27.294" height="5.49" depth="0" valign="baseline" size="8">Cerium</text>
+<text matrix="0.225493 0 0 0.225493 83.9114 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">58</text>
+<path matrix="0.225493 0 0 0.225493 225.122 25.8304" fill="KITgreen50" opacity="40 percent">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<text matrix="0.225493 0 0 0.225493 76.7055 6.73856" pos="663.657 95.4935" stroke="KITblack" type="label" width="16.492" height="10.891" depth="0" valign="baseline" size="16">La</text>
+<path matrix="0.225493 0 0 0.225493 206.545 -1.12719" fill="KITgreen50" opacity="40 percent">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<text matrix="0.225493 0 0 0.225493 74.0574 4.62031" pos="663.657 95.4935" stroke="KITblack" type="label" width="42.455" height="5.49" depth="0" valign="baseline" size="8">Lanthanum</text>
+<text matrix="0.225493 0 0 0.225493 74.6229 10.5473" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">57</text>
+<text matrix="0.225493 0 0 0.225493 76.5061 -2.24759" pos="663.657 95.4935" stroke="KITblack" type="label" width="17.112" height="10.891" depth="0" valign="baseline" size="16">Ac</text>
+<path matrix="0.225493 0 0 0.225493 206.545 7.85784" fill="KITgreen50" opacity="40 percent">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<text matrix="0.225493 0 0 0.225493 74.93 -4.36583" pos="663.657 95.4935" stroke="KITblack" type="label" width="34.336" height="5.49" depth="0" valign="baseline" size="8">Actinium</text>
+<text matrix="0.225493 0 0 0.225493 74.6229 1.56112" pos="663.657 95.4935" stroke="KITblack" type="label" width="10.731" height="6.901" depth="0" valign="baseline" size="11">89</text>
+<path matrix="0.225493 0 0 0.225493 206.545 7.85744" stroke="KITgreen70" pen="fat">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.225493 0 0 0.225493 206.545 16.844" fill="KITgreen50" opacity="40 percent">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.225493 0 0 0.225493 206.545 16.8435" stroke="KITgreen70" pen="fat">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.225493 0 0 0.225493 206.545 -1.12849" stroke="KITgreen70" pen="fat">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.225493 0 0 0.225493 225.122 25.8299" stroke="KITgreen70" pen="fat">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<text matrix="0.225493 0 0 0.225493 180.421 8.90078" pos="430.738 344.377" stroke="KITblack70" type="label" width="86.864" height="11.942" depth="3.97" valign="baseline" size="16">Al: \, (2, 8, {\bf 3})</text>
+<text matrix="0.225493 0 0 0.225493 180.421 -1.97603" pos="430.738 344.377" stroke="KITblack70" type="label" width="151.935" height="11.942" depth="3.97" valign="baseline" size="16">Au: (2, 8, 18, 32, 18, {\bf 1})</text>
+<text matrix="0.225493 0 0 0.225493 180.421 1.67587" pos="430.738 344.377" stroke="KITblack70" type="label" width="128.106" height="11.942" depth="3.97" valign="baseline" size="16">Ag: (2, 8, 18, 18, {\bf 1})</text>
+<text matrix="0.225493 0 0 0.225493 180.421 5.28676" pos="430.738 344.377" stroke="KITblack70" type="label" width="105.116" height="11.942" depth="3.97" valign="baseline" size="16">Cu: (2, 8, 18, {\bf 1})</text>
+<text matrix="0.225493 0 0 0.225493 247.167 14.3126" pos="430.738 344.377" stroke="KITblack70" type="label" width="73.26" height="11.942" depth="3.97" valign="baseline" size="16">Ne: \, (2, {\bf 8})</text>
+<text matrix="0.225493 0 0 0.225493 247.167 17.9205" pos="430.738 344.377" stroke="KITblack70" type="label" width="57.158" height="11.942" depth="3.97" valign="baseline" size="16">He: \, ({\bf 2})</text>
+<path matrix="0.225493 0 0 0.225493 271.565 34.8187" fill="KITred50" opacity="40 percent">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.225493 0 0 0.225493 271.565 43.8037" fill="KITred50" opacity="40 percent">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.225493 0 0 0.225493 271.565 43.8033" stroke="KITred70" pen="fat">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.225493 0 0 0.225493 271.564 34.8167" stroke="KITred70" pen="fat">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+<path matrix="0.229962 0 0 1.12758 269.751 -194.408" fill="1" opacity="30 percent">
+405.649 244.144 m
+405.649 204.294 l
+446.841 204.294 l
+446.841 244.144 l
+h
+</path>
+</group>
+<path matrix="3.4517 0 0 0.883399 -505.452 26.8484" fill="white">
+205.249 99.4545 m
+205.249 -49.0911 l
+179.689 -49.0911 l
+179.689 99.4545 l
+h
+</path>
+<path matrix="0.881415 0 0 1.01057 45.3036 0.437122" fill="white">
+384 16 m
+384 -32 l
+176 -32 l
+176 16 l
+h
+</path>
+<group matrix="0.975558 0 0 0.975558 0.363971 1.25933">
+<group matrix="0.213529 0 0 0.213529 25.1363 14.8464">
+<path matrix="0.864347 0 0 0.864347 22.2706 8.26014" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 113.149 45.0384" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 110.306 57.3222" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 37.5842 12.3591" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -9.65141 37.3223" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -9.74709 112.624" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 102.526 41.2236" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 13.9969 17.9448" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 66.3687 16.5171" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -18.4035 67.7555" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 70.8103 119.111" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 28.112 118.629" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 100.739 93.3638" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 99.8413 54.3081" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 103.598 71.8066" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -7.88471 54.5424" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 96.5702 71.3963" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -2.42849 61.7286" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -3.13377 91.2731" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 5.74044 38.1739" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 3.37898 67.5134" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 47.7497 21.7044" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 46.3768 28.7252" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 15.2042 63.1855" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 60.6151 29.6127" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 24.7203 25.7076" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 65.8143 38.1112" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 24.2188 39.8763" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 79.6919 28.4848" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 28.1013 48.1158" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 87.846 38.357" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 85.0251 62.2165" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 69.0732 49.6578" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 72.1556 57.9971" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 45.6583 45.0999" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 17.5972 55.8629" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 34.6808 63.6187" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 56.3067 63.5848" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 50.9385 67.9676" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 36.2917 70.9047" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 62.9192 76.5213" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 41.8097 82.7206" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 35.5378 92.7978" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 19.1429 76.1419" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 85.9935 84.7051" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 66.5039 99.7877" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 42.3664 105.266" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 22.0751 97.2984" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 6.0283 106.452" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -13.8787 77.2768" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 81.6096 105.236" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 52.595 117.478" stroke="KITred15" fill="KITred70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 63.2814 84.7723" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 5.53265 84.9076" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 28.7694 109.782" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 46.281 131.35" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 8.20934 123.994" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.864347 0 0 0.864347 -20.3006 86.4331" stroke="KITblack15" fill="white" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+</group>
+<path matrix="0.213529 0 0 0.213529 25.1363 14.8464" stroke="KITblack" pen="heavier">
+295.547 228.126 m
+280.52 227.052
+265.188 225.066
+255.42 223.194
+246.746 220.927
+239.888 218.489
+231.87 214.13
+226.764 207.496
+226.806 203.419
+229.693 198.332
+239.904 190.433
+255.113 183.316
+297.416 170.154
+363.44 161.704
+415.213 160.674
+462.353 163.241
+492.928 168.853
+512.782 185.86
+480.197 206.177
+433.819 216.741 c
+</path>
+<path matrix="0.132557 0 0 0.132497 82.5996 33.2618" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 27.6204 42.4132" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.213529 0 0 0.213529 25.1363 14.8464" stroke="KITblack" pen="heavier">
+281.589 211.094 m
+245.431 198.553
+210.6 184.72
+175.727 167.946
+153.692 155.266
+129.49 130.2
+198.399 122.577
+305.525 140.165
+379.569 157.468
+443.506 174.974
+524.6 206.527
+555.92 221.296
+576.127 235.624
+585.844 244.594
+586.191 256.676
+566.963 263.402
+511.839 262.899
+445.323 252.549
+406.076 244.731 c
+</path>
+<path matrix="0.132557 0 0 0.132497 34.3279 39.9281" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 16.3863 33.0211" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 19.9828 22.7395" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 84.2304 38.3627" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 76.2168 50.0996" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 94.9681 52.1599" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 98.5253 46.0184" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 52.4065 28.5056" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.213529 0 0 0.213529 25.1363 14.8464" stroke="KITblack" pen="heavier">
+359.095 271.235 m
+321.954 325.153
+300.647 357.133
+247.05 404.841
+249.396 354.388
+281.827 275.086
+330.015 180.563
+373.769 111.359
+403.294 68.4838
+442.55 17.8839
+495.895 -24.0541
+464.253 82.8748
+427.826 151.244 c
+</path>
+<path matrix="0.132557 0 0 0.132497 49.1008 59.4013" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 41.7419 44.3757" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 46.1124 35.9183" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 55.9555 19.5456" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 62.2704 10.607" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 69.0056 2.55272" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 76.2262 -3.62225" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 78.155 2.39217" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 76.0791 9.49785" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 73.0103 16.8975" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 69.0239 25.8866" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 36.949 54.4878" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 32.8845 63.8965" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 29.9823 72.5568" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 31.89 78.5446" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 37.7609 74.0466" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 43.623 67.0926" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.132557 0 0 0.132497 51.0136 27.5994" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+<path matrix="0.213529 0 0 0.213529 25.1363 14.8464" stroke="KITblack" pen="heavier">
+291.893 234.559 m
+239.051 235.984
+139.56 236.269
+50.6289 234.237
+-68.7245 215.461
+101.174 178.739
+194.129 169.923
+297.245 161.247
+375.896 156.556
+485.402 152.65
+652.302 154.519
+799.615 171.229
+643.524 208.783
+526.098 219.485
+432.381 227.252 c
+</path>
+<path matrix="0.132557 0 0 0.132497 118.864 29.5809" stroke="KITblack15" fill="KITblack70" pen="heavier">
+16 0 0 16 368 144 e
+</path>
+</group>
+<text matrix="0.930138 0 0 1.31646 -0.823561 -398.172" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="14.147" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(b)}</text>
+</page>
+</ipe>
