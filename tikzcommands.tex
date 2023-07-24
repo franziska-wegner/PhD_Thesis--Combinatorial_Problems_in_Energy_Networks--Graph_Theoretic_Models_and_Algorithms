@@ -1,0 +1,103 @@
+\def\tikzTurbine{%
+    {$\otimes$}\xspace%
+}
+
+\def\tikzSubstation{%
+    {\protect\tikz\protect%
+     \filldraw[fill=SUBSTATION,draw=SUBSTATION] rectangle (5pt,5pt);%
+    }\xspace%
+}
+
+\def\tikzVertex{%
+    {\protect\tikz\protect%
+     \draw[line width=1pt,fill=white,draw=KITblack70] (0,0) circle (1ex);%
+    }\xspace%
+}
+
+\def\tikzKclConflictMarker{%
+    {\protect\tikz\protect%
+     % \filldraw[fill=SUBSTATION,draw=SUBSTATION] rectangle (5pt,5pt);%
+     % \draw[style=dashed] (2,.5) circle (0.5);%
+     \draw[fill=ColorKclConflictMarker!50,draw=ColorKclConflictMarker] (0,0)
+    circle (1ex);%
+    }\xspace%
+}
+
+\def\tikzSusceptanceScaling{%
+    {\protect\tikz\protect%
+     \draw[fill=ColorSusceptanceScalingMarker!50,draw=ColorSusceptanceScalingMarker] (0,0)
+    circle (1ex);%
+    }\xspace%
+}
+
+\def\tikzStandardVertex{%
+    {\protect\tikz\protect%
+     \fill[KITblack70] (0.5ex,0.5ex) circle (0.5ex);%
+    }\xspace%
+}
+
+\def\tikzPolytopePoint{%
+    {\protect\tikz\protect%
+     \draw[line width=1pt,fill=KITlilac70,draw=KITlilac70,fill opacity=0.2] 
+        (0.5ex,0.5ex) circle (0.5ex);%
+    }\xspace%
+}
+
+\def\tikzPolytopeLine{%
+    {\protect\tikz\protect%
+     \draw[line width=1pt,draw=KITpalegreen70,fill opacity=1.0, dashed, line
+     cap=round, align=center] 
+        (0ex,0ex) -- (3.5ex,0ex);% 
+    }%
+}
+
+\def\tikzStandardVertexDual{%
+    {\protect\tikz\protect%
+     \fill[DUALGRAPH] (0.5ex,0.5ex) circle (0.5ex);%
+    }\xspace%
+}
+
+\def\tikzPCC{%
+    {\protect\tikz\protect%
+     \fill[black] (0.5ex,0.5ex) circle (0.7ex);%
+    }\xspace%
+}
+
+\DeclareRobustCommand\tikzTransportCable{
+    \begin{tikzpicture}[inner sep=0pt]%
+        % bottom
+        \filldraw[fill=KITblack,draw=KITblack,rounded corners=1.25pt] 
+                (0pt,0pt) rectangle (9pt,2.5pt);%
+        % middle
+        \filldraw[fill=KITblack70,draw=KITblack70,rounded corners=0.75pt] 
+                (0pt,3.5pt) rectangle (9pt,5pt);%
+        % top
+        \filldraw[fill=KITblack50,draw=KITblack50,rounded corners=0.375pt]
+                (0pt,6pt) rectangle (9pt,6.75pt);%
+    \end{tikzpicture}\xspace%
+}
+
+\DeclareRobustCommand\tikzOneTransportCable{
+    \begin{tikzpicture}[inner sep=0pt]%
+        % bottom
+        \filldraw[fill=white,draw=white,rounded corners=1.25pt] 
+                (0pt,0pt) rectangle (9pt,1.5pt);%
+        % middle
+        \filldraw[fill=KITblack,draw=KITblack,rounded corners=1.25pt] 
+                (0pt,2pt) rectangle (9pt,4.5pt);%
+    \end{tikzpicture}\xspace%
+}
+
+\DeclareRobustCommand\tikzTransmissionCable{
+    % \tikz \fill[black] (1ex,1ex) circle (1ex);
+    \begin{tikzpicture}[inner sep=0pt]%
+        % bottom
+        \filldraw[fill=white,draw=white,rounded corners=1.25pt] 
+                (0pt,0pt) rectangle (9pt,1.5pt);%
+        % middle
+        \filldraw[fill=KITseablue,draw=KITseablue,rounded corners=1.25pt] 
+                (0pt,2pt) rectangle (9pt,4.5pt);%
+    \end{tikzpicture}\xspace%
+}
+
+\makeatother
