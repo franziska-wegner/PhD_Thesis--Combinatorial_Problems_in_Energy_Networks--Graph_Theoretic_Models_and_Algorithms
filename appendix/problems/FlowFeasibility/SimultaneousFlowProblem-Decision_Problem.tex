@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[framed]{
+% 
+\acrlong{sfp}~\footnote{After showing our results to Guido Br\"uckner, he
+mentioned the~\gls{sfp} generalization to us. We would like to thank him for
+that generalization of the biconnected
+planar~\source-\sink-\gls{dc}~\gls{feas}-problem.}~$\gls{sfp}(
+\glssymbol{network})$
+% 
+}%
+% 
+% 
+  Instance: & Two graphs~$\glssymbol{graph}_1$ and~$\glssymbol{graph}_2$,
+  subsets $
+    % 
+    \glssymbol{edges}_1
+    \subseteq
+    \glssymbol{edges}(\glssymbol{graph}_1)
+    % 
+  $ and~$
+    % 
+    \glssymbol{edges}_2
+    \subseteq
+    \glssymbol{edges}(\glssymbol{graph}_2)
+    % 
+  $, and a bijection~$
+    % 
+    % \oneToOneMap
+    \foneToOneMap{\gls{sfp}}
+    \colon 
+    \glssymbol{edges}_1 
+    \to
+    \glssymbol{edges}_2$.
+  % 
+  \\
+  % 
+  Question: & Are there nonzero~\gls{kcl}-feasible flows~$
+    % 
+    \glssymbol{flow}_{\glssymbol{graph}_1}
+    % 
+  $ and~$
+    % 
+    \glssymbol{flow}_{\glssymbol{graph}_2}
+    % 
+  $ in~$\glssymbol{graph}_1$ and~$\glssymbol{graph}_2$  
+  % 
+  % with~$\glssymbol{flowvalue}(\glssymbol{graph}_1)\not=0$ and~$
+  % \glssymbol{flowvalue}(\glssymbol{graph}_2)\not=0$ 
+  %  
+  such that for every edge~$\edge\in\glssymbol{edges}_1$ we have~$
+    % 
+    \glssymbol{flow}_{\glssymbol{graph}_1}(\edge) 
+    =
+    \glssymbol{flow}_{\glssymbol{graph}_2}(\foneToOneMap{\gls{sfp}}(\edge))
+    % 
+  $?
+\end{problem}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

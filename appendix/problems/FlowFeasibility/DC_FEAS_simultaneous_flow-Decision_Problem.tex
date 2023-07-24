@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[framed]{\source-\sink Planar~\gls{dc}~\gls{feas}(\glssymbol{network})
+ % \&~\source-\sink Planar~\gls{mpfp}(\glssymbol{network}) 
+ % 
+ % $\source-\sink P~\gls{dc}~\gls{feas}(\glssymbol{network})$
+ % $\source-\sink P~\gls{mpfp}(\glssymbol{network})$
+ % 
+ }%
+  Instance: & A plane~\source-\sink-graph~\glssymbol{graph}, its
+  dual graph~\glssymbol{dualgraph}, and the corresponding
+  bijection~$\oneToOneMap\colon \glssymbol{edges}(\glssymbol{graph}) \to
+  \glssymbol{edges}(\glssymbol{dualgraph})$.
+  \\
+  % 
+  Question: & Are there simultaneous flows on~\glssymbol{graph}
+  and~\glssymbol{dualgraph} such that~$
+  % 
+  \glssymbol{flow}_{\glssymbol{graph}}(\edge) 
+  = 
+  \glssymbol{flow}_{\glssymbol{dualgraph}}
+  \big(
+    \oneToOneMap(\edge)
+  \big)
+  \cdot
+  \glssymbol{susceptance}(\edge)
+  % 
+  $ for all~$\edge\in\glssymbol{edges}(\glssymbol{graph})$?
+\end{problem}%
