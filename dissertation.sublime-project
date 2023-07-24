@@ -1,0 +1,60 @@
+{
+    "folders":
+    [
+        {
+            "path": ".",
+            "file_exclude_patterns": [ "v2-readme.txt"
+                                    , "*.nlo"
+                                    ,"*.sty"
+                                    , "*.aux"
+                                    , "*.auxlock"
+                                    , "*.bcf"
+                                    , "*.bbl"
+                                    , "*.blg"
+                                    , "*.bst"
+                                    , "*.cls"
+                                    , "*.fdb_latexmk"
+                                    , "*.fls"
+                                    , "*.glg"
+                                    , "*.glo"
+                                    , "*-glo"
+                                    , "*.gls"
+                                    , "*.gz"
+                                    , "*.ist"
+                                    , "*.log"
+                                    , "*.lof"
+                                    , "*.lot"
+                                    , "*.modd"
+                                    , "*.modg"
+                                    , "*.modn"
+                                    , "*.nlo"
+                                    , "*.out"
+                                    , "*.synctex.gz"
+                                    , "*.run.xml"
+                                    , "*.toc"
+                                    , "*.unitd"
+                                    , "*.unitg"
+                                    , "*.unitn"
+                                    , "dissertation-final.pdf"
+                                    , "master.pdf"
+                                    , "biber"
+                                    , "biber-2.7"
+                                    , "README_extend_latex_memory"
+                                    , "comment.cut"],
+            "folder_exclude_patterns": ["acmart-master", "ACM-Right-Form"]
+        }
+    ],
+    "settings": {
+        "TEXroot": "master.tex"
+    },
+    // "builder": "script",
+    "builder_settings": {
+        "options": ["-shell-escape"] 
+        // "script_commands": [
+        //     "pdflatex -synctex=1 -interaction=nonstopmode",
+        //     "/⁨Users⁩/⁨fwegner⁩/⁨Documents⁩/work/⁨dissertation/biber \"/⁨Users⁩/⁨fwegner⁩/⁨Documents⁩/work/⁨dissertation/03-Document/master.bcf\"",
+        //     "pdflatex -synctex=1 -interaction=nonstopmode",
+        //     "pdflatex -synctex=1 -interaction=nonstopmode"
+        // ]
+    }
+}
