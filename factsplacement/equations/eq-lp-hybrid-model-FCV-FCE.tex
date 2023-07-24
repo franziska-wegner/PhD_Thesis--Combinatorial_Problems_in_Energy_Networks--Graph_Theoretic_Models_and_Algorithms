@@ -1,0 +1,97 @@
+\begin{align}
+    & \underset{\glssymbol{flow}}{\text{minimize}}\hspace{-2cm} 
+    & \totalgenlosscost(\glssymbol{flow})\,=\,
+    & \lambda 
+    \cdot
+    \gencost(\glssymbol{flow}) 
+    + 
+    (1-\lambda)
+    \cdot 
+    \losscost(\glssymbol{flow})
+    \label{ch:facts:lp:FCV:eq:objective}
+\\
+% 
+& \text{subject to}\hspace{-3cm}&
+\nonumber
+\\
+    & & 
+    % \sum_{
+    %     \{\vertexb,\vertexa\} 
+    %     \in 
+    %     \glssymbol{undirectededges}
+    % } 
+    \glssymbol{netflow}(\vertexb)\,=\,
+    &  0 
+    &
+    & & & 
+    \forall
+    \vertexb 
+    \in 
+    \glssymbol{vertices} 
+    \setminus (
+    \glssymbol{generators} 
+    \cup 
+    \glssymbol{consumers}
+    )
+    % 
+    \label{ch:facts:lp:FCV:eq:conservation}
+\\
+    & & \glssymbol{flow}(\vertexa, \vertexb )\,=\,
+    & \glssymbol{susceptance}(\vertexa, \vertexb) 
+    (\glssymbol{voltageangle}(\vertexa) 
+    - 
+    \glssymbol{voltageangle}(\vertexb))
+    & & & & 
+    % 
+    \hspace{-1cm}
+    \begin{cases}
+        \forall \{\vertexa,\vertexb\}\in~\glssymbol{edges} \text{ s.t. }
+        \vertexa,\vertexb
+        \notin
+        \glssymbol{factsbus}~\text{for~\gls{fcv}s}
+        \\
+        \forall \{\vertexa,\vertexb\} 
+        \in 
+        \glssymbol{edges} 
+        \setminus
+        \glssymbol{factsbranch}
+        \hspace{1.35cm}~\text{for~\gls{fce}s}
+    \end{cases}
+    % 
+    \label{ch:facts:lp:FCV:eq:electricalfeasible}
+\\
+    & & 
+    % \sum_{\{\vertexb,\vertexa\} 
+    % \in 
+    % \glssymbol{edges}} 
+    \hspace{1.2cm}
+    \glssymbol{netflow}(\vertexb)\,=\,
+    &  
+    -\glssymbol{realpowerdemand}(\vertexb) 
+    & & & & 
+    \vertexb \in \glssymbol{consumers}
+    % 
+    \label{ch:facts:lp:FCV:eq:demand}
+\\ 
+    & & 0\,\leq\,
+    & 
+    % \sum_{\{\vertexb,\vertexa\}\in \glssymbol{edges}} 
+    \glssymbol{netflow}(\vertexb)
+    \,\le\,
+    \glssymbol{realpowergenerationmax}(\vertexb) 
+    & & & & 
+    \vertexb 
+    \in 
+    \glssymbol{generators} 
+    \label{ch:facts:lp:FCV:eq:generator}
+\\
+    & & %-\glssymbol{capacity}(\edge)\,\leq\,
+    & 
+    \fmagnitude{\glssymbol{flow} ( \vertexa, \vertexb )}\,\leq\, 
+    \glssymbol{capacity}(\vertexa, \vertexb)
+    & & & &
+    \forall (\vertexa, \vertexb) \in \glssymbol{edges}.
+    % 
+    \label{ch:facts:lp:FCV:eq:capacity}
+% 
+\end{align}

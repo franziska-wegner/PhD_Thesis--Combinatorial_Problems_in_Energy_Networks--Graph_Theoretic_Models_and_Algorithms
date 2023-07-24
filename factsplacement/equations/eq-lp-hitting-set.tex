@@ -1,0 +1,13 @@
+\begin{align}
+    & \underset{}{\text{minimize}}\hspace{-2cm} 
+    & \sum_{\vertex\in\vertices} \switch(\vertex),& &
+    \label{ch:facts:lp:hitting-set:eq:objective}
+    \\
+    & \text{subject to}\hspace{-3cm}& &
+    \nonumber
+    \\%
+    &&\sum_{\vertex\in S_i} \switch(\vertex) &\geq 1
+    &\forall S_i\in S,
+    \label{ch:facts:lp:hitting-set:eq:hitting-set-constraint}
+    %
+\end{align}

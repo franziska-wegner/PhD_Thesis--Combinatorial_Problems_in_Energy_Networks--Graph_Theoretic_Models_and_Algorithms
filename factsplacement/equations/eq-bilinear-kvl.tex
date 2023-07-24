@@ -1,0 +1,36 @@
+\begin{align}
+    \glssymbol{flow}(\vertexa,\vertexb) 
+    &= 
+    \glssymbol{susceptance}(\vertexa,\vertexb) 
+    (\glssymbol{voltageangle}(\vertexb) 
+    - \glssymbol{voltageangle}(\vertexa))
+    % 
+    \label{ch:facts:eq:bilinear:1}
+\\
+    \glssymbol{flow}(\vertexa,\vertexb) 
+    &= 
+    \glssymbol{susceptance}(\vertexa,\vertexb)\cdot\glssymbol{voltageangle}(\vertexb)
+    -
+    \glssymbol{susceptance}(\vertexa,\vertexb)\cdot\glssymbol{voltageangle}
+    (\vertexa)
+    % 
+    \label{ch:facts:eq:bilinear:2}
+% \\
+%     \glssymbol{flow}(\vertexa,\vertexb) 
+%     &=
+%     \bilinearmap(\glssymbol{susceptance}(\vertexa,\vertexb),
+%     \glssymbol{voltageangle}(\vertexb))
+%     -
+%     \bilinearmap(\glssymbol{susceptance}(\vertexa,\vertexb),
+%     \glssymbol{voltageangle}(\vertexa))
+%     % 
+%     \label{ch:facts:eq:bilinear:3}
+\\
+    \glssymbol{flow}(\vertexa,\vertexb) 
+    &=
+    \bilinearmap(\glssymbol{susceptance}(\vertexa,\vertexb),
+    \glssymbol{voltageangle}(\vertexb)
+    - \glssymbol{voltageangle}(\vertexa))
+    % 
+    \label{ch:facts:eq:bilinear:4}
+\end{align}
