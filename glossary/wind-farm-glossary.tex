@@ -1,0 +1,560 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problems %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Wind Farm
+\newglossaryentry{fffp}
+{
+    name={\wfffp},
+    longform={flexible full farm problem},
+    capitalform={\WfFFP},
+    sort={fffp},
+    % type={windfarmmodel},
+    % 
+    description={The~\glslongform{fffp} represents the cabling of multiple
+    collector systems with substation locations. In this problem layer the
+    location of the substation is not fix and has to be computed, too. Note that
+    the assignment of turbines is neither fixed to a circuit nor to a
+    substation. The~\glslongform{sp} and~\glslongform{cp} are subproblems.
+    See~\cref{ch:wfcp:fig:topological-description} for more information.},
+    % 
+    symbol={\wfffp}
+}
+
+\newglossaryentry{cp}
+{
+    name={\wcp},
+    longform={\textsc{Circuit Problem}\xspace},
+    capitalform={\WCP},
+    sort={wfcp2Cp},
+    parent={fffp},
+    % type={windfarmmodel},
+    description={\glscapitalform{cp} (\gls{cp}) is the smallest problem layer in
+    the wind farm layout problem hierarchy. In this problem layer only the cable
+    layout of a circuit---a connected component connected to a substation---is
+    considered, where turbines are either connected to other turbines or to a
+    preassigned substation. See~\cref{ch:wfcp:fig:topological-description} for
+    more information.}, symbol={\wcp} }
+
+\newglossaryentry{circuit}
+{
+    name={circuit},
+    longform={circuit},
+    capitalform={Circuit},
+    sort={circuit},
+    % type={windfarmmodel},
+    description={The term~\emph{circuit} can have different meanings. In terms
+    of bases it represents a simple cycle and in terms of wind farm cabling it
+    represent one connected component that is assigned to a substation 
+    (see~\cref{ch:wfcp:fig:topological-description}).},
+    % 
+    symbol={circuit} }
+
+\newglossaryentry{collectorSystem}
+{
+    name={collector system},
+    longform={collector system},
+    capitalform={Collector System},
+    sort={wfcp3CollectorSystem},
+    parent={fffp},
+    % type={windfarmmodel},
+    % 
+    description={The~\glslongform{collectorSystem} is a part of a wind farm,
+    where multiple circuits are connected to one substation.
+    A~\glslongform{collectorSystem} has a preassigned substation. }, 
+    % 
+    symbol={collector system} 
+}
+
+\newglossaryentry{sp}
+{
+    name={\wsp},
+    longform={\textsc{Substation Problem}\xspace},
+    capitalform={\WSP},
+    sort={wfcp1Sp},
+    parent={fffp},
+    % 
+    description={The~\glslongform{sp} is a cabling of multiple independent
+    circuits with one preassigned substation. This represents the cable layout
+    of a single collector system of a substation in the wind farm. Note that the
+    turbines are not assigned to a circuit. Thus, the~\glslongform{cp} can be
+    seen as a subproblem if the turbine to substation assignment is computed. 
+    See~\cref{ch:wfcp:fig:topological-description} for more information.},
+    % 
+    symbol={\wsp}
+}
+
+\newglossaryentry{ffp}
+{
+    name={\wffp},
+    longform={\textsc{Full Farm Problem}\xspace},
+    capitalform={\WFFP},
+    sort={wfcp0Ffp},
+    parent={fffp},
+    % 
+    description={The~\glslongform{ffp} represents the cabling of multiple
+    collector systems with fix substation locations. Note that the assignment of
+    turbines is neither fixed to a circuit nor to a substation.
+    The~\glslongform{sp} and~\glslongform{cp} are subproblems.
+    See~\cref{ch:wfcp:fig:topological-description} for more information.},
+    % 
+    symbol={\wffp}
+}
+
+\newglossaryentry{pcc}
+{
+    name={PCC},
+    longform={point of common connection},
+    capitalform={Point of Common Connection},
+    sort={pcc},
+    % 
+    description={The Point of Common Connection (\glssymbol{pcc}) represents the
+    on-shore connection point to the mainland power grid. See~\cref{ch:wfcp:fig:topological-description} for more information.},
+    % 
+    symbol={PCC}
+}
+
+\newglossaryentry{temperature}
+{
+    name={\ensuremath{\temperature}},
+    longform={temperature},
+    capitalform={Temperature},
+    sort={wfcpTemperature},
+    type={model},
+    % 
+    description={The cooling schedule is a non-increasing monotone
+    function~$\glssymbol{temperature}\colon\naturals\to (0,\infty)$, where~$
+    \glssymbol{temperature}(\glssymbol{timestamp})$ is the temperature at
+    time~\glssymbol{timestamp}. },
+    % 
+    symbol={\ensuremath{\temperature}}
+}
+
+
+% turbines and substations
+% 
+\newglossaryentry{instances}
+{
+    name={\ensuremath{\instances}},
+    longform={instances},
+    capitalform={Instances},
+    sort={wfcpInstances},
+    type={model},
+    % 
+    description={
+        The set of instances~\glssymbol{instances}, where each
+        instance~$\glssymbol{instance}\in\glssymbol{instances}$ is a
+        tuple~$\instancec = (
+        \glssymbol{solution}_{\glssymbol{timestamp}},
+        \glssymbol{bestsolution},
+        \glssymbol{temperature},
+        \glssymbol{thermalConductivityCapacity},
+        \glssymbol{activity})$.
+    },
+    % 
+    symbol={\ensuremath{\instances}}
+}
+
+\newglossaryentry{instance}
+{
+    name={\ensuremath{\instance}},
+    longform={instance},
+    capitalform={instance},
+    sort={wfcpInstance},
+    parent={instances},
+    type={model},
+    % 
+    description={An instance~$\glssymbol{instance}\in\glssymbol{instances}$ is a
+        tuple~$\instancec = (
+        \glssymbol{solution}_{\glssymbol{timestamp}},
+        \glssymbol{bestsolution},
+        \glssymbol{temperature},
+        \glssymbol{thermalConductivityCapacity},
+        \glssymbol{activity})$.
+    },
+    % 
+    symbol={\ensuremath{\instance}}
+}
+
+\newglossaryentry{energy}
+{
+    name={\ensuremath{\Delta\energy}},
+    longform={energy},
+    capitalform={Energy},
+    sort={wfcpEnergy},
+    type={model},
+    % 
+    description={ The cost difference (or energy) of two solutions~\solutiona
+        and~\solutionb is computed by~$
+        \glssymbol{energy}
+        =
+        \glssymbol{windfarmTotalcost}(\glssymbol{solution}_{\glssymbol{timestamp}+1})
+        -
+        \glssymbol{windfarmTotalcost}(\glssymbol{solution}_{\glssymbol{timestamp}})
+        $. 
+    },
+    % 
+    symbol={\ensuremath{\Delta\energy}}
+}
+
+\newglossaryentry{cabletypes}
+{
+    name={\ensuremath{\cabletypes}},
+    longform={cabletypes},
+    capitalform={Cabletypes},
+    sort={wfcpCabletypes},
+    type={model},
+    % 
+    description={The set of cable types is denoted by~\glssymbol{cabletypes}.
+    See~\glslongform{cabletype}~\glssymbol{cabletype} for a detailed
+    specification of a cable type and for an example set of cable types
+    see~\cref{ch:wfcp:tbl:fig:cabletypes}.},
+    % 
+    symbol={\ensuremath{\cabletypes}}
+}
+
+\newglossaryentry{cabletype}
+{
+    name={\ensuremath{\cabletype}},
+    longform={cabletype},
+    capitalform={cabletype},
+    sort={wfcpCabletype},
+    parent={cabletypes},
+    type={model},
+    % 
+    description={A~\glslongform{cabletype} is denoted by~\glssymbol{cabletype}.
+    Each cable type has a thermal limit~\glssymbol{capacity} and a cost per
+    unit~\glssymbol{windfarmCableCost}, where the unit can be meter~\si{\metre}.
+    See for example~\cref{ch:wfcp:tbl:fig:cabletypes}.
+    },
+    % 
+    symbol={\ensuremath{\cabletype}}
+}
+
+\newglossaryentry{probability}
+{
+    name={\ensuremath{\probability}},
+    longform={probability},
+    capitalform={Probability},
+    sort={wfcpProbability},
+    type={model},
+    % 
+    description={ The probability~$\glssymbol{probability}\in\posreals$ and
+        describes the probability of accepting a worse solution~$\solutionb$
+        from~$\solutiona$ and is designed in such a way that probability of the
+        acceptance of worse solutions is in the beginning higher and deceases
+        over the time. All possible probabilities are assumed to
+        be~$\sum_{\solutionb\in\glssymbol{solutions}
+        (\solutiona)}\glssymbol{probability}_{
+        \solutiona\solutionb}=1$.
+    },
+    % 
+    symbol={\ensuremath{\probability}}
+}
+
+\newglossaryentry{solutions}
+{
+    name={\ensuremath{\solutions}},
+    longform={solutions},
+    capitalform={solutions},
+    sort={wfcpSolutions},
+    type={model},
+    % 
+    description={The set of solution is denoted by~\glssymbol{solutions}.
+    % 
+    We also define the neighborhood of solutions, where we denote that
+    solution~$\solutiona$ is neighbor of solution~$\solutionb$
+    by~$\solutiona\in\glssymbol{solutions}(\solutionb)$. This holds only if and
+    only if~$\solutionb\in\glssymbol{solutions}(\solutiona)$.},
+    % 
+    symbol={\ensuremath{\solutions}}
+}
+
+\newglossaryentry{solution}
+{
+    name={\ensuremath{\solution}},
+    longform={solution},
+    capitalform={Solution},
+    sort={wfcpSolution},
+    parent={solutions},
+    type={model},
+    % 
+    description={ A solution at time~\mbox{$\glssymbol{timestamp}\in\naturals$}
+    is denoted
+    by~$\glssymbol{solution}_{\glssymbol{timestamp}}\in\glssymbol{solutions}$,
+    where each solution is a
+    tupel~$\glssymbol{solution}_{\glssymbol{timestamp}}=(\glssymbol{network}^{\glssymbol{timestamp}},
+    \glssymbol{flow})$
+    with a flow network~\glssymbol{network} at time~$\glssymbol{timestamp}$, where
+    the underlying graph~\glssymbol{graph} changes dependent on~$\glssymbol{timestamp}$ denoted
+    by~$\glssymbol{graph}^{\glssymbol{timestamp}}=(
+    \glssymbol{edges}^{\glssymbol{timestamp}}\subseteq\glssymbol{edges},\glssymbol{vertices})$.
+    },
+    % 
+    symbol={\ensuremath{\solution}}
+}
+
+\newglossaryentry{bestsolution}
+{
+    name={\ensuremath{\bestsolution}},
+    longform={bestsolution},
+    capitalform={Best Solution},
+    sort={wfcpInstances},
+    parent={solutions},
+    type={model},
+    % 
+    description={The best feasible solution found so far is denoted
+    by~\glssymbol{bestsolution}.},
+    % 
+    symbol={\ensuremath{\bestsolution}}
+}
+
+\newglossaryentry{activity}
+{
+    name={\ensuremath{\activity}},
+    longform={activity},
+    capitalform={Activity},
+    sort={wfcpActivity},
+    type={model},
+    % 
+    description={The activity~\glssymbol{activity} is defined
+    in~\cref{ch:wfcp:sa:eq:dynamic-cooling-schedule} and is used for the dynamic
+    cooling schedule as an adjustment factor for the cooling curve. The cooling
+    schedule is adjusted to different network sizes using the activity. },
+    % 
+    symbol={\ensuremath{\activity}}
+}
+
+\newglossaryentry{representations}
+{
+    name={\ensuremath{\representations}},
+    longform={representations},
+    capitalform={Representations},
+    sort={wfcpRepresentations},
+    type={model},
+    % 
+    description={The representation~\glssymbol{representations} is a
+    tuple~$\glssymbol{representations}=(\glssymbol{potential},
+    \glssymbol{cuts})$, where~\glssymbol{potential} is permutation function
+    and~\glssymbol{cuts} is cut set.
+    },
+    % 
+    symbol={\ensuremath{\representations}}
+}
+
+\newglossaryentry{potential}
+{
+    name={\ensuremath{\potential}},
+    longform={potential},
+    capitalform={potential},
+    sort={wfcpPotential},
+    type={model},
+    % 
+    description={The potential field is defined by a permutation
+    function~$\glssymbol{potential}\colon\glssymbol{vertices}\to\glssymbol{vertices}$.
+    },
+    % 
+    symbol={\ensuremath{\potential}}
+}
+
+\newglossaryentry{partition}
+{
+    name={\ensuremath{\partition}},
+    longform={partition},
+    capitalform={partition},
+    sort={wfcpPartition},
+    type={model},
+    % 
+    description={A partition is a subset of the set of vertices, \eg, a subset
+    of a set of substation is denoted by~$\glssymbol{partition}\subsetneq
+    \glssymbol{consumers}$.
+    },
+    % 
+    symbol={\ensuremath{\partition}}
+}
+
+\newglossaryentry{possiblesubstations}
+{
+    name={\ensuremath{\possiblesubstations}},
+    longform={possiblesubstations},
+    capitalform={possiblesubstations},
+    sort={wfcpPossiblesubstations},
+    type={model},
+    % 
+    description={The set of possible substation position is denoted
+    by~\glssymbol{possiblesubstations}. It is used in the~\glslongform{fffp}
+    (\gls{fffp}), where the position of a set of
+    substations~\glssymbol{consumers} is not fixed. },
+    % 
+    symbol={\ensuremath{\possiblesubstations}}
+}
+
+\newglossaryentry{len}
+{
+    name={\ensuremath{\len}},
+    longform={len},
+    capitalform={len},
+    sort={wfcpLen},
+    type={model},
+    % 
+    description={ A edge weight
+    function~\mbox{$\glssymbol{len}\colon\glssymbol{edges}\to\posreals$} that
+    represents the length of a cable. },
+    % 
+    symbol={\ensuremath{\len}}
+}
+
+\newglossaryentry{capacityTightness}
+{
+    name={\ensuremath{\capacityTightness}},
+    longform={capacityTightness},
+    capitalform={capacityTightness},
+    sort={wfcpCapacityTightness},
+    type={model},
+    % 
+    description={The substation capacities are characterized by the
+    \emph{substation capacity tightness}~$\glssymbol{capacityTightness}$ that
+    measures the the ratio of maximum supply and maximum demand. We call this
+    ratio tight if~$\glssymbol{capacityTightness}=1$.},
+    % 
+    symbol={\ensuremath{\capacityTightness}}
+}
+
+\newglossaryentry{substationCapacityVariance}
+{
+    name={\ensuremath{\substationCapacityVariance}},
+    longform={substationCapacityVariance},
+    capitalform={substationCapacityVariance},
+    sort={wfcpSubstationCapacityVariance},
+    type={model},
+    % 
+    description={ The substation capacity
+    variance~$\glssymbol{substationCapacityVariance}$ restricts the net flow
+    interval at a substation (see~\cref{ch:wfcp:generator:eq:delta}). },
+    % 
+    symbol={\substationCapacityVariance}
+}
+
+\newglossaryentry{shapeAspectRatio}
+{
+    name={\shapeAspectRatio},
+    longform={shapeAspectRatio},
+    capitalform={shapeAspectRatio},
+    sort={wfcpShapeAspectRatio},
+    type={model},
+    % 
+    description={ The wind farm shape of the benchmark sets
+    (\cref{ch:wfcp:sec:benchmark-generator}) is defined by an ellipse that is
+    described by the aspect ratio~$\glssymbol{shapeAspectRatio}\in(0,1]$.  },
+    % 
+    symbol={\shapeAspectRatio}
+}
+
+\newglossaryentry{kNearestNeighbor}
+{
+    name={\kNearestNeighbor},
+    longform={kNearestNeighbor},
+    capitalform={kNearestNeighbor},
+    sort={wfcpKNearestNeighbor},
+    type={model},
+    % 
+    description={The~$\glssymbol{kNearestNeighbor}$-nearest neighbors
+    ($\glssymbol{kNearestNeighbor}$-NN) is based on the euclidean distance.},
+    % 
+    symbol={\kNearestNeighbor}
+}
+
+\newglossaryentry{edgeInclusionValue}
+{
+    name={\edgeInclusionValue},
+    longform={edgeInclusionValue},
+    capitalform={edgeInclusionValue},
+    sort={wfcpEdgeInclusionValue},
+    type={model},
+    % 
+    description={ The~\glssymbol{edgeInclusionValue} is a scaling factor that is
+    used in the case when a new generated point violates the minimum pairwise
+    distance. Then the whole wind farm is scaled up by
+    a~$\glssymbol{edgeInclusionValue}>0$.
+    See~\cref{ch:wfcp:sec:benchmark-generator} for more information. },
+    % 
+    symbol={\edgeInclusionValue}
+}
+
+\newglossaryentry{thermalConductivityCapacity}
+{
+    name={\thermalConductivityCapacity},
+    longform={thermalConductivityCapacity},
+    capitalform={thermalConductivityCapacity},
+    sort={wfcpThermalConductivityCapacity},
+    type={model},
+    parent={temperature},
+    % 
+    description={The thermal conductivity and capacity is represented by the
+    factor~$\glssymbol{thermalConductivityCapacity}$ that has influence on the
+    temperature's drop~\glssymbol{temperature}. 
+    },
+    % 
+    symbol={\thermalConductivityCapacity}
+}
+
+\newglossaryentry{windfarmTotalcost}
+{
+    name={\ensuremath{\totalcost}},
+    longform={total cost},
+    capitalform={Total Cost},
+    sort={wfcpTotalcost},
+    type={model},
+    % 
+    description={ The total cost~\glssymbol{windfarmTotalcost} is defined by the
+    costs of the transport and export cables and is defined in~\cref{ch:wfcp:eq:total-cost-FFP-free-substation-positioning}. },
+    % 
+    symbol={\ensuremath{\totalcost}}
+}
+
+\newglossaryentry{windfarmCableCost}
+{
+    name={\ensuremath{\cost}},
+    longform={windfarmCost},
+    capitalform={windfarmCost},
+    sort={wfcpCableCost},
+    parent={windfarmTotalcost},
+    type={model},
+    % 
+    description={ A cable type is among other things defined by its cost. The
+    cost function is defined by~$\glssymbol{windfarmCableCost}\colon
+    \glssymbol{cabletypes}\to\posreals$ and is non-convex.
+    },
+    % 
+    symbol={\ensuremath{\cost}}
+}
+
+\newglossaryentry{windfarmSubstationCost}
+{
+    name={\ensuremath{\costsubstation}},
+    longform={substation fixed costs},
+    capitalform={Substation Fixed Costs},
+    sort={wfcpCostsubstation},
+    parent={windfarmTotalcost},
+    type={model},
+    % 
+    description={
+    The fixed costs for laying an export cable and for placing a
+    substation are denoted by~$\glssymbol{windfarmSubstationCost}$.
+    },
+    % 
+    symbol={\ensuremath{\costsubstation}}
+}
+
+\newglossaryentry{cuts}
+{
+    name={\ensuremath{ \cuts }},
+    sort={wfcpCuts},
+    type={model},
+    % 
+    description={ The edge cut~\glssymbol{cuts} is a set of edges~$
+        \glssymbol{undirectededges}'\subsetneq
+        \glssymbol{undirectededges}$ such that~$\glssymbol{graph}' = 
+        \glssymbol{graph} - \glssymbol{undirectededges}'$. 
+        % 
+    },
+    symbol={\ensuremath{ \cuts }}
+}
