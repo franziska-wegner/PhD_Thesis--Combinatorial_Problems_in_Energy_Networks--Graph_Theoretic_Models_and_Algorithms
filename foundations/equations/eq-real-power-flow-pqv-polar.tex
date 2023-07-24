@@ -1,0 +1,32 @@
+\begin{alignat}{2}
+    \begin{split}
+    \glssymbol{realpower}(\vertexa,\vertexc) 
+    &= 
+    \glssymbol{conductance}(\vertexa,\vertexc)
+    \Big(
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}
+        \fmagnitude{\glssymbol{voltage}(\vertexc)}
+        \fcos{
+            \glssymbol{voltageangle}(\vertexa) 
+            - 
+            \glssymbol{voltageangle}(\vertexc)
+        }
+        -
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}^2
+    \Big)
+    \\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &\,\,\,\,+ 
+        \glssymbol{susceptance}(\vertexa,\vertexc)
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}
+        \fmagnitude{\glssymbol{voltage}(\vertexc)}
+        \fsin{
+            \glssymbol{voltageangle}(\vertexa) 
+            - 
+            \glssymbol{voltageangle}(\vertexc) 
+        }
+    \end{split}
+    %   
+    \label{ch:foundations:sec:power-flow-analyses:eq:real-power-flow:pqv:polar}
+    % 
+\end{alignat}

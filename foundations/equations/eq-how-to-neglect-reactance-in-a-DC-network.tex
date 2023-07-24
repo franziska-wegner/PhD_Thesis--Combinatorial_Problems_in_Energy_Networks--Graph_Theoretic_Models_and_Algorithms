@@ -1,0 +1,25 @@
+\small
+\begin{align}
+    \glssymbol{reactivepower}(\vertexa)
+    &
+    \!\!
+    \overset{(A
+    \ref{ch:foundations:sec:power-flow-analyses:assumption:voltage-magnitude})
+    }{=}
+    \!\!
+    - 
+    \glssymbol{susceptance}(\vertexa,\vertexa)
+    - 
+    \sum_{\vertexc\colon\{\vertexa,\vertexc\}\in\glssymbol{undirectededges}}
+    \glssymbol{susceptance}(\vertexa,\vertexc)
+    \left(
+        \fmagnitude{\glssymbol{voltage}(\vertexc)} 
+        -
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}
+    \right)
+    % 
+    &
+    \forall\vertexa\in\glssymbol{vertices}
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:how2neglectQinDC:4}
+\end{align}

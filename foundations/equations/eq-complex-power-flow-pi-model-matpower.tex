@@ -1,0 +1,74 @@
+\small
+\begin{alignat}{2}
+    &\glssymbol{realpower}(\vertexa,\vertexc) + \imgPart\cdot\glssymbol{reactivepower}(\vertexa,\vertexc)
+\\ 
+% 
+&=  \glssymbol{voltage}(\vertexa)
+    \Big( 
+        \big(
+            \glssymbol{voltage}(\vertexa) - \glssymbol{voltage}(\vertexc)
+        \big)
+        \glssymbol{admittance}(\vertexa,\vertexc)
+    \Big)^\star 
+    +
+    \glssymbol{voltage}(\vertexa)
+    \big(
+        \glssymbol{voltage}(\vertexa)\glssymbol{linechargingadmittance}(\vertexa, \vertexc)
+    \big)^\star
+% \\%
+% %
+% &\begin{aligned}
+% &=  \fmagnitude{\glssymbol{voltage}(\vertexa)}e^{\imgPart\cdot\glssymbol{voltageangle}(\vertexa)} 
+%     \left( 
+%         \left(
+%             % \frac{1}{\imgPart\reactance\tapratio^2}
+%             \fmagnitude{\glssymbol{voltage}(\vertexa)}
+%             e^{\imgPart\cdot\glssymbol{voltageangle}(\vertexa)} 
+%             - 
+%             % \frac{1}{\tapratio\reactance e^{-\imgPart\cdot\glssymbol{voltageangle}shift} }
+%             \fmagnitude{\glssymbol{voltage}(\vertexc)}
+%             e^{\imgPart\cdot\glssymbol{voltageangle}(\vertexc)} 
+%         \right) 
+%         % \left( 
+%         %     \conductance(\vertexa,\vertexc) 
+%         %     + 
+%         %     \imgPart\cdot\glssymbol{susceptance}(\vertexa,\vertexc) 
+%         % \right) 
+%         \glssymbol{linechargingadmittance}(\vertexa,\vertexc)
+%     \right)^\star 
+%     % \\
+%     % &\,\,\,\,
+%     - 
+%     \imgPart\cdot\fmagnitude{\glssymbol{voltage}(\vertexa)}^2
+%     \glssymbol{linechargingsusceptance}(\vertexa,\vertexc)
+% \end{aligned}
+\\%
+% 
+&\begin{aligned}
+&=  \Big( 
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}^2 
+        - 
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}\cdot\fmagnitude{\glssymbol{voltage}(\vertexc)} 
+        \cos 
+        \left(
+            \glssymbol{voltageangle}(\vertexa) - \glssymbol{voltageangle}(\vertexc)
+        \right) 
+        - 
+        \imgPart\cdot\fmagnitude{\glssymbol{voltage}(\vertexa)}\fmagnitude{\glssymbol{voltage}(\vertexc)}
+        \sin
+        \left( 
+            \glssymbol{voltageangle}(\vertexa) - \glssymbol{voltageangle}(\vertexc) 
+        \right)
+    \Big) 
+    \\
+    &\,\,\,\,
+    \cdot
+    % \left(
+    %         \conductance(\vertexa,\vertexc) 
+    %         + 
+    %         \imgPart\cdot\glssymbol{susceptance}(\vertexa,\vertexc) 
+    % \right)^\star 
+    \glssymbol{admittance}(\vertexa,\vertexc)^\star
+    - \fmagnitude{\glssymbol{voltage}(\vertexa)}^2 \glssymbol{linechargingadmittance}(\vertexa,\vertexc)^\star
+\end{aligned}
+\end{alignat}

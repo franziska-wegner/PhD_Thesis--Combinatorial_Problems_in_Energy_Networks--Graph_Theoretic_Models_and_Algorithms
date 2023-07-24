@@ -1,0 +1,30 @@
+\begin{alignat}{2}
+    \begin{split}
+        \glssymbol{reactivepower}(\vertexa,\vertexc) 
+        &= 
+        \,\,\,\glssymbol{conductance}(\vertexa,\vertexc)
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}
+        \fmagnitude{\glssymbol{voltage}(\vertexc)}
+        \fsin{
+            \glssymbol{voltageangle}(\vertexa) 
+            - 
+            \glssymbol{voltageangle}(\vertexc)
+        }
+    \\
+        &\,\,\,\,-\glssymbol{susceptance}(\vertexa,\vertexc)
+        \Big(
+            \fmagnitude{\glssymbol{voltage}(\vertexa)}
+            \fmagnitude{\glssymbol{voltage}(\vertexc)}
+            \fcos{  
+                \glssymbol{voltageangle}(\vertexa) 
+                - 
+                \glssymbol{voltageangle}(\vertexc) 
+            }
+            -
+            \fmagnitude{\glssymbol{voltage}(\vertexa)}^2
+        \Big)
+    \end{split}
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:reactive-power-flow:pqv:polar}
+    % 
+\end{alignat}

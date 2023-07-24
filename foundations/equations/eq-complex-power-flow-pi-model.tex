@@ -1,0 +1,65 @@
+\small
+\begin{align}
+    &\realpower(\vertexa,\vertexc) + \imgPart\cdot\reactivepower(\vertexa,\vertexc)
+\\ 
+% 
+&=  \glssymbol{voltage}(\vertexa)
+    \Big( 
+        \big(
+            \glssymbol{voltage}(\vertexa) - \glssymbol{voltage}(\vertexc)
+        \big)
+        \admittance(\vertexa,\vertexc)
+    \Big)^\star 
+    +
+    \glssymbol{voltage}(\vertexa)
+    \big(
+        \glssymbol{voltage}(\vertexa)\linechargingadmittance(\vertexa, \vertexc)
+    \big)^\star
+\\%
+%
+&\begin{aligned}
+&=  \fmagnitude{\glssymbol{voltage}(\vertexa)}e^{\imgPart\cdot\glssymbol{voltageangle}(\vertexa)} 
+    \left( 
+        \left(
+            \fmagnitude{\glssymbol{voltage}(\vertexa)}e^{\imgPart\cdot\glssymbol{voltageangle}(\vertexa)} 
+            - 
+            \fmagnitude{\glssymbol{voltage}(\vertexc)}e^{\imgPart\cdot\glssymbol{voltageangle}(\vertexc)} 
+        \right) 
+        \left( 
+            \conductance(\vertexa,\vertexc) 
+            + 
+            \imgPart\cdot\glssymbol{susceptance}(\vertexa,\vertexc) 
+        \right) 
+    \right)^\star 
+    \\
+    &\,\,\,\,- 
+    \imgPart\cdot|\glssymbol{voltage}(\vertexa)|^2 \linechargingsusceptance(\vertexa,\vertexc)
+\end{aligned}
+\\%
+% 
+&\begin{aligned}
+&=  \left( 
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}^2 
+        - 
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}\cdot\fmagnitude{\glssymbol{voltage}(\vertexc)} 
+        \cos 
+        \left(
+            \glssymbol{voltageangle}(\vertexa) - \glssymbol{voltageangle}(\vertexc)
+        \right) 
+        - 
+        \imgPart\cdot\fmagnitude{\glssymbol{voltage}(\vertexa)}\fmagnitude{\glssymbol{voltage}(\vertexc)}
+        \sin
+        \left( 
+            \glssymbol{voltageangle}(\vertexa) - \glssymbol{voltageangle}(\vertexc) 
+        \right)
+    \right) 
+    \\
+    &\times 
+    \left(
+            \conductance(\vertexa,\vertexc) 
+            + 
+            \imgPart\cdot\glssymbol{susceptance}(\vertexa,\vertexc) 
+    \right)^\star 
+    - \imgPart\cdot\fmagnitude{\glssymbol{voltage}(\vertexa)}^2 \linechargingsusceptance(\vertexa,\vertexc)
+\end{aligned}
+\end{align}

@@ -1,0 +1,51 @@
+\begin{alignat}{2}
+    \{
+        \glssymbol{current}(\vertexa,\vertexc)
+        \in
+        \complexes
+    &\mid
+        \real{\glssymbol{current}(\vertexa,\vertexc)}^2
+    &+
+        \imaginary{\glssymbol{current}(\vertexa,\vertexc)}^2
+    &\leq
+        \glssymbol{currentmax}(\vertexa,\vertexc)^2
+    \},
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:current-flow}
+    % 
+    \\
+    %
+    &&
+    \fmagnitude{\glssymbol{current}(\vertexa,\vertexc)} 
+    &\leq 
+    \glssymbol{currentmax}(\vertexa,\vertexc),
+    %
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:current-flow:polar}
+    % 
+    \\
+    % 
+    \{ 
+        \glssymbol{complexpower}(\vertexa,\vertexc)
+        \in
+        \complexes
+    &\mid
+        \real{\glssymbol{complexpower}(\vertexa,\vertexc)}^2 
+    &+ 
+        \imaginary{\glssymbol{complexpower}(\vertexa,\vertexc)}^2 
+    % = 
+    %     |\complexpower(\vertexa,\vertexc)|^2 
+    &\leq
+        \glssymbol{complexpowermax}(\vertexa,\vertexc)^2
+    \},
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:complex-power-flow}
+    \\
+    %
+    &&
+    \fmagnitude{\glssymbol{complexpower}(\vertexa,\vertexc)} 
+    &\leq 
+    \glssymbol{complexpowermax}(\vertexa,\vertexc),
+    %
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:complex-power:rectangular}
+    %
+\end{alignat}

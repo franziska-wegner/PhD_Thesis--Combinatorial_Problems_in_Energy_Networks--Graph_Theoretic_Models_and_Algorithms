@@ -1,0 +1,31 @@
+\begin{alignat}{3}
+        \glssymbol{voltageangledifferencemin}(\vertexa,\vertexc)
+    &\leq
+        \glssymbol{voltageangle}(\vertexa)
+        &-&
+        \glssymbol{voltageangle}(\vertexc)
+    &\leq
+        \glssymbol{voltageangledifferencemax}(\vertexa,\vertexc),
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:delta-voltageangle:polar}
+    % 
+    \\
+    % 
+        \glssymbol{voltageangledifferencemin}(\vertexa,\vertexc)
+    &\leq
+        \arctan
+        \left(
+            \frac{\imaginary{\glssymbol{voltage}(\vertexa)}}{\real{
+            \glssymbol{voltage}(\vertexa)}}
+        \right)
+        &-&
+        \arctan%
+        \left(
+            \frac{\imaginary{\glssymbol{voltage}(\vertexc)}}{\real{
+            \glssymbol{voltage}(\vertexc)}}
+        \right)
+    &\leq
+        \glssymbol{voltageangledifferencemax}(\vertexa,\vertexc),
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:delta-voltageangle:rectangular}
+\end{alignat}

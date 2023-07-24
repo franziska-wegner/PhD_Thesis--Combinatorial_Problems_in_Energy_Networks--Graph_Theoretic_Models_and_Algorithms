@@ -1,0 +1,83 @@
+\small
+\begin{alignat}{2}
+    \glssymbol{complexpower}(\vertexa,\timestamp) 
+    &=
+        \glssymbol{voltage}(\vertexa,\timestamp)
+        \hspace{3.0cm}\cdot
+        \conjugate{\glssymbol{current}(\vertexa,\timestamp)}
+    \\
+    &\begin{aligned}
+        &=
+        \hphantom{-\imgPart\cdot\big(}
+        {\underbrace{
+            \begin{aligned}
+                \real{\glssymbol{voltage}(\vertexa,\timestamp)}
+                \cdot
+                \real{\glssymbol{current}(\vertexa,\timestamp)}
+                +
+                \imaginary{\glssymbol{voltage}(\vertexa,\timestamp)}
+                \cdot
+                \imaginary{\glssymbol{current}(\vertexa,\timestamp)}
+            \end{aligned}
+        }_{\eqqcolon\glssymbol{realpower}(\vertexa)}}%
+        \\
+        &\,\,\,\,-
+        \imgPart\cdot
+        {\underbrace{
+            \begin{aligned}
+                \big(
+                    \real{\glssymbol{voltage}(\vertexa,\timestamp)}
+                    \cdot
+                    \imaginary{\glssymbol{current}(\vertexa,\timestamp)}
+                    -
+                    \imaginary{\glssymbol{voltage}(\vertexa,\timestamp)}
+                    \cdot
+                    \real{\glssymbol{current}(\vertexa,\timestamp)}
+                \big)
+            \end{aligned}
+        }_{\eqqcolon\glssymbol{reactivepower}(\vertexa)}}%
+    \end{aligned}%
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:complex-power:iv:rectangular}
+    \\
+    &=
+        % \frac{1}{2}
+        \fmagnitude{\glssymbol{voltage}(\vertexa)}
+        \fmagnitude{\glssymbol{current}(\vertexa)} 
+        \Big(
+            \fcos{
+                \glssymbol{voltageangle}(\vertexa) 
+                + \angularfrequency\timestamp 
+                - \glssymbol{currentangle}(\vertexa) 
+                - \angularfrequency\timestamp
+                } 
+            +
+            \imgPart\cdot
+                \fsin{
+                    \glssymbol{voltageangle}(\vertexa)  
+                    + \angularfrequency\timestamp 
+                    - \glssymbol{currentangle}(\vertexa)  
+                    - \angularfrequency\timestamp
+                    }
+        \Big)
+        \label{ch:foundations:sec:power-flow-analyses:eq:complex-power:iv:polar}
+    \\
+    &=
+        \underbrace{
+            % \frac{1}{2}
+            \fmagnitude{\glssymbol{voltage}(\vertexa)}
+            \fmagnitude{\glssymbol{current}(\vertexa)} 
+            \fcos{\glssymbol{voltageangle}(\vertexa)
+            - \glssymbol{currentangle}(\vertexa)} 
+        }_{=\glssymbol{realpower}(\vertexa)}
+        \hspace{16.7mm}+\hspace{0.5mm}
+        \imgPart\cdot
+        \underbrace{
+            % \frac{1}{2}
+            \fmagnitude{\glssymbol{voltage}(\vertexa)}
+            \fmagnitude{\glssymbol{current}(\vertexa)}
+            \fsin{\glssymbol{voltageangle}(\vertexa) - \glssymbol{currentangle}(\vertexa) } 
+        }_{=\glssymbol{reactivepower}(\vertexa)}
+        \label{ch:foundations:sec:power-flow-analyses:eq:complex-power:iv:polar:p:q}
+    % 
+\end{alignat}

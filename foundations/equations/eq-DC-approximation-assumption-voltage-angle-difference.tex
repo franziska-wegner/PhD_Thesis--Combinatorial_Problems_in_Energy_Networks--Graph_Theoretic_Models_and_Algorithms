@@ -1,0 +1,28 @@
+\begin{align}
+    \glssymbol{realpower}(\vertexa,\vertexc) 
+    &\overset{(A\ref{ch:foundations:sec:power-flow-analyses:assumption:voltage-angle-difference})}{=}
+    \hphantom{-}
+    \fmagnitude{\glssymbol{voltage}(\vertexa)}
+    \fmagnitude{\glssymbol{voltage}(\vertexc)}
+    % 
+    \glssymbol{susceptance}(\vertexa,\vertexc)
+    \big( 
+        \glssymbol{voltageangle}(\vertexa)
+        -
+        \glssymbol{voltageangle}(\vertexc) 
+    \big) 
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:assumption:vad:1}
+\\
+    \glssymbol{reactivepower}(\vertexa,\vertexc)
+    &\overset{(A\ref{ch:foundations:sec:power-flow-analyses:assumption:voltage-angle-difference})}{=}
+    -
+    \fmagnitude{\glssymbol{voltage}(\vertexa)}
+    \fmagnitude{\glssymbol{voltage}(\vertexc)}
+    \glssymbol{susceptance}(\vertexa,\vertexc)
+    +
+    \fmagnitude{\glssymbol{voltage}(\vertexa)}^2
+    \glssymbol{susceptance}(\vertexa,\vertexc)
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:assumption:vad:2}
+\end{align}

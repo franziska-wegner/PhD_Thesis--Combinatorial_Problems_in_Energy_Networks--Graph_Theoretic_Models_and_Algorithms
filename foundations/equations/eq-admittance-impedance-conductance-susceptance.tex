@@ -1,0 +1,36 @@
+    \glssymbol{admittance}(\vertexa,\vertexc) 
+&\coloneqq 
+    \frac{1}{\glssymbol{impedance}(\vertexa,\vertexc)} =
+    \glssymbol{conductance}(\vertexa,\vertexc) 
++ 
+    \imgPart\cdot\glssymbol{susceptance}(\vertexa,\vertexc)
+& \forall \{\vertexa,\vertexc\}\in\glssymbol{undirectededges},
+% 
+\label{ch:foundations:sec:power-flow-analyses:eq:admittance}
+\\
+    \glssymbol{impedance}(\vertexa,\vertexc) 
+&\hphantom{:}=
+    \frac{1}{\glssymbol{admittance}(\vertexa,\vertexc)} 
+=
+    \glssymbol{resistance}(\vertexa,\vertexc) 
++ 
+    \imgPart\cdot\glssymbol{reactance}(\vertexa,\vertexc)
+& \forall \{\vertexa,\vertexc\}\in\glssymbol{undirectededges},
+% 
+\label{ch:foundations:sec:power-flow-analyses:eq:impedance}
+\\
+    \glssymbol{conductance}(\vertexa,\vertexc) 
+&\coloneqq
+    \frac{\glssymbol{resistance}(\vertexa,\vertexc)}
+    {\glssymbol{resistance}(\vertexa,\vertexc)^2 + \glssymbol{reactance}(\vertexa,\vertexc)^2}
+& \forall \{\vertexa,\vertexc\}\in\glssymbol{undirectededges},
+% 
+\label{ch:foundations:sec:power-flow-analyses:eq:conductance}
+\\
+    \glssymbol{susceptance}(\vertexa,\vertexc) 
+&\coloneqq 
+    - \frac{\glssymbol{reactance}(\vertexa,\vertexc)}
+    {\glssymbol{resistance}(\vertexa,\vertexc)^2 + \glssymbol{reactance}(\vertexa,\vertexc)^2}
+& \forall \{\vertexa,\vertexc\}\in\glssymbol{undirectededges}.
+% 
+\label{ch:foundations:sec:power-flow-analyses:eq:susceptance}

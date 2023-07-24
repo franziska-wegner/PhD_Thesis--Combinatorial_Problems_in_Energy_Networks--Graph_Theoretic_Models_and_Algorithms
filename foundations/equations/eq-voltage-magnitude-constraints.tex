@@ -1,0 +1,27 @@
+\begin{alignat}{3}
+        \fmagnitude{\glssymbol{voltagemin}(\vertexa)}\hphantom{)^2}
+    &\leq
+        &\fmagnitude{\glssymbol{voltage}(\vertexa)}
+    &\leq&
+        \fmagnitude{\glssymbol{voltagemax}(\vertexa)}\hphantom{)^2},
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-min:polar}
+    % 
+    \\
+        \glssymbol{voltagemin}(\vertexa)^2
+    &\leq
+        &\,\,\real{\glssymbol{voltage}(\vertexa)}^2
+    +
+        \imaginary{\glssymbol{voltage}(\vertexa)}^2,&&
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-min:rectangular}
+    % 
+    \\
+        &&\real{\glssymbol{voltage}(\vertexa)}^2 
+    + 
+        \imaginary{\glssymbol{voltage}(\vertexa)}^2\hphantom{,}
+    &\leq&
+        \glssymbol{voltagemax}(\vertexa)^2,
+    % 
+    \label{ch:foundations:sec:power-flow-analyses:eq:network:bounds:voltage-magnitude-max:rectangular}
+\end{alignat}
