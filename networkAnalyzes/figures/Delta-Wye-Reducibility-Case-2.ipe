@@ -1,0 +1,1428 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70206" creator="Ipe 7.2.11">
+<info created="D:20190404104808" modified="D:20190930150950" title="Delta-Wye Reducibility" author="Franziska Wegner" subject="Case 2"/>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/ptarc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fptarc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+0.5 0 0 0.5 0 0 e
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+-0.5 -0.5 m
+0.5 -0.5 l
+0.5 0.5 l
+-0.5 0.5 l
+h
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="small" value="\small"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="75%" value="0.75"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<ipestyle name="KIT-colors">
+<color name="KITgreen" value="0 0.588 0.509"/>
+<color name="KITgreen70" value="0.3 0.711 0.656"/>
+<color name="KITgreen50" value="0.5 0.794 0.754"/>
+<color name="KITgreen30" value="0.7 0.876 0.852"/>
+<color name="KITgreen15" value="0.85 0.938 0.926"/>
+<color name="KITblue" value="0.274 0.392 0.666"/>
+<color name="KITblue70" value="0.492 0.574 0.766"/>
+<color name="KITblue50" value="0.637 0.696 0.833"/>
+<color name="KITblue30" value="0.782 0.817 0.9"/>
+<color name="KITblue15" value="0.891 0.908 0.95"/>
+<color name="KITblack" value="0"/>
+<color name="KITblack70" value="0.3"/>
+<color name="KITblack50" value="0.5"/>
+<color name="KITblack30" value="0.7"/>
+<color name="KITblack15" value="0.85"/>
+<color name="KITpalegreen" value="0.509 0.745 0.235"/>
+<color name="KITpalegreen70" value="0.656 0.821 0.464"/>
+<color name="KITpalegreen50" value="0.754 0.872 0.617"/>
+<color name="KITpalegreen30" value="0.852 0.923 0.77"/>
+<color name="KITpalegreen15" value="0.926 0.961 0.885"/>
+<color name="KITyellow" value="0.98 0.901 0.078"/>
+<color name="KITyellow70" value="0.986 0.931 0.354"/>
+<color name="KITyellow50" value="0.99 0.95 0.539"/>
+<color name="KITyellow30" value="0.994 0.97 0.723"/>
+<color name="KITyellow15" value="0.997 0.985 0.861"/>
+<color name="KITorange" value="0.862 0.627 0.117"/>
+<color name="KITorange70" value="0.903 0.739 0.382"/>
+<color name="KITorange50" value="0.931 0.813 0.558"/>
+<color name="KITorange30" value="0.958 0.888 0.735"/>
+<color name="KITorange15" value="0.979 0.944 0.867"/>
+<color name="KITbrown" value="0.627 0.509 0.196"/>
+<color name="KITbrown70" value="0.739 0.656 0.437"/>
+<color name="KITbrown50" value="0.813 0.754 0.598"/>
+<color name="KITbrown30" value="0.888 0.852 0.758"/>
+<color name="KITbrown15" value="0.944 0.926 0.879"/>
+<color name="KITred" value="0.627 0.117 0.156"/>
+<color name="KITred70" value="0.739 0.382 0.409"/>
+<color name="KITred50" value="0.813 0.558 0.578"/>
+<color name="KITred30" value="0.888 0.735 0.747"/>
+<color name="KITred15" value="0.944 0.867 0.873"/>
+<color name="KITlilac" value="0.627 0 0.47"/>
+<color name="KITlilac70" value="0.739 0.3 0.629"/>
+<color name="KITlilac50" value="0.813 0.5 0.735"/>
+<color name="KITlilac30" value="0.888 0.7 0.841"/>
+<color name="KITlilac15" value="0.944 0.85 0.92"/>
+<color name="KITcyanblue" value="0.313 0.666 0.901"/>
+<color name="KITcyanblue70" value="0.519 0.766 0.931"/>
+<color name="KITcyanblue50" value="0.656 0.833 0.95"/>
+<color name="KITcyanblue30" value="0.794 0.9 0.97"/>
+<color name="KITcyanblue15" value="0.897 0.95 0.985"/>
+<color name="KITseablue" value="0.196 0.313 0.549"/>
+<color name="KITseablue70" value="0.437 0.519 0.684"/>
+<color name="KITseablue50" value="0.598 0.656 0.774"/>
+<color name="KITseablue30" value="0.758 0.794 0.864"/>
+<color name="KITseablue15" value="0.879 0.897 0.932"/>
+<color name="kit100black" value="0"/>
+<color name="HELMHOLTZblue" value="0.043 0.362 0.618"/>
+<color name="HELMHOLTZgreen" value="0.549 0.7 0.19"/>
+<color name="MTSF" value="0.509 0.745 0.235"/>
+<color name="MPF" value="0.437 0.519 0.684"/>
+<color name="MF" value="0.739 0.3 0.629"/>
+<color name="SUSCEPTANCE" value="0.862 0.627 0.117"/>
+<color name="SWITCHES" value="0 0.588 0.509"/>
+<color name="THETA" value="0.313 0.666 0.901"/>
+<color name="CAPACITIES" value="0.5"/>
+<color name="CHANGES" value="0.997 0.985 0.861"/>
+<color name="FRAMEblack15" value="0.95"/>
+<color name="CountryText" value="0.85"/>
+<color name="DTP" value="0.627 0.117 0.156"/>
+<color name="GRIDtextCity" value="0"/>
+<color name="GRIDtextLand" value="0.3"/>
+<color name="GRIDtextDenmark" value="1"/>
+<color name="GRIDtextKarlsruhe" value="0.627 0.117 0.156"/>
+<color name="GRIDtextTransnetBW" value="0.926 0.961 0.885"/>
+<color name="GRIDtextAmprion" value="0.926 0.961 0.885"/>
+<color name="GRIDtextTennet" value="0.85"/>
+<color name="GRIDtext50Herz" value="0.926 0.961 0.885"/>
+<color name="GRIDtextSea" value="1"/>
+<color name="GRIDSea" value="0.437 0.519 0.684"/>
+<color name="GRIDland" value="1"/>
+<color name="GRIDdenmark" value="0.85"/>
+<color name="GRIDtransnetbw" value="0.509 0.745 0.235"/>
+<color name="GRIDamprion" value="0.656 0.821 0.464"/>
+<color name="GRID50hertz" value="0.754 0.872 0.617"/>
+<color name="GRIDlandBorder" value="0.3"/>
+<color name="GRIDGermanyBorder" value="0.3"/>
+<color name="GRIDcableOffshore" value="0.739 0.3 0.629"/>
+<color name="GRIDwindturbine" value="0.879 0.897 0.932"/>
+<color name="GRIDtennet" value="0.852 0.923 0.77"/>
+<color name="GRIDcableOnshorePlanned" value="0.5"/>
+<color name="GRIDcableOnshore330KV" value="0.3 0.711 0.656"/>
+<color name="GRIDcableOnshore220KV" value="0.739 0.656 0.437"/>
+<color name="GRIDcableOnshore110KV" value="0"/>
+<color name="PHYSICAL" value="0.437 0.519 0.684"/>
+<color name="KVL" value="0.437 0.519 0.684"/>
+<color name="FEASIBLE" value="0.739 0.3 0.629"/>
+<color name="KCL" value="0.739 0.3 0.629"/>
+<color name="OTS" value="0"/>
+<color name="ROP" value="0"/>
+<color name="MFF" value="0"/>
+<color name="OPF" value="0"/>
+</ipestyle>
+<ipestyle name="diss_basics">
+<dashstyle name="medium dotted" value="[1 1.5] 0"/>
+<dashstyle name="dense dashed" value="[8 3] 0"/>
+<dashstyle name="long dashed" value="[12] 0"/>
+<dashstyle name="long dash dotted" value="[12 6 1 6] 0"/>
+<dashstyle name="dense dotted" value="[0.5 0.5] 0"/>
+<gridsize name="1 pts" value="1"/>
+<gridsize name="2 pts" value="2"/>
+<gridsize name="3 pts" value="3"/>
+<opacity name="10 percent" value="0.1"/>
+<opacity name="20 percent" value="0.2"/>
+<opacity name="30 percent" value="0.3"/>
+<opacity name="40 percent" value="0.4"/>
+<opacity name="50 percent" value="0.5"/>
+<opacity name="60 percent" value="0.6"/>
+<opacity name="70 percent" value="0.7"/>
+<opacity name="80 percent" value="0.8"/>
+<opacity name="90 percent" value="0.9"/>
+</ipestyle>
+<ipestyle name="StandardPreamble">
+<preamble>
+  \input{/Users/fwegner/Documents/work/dissertation/03-Document/ipe-latex-preamble.tex}
+</preamble>
+</ipestyle>
+<ipestyle name="Dissertation-One-Column">
+<preamble>
+\makeatletter
+\leftmargini 1.5em
+\leftmargin \leftmargini
+\leftmarginii  1.2em
+\leftmarginiii 1em
+\def\@listI{\leftmargin\leftmargini
+            \parsep \z@
+	    \partopsep 3pt
+	    \topsep \z@
+            \itemsep \z@}
+\@listI
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \itemsep   \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \partopsep \z@
+              \itemsep   \topsep}
+\makeatother
+</preamble>
+<layout paper="374 200" origin="0 0" frame="374 200" skip="64" crop="no"/>
+<tiling name="falling" angle="-60" step="12" width="3"/>
+<tiling name="rising" angle="30" step="12" width="3"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<path layer="alpha" stroke="KITorange70" pen="3.5" opacity="75%">
+114.868 152.264 m
+114.868 139.107 l
+</path>
+<path stroke="KITorange70" pen="3.5" opacity="75%">
+101.711 139.107 m
+128.025 139.107 l
+</path>
+<path stroke="KITorange70" pen="3.5" opacity="75%">
+177.108 139.107 m
+190.266 152.264 l
+177.109 152.264 l
+177.109 139.107 l
+</path>
+<path stroke="KITorange70" pen="3.5" opacity="75%">
+341.06 152.264 m
+354.218 152.264 l
+354.218 139.107 l
+341.061 152.264 l
+</path>
+<path stroke="KITorange70" pen="3.5" opacity="75%">
+255.187 67.6361 m
+268.344 54.4792 l
+268.344 67.6361 l
+255.187 67.6361 l
+</path>
+<path stroke="KITorange70" pen="3.5" opacity="75%">
+52.6276 67.6361 m
+65.7845 54.4792 l
+</path>
+<path stroke="KITorange70" pen="3.5" opacity="75%">
+52.6276 54.4792 m
+59.206 61.0577 l
+</path>
+<text matrix="1.14475 0 0 1.63065 -321.58 -401.181" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="13.41" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(a)}</text>
+<text matrix="1.14475 0 0 1.63065 -246.551 -401.181" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="14.147" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(b)}</text>
+<text matrix="1.14475 0 0 1.63065 -170.564 -401.181" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="12.968" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(c)}</text>
+<text matrix="1.14475 0 0 1.63065 -95.7558 -401.181" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="14.147" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(d)}</text>
+<text matrix="1.14475 0 0 1.63065 -19.8454 -401.181" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="13.121" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(e)}</text>
+<text matrix="1.14475 0 0 1.63065 -19.9312 -495.024" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="11.2" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(i)}</text>
+<text matrix="1.14475 0 0 1.63065 -117.199 -495.024" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="14.147" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(h)}</text>
+<text matrix="1.14475 0 0 1.63065 -212.479 -495.024" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="13.557" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(g)}</text>
+<text matrix="1.14475 0 0 1.63065 -312.875 -495.024" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="11.789" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(f)}</text>
+<path matrix="0.411153 0 0 0.411153 6.57846 -24.4622" stroke="KITred15" pen="fat" cap="1">
+48 160 m
+64 192
+112 240
+144 256 c
+</path>
+<path matrix="0.411153 0 0 0.411153 -256.56 -24.4622" stroke="KITblack50" pen="fat">
+688 224 m
+688 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 6.57846 41.3223" stroke="KITblack50" pen="fat">
+128 48 m
+144 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 26.3138 -37.6191" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 26.3138 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 6.57846 41.3223" stroke="KITblack50" pen="fat">
+112 64 m
+128 48 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 -124.991 -24.4622" stroke="KITblack50" pen="fat">
+368 160 m
+432 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 6.57846 41.3223" stroke="KITblack50" pen="fat">
+80 32 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 -11.3053" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 6.57846 41.3223" stroke="KITblack50" pen="fat">
+128 48 m
+112 32 l
+</path>
+<use matrix="0.411153 0 0 0.411153 81.5739 41.3223" name="Background"/>
+<path matrix="0.411153 0 0 0.411153 39.4707 -24.4622" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 39.4707 -37.6191" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 39.4707 -11.3053" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 6.57846 41.3223" stroke="KITseablue70" pen="fat">
+112 64 m
+144 64
+144 32 c
+</path>
+<path matrix="0.411153 0 0 0.411153 6.57846 41.3223" stroke="KITseablue70" pen="fat">
+112 32 m
+144 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 6.57846 41.3223" stroke="KITseablue70" pen="fat">
+112 64 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 39.4707 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 26.3138 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<text matrix="1.19202 0 0 1.69798 -305.474 -440.72" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<use matrix="0.411153 0 0 0.411153 -26.3138 -11.3053" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 0.000006 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 0.000006 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 -26.3138 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -341.486 -485.751" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<use matrix="0.411153 0 0 0.411153 -26.3138 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 -13.1569 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 6.57846 8.43007" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 -13.1569 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 0.000006 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 13.1569 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 13.1569 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 13.1569 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<path matrix="0.411153 0 0 0.411153 109.175 -24.4622" stroke="KITred15" pen="fat" cap="1">
+48 160 m
+64 192
+112 240
+144 256 c
+</path>
+<path matrix="0.411153 0 0 0.411153 23.6547 41.3223" stroke="KITblack50" pen="fat">
+320 64 m
+352 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 109.175 41.3223" stroke="KITblack50" pen="fat">
+112 32 m
+144 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 109.175 41.3223" stroke="KITblack50" pen="fat">
+112 64 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 -153.963 -24.4622" stroke="KITblack50" pen="fat">
+688 224 m
+688 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 128.91 -37.6191" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 128.91 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 102.596 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 115.753 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 -22.3945 -24.4622" stroke="KITblack50" pen="fat">
+368 160 m
+432 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 102.596 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 102.596 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 102.596 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 109.175 41.3223" stroke="KITblack50" pen="fat">
+80 32 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 115.753 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 102.596 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 115.753 -11.3053" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 115.753 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 142.067 -24.4622" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 142.067 -37.6191" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 142.067 -11.3053" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 142.067 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 115.753 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 128.91 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 102.596 1.85162" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<use matrix="0.411153 0 0 0.411153 76.2823 -11.3053" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 102.596 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 102.596 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 76.2823 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -238.89 -485.751" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<use matrix="0.411153 0 0 0.411153 76.2823 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 89.4392 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 89.4392 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 102.596 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 115.753 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 115.753 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 115.753 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -202.878 -440.72" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<path matrix="0.411153 0 0 0.411153 44.6771 41.3223" stroke="KITred15" pen="fat" cap="1">
+448 0 m
+464 32
+496 64
+544 64 c
+</path>
+<path matrix="0.411153 0 0 0.411153 209.138 41.3223" stroke="KITblack50" pen="fat">
+80 32 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 123.619 41.3223" stroke="KITblack50" pen="fat">
+320 64 m
+352 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 209.138 41.3223" stroke="KITblack50" pen="fat">
+112 32 m
+144 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 209.138 41.3223" stroke="KITblack50" pen="fat">
+112 64 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 -53.9997 -24.4622" stroke="KITblack50" pen="fat">
+688 224 m
+688 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 228.874 -37.6191" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 228.874 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 202.56 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 215.717 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 77.5693 -24.4622" stroke="KITblack50" pen="fat">
+368 160 m
+432 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 202.56 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 202.56 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 202.56 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 215.717 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 202.56 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 215.717 -11.3053" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 215.717 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 44.6771 41.3223" stroke="KITseablue70" pen="fat">
+512 64 m
+533.803 54.3615 l
+</path>
+<path matrix="0.411153 0 0 0.411153 44.6771 41.3223" stroke="KITseablue70" pen="fat">
+533.803 54.3615 m
+544 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 44.6771 41.3223" stroke="KITseablue70" pen="fat">
+533.803 54.3615 m
+544 64 l
+</path>
+<text matrix="1.19202 0 0 1.69798 -115.976 -464.331" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<use matrix="0.411153 0 0 0.411153 211.524 11.0456" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITseablue70"/>
+<use matrix="0.411153 0 0 0.411153 176.246 -11.3053" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 202.56 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 202.56 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 176.246 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -138.926 -485.751" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<use matrix="0.411153 0 0 0.411153 176.246 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 189.403 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 189.403 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 202.56 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 215.717 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 215.717 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 215.717 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -93 -449.155" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="3.598" height="6.128" depth="0" valign="baseline" style="math">t</text>
+<path matrix="0.411153 0 0 0.411153 65.5931 41.3223" stroke="KITseablue70" pen="fat">
+624 0 m
+640 32
+672 80
+730.197 73.6385 c
+</path>
+<path matrix="0.411153 0 0 0.411153 302.417 41.3223" stroke="KITblack50" pen="fat">
+80 32 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 302.417 41.3223" stroke="KITblack50" pen="fat">
+112 32 m
+144 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 302.417 41.3223" stroke="KITblack50" pen="fat">
+112 64 m
+112 32 l
+</path>
+<path matrix="0.411153 0 0 0.411153 39.2793 -24.4622" stroke="KITblack50" pen="fat">
+688 224 m
+688 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 322.153 -37.6191" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 322.153 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 295.839 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<text matrix="1.19202 0 0 1.69798 -45.6469 -485.751" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<path matrix="0.411153 0 0 0.411153 308.996 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 170.848 -24.4622" stroke="KITblack50" pen="fat">
+368 160 m
+432 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 295.839 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 295.839 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 295.839 -24.4622" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 308.996 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 295.839 -11.3053" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 308.996 -11.3053" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 308.996 -24.4622" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 142.149 45.2852" stroke="KITseablue70" pen="fat">
+533.803 54.3615 m
+544 64 l
+</path>
+<text matrix="1.19202 0 0 1.69798 -22.3867 -462.558" transformations="translations" pos="303.793 306.209" stroke="KITseablue70" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<use matrix="0.411153 0 0 0.411153 269.525 -11.3053" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 295.839 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 295.839 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 269.525 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 269.525 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 282.682 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 282.682 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 295.839 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 308.996 -11.3053" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 308.996 1.85162" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 308.996 15.0085" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 5.30897 -457.735" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="3.598" height="6.128" depth="0" valign="baseline" style="math">t</text>
+<use matrix="0.411153 0 0 0.411153 313.188 18.9714" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITseablue70"/>
+<path matrix="0.411153 0 0 0.411153 308.168 73.3223" stroke="KITred15" pen="fat" cap="1">
+48 160 m
+64 192
+112 240
+144 256 c
+</path>
+<path matrix="0.411153 0 0 0.411153 242.384 73.3223" stroke="KITblack50" pen="fat">
+240 192 m
+272 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 301.59 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 301.59 86.4792" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 314.747 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 176.599 73.3223" stroke="KITblack50" pen="fat">
+368 160 m
+432 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 301.59 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 301.59 73.3223" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 301.59 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 314.747 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 314.747 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 45.0303 73.3223" stroke="KITblack50" pen="fat">
+688 224 m
+688 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 45.0303 73.3223" stroke="KITseablue70" pen="fat">
+720 192 m
+741.546 181.455 l
+</path>
+<path matrix="0.411153 0 0 0.411153 45.0303 73.3223" stroke="KITseablue70" pen="fat">
+741.546 181.455 m
+752 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 45.0303 73.3223" stroke="KITseablue70" pen="fat">
+741.546 181.455 m
+752 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 327.904 73.3223" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 327.904 60.1654" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 327.904 86.4792" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 314.747 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 327.904 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 301.59 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<text matrix="1.19202 0 0 1.69798 -39.8959 -387.967" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<use matrix="0.411153 0 0 0.411153 275.276 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<path matrix="0.411153 0 0 0.411153 301.59 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<use matrix="0.411153 0 0 0.411153 297.292 95.3006" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITseablue70"/>
+<use matrix="0.411153 0 0 0.411153 275.276 86.4792" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 301.59 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 301.59 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 275.276 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 288.433 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 301.59 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 288.433 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -3.88414 -342.935" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<path matrix="0.411153 0 0 0.411153 157.373 73.3223" stroke="KITred15" pen="fat" cap="1">
+48 160 m
+64 192
+112 240
+144 256 c
+</path>
+<path matrix="0.411153 0 0 0.411153 91.5889 73.3223" stroke="KITblack50" pen="fat">
+240 192 m
+272 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 91.5889 73.3223" stroke="KITblack50" pen="fat">
+208 160 m
+240 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 86.4792" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 163.952 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 25.8044 73.3223" stroke="KITblack50" pen="fat">
+368 160 m
+432 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 73.3223" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 163.952 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 163.952 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 25.8044 73.3223" stroke="KITseablue70" pen="fat">
+378.153 181.135 m
+368 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 25.8044 73.3223" stroke="KITseablue70" pen="fat">
+378.153 181.135 m
+400 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 25.8044 73.3223" stroke="KITseablue70" pen="fat">
+368 160 m
+378.153 181.135 l
+</path>
+<path matrix="0.411153 0 0 0.411153 177.109 73.3223" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 177.109 60.1654" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 177.109 86.4792" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 163.952 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 177.109 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 150.795 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<text matrix="1.19202 0 0 1.69798 -190.691 -387.967" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<use matrix="0.411153 0 0 0.411153 128.656 95.169" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITseablue70"/>
+<use matrix="0.411153 0 0 0.411153 124.481 86.4792" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 150.795 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 150.795 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 124.481 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 124.481 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 137.638 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 150.795 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 137.638 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -154.679 -342.935" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<path matrix="0.411153 0 0 0.411153 232.771 73.3223" stroke="KITred15" pen="fat" cap="1">
+48 160 m
+64 192
+112 240
+144 256 c
+</path>
+<path matrix="0.411153 0 0 0.411153 166.986 73.3223" stroke="KITblack50" pen="fat">
+240 192 m
+272 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 226.192 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 226.192 86.4792" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 239.349 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 101.202 73.3223" stroke="KITblack50" pen="fat">
+368 160 m
+432 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 226.192 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 226.192 73.3223" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 226.192 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 239.349 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 239.349 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 35.4174 73.3223" stroke="KITseablue70" pen="fat">
+528 208 m
+528 192 l
+</path>
+<use matrix="0.411153 0 0 0.411153 199.879 106.215" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITseablue70"/>
+<path matrix="0.411153 0 0 0.411153 35.4174 79.9008" stroke="KITseablue70" pen="fat">
+528 208 m
+528 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 252.506 73.3223" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 252.506 60.1654" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 252.506 86.4792" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 239.349 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 252.506 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 226.192 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<text matrix="1.19202 0 0 1.69798 -115.293 -387.967" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<path matrix="0.411153 0 0 0.411153 226.192 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<use matrix="0.411153 0 0 0.411153 199.879 86.4792" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 226.192 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 226.192 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 199.879 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 199.879 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 213.036 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 226.192 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 213.036 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -79.2815 -342.935" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<path matrix="0.411153 0 0 0.411153 81.9759 73.3223" stroke="KITred15" pen="fat" cap="1">
+48 160 m
+64 192
+112 240
+144 256 c
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 86.4792" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 88.5543 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 60.1654" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 88.5543 60.1654" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 73.3223" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 88.5543 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 88.5543 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 88.5543 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 16.1914 73.3223" stroke="KITseablue70" pen="fat">
+208 160 m
+224 144
+256 144
+272 160 c
+</path>
+<path matrix="0.411153 0 0 0.411153 16.1914 73.3223" stroke="KITseablue70" pen="fat">
+240 192 m
+272 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 16.1914 73.3223" stroke="KITseablue70" pen="fat">
+208 160 m
+240 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 101.711 73.3223" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 101.711 60.1654" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 101.711 86.4792" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 88.5543 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 101.711 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 75.3974 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<use matrix="0.411153 0 0 0.411153 49.0836 86.4792" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 75.3974 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 75.3974 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 49.0836 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -266.088 -387.967" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<use matrix="0.411153 0 0 0.411153 49.0836 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 62.2405 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 75.3974 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 62.2405 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 62.2405 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -230.077 -342.935" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+<path matrix="0.411153 0 0 0.411153 6.57846 73.3223" stroke="KITred15" pen="fat" cap="1">
+48 160 m
+64 192
+112 240
+144 256 c
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+0 192
+0 64
+128 64
+128 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 86.4792" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 60.1654" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 60.1654" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 73.3223" stroke="KITblack50" pen="fat">
+128 192 m
+128 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 86.4792" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 73.3223" stroke="KITblack50" pen="fat">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 86.4792" stroke="KITseablue70" pen="fat">
+64 160 m
+32 160
+32 96
+96 96
+96 128 c
+</path>
+<path matrix="0.411153 0 0 0.411153 26.3138 73.3223" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 26.3138 60.1654" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 26.3138 86.4792" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+96 192 l
+</path>
+<path matrix="0.411153 0 0 0.411153 13.1569 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 26.3138 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<path matrix="0.411153 0 0 0.411153 0.000006 99.6361" stroke="KITblack30" dash="dashed" pen="fat" cap="1">
+64 192 m
+64 160 l
+</path>
+<use matrix="0.411153 0 0 0.411153 -26.3138 86.4792" name="mark/disk(sx)" pos="128 192" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 0.000006 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 0.000006 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 -26.3138 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -341.486 -387.967" transformations="translations" pos="303.793 306.209" stroke="KITblack70" type="label" width="4.67" height="4.289" depth="0" valign="baseline" style="math">s</text>
+<use matrix="0.411153 0 0 0.411153 -26.3138 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 -13.1569 112.793" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 0.000006 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 -13.1569 86.4792" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<use matrix="0.411153 0 0 0.411153 -13.1569 99.6361" name="mark/disk(sx)" pos="128 128" size="normal" stroke="KITblack70"/>
+<text matrix="1.19202 0 0 1.69798 -305.474 -342.935" transformations="translations" pos="303.793 306.209" stroke="KITred15" type="label" width="7.434" height="7.49" depth="0" valign="baseline" style="math">\edge&apos;</text>
+</page>
+</ipe>
