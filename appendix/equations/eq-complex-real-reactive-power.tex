@@ -1,0 +1,135 @@
+\small
+\begin{alignat}{3}
+% 
+% RMS of Voltage and Current
+\glssymbol{currentrms}(\vertexa) 
+&= 
+\fmagnitude{\glssymbol{current}(\vertexa)} 
+\cdot 
+\frac{1}{\sqrt{2}}
+\\
+\glssymbol{voltagerms}(\vertexa) 
+&= 
+\fmagnitude{\glssymbol{voltage}(\vertexa)} 
+\cdot 
+\frac{1}{\sqrt{2}} 
+\\
+% 
+% Voltage and Current Functions
+\glssymbol{current}(\vertexa,\glssymbol{timestamp}) 
+&= 
+\fmagnitude{\glssymbol{current}(\vertexa)} 
+\cdot 
+\sin(
+    \glssymbol{angularfrequency}\glssymbol{timestamp} 
+    - 
+    \glssymbol{currentangle}(\vertexa)
+    )
+\\
+% 
+\glssymbol{voltage}(\vertexa,\glssymbol{timestamp}) 
+&= 
+\fmagnitude{\glssymbol{voltage}(\vertexa)} 
+\cdot 
+\sin(
+    \glssymbol{angularfrequency}\glssymbol{timestamp} 
+    - 
+    \glssymbol{voltageangle}(\vertexa)
+)
+\\
+% 
+% 
+% Complex Power, Real Power, and Reactive Power
+% 
+% P = RMS(|v|) . RMS(|i|) . cos(\vangle - \iangle)
+\begin{split}
+    \glssymbol{realpower}(\vertexa)  
+    &= 
+    \currentrms(\vertexa)
+    \cdot
+    \voltagerms(\vertexa)
+    \cdot
+    \cos(
+        \glssymbol{voltageangle}(\vertexa) 
+        -
+        \glssymbol{currentangle}(\vertexa) 
+    )
+    \\
+    &= 
+    \frac{1}{2} 
+    \fmagnitude{\glssymbol{voltage}(\vertexa)} 
+    \fmagnitude{\glssymbol{current}(\vertexa)}
+    \cdot
+    \cos(
+        \glssymbol{voltageangle}(\vertexa) 
+        - 
+        \glssymbol{currentangle}(\vertexa) 
+    )
+\end{split}
+\\
+% Q = RMS(|v|) . RMS(|i|) . sin(\vangle - \iangle)
+\begin{split}
+    \glssymbol{reactivepower}(\vertexa) 
+    &= 
+    \currentrms(\vertexa)
+    \voltagerms(\vertexa)
+    \cdot
+    \sin(\glssymbol{voltageangle}(\vertexa) -
+         \glssymbol{currentangle}(\vertexa))
+    \\
+    &= 
+    \frac{1}{2}
+    \fmagnitude{\glssymbol{voltage}(\vertexa)} 
+    \fmagnitude{\glssymbol{current}(\vertexa)}
+    \cdot
+    \sin(\glssymbol{voltageangle}(\vertexa) -
+         \glssymbol{currentangle}(\vertexa))
+\end{split}
+\\
+% % q(t) = Q . sin( 2 . ( t + \iangle) )
+\glssymbol{reactivepower}(\vertexa,\glssymbol{timestamp}) 
+&= 
+-\glssymbol{reactivepower}(\vertexa)
+\cdot
+\sin(
+    2
+    \cdot
+    (
+        \glssymbol{angularfrequency}\glssymbol{timestamp} 
+        - 
+        (\glssymbol{voltageangle}(\vertexa) - \glssymbol{currentangle}(\vertexa)) 
+    )
+)
+\\
+% p(t) = P . (1 + cos( 2 . ( t + \iangle) ) )
+\glssymbol{realpower}(\vertexa,\glssymbol{timestamp}) 
+&=
+\glssymbol{realpower}(\vertexa) 
+\cdot 
+    (
+    1 
+    + 
+    \cos(
+        2\cdot
+        (
+        \glssymbol{angularfrequency}\glssymbol{timestamp} 
+        - 
+        (\glssymbol{voltageangle}(\vertexa) - \glssymbol{currentangle}(\vertexa)) 
+    ))
+)
+\\
+% 
+% s(t) = v(t) . i(t)
+\glssymbol{complexpower}(\vertexa,\glssymbol{timestamp}) 
+&= 
+\glssymbol{voltage}(\vertexa,\glssymbol{timestamp}) 
+\cdot
+\glssymbol{current}(\vertexa,\glssymbol{timestamp})
+\\
+\glssymbol{complexpower}(\vertexa,\glssymbol{timestamp}) 
+&= 
+\glssymbol{realpower}(\vertexa,\glssymbol{timestamp}) 
++
+\glssymbol{reactivepower}(\vertexa,\glssymbol{timestamp})
+% 
+\end{alignat}
