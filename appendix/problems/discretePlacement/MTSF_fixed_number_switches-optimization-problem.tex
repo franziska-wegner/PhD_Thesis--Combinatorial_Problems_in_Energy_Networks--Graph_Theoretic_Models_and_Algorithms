@@ -1,0 +1,16 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[framed]{\gls{mtsf}~Problem with Fixed Switches~$\gls{mtsfp}
+(\glssymbol{network},\glssymbol{switched})$} 
+    % 
+    Instance: & A network~\glssymbol{network} and a
+    set~$\glssymbol{switched}\subseteq\glssymbol{undirectededges}$.
+    \\
+    % 
+    Objective: & Find a switching~$\glssymbol{switch}(\edge)\in\{0,1\}$ for
+    all~$\edge\in\glssymbol{switched}$ such that~$\opt_{\gls{mpfp}}
+    (\glssymbol{network}-\{\edge\mid\edge\in
+    \glssymbol{switched}\land\glssymbol{switch}(\edge)=0\})$ is maximum among
+    all choices of~$\glssymbol{switch}$.
+    % 
+\end{problem} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
