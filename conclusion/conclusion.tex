@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter[Conclusion]{Conclusion}\label{ch:conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+In this thesis, we identified a bunch of problems in energy networks. We
+analyzed the problems and networks such that we were able to design algorithms
+that give certain guarantees or bounds. In addition, we evaluated the algorithms
+on the~\gls{ieee} benchmark data set or on self-generated instances. In this
+chapter, we briefly recapitulate the main results of this thesis
+in~\cref{ch:conclusion:sec:summary}. There are still many ideas and open
+questions, which we were not able to tackle during that time. Thus, we give an
+outlook of what can be done in the future by outlining a few of the remaining
+ideas and open problems in~\cref{ch:conclusion:sec:outlook}.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary}\label{ch:conclusion:sec:summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+One of the most fundamental problems that is part of nearly all problems that
+incorporate the power grid is the feasibility problem for electrical flows. We
+gave a first comprehensive analysis of electrical flows. We showed the duality
+of the two Kirchhoff's laws known as~\acrlong{kcl} and~\acrlong{kvl} that
+separates the relationship between current and voltage by using two graphs. We
+also show different possible representations that increase the understanding of
+electrical flows leading to different properties in electrical networks. We
+think that one of the most interesting properties is the balancing property that
+basically shows that all paths from one vertex to another vertex have the same
+length.
+% 
+We developed first algorithms for the feasibility problem on
+\source-\sink-planar biconnected graphs that can be seen as a \source-\sink
+electrical flow decomposition. Using the superposition principle, we can compute
+all \source-\sink electrical flows and combine them into one electrical flow.
+The algorithmic idea that uses the duality has the potential to be used in
+dynamic scenarios, since a topology change does not need a full new
+recomputation of the flow, but can start from an already existing solution.
+
+The second content chapter is about~\acrlong{mtsf} (\gls{mtsf}) that can be seen
+as a discrete manipulation of the electrical network topology. We are the first
+that develop algorithms with provable guarantees on certain graph structures and
+shrink the gap between theory and practice. With the theoretical analysis of
+this problem, we are able to build connections to related problems. We showed
+network simplifications including transformations from the bounded to the
+unbounded~\gls{mtsf} and the equivalence between~\acrlong{ots} (\gls{ots})
+and~\gls{mtsf}. We introduced exact algorithms for networks with one generator
+and one demand for certain graph structures. We also show when the problem
+becomes already \NP-hard on~\source-\sink networks. Though the algorithms are
+only designed for special graph structures, we evaluate them on general power
+grids. For the \source-\sink algorithm, which we called~\acrlong{dtp}
+(\gls{dtp}), we defined a new centrality. The results of the centrality seem to
+give a hint on which edges are critical, since there are edges where the
+electrical network degenerates and we realized that these edges are the ones
+with a low centrality.
+
+The third chapter is about the continuous manipulation of the electrical network
+topology. We motivate this by placing~\gls{facts} either at vertices or at
+edges. For that problem, we present a hybrid model for including flow control
+vertices or edges. We were able to show that it suffices to place a relatively
+small number of flow control units to reach the same solution as the
+graph-theoretical flow solution that is equivalent to placing these units
+everywhere. In addition to that, we even saw that fewer flow control buses
+improve the loadability and even have lower cost increase compared
+to~\acrlong{opf} (\gls{opf}). We were able to explain our empirical observations
+on controller placement with graph-theoretical means.
+
+We focused in the last part of this work on transmission network expansion
+planning on the green field. This particular problem represents a layout problem
+and was motivated by the wind farm cabling problem. We assumed that the turbines
+have fixed positions and that there are multiple cables types. We want to find a
+cabling of the wind farm such that the overall cabling costs are minimized. This
+is in general an~\NP-hard problem. We give a first proper model and decompose the
+wind farm cabling problem into multiple subproblems, each remaining~\NP-hard for
+multiple cable types. We developed a meta-heuristic known as~\acrlong{sa}
+algorithm, which we compare to the~\gls{milp} by using various benchmark sets
+that we generated to enable comparability and to overcome the shortcoming of the
+current literature. We could see good results in the simulations for medium to
+large wind farms.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Outlook}\label{ch:conclusion:sec:outlook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For the electrical flow feasibility problem there remain several further
+investigations and proofs to explain the properties of such an electrical flow
+in depth. Furthermore, it would be interesting to evaluate whether the
+assumptions we make---meaning biconnectivity and planarity---are reasonable
+assumptions for the problem. We think that planarity should be a reasonable
+assumption following the statement of~\textcite[p.13]{Cai12} and even the
+biconnectivity assumption for an~\source-\sink subgraph should be reasonable,
+since the electrical flow takes a path with the least resistance. However, it
+might lead to some error, which will be interesting to evaluate in simulations.
+
+For~\acrlong{mtsf} (\gls{mtsf}), which is a discrete manipulation of the power
+grid topology, it is unknown to us whether the reachability test can be done in
+polynomial time and if not, whether there is a polynomial time algorithm that
+finds all~\acrlong{dtp}s (\gls{dtp}s) from one source~\source to one sink~\sink.
+Another open question to us is whether there is a~\acrlong{ptas} (\gls{ptas}) on
+cacti. It would be also interesting to see whether the complexity changes and
+whether there are algorithms when we define a set of edges as non-switchable
+(motivated by~\gls{tnep}). Other interesting problems are the minimization and
+the constraining of the number of switches.
+
+For the manipulation of the power grid topology using control units a complexity
+analysis would give the problem more structure and would increase the
+understanding of the problem. It would be even interesting if we can adopt the
+methods and algorithm from~\gls{mtsf} such that they work for the susceptance
+scaling, too. It is also unknown to us if the bilinearity will help us to some
+extent.
+
+For both problems it would be interesting if the recent findings in the
+electrical flow feasibility also help in developing better algorithms for the
+discrete and continuous manipulation in power grids. In addition, a comparison
+to more realistic network models such as~\gls{ac} model is another main
+evaluation.
+
+For the wind farm cabling there are many open questions concerning complexity
+and algorithms that give certain guarantees. In addition, so far we completely
+omit electrical flows in the wind farm cabling, since we more or less assume
+that the resulting networks are tree-like and thus, a graph-theoretical flow is
+a reasonable assumption. It would be worth investigating whether the results are
+electrically feasible and to incorporate electrical flows in general.
+% 
