@@ -1,0 +1,434 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Units
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{pi}% Pi
+{
+    name={\ensuremath{\pi}},
+    longform={pi},
+    capitalform={Pi},
+    symbol={\ensuremath{\pi}},
+    sort={pi},
+    type={unit},
+    description={The ratio of a circle's circumference to its diameter.}
+}
+
+\newglossaryentry{twopi}% Pi
+{
+    name={\ensuremath{2\cdot\pi}},
+    longform={two pi},
+    capitalform={Two Pi},
+    symbol={\ensuremath{2\pi}},
+    parent={pi},
+    sort={twopi},
+    type={unit},
+    description={A full period~$T$ that corresponds to a full cycle rotation of
+    a vector in the Argand diagram that corresponds to~$\glssymbol{twopi}$ 
+    (see~\cref{ch:foundations:fig:AC-voltage-current-angle-difference}).}
+}
+
+\newglossaryentry{ampere}% A
+{
+    name={\protect\si{\protect\ampere}},
+    longform={ampere},
+    capitalform={Ampere},
+    sort={ampere},
+    type={unit},
+    % 
+    description={The unit of electrical current is called~\emph{Ampere} (in
+    short~\glssymbol{ampere}). It is one of the seven~\gls{si} base units and
+    describes how much coulomb of current flows through a point per second
+    (\si{\coulomb\per\second}).
+    % 
+    },
+    % 
+    symbol={\protect\si{\protect\coulomb}}
+}
+
+\newglossaryentry{coulomb}% C
+{
+    name={\protect\si{\protect\coulomb}},
+    longform={coulomb},
+    capitalform={Coulomb},
+    sort={C},
+    type={unit},
+    % 
+    description={The~\emph{Coulomb} corresponds to~$6.24\times 10^{18}$
+    electrons and was introduced since the amount of one electron is simply to
+    small. It is equal to the unit~\protect\si{\protect\ampere\second} and
+    represents a~\gls{si} derived unit of electric charge. },
+    % 
+    symbol={\protect\si{\protect\coulomb}}
+}
+
+\newglossaryentry{joule}% J
+{
+    name={\protect\si{\protect\joule}},
+    longform={joule},
+    capitalform={Joule},
+    sort={joule},
+    type={unit},
+    % 
+    description={The unit of energy and thus, work is measured in~\emph{Joule}.
+    From an electrical point of view it represents the electrical current
+    density. It is a~\gls{si} derived unit measuring the (electrical) energy or
+    work that is done~\ensuremath{
+    % 
+    \si[per-mode=fraction,fraction-function=\sfrac]{\newton\metre} 
+    % 
+    =\si[per-mode=fraction,fraction-function=\sfrac]{\volt\ampere\second} 
+    % 
+    =\si[per-mode=fraction,fraction-function=\sfrac]{\watt\second} 
+    % 
+    = \si[per-mode=fraction,fraction-function=\sfrac]
+    {\sfrac{\kilogram~\metre\squared}{\second\squared}}
+    % 
+    }.
+    % 
+    },
+    symbol={\protect\si{\protect\joule}}
+}
+
+\newglossaryentry{ohm}% Ohm
+{
+    name={\protect\si{\protect\ohm}},
+    symbol={\si{\ohm}},
+    sort={ohm},
+    type={unit},
+    % 
+    description={The unit of electrical impedance~\impedance,
+    resistance~\resistance, and reactance~\reactance is called~\emph{Ohm}. It is
+    a derived~\gls{si} unit
+    % 
+    from~\protect\ensuremath{
+    % 
+    \protect\si{\volt\per\ampere} 
+    % 
+    = \si{\sfrac{\kilogram~\metre\squared}{\ampere\squared\second\cubed}}
+    % 
+    }.
+    % 
+    },
+    % 
+    symbol={\protect\si{\protect\ohm}}
+}
+
+\newglossaryentry{ohmmetre}% Om
+{
+    name={\protect\si{\protect\ohm\protect\metre}},
+    longform={ohm metre},
+    capitalform={Ohm Metre},
+    sort={ohmmetre},
+    type={unit},
+    parent={ohm},
+    % 
+    description={The unit of resistivity~\resistivity is~\si{\ohm\metre}. It
+    represents the property how well a material resists electric current. It is
+    reciprocal to the electrical conductivity~\conductivity and is a
+    derived~\gls{si} unit from~\ensuremath{
+    % 
+    \si{\sfrac{\kilogram\metre\cubed}{\ampere\squared\second\cubed}}
+    % 
+    }. Note that another definition is~\ensuremath{\resistivity:=\resistance
+    \frac{A}{\ell}}, where~$A$ is the area (wired gauge) and~$\ell$ the length
+    of the material.
+    % 
+    },
+    % 1m \times 1m \times 1m solid cube contacts on oposite sides -|_|-
+    % resistance between these contacts 1 ohm -> 1 ohm metre
+    % 
+    % intrinsic property -> always the same for same volume
+    % resistance differs on length to area ratio, i.e., longer length means more
+    % resistance, than higher gauge and smaller length
+    symbol={\protect\si{\protect\sfrac{\protect\siemens}{\protect\metre}}}
+}
+
+\newglossaryentry{si}% SI
+{
+    name={SI},
+    longform={international system of units},
+    capitalform={International System of Units},
+    sort={si},
+    type={unit},
+    % 
+    description={The International System of Units (\gls{si}) is a metric system
+    that helps to prevent conversion problems as it specify the seven base units
+    that are ampere~\protect\si{\protect\ampere}, candela~\protect
+    \si{\protect\candela}, kelvin~\protect\si{\protect\kelvin},
+    kilogram~\protect\si{\protect\kilogram}, metre~\protect\si{\protect\metre},
+    mole~\protect\si{\protect\mole}, and seconds~\protect\si{\protect\second}. },
+    % 
+    symbol={SI}
+}
+
+\newglossaryentry{siemens}% S
+{
+    name={\protect\si{\protect\siemens}},
+    longform={siemens},
+    capitalform={Siemens},
+    sort={siemens},
+    type={unit},
+    % 
+    description={The unit of electrical admittance~\admittance,
+    conductance~\conductance, and susceptance~\susceptance is
+    Siemens~\si{\siemens}. It is a derived~\gls{si} unit
+    % 
+    from~\ensuremath{
+    \si{\sfrac{1}{\ohm}}
+    % 
+    = \si{\ampere\per\volt}
+    % 
+    = \si{\sfrac{\ampere\squared\second\cubed}{\kilogram~\metre\squared} }
+    }.
+    %
+    It also shows that Siemens is reciprocal to Ohm.
+    % increase of one volt increases voltages by one if 1 S
+    },
+    % 
+    symbol={\protect\si{\protect\siemens}}
+}
+
+\newglossaryentry{siemenspermetre}% Wh
+{
+    name={\protect\si{\protect\sfrac{\protect\siemens}{\protect\metre}}},
+    longform={siemens per metre},
+    capitalform={Siemens per Metre},
+    sort={siemenspermetre},
+    type={unit},
+    parent={siemens},
+    % 
+    description={The unit of conductivity~\conductivity is~\si
+    [per-mode=fraction,fraction-function=\sfrac]{\siemens\per\metre}. It
+    represents the property how well a material (conductor) conducts electric
+    current. It is reciprocal to the electrical resistivity~\resistivity and is
+    a derived SI unit from~\ensuremath{
+    % 
+    \si{\sfrac{\ampere\squared\second\cubed}{\kilogram~\metre\cubed}}
+    % 
+    }.
+    % 
+    },
+    % 
+    symbol={\protect\si{\protect\sfrac{\protect\siemens}{\protect\metre}}}
+}
+
+\newglossaryentry{volt}% V
+{
+    name={\protect\si{\protect\volt}},
+    longform={volt},
+    capitalform={Volt},
+    sort={volt},
+    type={unit},
+    % 
+    description={The unit of voltage~\voltage is called~\emph{Volt} representing
+    a potential difference and a electromotive force in electrical circuits. It
+    is a~\gls{si} derived unit measuring either the work that is done on one
+    ampere or an alternative formulation the force that take effect on an
+    electrical
+    % 
+    charge~\ensuremath{
+    % 
+    \si[per-mode=fraction,fraction-function=\sfrac]{\watt\per\ampere}
+    % 
+    = \si[per-mode=fraction,fraction-function=\sfrac]{\joule\per\coulomb} 
+    % 
+    =
+    \si[per-mode=fraction,fraction-function=\sfrac]{{\newton\metre}\per{\ampere\second}}}.
+    },
+    % 
+    symbol={\protect\si{\protect\volt}}
+}
+
+\newglossaryentry{watt}% W
+{
+    name={\protect\si{\protect\watt}},
+    longform={watt},
+    capitalform={Watt},
+    sort={watt},
+    type={unit},
+    % 
+    description={The unit of power such as real power~\realpower is measured
+    in~\emph{Watt}. It is a~\gls{si} derived unit measuring the (electrical)
+    energy conversion per second (representing a degree of efficiency) that is
+    done~\ensuremath{
+    % 
+    \si[per-mode=fraction,fraction-function=\sfrac]{\joule\per\second} 
+    % 
+    = \si[per-mode=fraction,fraction-function=\sfrac]
+    {\sfrac{\kilogram~\metre\squared}{\second\cubed}}
+    % 
+    }. Note that it is used for the real power. For the complex power and
+    reactive power the units~\si{\volt\ampere} and~\si{\var} are used,
+    respectively.
+    % 
+    },
+    symbol={\protect\si{\protect\watt}}
+}
+
+\newglossaryentry{voltampere}% VA
+{
+    name={\protect\si{\protect\volt\protect\ampere}},
+    longform={volt ampere},
+    capitalform={Volt Ampere},
+    sort={va},
+    type={unit},
+    % 
+    description={ The unit of the complex and apparent power is Volt
+    Ampere~\glssymbol{voltampere}. For more information
+    see~\glscapitalform{watt}~\glssymbol{watt}.
+    % 
+    },
+    % 
+    symbol={\protect\si{\protect\volt\protect\ampere}}
+}
+
+\newglossaryentry{var}% VAr
+{
+    name={\protect\si{\protect\var}},
+    longform={volt ampere reactive},
+    capitalform={Volt Ampere Reactive},
+    sort={var},
+    type={unit},
+    % 
+    description={ The unit of the reactive power is Volt
+    Ampere reactive~\glssymbol{var}. For more information
+    see~\glscapitalform{watt}~\glssymbol{watt}.
+    % 
+    },
+    % 
+    symbol={\protect\si{\protect\var}}
+}
+
+\newglossaryentry{kv}% kV
+{
+    name={\protect\si{\protect\kV}},
+    longform={kilovolt},
+    capitalform={Kilovolt},
+    sort={kv},
+    parent={watt},
+    type={unit},
+    % 
+    description={One~\si{\kV} corresponds to $1\,000$~\si{\volt}.},
+    % 
+    symbol={\protect\si{\protect\kV}}
+}
+
+\newglossaryentry{kw}% kW
+{
+    name={\protect\si{\protect\kW}},
+    longform={kilowatt},
+    capitalform={Kilowatt},
+    sort={kw},
+    parent={watt},
+    type={unit},
+    % 
+    description={One~\si{\kW} corresponds to $1\,000$~\si{\watt}.},
+    % 
+    symbol={\protect\si{\protect\kW}}
+}
+
+\newglossaryentry{kwh}% kWh
+{
+    name={\protect\si{\protect\kWh}},
+    longform={kilowatt hour},
+    capitalform={Kilowatt Hour},
+    sort={kwh},
+    parent={watt},
+    type={unit},
+    % 
+    description={One~\si{\kWh} corresponds to~$3.6$~\si{\mega\joule}. It
+    basically describes that one~\gls{kw} is in average used over one hour of
+    time. Note that this is a non-\gls{si} unit and mainly used for electricity
+    bills.},
+    % 
+    symbol={\protect\si{\protect\kWh}}
+}
+
+\newglossaryentry{mw}% MW
+{
+    name={\protect\si{\protect\MW}},
+    longform={megawatt},
+    capitalform={Megawatt},
+    sort={mw},
+    parent={watt},
+    type={unit},
+    description={One~\si{\MW} corresponds to $1\,000\,000$~\gls{watt}.},
+    symbol={\protect\si{\protect\MW}}
+}
+
+\newglossaryentry{mwh}% mWh
+{
+    name={\protect\si{\protect\mega\protect\watt\protect\hour}},
+    longform={megawatt hour},
+    capitalform={Megawatt Hour},
+    sort={mwh},
+    parent={watt},
+    type={unit},
+    description={One~\si{\mega\watt} corresponds to $10^{6}$~\si{\watt}.},
+    symbol={\protect\si{\protect\mega\protect\watt\protect\hour}}
+}
+
+\newglossaryentry{miwh}% mWh
+{
+    name={\protect\si{\protect\milli\protect\watt\protect\hour}},
+    longform={milliwatt hour},
+    capitalform={Milliwatt Hour},
+    sort={miwh},
+    parent={watt},
+    type={unit},
+    description={One~\si{\milli\watt} corresponds to $10^{-3}$~\si{\watt} and
+    thus, a~\si{\protect\milli\protect\watt\protect\hour} corresponds to
+    3.6~\gls{joule}.},
+    symbol={\protect\si{\protect\milli\protect\watt\protect\hour}}
+}
+
+\newglossaryentry{hertz}%
+{
+    name={\protect\si{\protect\hertz}},
+    longform={hertz},
+    capitalform={Hertz},
+    sort={hertz},
+    type={unit},
+    description={One~\si{\hertz} corresponds to one~$\si{\second}^{-1}$. It
+    is used in terms of frequencies.},
+    symbol={\protect\si{\protect\hertz}}
+}
+
+% \newglossaryentry{boltzmannKonstante}% mWh
+% {
+%     name={\ensuremath{k_B}},
+%     longform={Boltzmann-Constant},
+%     capitalform={Boltzmann-Constant},
+%     sort={boltzmann},
+%     type={unit},
+%     description={The boltzmann constant is a exact physical constant
+%     with~$k_B = 1.380\, 649\cdot 10^{-23}\si{\joule\per\kelvin}$ and comes from
+%     the statistical mechanic.
+%     }, 
+%     symbol={\ensuremath{k_B}}
+% }
+% 
+
+
+% Units
+\glsadd{ampere}
+\glsadd{coulomb}
+\glsadd{hertz}
+\glsadd{joule}
+\glsadd{kv}
+\glsadd{kw}
+\glsadd{kwh}
+\glsadd{miwh}
+\glsadd{mw}
+\glsadd{mwh}
+\glsadd{ohm}
+\glsadd{ohmmetre}
+\glsadd{pi}
+\glsadd{si}
+\glsadd{siemens}
+\glsadd{siemenspermetre}
+\glsadd{twopi}
+\glsadd{var}
+\glsadd{volt}
+\glsadd{voltampere}
+\glsadd{watt}
