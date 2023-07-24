@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Problem Environment
+
+\makeatletter
+% \renewcommand\arraystretch{1.5}
+\newenvironment{problem}[2][]{%
+  \def\problem@arg{#1}%
+  \def\problem@framed{framed}%
+  \def\problem@lined{lined}%
+  \def\problem@doublelined{doublelined}%
+  \ifx\problem@arg\@empty%
+    \def\problem@hline{}%
+  \else%
+    \ifx\problem@arg\problem@doublelined%
+      \def\problem@hline{\hline\hline}%
+    \else%
+      \def\problem@hline{\hline}%
+      \def\problem@hrule{\hrule}%
+    \fi%
+  \fi%
+  \ifx\problem@arg\problem@framed%
+    \def\problem@table{\centering\tabularx{1\columnwidth}{|>
+{\itshape}rX|c}}%
+    \def\problem@title{\multicolumn{2}{|l|}{%
+        \raisebox{-\fboxsep}{\textsc{#2}}%
+      }}%
+  \else
+    \def\problem@table{\tabularx{1\columnwidth}{>{\bfseries}rXc}}%
+    \def\problem@title{\multicolumn{2}{l}{%
+        \raisebox{-\fboxsep}{\textsc{\large #2}}%
+      }}%
+  \fi%
+  \bigskip\par\noindent%
+  \renewcommand{\arraystretch}{1.2}%
+    \problem@table%
+      \problem@hline%
+      \problem@title\\[2\fboxsep]\hspace*{0.5cm}%%
+}{%
+      % \\\problem@hline%
+    \endtabularx%
+    \problem@hrule
+  \medskip\par%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Diff Environment
+\makeatletter
+\providecommand*{\diff}%
+{%
+  \@ifnextchar^{\DIfF}{\DIfF^{}}
+}%
+\def\DIfF^#1{%
+  \mathop{\mathrm{\mathstrut d}}%
+  \nolimits^{#1}\gobblespace%
+}
+\def\gobblespace{%
+  \futurelet\diffarg\opspace%
+}
+\def\opspace{%
+  \let\DiffSpace\!%
+  \ifx\diffarg(%
+    \let\DiffSpace\relax
+  \else
+    \ifx\diffarg[%
+      \let\DiffSpace\relax
+    \else
+      \ifx\diffarg\{%
+        \let\DiffSpace\relax
+      \fi\fi\fi\DiffSpace%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Properties Environment
+% \makeatletter
+% \newenvironment{property}[1][]{%
+% \textbf{Properties.}
+% \begin{enumerate}
+% }{%
+% \end{enumerate}
+% }%
+% \makeatother
