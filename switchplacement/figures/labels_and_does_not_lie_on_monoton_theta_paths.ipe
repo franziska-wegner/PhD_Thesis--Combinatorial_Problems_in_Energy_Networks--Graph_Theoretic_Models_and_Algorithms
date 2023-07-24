@@ -1,0 +1,819 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70206" creator="Ipe 7.2.11">
+<info created="D:20150826150040" modified="D:20191008082334" title="DTP Labels to Colored DAG" author="Franziska Wegner"/>
+<preamble>\usepackage{ marvosym } %\Lightning
+\usepackage{ wasysym } %\lightning</preamble>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/ptarc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fptarc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+0.5 0 0 0.5 0 0 e
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+-0.5 -0.5 m
+0.5 -0.5 l
+0.5 0.5 l
+-0.5 0.5 l
+h
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<dashstyle name="dense dashed" value="[2 1] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="small" value="\small"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<ipestyle name="scrartcl">
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="20%" value="0.2"/>
+<opacity name="40%" value="0.4"/>
+<opacity name="60%" value="0.6"/>
+<opacity name="70%" value="0.7"/>
+<opacity name="80%" value="0.8"/>
+<opacity name="90%" value="0.9"/>
+<preamble>
+\makeatletter
+\leftmargini 1.5em
+\leftmargin \leftmargini
+\leftmarginii  1.2em
+\leftmarginiii 1em
+\def\@listI{\leftmargin\leftmargini
+            \parsep \z@
+	    \partopsep 3pt
+	    \topsep \z@
+            \itemsep \z@}
+\@listI
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \itemsep   \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \partopsep \z@
+              \itemsep   \topsep}
+\makeatother
+</preamble>
+<layout paper="237 85" origin="0 0" frame="237 85" skip="64"/>
+<tiling name="falling" angle="-60" step="12" width="3"/>
+<tiling name="rising" angle="30" step="12" width="3"/>
+</ipestyle>
+<ipestyle name="more_options">
+<symbol name="yes">
+<path matrix="1.2 0 0 1.2 -729.132 413.85" stroke="KITpalegreen" fill="KITpalegreen70">
+694.897 289.769 m
+703.196 286.16
+711.712 278.511 s
+725.01 293.598
+734.277 297.783 s
+732.953 301.498
+733.594 309.185 s
+724.412 304.231
+715.146 292.915
+711.004 286.04 s
+705.588 294.938 l
+h
+</path>
+</symbol>
+<symbol name="no">
+<path matrix="0.512 0 0 0.512 7.908 711.519" stroke="KITred" fill="KITred70">
+368.74 80.9727 m
+350.572 58.9801 l
+330.97 71.2513 l
+354.457 99.152 l
+332.742 125.648 l
+347.404 138.078 l
+368.6 114 l
+388.998 138.238 l
+403.501 125.01 l
+382.783 99.193 l
+406.43 71.2513 l
+386.111 58.6614 l
+h
+</path>
+</symbol>
+<dashstyle name="dense dashed" value="[2] 0"/>
+<dashstyle name="dense dotted" value="[1] 0"/>
+<gridsize name="2 pts" value="2"/>
+<gridsize name="1 pt" value="1"/>
+<anglesize name="72 deg" value="72"/>
+<anglesize name="36 deg" value="36"/>
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="20%" value="0.2"/>
+<opacity name="40%" value="0.4"/>
+<opacity name="60%" value="0.6"/>
+<opacity name="70%" value="0.7"/>
+<opacity name="80%" value="0.8"/>
+<opacity name="90%" value="0.9"/>
+</ipestyle>
+<ipestyle name="StandardPreamble">
+<preamble>
+  \input{/Users/fwegner/Documents/work/dissertation/03-Document/ipe-latex-preamble.tex}
+</preamble>
+</ipestyle>
+<ipestyle name="diss_basics">
+<dashstyle name="dense dashed" value="[8 3] 0"/>
+<dashstyle name="dense dotted" value="[0.5 0.5] 0"/>
+<dashstyle name="medium dotted" value="[1 1.5] 0"/>
+<dashstyle name="long dashed" value="[12] 0"/>
+<dashstyle name="long dash dotted" value="[12 6 1 6] 0"/>
+<gridsize name="2 pts" value="2"/>
+<gridsize name="3 pts" value="3"/>
+<gridsize name="1 pts" value="1"/>
+<opacity name="10 percent" value="0.1"/>
+<opacity name="20 percent" value="0.2"/>
+<opacity name="30 percent" value="0.3"/>
+<opacity name="40 percent" value="0.4"/>
+<opacity name="50 percent" value="0.5"/>
+<opacity name="60 percent" value="0.6"/>
+<opacity name="70 percent" value="0.7"/>
+<opacity name="80 percent" value="0.8"/>
+<opacity name="90 percent" value="0.9"/>
+</ipestyle>
+<ipestyle name="Dissertation-One-Column">
+<preamble>
+\makeatletter
+\leftmargini 1.5em
+\leftmargin \leftmargini
+\leftmarginii  1.2em
+\leftmarginiii 1em
+\def\@listI{\leftmargin\leftmargini
+            \parsep \z@
+	    \partopsep 3pt
+	    \topsep \z@
+            \itemsep \z@}
+\@listI
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \itemsep   \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    \z@
+              \parsep    \z@
+              \partopsep \z@
+              \itemsep   \topsep}
+\makeatother
+</preamble>
+<layout paper="374 100" origin="0 0" frame="374 100" skip="64" crop="no"/>
+<tiling name="falling" angle="-60" step="12" width="3"/>
+<tiling name="rising" angle="30" step="12" width="3"/>
+</ipestyle>
+<ipestyle name="KIT-colors">
+<color name="KITpalegreen" value="0.509 0.745 0.235"/>
+<color name="KITpalegreen70" value="0.656 0.821 0.464"/>
+<color name="KITred" value="0.627 0.117 0.156"/>
+<color name="KITred70" value="0.739 0.382 0.409"/>
+<color name="KITgreen" value="0 0.588 0.509"/>
+<color name="KITgreen70" value="0.3 0.711 0.656"/>
+<color name="KITgreen50" value="0.5 0.794 0.754"/>
+<color name="KITgreen30" value="0.7 0.876 0.852"/>
+<color name="KITgreen15" value="0.85 0.938 0.926"/>
+<color name="KITblue" value="0.274 0.392 0.666"/>
+<color name="KITblue70" value="0.492 0.574 0.766"/>
+<color name="KITblue50" value="0.637 0.696 0.833"/>
+<color name="KITblue30" value="0.782 0.817 0.9"/>
+<color name="KITblue15" value="0.891 0.908 0.95"/>
+<color name="KITblack" value="0"/>
+<color name="KITblack70" value="0.3"/>
+<color name="KITblack50" value="0.5"/>
+<color name="KITblack30" value="0.7"/>
+<color name="KITblack15" value="0.85"/>
+<color name="KITpalegreen50" value="0.754 0.872 0.617"/>
+<color name="KITpalegreen30" value="0.852 0.923 0.77"/>
+<color name="KITpalegreen15" value="0.926 0.961 0.885"/>
+<color name="KITyellow" value="0.98 0.901 0.078"/>
+<color name="KITyellow70" value="0.986 0.931 0.354"/>
+<color name="KITyellow50" value="0.99 0.95 0.539"/>
+<color name="KITyellow30" value="0.994 0.97 0.723"/>
+<color name="KITyellow15" value="0.997 0.985 0.861"/>
+<color name="KITorange" value="0.862 0.627 0.117"/>
+<color name="KITorange70" value="0.903 0.739 0.382"/>
+<color name="KITorange50" value="0.931 0.813 0.558"/>
+<color name="KITorange30" value="0.958 0.888 0.735"/>
+<color name="KITorange15" value="0.979 0.944 0.867"/>
+<color name="KITbrown" value="0.627 0.509 0.196"/>
+<color name="KITbrown70" value="0.739 0.656 0.437"/>
+<color name="KITbrown50" value="0.813 0.754 0.598"/>
+<color name="KITbrown30" value="0.888 0.852 0.758"/>
+<color name="KITbrown15" value="0.944 0.926 0.879"/>
+<color name="KITred50" value="0.813 0.558 0.578"/>
+<color name="KITred30" value="0.888 0.735 0.747"/>
+<color name="KITred15" value="0.944 0.867 0.873"/>
+<color name="KITlilac" value="0.627 0 0.47"/>
+<color name="KITlilac70" value="0.739 0.3 0.629"/>
+<color name="KITlilac50" value="0.813 0.5 0.735"/>
+<color name="KITlilac30" value="0.888 0.7 0.841"/>
+<color name="KITlilac15" value="0.944 0.85 0.92"/>
+<color name="KITcyanblue" value="0.313 0.666 0.901"/>
+<color name="KITcyanblue70" value="0.519 0.766 0.931"/>
+<color name="KITcyanblue50" value="0.656 0.833 0.95"/>
+<color name="KITcyanblue30" value="0.794 0.9 0.97"/>
+<color name="KITcyanblue15" value="0.897 0.95 0.985"/>
+<color name="KITseablue" value="0.196 0.313 0.549"/>
+<color name="KITseablue70" value="0.437 0.519 0.684"/>
+<color name="KITseablue50" value="0.598 0.656 0.774"/>
+<color name="KITseablue30" value="0.758 0.794 0.864"/>
+<color name="KITseablue15" value="0.879 0.897 0.932"/>
+<color name="kit100black" value="0"/>
+<color name="HELMHOLTZblue" value="0.043 0.362 0.618"/>
+<color name="HELMHOLTZgreen" value="0.549 0.7 0.19"/>
+<color name="MTSF" value="0.509 0.745 0.235"/>
+<color name="MPF" value="0.437 0.519 0.684"/>
+<color name="MF" value="0.739 0.3 0.629"/>
+<color name="SUSCEPTANCE" value="0.862 0.627 0.117"/>
+<color name="SWITCHES" value="0 0.588 0.509"/>
+<color name="THETA" value="0.313 0.666 0.901"/>
+<color name="CAPACITIES" value="0.5"/>
+<color name="CHANGES" value="0.997 0.985 0.861"/>
+<color name="FRAMEblack15" value="0.95"/>
+<color name="CountryText" value="0.85"/>
+<color name="DTP" value="0.627 0.117 0.156"/>
+<color name="GRIDtextCity" value="0"/>
+<color name="GRIDtextLand" value="0.3"/>
+<color name="GRIDtextDenmark" value="1"/>
+<color name="GRIDtextKarlsruhe" value="0.627 0.117 0.156"/>
+<color name="GRIDtextTransnetBW" value="0.926 0.961 0.885"/>
+<color name="GRIDtextAmprion" value="0.926 0.961 0.885"/>
+<color name="GRIDtextTennet" value="0.85"/>
+<color name="GRIDtext50Herz" value="0.926 0.961 0.885"/>
+<color name="GRIDtextSea" value="1"/>
+<color name="GRIDSea" value="0.437 0.519 0.684"/>
+<color name="GRIDland" value="1"/>
+<color name="GRIDdenmark" value="0.85"/>
+<color name="GRIDtransnetbw" value="0.509 0.745 0.235"/>
+<color name="GRIDamprion" value="0.656 0.821 0.464"/>
+<color name="GRID50hertz" value="0.754 0.872 0.617"/>
+<color name="GRIDlandBorder" value="0.3"/>
+<color name="GRIDGermanyBorder" value="0.3"/>
+<color name="GRIDcableOffshore" value="0.739 0.3 0.629"/>
+<color name="GRIDwindturbine" value="0.879 0.897 0.932"/>
+<color name="GRIDtennet" value="0.852 0.923 0.77"/>
+<color name="GRIDcableOnshorePlanned" value="0.5"/>
+<color name="GRIDcableOnshore330KV" value="0.3 0.711 0.656"/>
+<color name="GRIDcableOnshore220KV" value="0.739 0.656 0.437"/>
+<color name="GRIDcableOnshore110KV" value="0"/>
+<color name="PHYSICAL" value="0.437 0.519 0.684"/>
+<color name="KVL" value="0.437 0.519 0.684"/>
+<color name="FEASIBLE" value="0.739 0.3 0.629"/>
+<color name="KCL" value="0.739 0.3 0.629"/>
+<color name="OTS" value="0"/>
+<color name="ROP" value="0"/>
+<color name="MFF" value="0"/>
+<color name="OPF" value="0"/>
+</ipestyle>
+<page>
+<layer name="graph"/>
+<layer name="labels"/>
+<layer name="arcs"/>
+<layer name="helper"/>
+<layer name="vertex_names"/>
+<view layers="graph labels arcs vertex_names" active="labels"/>
+<path layer="labels" stroke="KITblack" arrow="normal/tiny">
+152.504 27.2699 m
+165.849 27.3485
+164.474 53.0799
+124 75
+108 75 c
+</path>
+<path stroke="KITblack" arrow="normal/tiny">
+36.6698 27.5771 m
+19.7367 29.9674
+39 55
+62 83
+84.3693 82.9827 c
+</path>
+<path matrix="0.96039 0 0 1 2.30779 0" stroke="KITblack" arrow="normal/tiny">
+58.2623 27.6606 m
+135.434 27.5628 l
+</path>
+<path stroke="KITblack50" dash="dashed" rarrow="normal/tiny">
+59 8 m
+72 8
+90 18
+133 18 c
+</path>
+<path stroke="KITblack50" dash="dashed" rarrow="normal/tiny">
+108 95 m
+130.667 96.3953
+182.135 72.6178
+182 16
+148 15 c
+</path>
+<path matrix="1.3734 0 0 1.13846 43.5276 -85.2376" stroke="KITred" fill="KITred15">
+64.9133 102.721 m
+64.9133 95.0663 l
+81.5636 95.0663 l
+81.5636 102.721 l
+h
+</path>
+<path matrix="1.3734 0 0 1.14399 43.5276 -95.7847" stroke="KITred" fill="KITred15">
+64.9133 102.721 m
+64.9133 95.0663 l
+81.5636 95.0663 l
+81.5636 102.721 l
+h
+</path>
+<path layer="helper" matrix="1 0 0 1 -200.127 -19.8037" stroke="KITblack">
+220 64 m
+220 32 l
+</path>
+<path matrix="1 0 0 1 -7.3499 -60.0001" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -7.418 -21.6434" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -7.418 -30.6434" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -7.3499 -51.0001" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 40.2434 -53.8846" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 40.2434 -44.8846" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -14.0002 -19.8273" stroke="KITblack">
+220 64 m
+220 32 l
+</path>
+<path matrix="1 0 0 1 -16.6503 9" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 16.6503 -0.00005" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 16.6501 8.9999" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -14.0001 19.8274" stroke="KITblack">
+220 64 m
+220 32 l
+</path>
+<path matrix="1 0 0 1 -32.0002 -19.8273" stroke="KITblack">
+220 64 m
+220 32 l
+</path>
+<path matrix="1 0 0 1 -32.0002 19.8274" stroke="KITblack">
+220 64 m
+220 32 l
+</path>
+<path matrix="1 0 0 1 6.94321 -53.8846" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 6.94321 -44.8846" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -40.7182 -21.6433" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -40.6501 -51" stroke="KITblack">
+112.267 70.667 m
+95.6165 70.667 l
+</path>
+<path matrix="1 0 0 1 -200.127 19.851" stroke="KITblack">
+220 64 m
+220 32 l
+</path>
+<text layer="labels" matrix="0.930138 0 0 1.31646 -193.274 -397.428" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="13.41" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(a)}</text>
+<text matrix="0.930138 0 0 1.31646 -14.3177 -397.428" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="14.147" height="6.726" depth="2.24" valign="baseline" size="small">\textbf{(b)}</text>
+<path stroke="KITblack50" dash="dashed" arrow="normal/tiny">
+84.596 86.9165 m
+56 88
+15.3248 39.518
+15 18
+36 18 c
+</path>
+<path stroke="KITblack" arrow="normal/tiny">
+107 85 m
+121 85
+165.926 73.2738
+175 20
+156 19 c
+</path>
+<path stroke="KITblack50" pen="fat" cap="1">
+48 37 m
+96.1135 66.1128 l
+</path>
+<path stroke="KITblack50" pen="fat" cap="1">
+96.1135 66.1128 m
+144 37 l
+</path>
+<path matrix="1 0 0 1 0 -11" stroke="KITblack50" pen="fat" cap="1">
+144 48 m
+48 48 l
+</path>
+<use matrix="0.870324 0 0 0.870324 20.2631 -4.66283" name="mark/disk(sx)" pos="32 48" size="large" stroke="KITcyanblue30"/>
+<use matrix="0.870324 0 0 0.870324 116.263 -4.66283" name="mark/disk(sx)" pos="32 48" size="large" stroke="KITred30"/>
+<use matrix="0.870324 0 0 0.870324 68.2631 24.3372" name="mark/disk(sx)" pos="32 48" size="large" stroke="KITpalegreen30"/>
+<text matrix="0.870324 0 0 0.870324 47.2619 4.10286" transformations="translations" pos="56 40" stroke="KITblack30" type="label" width="16.936" height="5.98" depth="1.99" halign="center" valign="baseline" size="footnote">--/\textcolor{CAPACITIES}{10}</text>
+<text matrix="0.870324 0 0 0.870324 59.266 14.128" transformations="translations" pos="56 40" stroke="KITblack30" type="label" width="12.702" height="5.98" depth="1.99" halign="center" valign="baseline" size="footnote">--/\textcolor{CAPACITIES}{1}</text>
+<text matrix="0.870324 0 0 0.870324 34.5895 14.128" transformations="translations" pos="56 40" stroke="KITblack30" type="label" width="16.936" height="5.98" depth="1.99" halign="center" valign="baseline" size="footnote">--/\textcolor{CAPACITIES}{10}</text>
+<text matrix="0.870324 0 0 0.870324 20.5895 19.1486" transformations="translations" pos="56 40" stroke="KITblack30" type="label" width="4.234" height="5.136" depth="0" halign="center" valign="baseline" size="footnote">\textcolor{SUSCEPTANCE}{5}</text>
+<text matrix="0.870324 0 0 0.870324 72.5798 19.1486" transformations="translations" pos="56 40" stroke="KITblack30" type="label" width="4.234" height="5.136" depth="0" halign="center" valign="baseline" size="footnote">\textcolor{SUSCEPTANCE}{5}</text>
+<text matrix="0.870324 0 0 0.870324 47.2619 -5.00044" transformations="translations" pos="56 40" stroke="KITblack30" type="label" width="4.234" height="5.136" depth="0" halign="center" valign="baseline" size="footnote">\textcolor{SUSCEPTANCE}{1}</text>
+<text matrix="0.870324 0 0 0.870324 135.222 -26.2748" transformations="translations" pos="10.2163 50.1232" stroke="KITred" type="label" width="18.127" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">\nicefrac{2}{5},1</text>
+<text matrix="0.870324 0 0 0.870324 135.222 -16.2748" transformations="translations" pos="10.2163 50.1232" stroke="KITred" type="label" width="16.466" height="5.136" depth="1.55" halign="center" valign="center" size="footnote" style="math">1,10</text>
+<text matrix="-1.82551 0 0 1.0054 315.377 -11.5161" transformations="translations" pos="138.252 15.5581" stroke="KITred70" type="label" width="4.633" height="6.974" depth="0" valign="baseline" size="10">\Lightning</text>
+<text matrix="-1.82551 0 0 1.0054 280.499 -1.51609" transformations="translations" pos="138.252 15.5581" stroke="KITred70" type="label" width="4.633" height="6.974" depth="0" valign="baseline" size="10">\Lightning</text>
+<text matrix="-1.82551 0 0 1.0054 364.26 76.0287" transformations="translations" pos="138.252 15.5581" stroke="KITred70" type="label" width="4.633" height="6.974" depth="0" valign="baseline" size="10">\Lightning</text>
+<text matrix="0.870324 0 0 0.870324 13.3734 1.06504" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="4.67" height="4.289" depth="0" halign="center" valign="center" style="math">\source</text>
+<text matrix="0.870324 0 0 0.870324 124.294 1.06503" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="5.187" height="4.289" depth="0" halign="center" valign="center" style="math">\vertex</text>
+<text matrix="0.870324 0 0 0.870324 68.8786 22.1482" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="3.598" height="6.128" depth="0" halign="center" valign="center" style="math">\sink</text>
+<text matrix="0.870324 0 0 0.870324 302.079 29.8203" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="3.598" height="6.128" depth="0" halign="center" valign="center" style="math">\sink</text>
+<text matrix="0.870324 0 0 0.870324 165.518 28.9008" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="4.67" height="4.289" depth="0" halign="center" valign="center" style="math">\source</text>
+<text matrix="0.870324 0 0 0.870324 213.461 29.6483" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="9.298" height="4.294" depth="1.49" halign="center" valign="center" style="math">\vertex_1</text>
+<path matrix="1 0 0 1 0 -4.88213" stroke="KITblue50" pen="ultrafat" arrow="normal/tiny" opacity="40%">
+207.08 80.6583 m
+259.612 40.3998
+264.864 41.7813
+280.681 74.7108
+297.351 81.5204
+314.079 82.4001 c
+</path>
+<path matrix="1 0 0 1 0 -4.88213" stroke="KITgreen50" pen="ultrafat" arrow="normal/tiny" opacity="40%">
+207.726 82.512 m
+242.754 76.8823
+273.45 80.153
+275.944 76.9276
+264.552 41.7874
+267.307 36.4739
+314.892 79.9229 c
+</path>
+<path matrix="1.02256 0 0 1.02256 -5.94621 -5.63171" stroke="KITblack50" pen="fat" arrow="normal/tiny">
+263.589 33.2279 m
+278.709 74.2818 l
+</path>
+<path matrix="0.788992 0 0 1 40.5747 -4.88213" stroke="KITblack50" pen="fat" arrow="normal/tiny">
+306.03 84.1129 m
+347.363 84.1129 l
+</path>
+<path matrix="0.781685 0 0 1 33.7871 -4.88213" stroke="KITblack50" pen="fat" arrow="normal/tiny">
+264.697 84.1129 m
+306.03 84.1129 l
+</path>
+<path matrix="0.778623 0 0 1 25.4475 -4.88213" stroke="KITblack50" pen="fat" arrow="normal/tiny">
+223.363 84.1129 m
+264.697 84.1129 l
+</path>
+<path matrix="1.00786 0 0 1.00786 -2.07295 -5.14344" stroke="KITblack50" pen="fat" arrow="normal/tiny">
+263.589 33.2279 m
+315.897 77.5369 l
+</path>
+<path matrix="1.0029 0 0 1.0029 -0.578925 -5.12638" stroke="KITblack50" pen="fat" arrow="normal/tiny">
+199.363 84.1129 m
+256.084 39.1742 l
+</path>
+<path matrix="0.901032 0 0 0.901032 25.2453 -0.74651" stroke="KITblack70" fill="white" pen="heavier">
+9.43876 0 0 9.49962 264.523 32.2877 e
+</path>
+<text matrix="1.14475 0 0 1.63065 -92.3399 -473.358" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="16.596" height="5.137" depth="0.83" valign="baseline" size="footnote" style="math">\textcolor{THETA}{2\!\!-\!\!3\epsilon}</text>
+<text matrix="1.14475 0 0 1.63065 -135.156 -448.159" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="6.044" height="7.116" depth="3.12" valign="baseline" size="footnote" style="math">\textcolor{SUSCEPTANCE}{\frac{1}{3}}</text>
+<text matrix="1.14475 0 0 1.63065 -44.9649 -450.06" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="20.709" height="10.635" depth="3.96" valign="baseline" size="footnote" style="math">\textcolor{SUSCEPTANCE}{
+\frac{\frac{2}{3} - 4\epsilon}{1+6\epsilon}
+}</text>
+<text matrix="1.14475 0 0 1.63065 -129.978 -417.265" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{SUSCEPTANCE}{1}</text>
+<text matrix="1.14475 0 0 1.63065 -88.6451 -417.265" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{SUSCEPTANCE}{1}</text>
+<text matrix="1.14475 0 0 1.63065 -54.2528 -416.904" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="16.596" height="5.137" depth="0.83" valign="baseline" size="footnote" style="math">\textcolor{SUSCEPTANCE}{1\!\!-\!\!3\epsilon}</text>
+<text matrix="1.14475 0 0 1.63065 -81.3341 -441.086" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{SUSCEPTANCE}{1}</text>
+<text matrix="1.14475 0 0 1.63065 -124.777 -460.339" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="14.172" height="7.116" depth="3.12" valign="baseline" size="footnote" style="math">\textcolor{CAPACITIES}{
+\frac{2}{3}\!\!-\!\!\epsilon
+}</text>
+<text matrix="1.14475 0 0 1.63065 -87.8483 -451.284" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="7.657" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{CAPACITIES}{
+3\epsilon
+}</text>
+<text matrix="1.14475 0 0 1.63065 -61.2214 -462.089" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="16.596" height="5.137" depth="0.83" valign="baseline" size="footnote" style="math">\textcolor{CAPACITIES}{
+1\!\!-\!\!3\epsilon
+}</text>
+<text matrix="1.14475 0 0 1.63065 -129.978 -427.92" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{CAPACITIES}{1}</text>
+<text matrix="1.14475 0 0 1.63065 -88.6451 -428.193" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{CAPACITIES}{1}</text>
+<text matrix="1.14475 0 0 1.63065 -47.3118 -428.193" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{CAPACITIES}{1}</text>
+<path matrix="0.901032 0 0 0.901032 2.35258 50.1385" stroke="KITblack70" fill="white" pen="heavier">
+9.43876 0 0 9.49962 264.523 32.2877 e
+</path>
+<text matrix="1.14475 0 0 1.63065 -109.311 -423.195" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{THETA}{1}</text>
+<path matrix="0.901032 0 0 0.901032 -38.9802 50.1385" stroke="KITblack70" fill="white" pen="heavier">
+9.43876 0 0 9.49962 264.523 32.2877 e
+</path>
+<text matrix="1.14475 0 0 1.63065 -150.644 -423.195" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{THETA}{0}</text>
+<path matrix="0.901032 0 0 0.901032 43.6871 50.1385" stroke="KITblack70" fill="white" pen="heavier">
+9.43876 0 0 9.49962 264.523 32.2877 e
+</path>
+<path matrix="0.901032 0 0 0.901032 85.0201 50.1385" stroke="KITblack70" fill="white" pen="heavier">
+9.43876 0 0 9.49962 264.523 32.2877 e
+</path>
+<text matrix="1.14475 0 0 1.63065 -32.5653 -422.473" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="16.596" height="5.145" depth="0.82" valign="baseline" size="footnote" style="math">\textcolor{THETA}{3\!\!+\!\!3\epsilon}</text>
+<text matrix="1.14475 0 0 1.63065 -67.7288 -422.794" transformations="translations" pos="303.793 306.209" stroke="black" type="label" width="4.234" height="5.136" depth="0" valign="baseline" size="footnote" style="math">\textcolor{THETA}{2}</text>
+<text matrix="0.870324 0 0 0.870324 259.856 29.6483" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="9.298" height="4.294" depth="1.49" halign="center" valign="center" style="math">\vertex_2</text>
+<text matrix="0.870324 0 0 0.870324 221.501 -17.3113" transformations="translations" pos="31.2928 41.4187" stroke="black" type="label" width="9.298" height="4.294" depth="1.49" halign="center" valign="center" style="math">\vertex_3</text>
+<text matrix="0.870324 0 0 0.870324 340.706 31.3049" transformations="translations" pos="10.2163 50.1232" stroke="KITgreen" type="label" width="28.828" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">(4.5, 3\epsilon)</text>
+<text matrix="0.870324 0 0 0.870324 340.706 39.9096" transformations="translations" pos="10.2163 50.1232" stroke="KITblue" type="label" width="22.242" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">(5,3\epsilon)</text>
+<group>
+<path matrix="1.05722 0 0 1.24581 -2.71973 -6.7876" stroke="KITcyanblue" fill="KITcyanblue15">
+36.7118 31.1105 m
+36.7118 24.1154 l
+58.3416 24.1154 l
+58.3416 31.1105 l
+h
+</path>
+<text matrix="0.870324 0 0 0.870324 38.6351 -16.0104" transformations="translations" pos="10.2163 50.1232" stroke="KITcyanblue" type="label" width="16.466" height="5.136" depth="1.55" halign="center" valign="center" size="footnote" style="math">0,\infty</text>
+</group>
+<group matrix="1 0 0 1 0 -5">
+<path matrix="1.3734 0 0 1.13846 -4.43093 -32.4284" stroke="KITpalegreen" fill="KITpalegreen15">
+64.9133 102.721 m
+64.9133 95.0663 l
+81.5636 95.0663 l
+81.5636 102.721 l
+h
+</path>
+<text matrix="0.870324 0 0 0.870324 87.2635 36.5344" transformations="translations" pos="10.2163 50.1232" stroke="KITpalegreen" type="label" width="18.127" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">\nicefrac{6}{5},1</text>
+</group>
+<group matrix="1 0 0 1 0 -3">
+<path matrix="1.06709 0 0 1.30808 -6.45059 -27.1596" stroke="KITpalegreen" fill="KITpalegreen15">
+85.4324 91.4889 m
+85.4324 84.8268 l
+106.862 84.8268 l
+106.862 91.4889 l
+h
+</path>
+<text matrix="0.870324 0 0 0.870324 87.256 44.5344" transformations="translations" pos="10.2163 50.1232" stroke="KITpalegreen" type="label" width="22.361" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">\nicefrac{1}{5},10</text>
+</group>
+<path matrix="1.19692 0 0 0.997582 -9.35883 -1.95258" stroke="KITcyanblue30" fill="KITcyanblue15">
+37.9739 23.9915 m
+37.9739 15.2346 l
+57.0793 15.2346 l
+57.0793 23.9915 l
+h
+</path>
+<text matrix="0.870324 0 0 0.870324 38.6351 -26.0104" transformations="translations" pos="10.2163 50.1232" stroke="KITcyanblue" type="label" width="22.361" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">\nicefrac{2}{5},10</text>
+<path matrix="1.57804 0 0 1.31443 -27.4725 -18.1669" stroke="KITcyanblue50" fill="KITcyanblue15">
+40.2811 22.944 m
+40.2811 16.2819 l
+54.7722 16.2819 l
+54.7722 22.944 l
+h
+</path>
+<text matrix="0.870324 0 0 0.870324 38.6351 -36.0104" transformations="translations" pos="10.2163 50.1232" stroke="KITcyanblue" type="label" width="18.127" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">\nicefrac{7}{5},1</text>
+<path matrix="1.337 0 0 1.30808 -32.2575 -20.1596" stroke="KITpalegreen30" fill="KITpalegreen15">
+87.4874 91.4889 m
+87.4874 84.8268 l
+104.591 84.8268 l
+104.591 91.4889 l
+h
+</path>
+<text matrix="0.870324 0 0 0.870324 87.2558 51.5344" transformations="translations" pos="10.2163 50.1232" stroke="KITpalegreen" type="label" width="18.127" height="5.98" depth="1.99" halign="center" valign="center" size="footnote" style="math">\nicefrac{3}{5},1</text>
+</page>
+</ipe>
