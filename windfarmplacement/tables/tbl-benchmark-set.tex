@@ -1,0 +1,139 @@
+\footnotesize
+\setlength{\tabcolsep}{0.2em}
+{\renewcommand{\arraystretch}{3}}% for the vertical padding
+\aboverulesep=0ex
+\belowrulesep=0ex
+\arrayrulecolor{ColorTableRule}
+\centering
+\begin{tabular}{
+m{2.7cm}
+|%!{\vrule width 1pt}
+>{\raggedleft}m{0.4cm}
+>{\raggedleft}m{0.4cm}
+|
+>{\raggedleft}m{0.4cm}
+>{\raggedleft}m{0.7cm}%
+|
+>{\raggedleft}m{0.4cm}
+>{\raggedleft}m{0.4cm}
+|
+>{\raggedleft}m{0.5cm}
+>{\raggedleft}m{0.5cm}
+|
+>{\raggedleft}m{0.5cm}
+% >{\raggedleft}m{0.4cm}
+c
+|
+c
+|
+c
+% >{\raggedleft}m{0.6cm}
+c
+|
+>{\raggedleft}m{0.7cm}
+c
+|
+c
+}
+\toprule
+	\multirow{2}{3cm}{Benchmark Set}
+		& \multicolumn{2}{c|}{$\glssymbol{shapeAspectRatio}$}
+		& \multicolumn{2}{c|}{$\fmagnitude{\glssymbol{generators}}$}
+		& \multicolumn{2}{c|}{$\fmagnitude{\glssymbol{consumers}}$}
+		& \multicolumn{2}{c|}{$\nicefrac{\fmagnitude{\glssymbol{generators}}}
+		{\fmagnitude{\glssymbol{consumers}}}$}
+		& \multicolumn{2}{c|}{$\glssymbol{capacityTightness}$}
+		& \multirow{2}{0.3cm}{\centering $\glssymbol{substationCapacityVariance}$}
+		& \multirow{2}{0.3cm}{\centering $\glssymbol{kNearestNeighbor}$} 
+		& \multirow{2}{0.3cm}{\centering $\glssymbol{edgeInclusionValue}$}
+		& \multirow{2}{0.5cm}{$\fmagnitude{\glssymbol{network}_i}$}
+		& run
+		& \multirow{2}{0.3cm}{$\glssymbol{temperature}_0$}
+	\\[-2pt]
+		& \tiny $\min$ & \tiny $\max$
+		& \tiny $\min$ & \tiny $\max$
+		& \tiny $\min$ & \tiny $\max$
+		& \tiny $\min$ & \tiny $\max$
+		& \tiny $\min$ & \tiny $\max$
+		& & &
+		&  & \tiny$\left[\frac{\si{\minute}}
+		{\glssymbol{network}_i}\right]$ &
+	\\\midrule
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\rowcolor{Table-Line-Marker}
+%-------------------------------------------------------------------------------
+	$\glssymbol{network}_1$ small/single
+		& 0.7 & 1
+		& 10 & 80
+		& 1 & 1
+		& -- & --
+		& -- & --
+		& --
+		& 6 & 1.1
+		& 500
+		& 2
+		& 0.01
+	\\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+	$\glssymbol{network}_2$ small
+		& 0.7 & 1
+		& 10 & 80
+		& 2 & 7
+		& 10 & 20
+		& 0.83 & 1
+		& 0
+		& 6 & 1.1
+		& 500
+		& 2
+		& 0.01
+	\\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\rowcolor{Table-Line-Marker}
+%-------------------------------------------------------------------------------
+	$\glssymbol{network}_3$ medium
+		& 0.5 & 1
+		& 80 & 200
+		& 4 & 10
+		& 10 & 20
+		& 0.83 & 1
+		& 0
+		& 6 & 1.1
+		& \SI{1000}{}
+		& 30
+		& 0.01
+	\\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+	$\glssymbol{network}_4$ large
+		& 0.4 & 1
+		& 200 & \SI{1000}{}
+		& 10 & 40
+		& 10 & 50
+		& 0.83 & 1
+		& 0
+		& 6 & 1.1
+		& \SI{1000}{}
+		& 30
+		& 0.01
+	\\\midrule
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\rowcolor{Table-Line-Marker}
+%-------------------------------------------------------------------------------
+	$\glssymbol{network}_5$ medium/complete
+		& 0.5 & 1
+		& 80 & 200
+		& 4 & 10
+		& 10 & 20
+		& 0.83 & 1
+		& 0
+		& $(\fmagnitude{\glssymbol{vertices}}-1)$ 
+		& --
+		& \SI{1000}{}
+		& 30
+		& 0.01
+	\\\bottomrule
+\end{tabular}
