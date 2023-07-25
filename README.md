@@ -7,7 +7,7 @@ _PhD Defense: December 12, 2019_<br/>
 _Published: September 29, 2020_
 
 ## Repository Content
-LaTeX source code and figures of the PhD thesis _"Combinatorial Problems in Energy Networks -- Graph-theoretic Models and Algorithms"_.
+LaTeX source code, figures, plots, presentations, and scripts of the PhD thesis _"Combinatorial Problems in Energy Networks -- Graph-theoretic Models and Algorithms"_.
 
 ## Author Information
 <a href="https://orcid.org/0000-0001-5146-4145">
