@@ -1,0 +1,119 @@
+% latex table generated in R 3.2.2 by xtable 1.8-0 package
+% Wed Jan 27 11:17:04 2016
+{\setlength{\tabcolsep}{0.3em}}
+{\renewcommand{\arraystretch}{1}}% for the vertical padding
+\small
+% \begin{tabular}{p{2cm}p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+\begin{tabular}{%
+>{\centering\arraybackslash}m{3cm}%
+>{\arraybackslash}m{2.5cm}%
+>{\centering\arraybackslash}m{2cm}%
+>{\arraybackslash}m{3.5cm}%
+% >{\centering\arraybackslash}m{2cm}%
+>{\arraybackslash}m{2cm}%
+% >{\centering\arraybackslash}m{0.56cm}%
+% >{\arraybackslash}m{2.3cm}%
+% >{\centering\arraybackslash}m{0.56cm}%
+% >{\arraybackslash}m{1.5cm}%
+% >{\centering\arraybackslash}m{0.56cm}%
+}%
+% 
+\toprule
+  \multirow[c]{1}*{Graph Structure}     & 
+  \multicolumn{1}{c}{Problem}           &
+  \multicolumn{1}{c}{Complexity}        & 
+  \multicolumn{1}{c}{Reduction Rules}   &
+  % \multicolumn{1}{c}{Algorithm}         &
+  \multicolumn{1}{c}{Cite}
+  \\
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% 
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% 
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+ \midrule  
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\rowcolor{Table-Line-Marker}
+% 
+    Arbitrary graphs 
+    & All-terminal reliability 
+    & \NP-hard 
+    & -- 
+    % & -- 
+    & \parencite{Pro83,Sat90}
+\\
+    Planar graphs 
+    & Reliability $R(\glssymbol{graph})$ 
+    & \NP-hard 
+    & -- 
+    % & -- 
+    & \parencite{Ver05} 
+\\
+\rowcolor{Table-Line-Marker}
+% 
+\rowcolor{Table-Line-Marker}
+    Series-parallel reducible graph 
+    & K-terminal reliability $R_K(\glssymbol{graph})$ 
+    & $\bigO(\fmagnitude{\glssymbol{edges}})$ 
+    & 
+    \begin{tabular}[c]{@{}l@{}}
+    Series, 
+    \\ parallel, and 
+    \\ degree-1
+    \end{tabular} 
+    % & -- 
+    & -- 
+\\
+    Series-parallel irreducible graph 
+    & K-terminal reliability $R_K(\glssymbol{graph})$ 
+    & linear time 
+    & 
+    \begin{tabular}[c]{@{}l@{}}
+        Polygone-to-chain, 
+        \\ series, 
+        \\ parallel, and 
+        \\ degree-1
+    \end{tabular} 
+    % & -- 
+    & \parencite{Sat85} 
+\\
+\rowcolor{Table-Line-Marker}
+    Basically series-parallel digraph 
+    & Source-to-K reliability
+    & $\bigO(\fmagnitude{\glssymbol{edges}})$ 
+    & -- 
+    % & -- 
+    & \parencite{Agr85} 
+\\
+    $K_2\times C_4$-free graph 
+    & Reliability $R(\glssymbol{graph})$ 
+    & linear time 
+    & -- 
+    % & -- 
+    & \parencite{Pol83,Pol86} 
+\\
+% 
+\rowcolor{Table-Line-Marker}
+    $\Delta-Y$-graph 
+    & Reliability~$R(\glssymbol{graph})$ 
+    & $\bigO(\fmagnitude{\glssymbol{vertices}}^2)$ 
+    & -- 
+    % & -- 
+    &  
+\\
+% 
+    $(K_5,K_{2,2,2})$-free graph 
+    & All-terminal reliability 
+    & $\bigO(\fmagnitude{\glssymbol{vertices}}\log
+    \fmagnitude{\glssymbol{vertices}})$
+    & -- 
+    % & -- 
+    & \parencite{Pol92} 
+\\
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   \bottomrule
+\end{tabular}%
