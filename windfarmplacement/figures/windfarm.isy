@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipestyle SYSTEM "ipe.dtd">
+<ipestyle name="windfarm">
+<symbol name="mark/turbine(sx)" transformations="translations">
+<group>
+<path fill="white">
+1.5 0 0 1.5 0 0 e
+</path>
+<path fill="sym-stroke">
+1.7 0 0 1.7 0 0 e
+1.5 0 0 1.5 0 0 e
+</path>
+<path fill="sym-stroke">
+-1.13 -1.27 m
+1.27 1.13 l
+1.13 1.27 l
+-1.27 -1.13 l
+h
+</path>
+<path fill="sym-stroke">
+-1.13 1.27 m
+1.27 -1.13 l
+1.13 -1.27 l
+-1.27 1.13 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/substation(sx)" transformations="translations">
+<path fill="orange">
+-1.7 -1.7 m
+1.7 -1.7 l
+1.7 1.7 l
+-1.7 1.7 l
+h
+</path>
+</symbol>
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="20%" value="0.2"/>
+<opacity name="40%" value="0.4"/>
+<opacity name="60%" value="0.6"/>
+<opacity name="70%" value="0.7"/>
+<opacity name="80%" value="0.8"/>
+<opacity name="90%" value="0.9"/>
+<layout paper="1738 732" origin="0 0" frame="1738 732" crop="no"/>
+</ipestyle>
