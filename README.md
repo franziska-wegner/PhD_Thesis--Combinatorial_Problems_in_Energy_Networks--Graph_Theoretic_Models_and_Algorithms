@@ -2,7 +2,9 @@
 
 # Combinatorial Problems in Energy Networks - _Graph Theoretic Models and Algorithms_
 _DOI: [10.5445/IR/1000120612][doi-phd-thesis]_<br/>
-_Publisher: Karlsruher Institut für Technologie (KIT)_
+_Publisher: Karlsruher Institut für Technologie (KIT)_<br/>
+_PhD Defense: December 12, 2019_<br/>
+_Published: September 29, 2020_
 
 ## Repository Content
 LaTeX source code and figures of the PhD thesis _"Combinatorial Problems in Energy Networks -- Graph-theoretic Models and Algorithms"_.
