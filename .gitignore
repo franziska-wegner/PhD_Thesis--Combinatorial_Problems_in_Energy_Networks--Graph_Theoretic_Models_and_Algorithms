@@ -1,4 +1,7 @@
+## OS generated files:
 *.DS_Store
+
+## SublimeText generated files:
 *.sublime-workspace
 
 ## Core latex/pdflatex auxiliary files:
@@ -25,7 +28,10 @@
 # *.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
-.pdf
+master.pdf
+master.ist
+master.modn
+master.unitn
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
