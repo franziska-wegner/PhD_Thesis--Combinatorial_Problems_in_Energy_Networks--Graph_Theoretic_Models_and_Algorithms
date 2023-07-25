@@ -1,0 +1,47 @@
+% latex table generated in R 3.2.2 by xtable 1.8-0 package
+% Fri Jan 26 22:50:42 2018
+\begin{table*}[t!]
+\centering
+\caption{The models~\pf, \mpf and~\mtsf from~\cref{sec:model} are
+    evaluated on the NESTA benchmark sets~\cite{Cof14b}.
+    The parameters~$n$, $m$ and~$|\switched_{\Pi}|$ represent the
+    number of vertices, edges and switched edges for a problem~$\Pi$,
+    respectively, and the optimal solutions are given in~$\opt_{\Pi}$.
+    % 
+    The~\myhl{KITyellow15}{yellow} rows mark the interesting cases
+    where~$\opt_{\mpf}$ is smaller than the~$\opt_{\mtsf}$.
+    % 
+    The highlighted cases are where the~$\opt_\mtsf$ is smaller than
+    $\opt_\mf$ (\myhl{KITblue15}{blue}), $\opt_\maxst$
+    (see~\cref{sec:approximation_algorithm_on_cacti}) and~$\opt_\mpf$ are
+    equal to~$\opt_\mtsf$ (\myhl{KITblack!10}{gray}), the maximum possible
+    generation is greater than the~$\opt_\mf$ (\myhl{KITred15}{red})
+    and~$|\switched_\maxst|\geq|\switched_\mtsf|$ (\myhl{KITgreen15}{green})
+    (all cases see~\cref{tbl:MTSF_MPF_PF_MF_long}).}
+\label{tbl:MTSF_MPF_PF_MF_short}
+{\
+\small
+\setlength{\tabcolsep}{4pt}
+% \setlength\minrowclearance{3pt}
+\begin{tabular}{lrrrrrrrrrr}
+  \toprule
+  NESTA Case &\hspace{-3mm} $n$ &\hspace{-3mm} $m$ &\hspace{-3mm} $|\switched_{\mtsf}|$ &\hspace{-3mm} $|\switched_{\maxst}|$ &\hspace{-3mm} $\opt_{\pf}$ &\hspace{-3mm} $\opt_{\mpf}$ &\hspace{-3mm} $\opt_{\mtsf}$ &\hspace{-3mm} $\opt_{\maxst}$ &\hspace{-3mm} $\opt_{\mf}$ &\hspace{-3mm} $\max$ Gen \\
+ \midrule
+\rowcolor{KITyellow15}\tablecase{nestacase3lmbd} &   3 &   3 & 1 & 1 &      315.00 &      353.53 &  4\,000.00 & \cellcolor{KITblack!10} 4\,000.00 &  4\,000.00 &  4\,000.00 \\ 
+  \rowcolor{KITyellow15}\tablecase{nestacase6ww} &   6 &  11 & 6 & 6 &      210.00 &      332.80 & \cellcolor{KITcyanblue15}     360.00 & \cellcolor{KITblack!10}     360.00 & \cellcolor{KITcyanblue15}     470.00 & \cellcolor{KITred15}     530.00 \\ 
+  \tablecase{nestacase9wscc} &   9 &   9 & 6 & 2 &      315.00 & \cellcolor{KITblack!10}     770.00 &      770.00 & \cellcolor{KITblack!10}     770.00 &      770.00 & \cellcolor{KITred15}     820.00 \\ 
+  \tablecase{nestacase24ieeerts} &  24 &  38 & 28 & 18 &  2\,850.00 & \cellcolor{KITblack!10} 3\,405.00 &  3\,405.00 & \cellcolor{KITblack!10} 3\,405.00 &  3\,405.00 &  3\,405.00 \\ 
+  \rowcolor{KITyellow15}\tablecase{nestacase29edin} &  29 &  99 & \cellcolor{KITgreen15}55 & \cellcolor{KITgreen15}79 & 56\,325.90 & 81\,597.50 & \cellcolor{KITcyanblue15}81\,603.40 & 76\,158.80 & \cellcolor{KITcyanblue15}82\,384.80 & 82\,384.80 \\ 
+  \tablecase{nestacase30as} &  30 &  41 & 32 & 15 &      283.40 & \cellcolor{KITblack!10}     435.00 &      435.00 & \cellcolor{KITblack!10}     435.00 &      435.00 &      435.00 \\ 
+  \tablecase{nestacase39epri} &  39 &  46 & 35 & 17 &  6\,254.23 & \cellcolor{KITblack!10} 7\,227.00 &  7\,227.00 & \cellcolor{KITblack!10} 7\,227.00 &  7\,227.00 & \cellcolor{KITred15} 7\,367.00 \\ 
+  \tablecase{nestacase57ieee} &  57 &  80 & 75 & 40 &  1\,250.80 & \cellcolor{KITblack!10} 1\,377.00 &  1\,377.00 & \cellcolor{KITblack!10} 1\,377.00 &  1\,377.00 &  1\,377.00 \\ 
+  \tablecase{nestacase73ieeerts} &  73 & 120 & 87 & 56 &  8\,550.00 & \cellcolor{KITblack!10}10\,215.00 & 10\,215.00 & \cellcolor{KITblack!10}10\,215.00 & 10\,215.00 & 10\,215.00 \\ 
+  \tablecase{nestacase189edin} & 189 & 206 & 71 & 62 &  1\,367.83 & \cellcolor{KITblack!10} 2\,987.00 &  2\,987.00 & \cellcolor{KITblack!10} 2\,987.00 &  2\,987.00 & \cellcolor{KITred15} 3\,012.00 \\ 
+  \tablecase{nestacase300ieee} & 300 & 411 & 290 & 185 & 23\,527.20 & \cellcolor{KITblack!10}31\,568.00 & \cellcolor{KITcyanblue15}31\,568.00 & 30\,504.00 & \cellcolor{KITcyanblue15}31\,735.00 & \cellcolor{KITred15}32\,492.00 \\ 
+  \tablecase{nestacase2736spmp} & 2736 & 3269 & 2518 & 1307 & 18\,074.50 & \cellcolor{KITblack!10}20\,246.70 & 20\,246.70 & 20\,010.70 & 20\,246.70 & 20\,246.70 \\ 
+  \tablecase{nestacase2737sopmp} & 2737 & 3269 & 2536 & 1305 & 11\,267.20 & \cellcolor{KITblack!10}14\,677.90 & 14\,677.90 & 14\,537.20 & 14\,677.90 & 14\,677.90 \\ 
+  \tablecase{nestacase3120spmp} & 3120 & 3693 & 2793 & 1513 & 21\,181.50 & \cellcolor{KITblack!10}25\,406.00 & 25\,406.00 & 24\,856.50 & 25\,406.00 & 25\,406.00 \\ 
+   \bottomrule
+\end{tabular}
+}
+\end{table*}
