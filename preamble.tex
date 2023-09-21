@@ -1,6 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Packages
 
+\usepackage{silence}
+% \WarningFilter{scrreprt}{Usage of package `fancyhdr'}
+% \WarningFilter{scrreprt}{Usage of package `titlesec'}
+
 \usepackage{scrhack}
 
 \usepackage[ngerman,main=american]{babel}
@@ -15,7 +19,10 @@
 
 % SI units
 \usepackage{eurosym}
-\usepackage[binary-units=true]{siunitx}
+% \usepackage[binary-units=true]{siunitx}
+% \usepackage[mediumspace,mediumqspace,squaren,binary]{SIunits}.
+\usepackage{siunitx}
+
 \sisetup{
     % quotient-mode = fraction,
     per-mode = fraction,
@@ -31,12 +38,11 @@
     group-minimum-digits = 3,
 }
 % \sisetup{}
-\DeclareSIUnit \var { \si{\volt}\si{\ampere}r } %volt-ampere reactive - idle
-% power
+\DeclareSIUnit \var { \si{\volt}\si{\ampere}r } % volt-ampere reactive - idle power
 \DeclareSIUnit \EUR { \text{\euro} } %euro as unit
 \DeclareSIUnit\year{a}
 
-\usepackage{xargs}       % Use more than one optional parameter in a new commands
+\usepackage{xargs} % Use more than one optional parameter in a new commands
 
 \usepackage{complexity}
 
@@ -60,22 +66,19 @@
 }
 \usepackage{colortbl}
 \usepackage{pdflscape}
-% \usepackage{lscape}
-
-% Quotes
-\usepackage{csquotes}
+\usepackage{lscape}
 
 \usepackage{timetravel}
 \setcounter{equation}{70}
-\setCounters{chapter,equation,section,figure}%algocfproc,theorem,algocf
+\setCounters{chapter,equation,section,figure} % algocfproc,theorem,algocf
 
 
 
-\makeatletter%https://tex.stackexchange.com/questions/265841/small-overleftrightarrow
+\makeatletter % https://tex.stackexchange.com/questions/265841/small-overleftrightarrow
     \newcommand{\overleftrightsmallarrow}{\mathpalette{\overarrowsmall@\leftrightarrowfill@}}
     \newcommand{\overrightsmallarrow}{\mathpalette{\overarrowsmall@\rightarrowfill@}}
     \newcommand{\overleftsmallarrow}{\mathpalette{\overarrowsmall@\leftarrowfill@}}
-% 
+%
     \newcommand{\overarrowsmall@}[3]{%
     \vbox{%
       \ialign{%
@@ -95,14 +98,6 @@
     }
 \makeatother
 
-%% New environment for research question
-% \DeclareFloatingEnvironment{researchquestion}[Research Question][List of
-% research questions]
-% \crefformat{enumi}{#2Reseacrh Questions #1#3}
-% \renewenvironment{researchquestion}
-%   {\begin{enumerate}}
-%   {\end{enumerate}}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Indentation
 
@@ -119,9 +114,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Colors
 
-% \usepackage[dvipsnames]{xcolor}
-\usepackage[table,x11names,dvipsnames,table]{xcolor}
-\usepackage[most]{tcolorbox}
+\usepackage[dvipsnames,table]{xcolor}
+% \usepackage[table,x11names,dvipsnames,table]{xcolor}
+% \usepackage[most]{tcolorbox}
 
 % Thesis, KIT, and power grid colors
 \input{color}
@@ -143,7 +138,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ...
 
-\newlength{\tmpa}
+% \newlength{\tmpa}
 \newlength{\tmpb}
 \newlength{\tmpc}
 
@@ -186,12 +181,10 @@
 \newcommand{\goldenratio}{1.618}
 
 \newlength{\myheadsep} % distance from header to body
-\setlength{\myheadsep}{(\mytopmargin-\cutmarktop) -
-  (\mytopmargin-\cutmarktop) / \real{\goldenratio} - 1ex}
+\setlength{\myheadsep}{(\mytopmargin-\cutmarktop) - (\mytopmargin-\cutmarktop) / \real{\goldenratio} - 1ex}
 
 \newlength{\myfootskip} % distance from body to footer
-\setlength{\myfootskip}{(\mybottommargin-\cutmarkbottom) /
-  \real{\goldenratio} - 1ex}
+\setlength{\myfootskip}{(\mybottommargin-\cutmarkbottom) / \real{\goldenratio} - 1ex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,11 +192,10 @@
 
 \newlength{\mymargininnersep} % distance between margin and body
 \newlength{\mymarginoutersep} % distance between margin and paper edge
-\newlength{\mymarginwidth} % width of the margin
+\newlength{\mymarginwidth}    % width of the margin
 \setlength{\mymargininnersep}{7mm}
 \setlength{\mymarginoutersep}{12mm}
-\setlength{\mymarginwidth}{\myoutermargin - \mymargininnersep -
-  \mymarginoutersep - \cutmarkouter}
+\setlength{\mymarginwidth}{\myoutermargin - \mymargininnersep - \mymarginoutersep - \cutmarkouter}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -228,15 +220,13 @@ marginparwidth=\mymarginwidth
 % for new line use "\newline"
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 % 
-\newcommandx{\franzi}[2][1=]{\todo
-[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{{\textbf{
-\underline{Franzi:}}}\newline#2}\xspace}
+\newcommandx{\franzi}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{{\textbf{\underline{Franzi:}}}\newline#2}\xspace}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Printing crop marks
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Printing crop marks
 
 \usepackage{tikz}
-\setlength{\tmpa}{1mm}
+% % \setlength{\tmpa}{1mm}
 \newcommand{\cropmarkeven}{%
   \begin{tikzpicture}[overlay,remember picture]%
     \node [inner sep=0,outer sep=0, anchor=north west] at (current
@@ -298,7 +288,7 @@ marginparwidth=\mymarginwidth
   \end{tikzpicture}
 }
 
-\usepackage{everypage}
+% \usepackage{everypage} % implemented in LaTex version
 \usepackage[strict]{changepage}
 
 \newcommand{\showcropmarks}{%
@@ -315,7 +305,9 @@ marginparwidth=\mymarginwidth
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Header and footer format
 
+\WarningsOff
 \usepackage{fancyhdr}
+\WarningsOn
 \pagestyle{fancy} 
 
 \fancypagestyle{plain}{%
@@ -392,18 +384,15 @@ marginparwidth=\mymarginwidth
 
 \usepackage{floatrow}
 \floatsetup[table]{capposition=top}
-% \usepackage{colortbl}
-% \usepackage[table]{xcolor}
-% \usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{multirow}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% part format
-% \RequirePackage{silence}
-% \WarningFilter{scrreprt}{Usage of package `titlesec'}
-% \WarningFilter{scrreprt}{Activating an ugly workaround}
-
+\WarningsOff
 \usepackage[noindentafter,explicit]{titlesec}
+\WarningsOn
 
 \assignpagestyle{\part}{empty}
 \titleformat{\part}
@@ -628,8 +617,7 @@ maxcitenames=2,
 % minbibnames=7,
 % uniquelist=true,
 % uniquename=allfull,
-]{biblatex}
-% \autocite, \textcite,\parencite
+]{biblatex} % \autocite, \textcite,\parencite
 \patchcmd{\bibsetup}{\interlinepenalty=5000}{\interlinepenalty=10000}{}{}
 
 % Set up back references.
@@ -1015,8 +1003,8 @@ pdfauthor={Franziska Wegner},
 pdftitle={Combinatorial Problems in Energy Networks}
 ]{hyperref}
 
-% \usepackage[ocgcolorlinks]{ocgx2}
-% \usepackage{ocgx2}
+\usepackage[ocgcolorlinks]{ocgx2}
+
 \usepackage{accents}
 \usepackage{graphicx}
 
@@ -1045,14 +1033,14 @@ pdftitle={Combinatorial Problems in Energy Networks}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 \usepackage{subcaption}
-\captionsetup[subfigure]{justification=centering}
+% \captionsetup[subfigure]{justification=centering}
 
 \usepackage[innercaption]{sidecap}
 \columnsep=\mymargininnersep
 
 \usepackage{pgfplots}
-\usepackage{filecontents}
 \pgfplotsset{compat=1.9}
+% \usepackage{filecontents} % This package is obsolete. Disabling it and(filecontents) passing control to the filecontents environment(filecontents) defined by the LaTeX kernel.
 \usepgfplotslibrary{external} 
 \tikzexternalize[prefix=tikz/]
 \tikzexternaldisable
@@ -1075,11 +1063,9 @@ pdftitle={Combinatorial Problems in Energy Networks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Algorithm stuff
 
-% \usepackage[algochapter, algo2e, figure, ruled, vlined, linesnumbered]
-% {algorithm2e}
+% \usepackage[algochapter, algo2e, figure, ruled, vlined, linesnumbered]{algorithm2e}
 % \usepackage{listings}
-\usepackage[titlenumbered, ruled, vlined, linesnumbered,resetcount]
-{algorithm2e}%, dotocloa
+\usepackage[titlenumbered, ruled, vlined, linesnumbered,resetcount]{algorithm2e}%, dotocloa
 \setCounters{algocf}%algocfproc,
 % \setcounter{algorithm}{1}
 \SetKwComment{Comment}{\color{KITblack30}$\triangleright$\ }{}
@@ -1174,16 +1160,16 @@ pdftitle={Combinatorial Problems in Energy Networks}
 \newtheorem{question}[theorem]{Question}
 \newtheorem{conjecture}[theorem]{Conjecture}
 
-% \newtheoremstyle{mytheoremstyle}  % name
-%     {0.25cm}                      % Space above
-%     {0.25cm}                      % Space below
-%     {}                            % Body font - \itshape
-%     {}                            % Indent amount
-%     {\bf}                         % Theorem head font - \scshape
-%     {.}                           % Punctuation after theorem head
-%     {.5em}                        % Space after theorem head
-%     {}  % Theorem head spec (can be left empty, meaning ‘normal’)
-% \theoremstyle{mytheoremstyle}
+\newtheoremstyle{mytheoremstyle}  % name
+    {0.25cm}                      % Space above
+    {0.25cm}                      % Space below
+    {}                            % Body font - \itshape
+    {}                            % Indent amount
+    {\bf}                         % Theorem head font - \scshape
+    {.}                           % Punctuation after theorem head
+    {.5em}                        % Space after theorem head
+    {}  % Theorem head spec (can be left empty, meaning ‘normal’)
+\theoremstyle{mytheoremstyle}
 \newtheorem{reductionrule}[theorem]{Reduction Rule}
 % \newtheorem{algorithm}[algocf]{Algorithm} 
 
@@ -1191,9 +1177,17 @@ pdftitle={Combinatorial Problems in Energy Networks}
 %% Clever referencing
 
 \usepackage[nameinlink,capitalize]{cleveref}
-\usepackage{crossreftools}%crthyperCref, \crthypercref, \crtcref, \crtCref
+\usepackage{crossreftools} % crthyperCref, \crthypercref, \crtcref, \crtCref
 \newcommand{\crefrangeconjunction}{\screen{--}}
 \creflabelformat{equation}{#2#1#3}
+
+%% New environment for research question
+\usepackage{newfloat}
+\DeclareFloatingEnvironment{researchquestion}[Research Question][List of research questions]
+\crefformat{enumi}{#2Reseacrh Questions #1#3}
+\renewenvironment{researchquestion}
+  {\begin{enumerate}}
+  {\end{enumerate}}
 
 % Labeltypes of \cref
 \Crefname{algorithm}{Algorithm}{Algorithms}%
@@ -1280,6 +1274,16 @@ pdftitle={Combinatorial Problems in Energy Networks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Acronym stuff
 %% For update run: makeglossaries master
+% \usepackage[nonumberlist,acronym]{glossaries}
+% \DeclareRobustCommand{\glossfirstformat}[1]{\textit{#1}}
+% \renewcommand*{\glsdisplayfirst}[4]{\glossfirstformat{#1#4}}
+% Glossary
+\usepackage[toc]{glossaries}
+    % define the colour of the first instance
+    % \renewcommand{\glsdisplayfirst}[4]{\textcolor{blue}{#1}}
+    % define the colour of all subsequent instances
+    % as the subsequent entries are capitalised the colour BLACK must be defined
+    % \renewcommand{\glsdisplay}[4]{\textcolor{black}{#1}}
 
 \usepackage[nopostdot,
             automake,
@@ -1290,9 +1294,9 @@ pdftitle={Combinatorial Problems in Energy Networks}
             % acronym
             ]{glossaries-extra}%,nonumberlist
 
-% \setabbreviationstyle[acronym]{short}
+% % \setabbreviationstyle[acronym]{short}
 \DeclareRobustCommand{\glossfirstformat}[1]{\textit{#1}}
-\renewcommand*{\glsdisplayfirst}[4]{\glossfirstformat{#1#4}}
+% \renewcommand*{\glsdisplayfirst}[4]{\glossfirstformat{#1#4}}
 
 \setlength{\glspagelistwidth}{0.1\textwidth}%
 \setlength{\glsdescwidth}{0.6\textwidth}%
@@ -1390,9 +1394,9 @@ pdftitle={Combinatorial Problems in Energy Networks}
 }
 
 % Change the font used by entry names
-% \renewcommand{\glsnamefont}[1]{\textbf{#1}}
-% \renewcommand{\glsnamefont}[1]{\textsc{\mdseries #1}}
-% \renewcommand{\glsnamefont}[1]{\mdseries #1}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+\renewcommand{\glsnamefont}[1]{\textsc{\mdseries #1}}
+\renewcommand{\glsnamefont}[1]{\mdseries #1}
 
 % \newglossary[slg]       {symbols}       {not}       {ntn}       {Symbols}
 % \setglossarystyle{tree}
